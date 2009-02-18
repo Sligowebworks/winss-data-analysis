@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="v_WSAS" targetNamespace="http://tempuri.org/v_WSAS.xsd" xmlns:mstns="http://tempuri.org/v_WSAS.xsd" xmlns="http://tempuri.org/v_WSAS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WI_2005_03_22ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="WI_2005_03_22ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SligoCS.DAL.WI.Properties.Settings.GlobalReference.Default.WI_2005_03_22ConnectionString1" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_WSASTableAdapter" GeneratorDataComponentClassName="v_WSASTableAdapter" Name="v_WSAS" UserDataComponentName="v_WSASTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WI_2005_03_22ConnectionString1 (Settings)" DbObjectName="Wisconsin.dbo.v_WSAS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT Year, FullKey, AGENCYKEY, Grade, GroupNum, GroupName, SubjectID, SubjectLabel, [District Name], [District Number], [School Name], [School Number], [Agency Type], CESA, [Lowest Grade in School], [Test Date], [Level], [Total Enrollment-PI 1290 definition], Enrolled, Included, Excluded, EnrollmentDenominator, [Excused-By-Parent], [No WSAS Total], [No WSAS], PctExcluded, [Eligible-But-Not-Tested], PctTotalWAADisabil, [Percent Pre-Req Skill], [Percent Pre-Req Skill Level 1], [Percent Pre-Req Skill Level 2], [Percent Pre-Req Skill Level 3], [Percent Pre-Req Skill Level 4], PctTotalWAALep, [Percent Pre-Req Eng], [Percent Pre-Req Eng Minimal], [Percent Pre-Req Eng Basic], [Percent Pre-Req Eng Proficient], [Percent Pre-Req Eng Advanced], [Percent Minimal], MinPerfWSAS, [Percent Basic], BasicWSAS, [Percent Proficient], ProficientWSAS, [Percent Advanced], AdvancedWSAS, PCTAdvPlusPCTPrf, AdvancedPlusProficientTotalWSAS, [BasicPlusMinPerfPlusPre-ReqSkillsEngPlusNoWSASTotal], BasicPlusMinPerfPlusNoWSASTotalWSAS FROM dbo.v_WSAS</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="FullKey" DataSetColumn="FullKey" />
+              <Mapping SourceColumn="AGENCYKEY" DataSetColumn="AGENCYKEY" />
+              <Mapping SourceColumn="Grade" DataSetColumn="Grade" />
+              <Mapping SourceColumn="GroupNum" DataSetColumn="GroupNum" />
+              <Mapping SourceColumn="GroupName" DataSetColumn="GroupName" />
+              <Mapping SourceColumn="SubjectID" DataSetColumn="SubjectID" />
+              <Mapping SourceColumn="SubjectLabel" DataSetColumn="SubjectLabel" />
+              <Mapping SourceColumn="District Name" DataSetColumn="District Name" />
+              <Mapping SourceColumn="District Number" DataSetColumn="District Number" />
+              <Mapping SourceColumn="School Name" DataSetColumn="School Name" />
+              <Mapping SourceColumn="School Number" DataSetColumn="School Number" />
+              <Mapping SourceColumn="Agency Type" DataSetColumn="Agency Type" />
+              <Mapping SourceColumn="CESA" DataSetColumn="CESA" />
+              <Mapping SourceColumn="Lowest Grade in School" DataSetColumn="Lowest Grade in School" />
+              <Mapping SourceColumn="Test Date" DataSetColumn="Test Date" />
+              <Mapping SourceColumn="Level" DataSetColumn="Level" />
+              <Mapping SourceColumn="Total Enrollment-PI 1290 definition" DataSetColumn="Total Enrollment-PI 1290 definition" />
+              <Mapping SourceColumn="Enrolled" DataSetColumn="Enrolled" />
+              <Mapping SourceColumn="Included" DataSetColumn="Included" />
+              <Mapping SourceColumn="Excluded" DataSetColumn="Excluded" />
+              <Mapping SourceColumn="EnrollmentDenominator" DataSetColumn="EnrollmentDenominator" />
+              <Mapping SourceColumn="Excused-By-Parent" DataSetColumn="Excused-By-Parent" />
+              <Mapping SourceColumn="No WSAS Total" DataSetColumn="No WSAS Total" />
+              <Mapping SourceColumn="No WSAS" DataSetColumn="No WSAS" />
+              <Mapping SourceColumn="PctExcluded" DataSetColumn="PctExcluded" />
+              <Mapping SourceColumn="Eligible-But-Not-Tested" DataSetColumn="Eligible-But-Not-Tested" />
+              <Mapping SourceColumn="PctTotalWAADisabil" DataSetColumn="PctTotalWAADisabil" />
+              <Mapping SourceColumn="Percent Pre-Req Skill" DataSetColumn="Percent Pre-Req Skill" />
+              <Mapping SourceColumn="Percent Pre-Req Skill Level 1" DataSetColumn="Percent Pre-Req Skill Level 1" />
+              <Mapping SourceColumn="Percent Pre-Req Skill Level 2" DataSetColumn="Percent Pre-Req Skill Level 2" />
+              <Mapping SourceColumn="Percent Pre-Req Skill Level 3" DataSetColumn="Percent Pre-Req Skill Level 3" />
+              <Mapping SourceColumn="Percent Pre-Req Skill Level 4" DataSetColumn="Percent Pre-Req Skill Level 4" />
+              <Mapping SourceColumn="PctTotalWAALep" DataSetColumn="PctTotalWAALep" />
+              <Mapping SourceColumn="Percent Pre-Req Eng" DataSetColumn="Percent Pre-Req Eng" />
+              <Mapping SourceColumn="Percent Pre-Req Eng Minimal" DataSetColumn="Percent Pre-Req Eng Minimal" />
+              <Mapping SourceColumn="Percent Pre-Req Eng Basic" DataSetColumn="Percent Pre-Req Eng Basic" />
+              <Mapping SourceColumn="Percent Pre-Req Eng Proficient" DataSetColumn="Percent Pre-Req Eng Proficient" />
+              <Mapping SourceColumn="Percent Pre-Req Eng Advanced" DataSetColumn="Percent Pre-Req Eng Advanced" />
+              <Mapping SourceColumn="Percent Minimal" DataSetColumn="Percent Minimal" />
+              <Mapping SourceColumn="MinPerfWSAS" DataSetColumn="MinPerfWSAS" />
+              <Mapping SourceColumn="Percent Basic" DataSetColumn="Percent Basic" />
+              <Mapping SourceColumn="BasicWSAS" DataSetColumn="BasicWSAS" />
+              <Mapping SourceColumn="Percent Proficient" DataSetColumn="Percent Proficient" />
+              <Mapping SourceColumn="ProficientWSAS" DataSetColumn="ProficientWSAS" />
+              <Mapping SourceColumn="Percent Advanced" DataSetColumn="Percent Advanced" />
+              <Mapping SourceColumn="AdvancedWSAS" DataSetColumn="AdvancedWSAS" />
+              <Mapping SourceColumn="PCTAdvPlusPCTPrf" DataSetColumn="PCTAdvPlusPCTPrf" />
+              <Mapping SourceColumn="AdvancedPlusProficientTotalWSAS" DataSetColumn="AdvancedPlusProficientTotalWSAS" />
+              <Mapping SourceColumn="BasicPlusMinPerfPlusPre-ReqSkillsEngPlusNoWSASTotal" DataSetColumn="BasicPlusMinPerfPlusPre-ReqSkillsEngPlusNoWSASTotal" />
+              <Mapping SourceColumn="BasicPlusMinPerfPlusNoWSASTotalWSAS" DataSetColumn="BasicPlusMinPerfPlusNoWSASTotalWSAS" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="v_WSAS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="v_WSAS" msprop:Generator_DataSetName="v_WSAS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_WSAS" msprop:Generator_UserTableName="v_WSAS" msprop:Generator_RowDeletedName="v_WSASRowDeleted" msprop:Generator_TableClassName="v_WSASDataTable" msprop:Generator_RowChangedName="v_WSASRowChanged" msprop:Generator_RowClassName="v_WSASRow" msprop:Generator_RowChangingName="v_WSASRowChanging" msprop:Generator_RowEvArgName="v_WSASRowChangeEvent" msprop:Generator_RowEvHandlerName="v_WSASRowChangeEventHandler" msprop:Generator_TablePropName="_v_WSAS" msprop:Generator_TableVarName="tablev_WSAS" msprop:Generator_RowDeletingName="v_WSASRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Year" msprop:Generator_UserColumnName="Year" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInTable="YearColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FullKey" msprop:Generator_UserColumnName="FullKey" msprop:Generator_ColumnPropNameInRow="FullKey" msprop:Generator_ColumnVarNameInTable="columnFullKey" msprop:Generator_ColumnPropNameInTable="FullKeyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AGENCYKEY" msprop:Generator_UserColumnName="AGENCYKEY" msprop:Generator_ColumnPropNameInRow="AGENCYKEY" msprop:Generator_ColumnVarNameInTable="columnAGENCYKEY" msprop:Generator_ColumnPropNameInTable="AGENCYKEYColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grade" msprop:Generator_UserColumnName="Grade" msprop:Generator_ColumnPropNameInRow="Grade" msprop:Generator_ColumnVarNameInTable="columnGrade" msprop:Generator_ColumnPropNameInTable="GradeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="GroupNum" msprop:Generator_UserColumnName="GroupNum" msprop:Generator_ColumnPropNameInRow="GroupNum" msprop:Generator_ColumnVarNameInTable="columnGroupNum" msprop:Generator_ColumnPropNameInTable="GroupNumColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="GroupName" msprop:Generator_UserColumnName="GroupName" msprop:Generator_ColumnPropNameInRow="GroupName" msprop:Generator_ColumnVarNameInTable="columnGroupName" msprop:Generator_ColumnPropNameInTable="GroupNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubjectID" msprop:Generator_UserColumnName="SubjectID" msprop:Generator_ColumnPropNameInRow="SubjectID" msprop:Generator_ColumnVarNameInTable="columnSubjectID" msprop:Generator_ColumnPropNameInTable="SubjectIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubjectLabel" msprop:Generator_UserColumnName="SubjectLabel" msprop:Generator_ColumnPropNameInRow="SubjectLabel" msprop:Generator_ColumnVarNameInTable="columnSubjectLabel" msprop:Generator_ColumnPropNameInTable="SubjectLabelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="District_x0020_Name" msdata:ReadOnly="true" msprop:Generator_UserColumnName="District Name" msprop:Generator_ColumnPropNameInRow="District_Name" msprop:Generator_ColumnVarNameInTable="columnDistrict_Name" msprop:Generator_ColumnPropNameInTable="District_NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="District_x0020_Number" msprop:Generator_UserColumnName="District Number" msprop:Generator_ColumnPropNameInRow="District_Number" msprop:Generator_ColumnVarNameInTable="columnDistrict_Number" msprop:Generator_ColumnPropNameInTable="District_NumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="School_x0020_Name" msprop:Generator_UserColumnName="School Name" msprop:Generator_ColumnPropNameInRow="School_Name" msprop:Generator_ColumnVarNameInTable="columnSchool_Name" msprop:Generator_ColumnPropNameInTable="School_NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="School_x0020_Number" msprop:Generator_UserColumnName="School Number" msprop:Generator_ColumnPropNameInRow="School_Number" msprop:Generator_ColumnVarNameInTable="columnSchool_Number" msprop:Generator_ColumnPropNameInTable="School_NumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Agency_x0020_Type" msprop:Generator_UserColumnName="Agency Type" msprop:Generator_ColumnPropNameInRow="Agency_Type" msprop:Generator_ColumnVarNameInTable="columnAgency_Type" msprop:Generator_ColumnPropNameInTable="Agency_TypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CESA" msprop:Generator_UserColumnName="CESA" msprop:Generator_ColumnPropNameInRow="CESA" msprop:Generator_ColumnVarNameInTable="columnCESA" msprop:Generator_ColumnPropNameInTable="CESAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lowest_x0020_Grade_x0020_in_x0020_School" msprop:Generator_UserColumnName="Lowest Grade in School" msprop:Generator_ColumnPropNameInRow="Lowest_Grade_in_School" msprop:Generator_ColumnVarNameInTable="columnLowest_Grade_in_School" msprop:Generator_ColumnPropNameInTable="Lowest_Grade_in_SchoolColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Test_x0020_Date" msprop:Generator_UserColumnName="Test Date" msprop:Generator_ColumnPropNameInRow="Test_Date" msprop:Generator_ColumnVarNameInTable="columnTest_Date" msprop:Generator_ColumnPropNameInTable="Test_DateColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Level" msprop:Generator_UserColumnName="Level" msprop:Generator_ColumnPropNameInRow="Level" msprop:Generator_ColumnVarNameInTable="columnLevel" msprop:Generator_ColumnPropNameInTable="LevelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total_x0020_Enrollment-PI_x0020_1290_x0020_definition" msprop:Generator_UserColumnName="Total Enrollment-PI 1290 definition" msprop:Generator_ColumnPropNameInRow="_Total_Enrollment_PI_1290_definition" msprop:Generator_ColumnVarNameInTable="_columnTotal_Enrollment_PI_1290_definition" msprop:Generator_ColumnPropNameInTable="_Total_Enrollment_PI_1290_definitionColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Enrolled" msprop:Generator_UserColumnName="Enrolled" msprop:Generator_ColumnPropNameInRow="Enrolled" msprop:Generator_ColumnVarNameInTable="columnEnrolled" msprop:Generator_ColumnPropNameInTable="EnrolledColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Included" msprop:Generator_UserColumnName="Included" msprop:Generator_ColumnPropNameInRow="Included" msprop:Generator_ColumnVarNameInTable="columnIncluded" msprop:Generator_ColumnPropNameInTable="IncludedColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Excluded" msprop:Generator_UserColumnName="Excluded" msprop:Generator_ColumnPropNameInRow="Excluded" msprop:Generator_ColumnVarNameInTable="columnExcluded" msprop:Generator_ColumnPropNameInTable="ExcludedColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="EnrollmentDenominator" msprop:Generator_UserColumnName="EnrollmentDenominator" msprop:Generator_ColumnPropNameInRow="EnrollmentDenominator" msprop:Generator_ColumnVarNameInTable="columnEnrollmentDenominator" msprop:Generator_ColumnPropNameInTable="EnrollmentDenominatorColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Excused-By-Parent" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Excused-By-Parent" msprop:Generator_ColumnPropNameInRow="_Excused_By_Parent" msprop:Generator_ColumnVarNameInTable="_columnExcused_By_Parent" msprop:Generator_ColumnPropNameInTable="_Excused_By_ParentColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="No_x0020_WSAS_x0020_Total" msdata:ReadOnly="true" msprop:Generator_UserColumnName="No WSAS Total" msprop:Generator_ColumnPropNameInRow="No_WSAS_Total" msprop:Generator_ColumnVarNameInTable="columnNo_WSAS_Total" msprop:Generator_ColumnPropNameInTable="No_WSAS_TotalColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="No_x0020_WSAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="No WSAS" msprop:Generator_ColumnPropNameInRow="No_WSAS" msprop:Generator_ColumnVarNameInTable="columnNo_WSAS" msprop:Generator_ColumnPropNameInTable="No_WSASColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PctExcluded" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PctExcluded" msprop:Generator_ColumnPropNameInRow="PctExcluded" msprop:Generator_ColumnVarNameInTable="columnPctExcluded" msprop:Generator_ColumnPropNameInTable="PctExcludedColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Eligible-But-Not-Tested" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Eligible-But-Not-Tested" msprop:Generator_ColumnPropNameInRow="_Eligible_But_Not_Tested" msprop:Generator_ColumnVarNameInTable="_columnEligible_But_Not_Tested" msprop:Generator_ColumnPropNameInTable="_Eligible_But_Not_TestedColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="PctTotalWAADisabil" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PctTotalWAADisabil" msprop:Generator_ColumnPropNameInRow="PctTotalWAADisabil" msprop:Generator_ColumnVarNameInTable="columnPctTotalWAADisabil" msprop:Generator_ColumnPropNameInTable="PctTotalWAADisabilColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Skill" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Skill" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Skill" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Skill" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_SkillColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Skill_x0020_Level_x0020_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Skill Level 1" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Skill_Level_1" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Skill_Level_1" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_Skill_Level_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Skill_x0020_Level_x0020_2" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Skill Level 2" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Skill_Level_2" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Skill_Level_2" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_Skill_Level_2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Skill_x0020_Level_x0020_3" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Skill Level 3" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Skill_Level_3" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Skill_Level_3" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_Skill_Level_3Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Skill_x0020_Level_x0020_4" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Skill Level 4" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Skill_Level_4" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Skill_Level_4" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_Skill_Level_4Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PctTotalWAALep" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PctTotalWAALep" msprop:Generator_ColumnPropNameInRow="PctTotalWAALep" msprop:Generator_ColumnVarNameInTable="columnPctTotalWAALep" msprop:Generator_ColumnPropNameInTable="PctTotalWAALepColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Eng" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Eng" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Eng" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Eng" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_EngColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Eng_x0020_Minimal" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Eng Minimal" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Eng_Minimal" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Eng_Minimal" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_Eng_MinimalColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Eng_x0020_Basic" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Eng Basic" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Eng_Basic" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Eng_Basic" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_Eng_BasicColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Eng_x0020_Proficient" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Eng Proficient" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Eng_Proficient" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Eng_Proficient" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_Eng_ProficientColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percent_x0020_Pre-Req_x0020_Eng_x0020_Advanced" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Pre-Req Eng Advanced" msprop:Generator_ColumnPropNameInRow="_Percent_Pre_Req_Eng_Advanced" msprop:Generator_ColumnVarNameInTable="_columnPercent_Pre_Req_Eng_Advanced" msprop:Generator_ColumnPropNameInTable="_Percent_Pre_Req_Eng_AdvancedColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Percent_x0020_Minimal" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Minimal" msprop:Generator_ColumnPropNameInRow="Percent_Minimal" msprop:Generator_ColumnVarNameInTable="columnPercent_Minimal" msprop:Generator_ColumnPropNameInTable="Percent_MinimalColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="MinPerfWSAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="MinPerfWSAS" msprop:Generator_ColumnPropNameInRow="MinPerfWSAS" msprop:Generator_ColumnVarNameInTable="columnMinPerfWSAS" msprop:Generator_ColumnPropNameInTable="MinPerfWSASColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Percent_x0020_Basic" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Basic" msprop:Generator_ColumnPropNameInRow="Percent_Basic" msprop:Generator_ColumnVarNameInTable="columnPercent_Basic" msprop:Generator_ColumnPropNameInTable="Percent_BasicColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="BasicWSAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="BasicWSAS" msprop:Generator_ColumnPropNameInRow="BasicWSAS" msprop:Generator_ColumnVarNameInTable="columnBasicWSAS" msprop:Generator_ColumnPropNameInTable="BasicWSASColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Percent_x0020_Proficient" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Proficient" msprop:Generator_ColumnPropNameInRow="Percent_Proficient" msprop:Generator_ColumnVarNameInTable="columnPercent_Proficient" msprop:Generator_ColumnPropNameInTable="Percent_ProficientColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="ProficientWSAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ProficientWSAS" msprop:Generator_ColumnPropNameInRow="ProficientWSAS" msprop:Generator_ColumnVarNameInTable="columnProficientWSAS" msprop:Generator_ColumnPropNameInTable="ProficientWSASColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Percent_x0020_Advanced" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Percent Advanced" msprop:Generator_ColumnPropNameInRow="Percent_Advanced" msprop:Generator_ColumnVarNameInTable="columnPercent_Advanced" msprop:Generator_ColumnPropNameInTable="Percent_AdvancedColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="AdvancedWSAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="AdvancedWSAS" msprop:Generator_ColumnPropNameInRow="AdvancedWSAS" msprop:Generator_ColumnVarNameInTable="columnAdvancedWSAS" msprop:Generator_ColumnPropNameInTable="AdvancedWSASColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="PCTAdvPlusPCTPrf" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PCTAdvPlusPCTPrf" msprop:Generator_ColumnPropNameInRow="PCTAdvPlusPCTPrf" msprop:Generator_ColumnVarNameInTable="columnPCTAdvPlusPCTPrf" msprop:Generator_ColumnPropNameInTable="PCTAdvPlusPCTPrfColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="AdvancedPlusProficientTotalWSAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="AdvancedPlusProficientTotalWSAS" msprop:Generator_ColumnPropNameInRow="AdvancedPlusProficientTotalWSAS" msprop:Generator_ColumnVarNameInTable="columnAdvancedPlusProficientTotalWSAS" msprop:Generator_ColumnPropNameInTable="AdvancedPlusProficientTotalWSASColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="BasicPlusMinPerfPlusPre-ReqSkillsEngPlusNoWSASTotal" msdata:ReadOnly="true" msprop:Generator_UserColumnName="BasicPlusMinPerfPlusPre-ReqSkillsEngPlusNoWSASTotal" msprop:Generator_ColumnPropNameInRow="_BasicPlusMinPerfPlusPre_ReqSkillsEngPlusNoWSASTotal" msprop:Generator_ColumnVarNameInTable="_columnBasicPlusMinPerfPlusPre_ReqSkillsEngPlusNoWSASTotal" msprop:Generator_ColumnPropNameInTable="_BasicPlusMinPerfPlusPre_ReqSkillsEngPlusNoWSASTotalColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="BasicPlusMinPerfPlusNoWSASTotalWSAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="BasicPlusMinPerfPlusNoWSASTotalWSAS" msprop:Generator_ColumnPropNameInRow="BasicPlusMinPerfPlusNoWSASTotalWSAS" msprop:Generator_ColumnVarNameInTable="columnBasicPlusMinPerfPlusNoWSASTotalWSAS" msprop:Generator_ColumnPropNameInTable="BasicPlusMinPerfPlusNoWSASTotalWSASColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
