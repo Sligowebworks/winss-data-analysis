@@ -1,0 +1,25 @@
+* text=auto !eol
+App_Code/BaseWebPage.cs -text
+App_Code/BusinessLayer.cs -text
+App_Code/Constants.cs -text
+App_Code/DAL.cs -text
+App_Code/QStringHelper.cs -text
+App_Code/vssver.scc -text
+/Default.aspx -text
+/Default.aspx.cs -text
+/MasterPage.master -text
+/MasterPage.master.cs -text
+NameValuePairDemo/NVPDemo1.aspx -text
+NameValuePairDemo/NVPDemo1.aspx.cs -text
+NameValuePairDemo/NVPDemo2.aspx -text
+NameValuePairDemo/NVPDemo2.aspx.cs -text
+QStringDemo/QStringDemo1.aspx -text
+QStringDemo/QStringDemo1.aspx.cs -text
+QStringDemo/QStringDemo2.aspx -text
+QStringDemo/QStringDemo2.aspx.cs -text
+/SligoDataGrid.ascx -text
+/SligoDataGrid.ascx.cs -text
+/SligoDataGrid.aspx -text
+/SligoDataGrid.aspx.cs -text
+/Web.Config -text
+/vssver.scc -text
