@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="v_Districts" targetNamespace="http://tempuri.org/v_Districts.xsd" xmlns:mstns="http://tempuri.org/v_Districts.xsd" xmlns="http://tempuri.org/v_Districts.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WI_2005_03_22ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="WI_2005_03_22ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SligoCS.DAL.WI.Properties.Settings.GlobalReference.Default.WI_2005_03_22ConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_DistrictsTableAdapter" GeneratorDataComponentClassName="v_DistrictsTableAdapter" Name="v_Districts" UserDataComponentName="v_DistrictsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WI_2005_03_22ConnectionString (Settings)" DbObjectName="[WI-2005-03-22].dbo.v_Districts" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT Year, AgencyKey, Name, district, Fullkey, webaddress, LinkedDistrictName FROM dbo.v_Districts</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="AgencyKey" DataSetColumn="AgencyKey" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="district" DataSetColumn="district" />
+              <Mapping SourceColumn="Fullkey" DataSetColumn="Fullkey" />
+              <Mapping SourceColumn="webaddress" DataSetColumn="webaddress" />
+              <Mapping SourceColumn="LinkedDistrictName" DataSetColumn="LinkedDistrictName" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="v_Districts" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="v_Districts" msprop:Generator_DataSetName="v_Districts">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_Districts" msprop:Generator_UserTableName="v_Districts" msprop:Generator_RowDeletedName="v_DistrictsRowDeleted" msprop:Generator_TableClassName="v_DistrictsDataTable" msprop:Generator_RowChangedName="v_DistrictsRowChanged" msprop:Generator_RowClassName="v_DistrictsRow" msprop:Generator_RowChangingName="v_DistrictsRowChanging" msprop:Generator_RowEvArgName="v_DistrictsRowChangeEvent" msprop:Generator_RowEvHandlerName="v_DistrictsRowChangeEventHandler" msprop:Generator_TablePropName="_v_Districts" msprop:Generator_TableVarName="tablev_Districts" msprop:Generator_RowDeletingName="v_DistrictsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Year" msprop:Generator_UserColumnName="Year" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInTable="YearColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AgencyKey" msprop:Generator_UserColumnName="AgencyKey" msprop:Generator_ColumnPropNameInRow="AgencyKey" msprop:Generator_ColumnVarNameInTable="columnAgencyKey" msprop:Generator_ColumnPropNameInTable="AgencyKeyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="district" msprop:Generator_UserColumnName="district" msprop:Generator_ColumnPropNameInRow="district" msprop:Generator_ColumnVarNameInTable="columndistrict" msprop:Generator_ColumnPropNameInTable="districtColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fullkey" msprop:Generator_UserColumnName="Fullkey" msprop:Generator_ColumnPropNameInRow="Fullkey" msprop:Generator_ColumnVarNameInTable="columnFullkey" msprop:Generator_ColumnPropNameInTable="FullkeyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="webaddress" msprop:Generator_UserColumnName="webaddress" msprop:Generator_ColumnPropNameInRow="webaddress" msprop:Generator_ColumnVarNameInTable="columnwebaddress" msprop:Generator_ColumnPropNameInTable="webaddressColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="57" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LinkedDistrictName" msdata:ReadOnly="true" msprop:Generator_UserColumnName="LinkedDistrictName" msprop:Generator_ColumnPropNameInRow="LinkedDistrictName" msprop:Generator_ColumnVarNameInTable="columnLinkedDistrictName" msprop:Generator_ColumnPropNameInTable="LinkedDistrictNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="176" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

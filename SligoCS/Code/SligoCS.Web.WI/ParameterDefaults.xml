@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ParamsHelper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FULLKEY>013619040022</FULLKEY>
+  <GraphFile>HIGHSCHOOLCOMPLETION</GraphFile>
+  <CompareTo>PRIORYEARS</CompareTo>
+  <ORGLEVEL>SC</ORGLEVEL>
+  <Group>AllStudentsFAY</Group>
+  <DN>Milwaukee</DN>
+  <SN>Madison Hi</SN>
+  <DETAIL>YES</DETAIL>
+  <NumSchools>4</NumSchools>
+  <ZBackTo>performance.aspx</ZBackTo>
+  <FileQuery>select count(*) from sysdatabases</FileQuery>
+  <FileName>c:\\sample.txt</FileName>
+  <SchoolWebaddress>http://mpsportal.milwaukee.k12.wi.us</SchoolWebaddress>
+  <DistrictWebaddress>http://www.milwaukee.k12.wi.us</DistrictWebaddress>
+  <STYP>9</STYP>
+  <COUNTY>40</COUNTY>
+  <YearLocal>2006</YearLocal>
+  <TrendStartYearLocal>1997</TrendStartYearLocal>
+  <WhichSchool>4</WhichSchool>
+  <ConferenceKey>27</ConferenceKey>
+  <DistrictID>3619</DistrictID>
+  <GradeBreakout>999</GradeBreakout>
+  <GradeBreakoutLAG>555</GradeBreakoutLAG>
+  <GradeBreakoutEDISA>212</GradeBreakoutEDISA>
+  <TraceLevels>None</TraceLevels>
+</ParamsHelper>

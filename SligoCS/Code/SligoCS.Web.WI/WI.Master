@@ -1,0 +1,175 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WI.master.cs" Inherits="SligoCS.Web.WI.WI" %>
+<%@ Register Assembly="SligoCS.Web.Base" Namespace="SligoCS.Web.Base.WebServerControls.WI"
+    TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+
+<link rel="stylesheet" href="dpi_pc.css" type="text/css" />
+
+<script language="Javascript">
+<!--
+function preloadImages() {
+        if (document.images) {
+        var loadedImages = new Array;
+      for(arg=0;arg<preloadImages.arguments.length;arg++) {
+      loadedImages[arg] = new Image();
+      loadedImages[arg].src = preloadImages.arguments[arg];
+                }
+    }
+ }
+function img_hot (imgName) {
+        if (document.images)
+        {       
+            document [imgName].src = "images/" + imgName + "_on.gif"
+        }
+}
+function img_cool (imgName) {
+        if (document.images)
+        {       
+            document [imgName].src = "images/" + imgName + ".gif"
+        }
+}
+//-->
+</script>
+<script language="javascript">
+	function popup(url) {
+	window.open(url,"_blank",'toolbar=1,location=1,directories=0,status=1,menubar=1,scrollbars=1,resizable=yes,width=500,height=300');
+
+	}
+	function transparencypopup(url) {
+	window.open(url,"_blank",'toolbar=1,location=1,directories=0,status=1,menubar=1,scrollbars=1,resizable=yes,width=800,height=400');
+
+	}
+</script>
+
+<script language="JavaScript" src="/sig/js/cookies.js">
+</script>
+<script language="JavaScript">
+	question='What percent of students did not advance to the next grade level?';
+	url='http://data.dpi.state.wi.us/data/graphshell.asp?GraphFile=RETENTION&CompareTo=PRIORYEARS&Group=AllStudentsFAY&STYP=9&Detail=YES';
+</script>
+
+</head>
+
+<body>
+
+<div align="center">
+
+        <table cellspacing="0" cellpadding="0" border="0" width="600">
+		 <tr>
+		  <td valign="bottom">
+		   <a href="#" ONMOUSEOVER="img_hot('mortar_big')" ONMOUSEOUT="img_cool('mortar_big')">
+		    <img src="images/wins_big.gif" width="84" height="40" hspace="0" vspace="0" border="0" alt="WINSS" /><img src="images/mortar_big.gif" width="61" height="40" hspace="0" vspace="0" border="0" alt="" name="mortar_big" /><img src="images/guide_big.gif" width="109" height="40" hspace="0" vspace="0" border="0" alt="Successful School Guide" /></a></td>
+		  <td width="342" align="right" valign="bottom">
+		   <a href="#" ONMOUSEOVER="img_hot('data_sm_lft')" ONMOUSEOUT="img_cool('data_sm_lft')"><img src="images/data_sm_lft.gif" width=161 height=30 hspace=0 vspace=0 border=0 alt="" name="data_sm_lft" /></a><a href="#" ONMOUSEOVER="img_hot('data_sm_lft')" ONMOUSEOUT="img_cool('data_sm_lft')"><img src="images/data_sm_rt.gif" width=89 height=30 hspace=0 vspace=0 border=0 alt="" /></a></td>
+		 </tr>
+		 <tr>
+		  <td valign="top" colspan="2">
+		   <img src="images/assess_runner.gif" width="600" height="5" hspace="0" vspace="0" border="0" alt="" /></td>
+		 </tr>
+		 <tr>
+		  <td valign="top" colspan="2">
+		   <img src="http://data.dpi.state.wi.usimages/white.gif" width="1" height="10" border="0" alt="" /></td>
+		 </tr>
+		</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="600">
+<tr valign="top"><td bgcolor="#D82058" class="text" width="200" style="padding:10px 10px 10px 10px;">
+	
+	<span class="dataschoolname">
+    <cc1:HyperLinkPlus ID="linkSchool" runat="server" ParamName="FullKey">School</cc1:HyperLinkPlus><br />
+    <cc1:HyperLinkPlus ID="linkDistrict" runat="server" ParamName="FullKey">District</cc1:HyperLinkPlus><br />
+    <cc1:HyperLinkPlus ID="linkState" runat="server" ParamName="FullKey">State</cc1:HyperLinkPlus>
+	</span>
+	
+</td>
+	
+
+
+<td valign="top" align="left" width="400" style="padding:10px 10px 10px 20px;">
+
+<div class="dataquestion" align="right" style="font-weight:bold;">Colored Heading Text</div>
+
+    <form id="form1" runat="server">        
+        <table border="1">
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>The header for all web pages goes here.</td>
+                            <td><a href="/SligoWI/Default.aspx">Home</a></td>
+                            <td><a href="/SligoWI/QStringDemo/QStringLinks.aspx">QString Links demo</a></td>                                                        
+                            <td><asp:HyperLink ID="lnkRetention" runat="server">Retention demo</asp:HyperLink></td>
+                            <td><asp:HyperLink ID="lnkDropouts" runat="server">Dropout demo</asp:HyperLink></td>
+                            
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>                
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>Footer goes here.</td>
+            </tr>
+        </table>
+    </form>
+
+<span class="textlt">
+
+Welcome to Wisconsin's Information Network for Successful Schools (WINSS). <br />
+&nbsp;<br />
+This electronic resource has been created to help educators, parents and community members who have an interest in educating the hearts and minds of all children. The Standards and Assessment, Data Analysis, Continuous School Improvement and Best Practices sections guide users to key local, state and national information about success in education as found on the DPI Web site and other valuable resources.</span>
+
+
+</td></tr>
+
+<tr bgcolor="#D82058"><td colspan="3"><table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="middle">
+		<td align="left">
+<form action=" ">
+<select name="section" onchange="a = this.options[this.selectedIndex].value; location=a;">
+<option value="" selected="selected">Go to:</option><option value="/">DPI Home</option>
+<option value="/sig/">WINSS Home</option>
+<option value="/sig/assessment">Standards and Assessment</option>
+<option value="/sig/assessment/sa1a.html"> --- What are our academic standards?</option>
+<option value="/sig/assessment/sa1.html"> --- What are standards of the heart?</option>
+<option value="/sig/assessment/success.html"> --- What indicates success in academic standards?</option>
+<option value="/sig/assessment/sa4.html"> --- What indicates success in standards of the heart?</option>
+<option value="http://data.dpi.state.wi.us/data/selschool.asp">Data Analysis</option>
+<option value="http://data.dpi.state.wi.us/data/performance.asp"> --- How are students performing academically?</option>
+<option value="http://data.dpi.state.wi.us/data/offerings.asp"> --- What programs, staff and money are available?</option>
+<option value="http://data.dpi.state.wi.us/data/attendance.asp"> --- What about attendance and behavior?</option>
+<option value="http://data.dpi.state.wi.us/data/demographics.asp"> --- What are student demographics?</option>
+<option value="/sig/improvement/">Continuous School Improvement</option>
+<option value="/sig/improvement/character.html"> --- What makes a successful school?</option>
+<option value="/sig/improvement/process.html"> --- How can we improve?</option>
+<option value="/sig/improvement/tools.html"> --- Where can we find planning tools?</option>
+<option value="/dpi/winss/tips.html"> --- Who should be involved in improvement?</option>
+<option value="/sig/practices">Best Practices</option>
+<option value="/sig/practices/vision.html"> --- Vision</option>
+<option value="/sig/practices/evidence.html"> --- Evidence of success</option>
+<option value="/sig/practices/standards.html"> --- High academic standards</option>
+<option value="/sig/practices/family.html"> --- Family, school and community partnerships</option>
+<option value="/sig/practices/heart.html"> --- Standards of the heart</option>
+<option value="/sig/practices/professional.html"> --- Professional development</option>
+<option value="/sig/practices/leadership.html"> --- Leadership</option>
+<option value="/sig/sitemap.html">Site Map</option>
+<option value="/dpi/search.html">Site Search</option>
+</select>
+</form></td>
+		<td align="right"><a href="http://www2.dpi.state.wi.us/sig/feedback/comments/survey_popup.html" target="survey" onclick="manualPopup('http://www2.dpi.state.wi.us/sig/feedback/comments/survey_popup.html','survey');" class="feedback">feedback</a><img src="images/spacer.gif" width="5" height="1" alt=" " /></td>
+	</tr>
+</table>
+</td></tr></table>
+</div>
+
+</body>
+</html>

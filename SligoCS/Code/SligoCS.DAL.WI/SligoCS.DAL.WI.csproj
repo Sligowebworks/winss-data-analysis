@@ -1,0 +1,124 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9576A66A-F6D2-4EE2-BA40-F1A5D7BC29AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SligoCS.DAL.WI</RootNamespace>
+    <AssemblyName>SligoCS.DAL.WI</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChartFX.Designer, Version=7.0.2893.24841, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.Silverlight.Client, Version=7.0.2894.32085, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms, Version=7.0.2893.24916, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Adornments, Version=7.0.2893.24805, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Annotation, Version=7.0.2893.25191, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Base, Version=7.0.2893.24781, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Data, Version=7.0.2893.25089, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Dhtml, Version=7.0.2893.24839, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Wrapper, Version=7.0.1500.0, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Wrapper.Exporter, Version=7.0.1500.0, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Writer.Accessibility, Version=7.0.2893.25168, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Writer.Flash, Version=7.0.2893.25145, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Writer.Silverlight, Version=7.0.2894.32085, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Writer.Svg, Version=7.0.2893.25157, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms, Version=7.0.2893.24916, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Adornments, Version=7.0.2893.24805, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Annotation, Version=7.0.2893.25191, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Base, Version=7.0.2893.24781, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Data, Version=7.0.2893.25079, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Wrapper, Version=7.0.1500.0, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Wrapper.Exporter, Version=7.0.1500.0, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.Wizard, Version=7.0.2893.24841, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DALDropouts.cs" />
+    <Compile Include="DALRetention.cs" />
+    <Compile Include="DALWIBase.cs" />
+    <Compile Include="DataSets\v_dropoutsWWoDisSchoolDistState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_dropoutsWWoDisSchoolDistState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_RetentionWWoDisSchoolDistState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_RetentionWWoDisSchoolDistState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DemoDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SampleDAL.cs" />
+    <Compile Include="SQLHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SligoCS.DAL.Base\SligoCS.DAL.Base.csproj">
+      <Project>{544272A2-4CC0-40D3-965E-7A4ABD2742CF}</Project>
+      <Name>SligoCS.DAL.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSets\v_dropoutsWWoDisSchoolDistState.xsc">
+      <DependentUpon>v_dropoutsWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_dropoutsWWoDisSchoolDistState.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_dropoutsWWoDisSchoolDistState.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_dropoutsWWoDisSchoolDistState.xss">
+      <DependentUpon>v_dropoutsWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_RetentionWWoDisSchoolDistState.xsc">
+      <DependentUpon>v_RetentionWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_RetentionWWoDisSchoolDistState.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_RetentionWWoDisSchoolDistState.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_RetentionWWoDisSchoolDistState.xss">
+      <DependentUpon>v_RetentionWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

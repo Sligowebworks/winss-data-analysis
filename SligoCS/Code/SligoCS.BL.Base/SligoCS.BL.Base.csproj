@@ -1,0 +1,75 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60DD2D55-94CE-4334-8D46-93420760B2F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SligoCS.BL.Base</RootNamespace>
+    <AssemblyName>SligoCS.BL.Base</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChartFX.Designer, Version=7.0.2893.24841, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.Silverlight.Client, Version=7.0.2894.32085, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms, Version=7.0.2893.24916, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Adornments, Version=7.0.2893.24805, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Annotation, Version=7.0.2893.25191, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Base, Version=7.0.2893.24781, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Data, Version=7.0.2893.25089, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Dhtml, Version=7.0.2893.24839, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Wrapper, Version=7.0.1500.0, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Wrapper.Exporter, Version=7.0.1500.0, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Writer.Accessibility, Version=7.0.2893.25168, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Writer.Flash, Version=7.0.2893.25145, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Writer.Silverlight, Version=7.0.2894.32085, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Writer.Svg, Version=7.0.2893.25157, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms, Version=7.0.2893.24916, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Adornments, Version=7.0.2893.24805, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Annotation, Version=7.0.2893.25191, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Base, Version=7.0.2893.24781, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Data, Version=7.0.2893.25079, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Wrapper, Version=7.0.1500.0, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WinForms.Wrapper.Exporter, Version=7.0.1500.0, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.Wizard, Version=7.0.2893.24841, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SligoCS.DAL.Base\SligoCS.DAL.Base.csproj">
+      <Project>{544272A2-4CC0-40D3-965E-7A4ABD2742CF}</Project>
+      <Name>SligoCS.DAL.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
