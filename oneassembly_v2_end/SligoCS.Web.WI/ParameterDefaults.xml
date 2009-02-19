@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StickyParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FULLKEY>ZZZZZZZZZZZZ</FULLKEY>
+  <GraphFile>BlankPageUrl</GraphFile>
+  <CompareTo>PRIORYEARS</CompareTo>
+  <ORGLEVEL>State</ORGLEVEL>
+	<LOWGRADE>9</LOWGRADE>
+	<HIGHGRADE>36</HIGHGRADE>
+  <Group>AllStudentsFAY</Group>
+  <DN>None Chosen</DN>
+  <SN>None Chosen</SN>
+  <DETAIL>YES</DETAIL>
+  <NumSchools>4</NumSchools>
+  <zBackTo>offerings.aspx</zBackTo>
+  <STYP>9</STYP>
+  <COUNTY>40</COUNTY>
+  <YearLocal>2007</YearLocal>
+  <TrendStartYearLocal>1997</TrendStartYearLocal>
+  <ConferenceKey>27</ConferenceKey>
+  <DistrictID>3619</DistrictID>
+  <GradeBreakout>999</GradeBreakout>
+  <GradeBreakoutLAG>555</GradeBreakoutLAG>
+  <GradeBreakoutEDISA>212</GradeBreakoutEDISA>
+  <STAFFRATIO>STUDENTSTAFF</STAFFRATIO>
+
+  <!--Teacher Qualification page variables-->
+	<TQShow>LICSTAT</TQShow>
+	<TQSubjects>SUMALL</TQSubjects>
+	
+	<!--ACT Page-->
+	<SubjectID>0AS</SubjectID>
+	
+	<!--PostGrad page-->
+	<PLAN>All</PLAN>
+	
+  <!--Graduation Requirements page-->
+	<CRED>R</CRED>
+  
+  <!--High School Completionol page,  HSC=Credential -->
+  <HSC>Reg</HSC>
+	
+  
+  
+	<!--Money page-->
+  <RATIO>REVENUE</RATIO>
+  <CT>TC</CT>
+  
+	<!--Staff page-->  
+  <STAFFRATIO>STUDENTSTAFF</STAFFRATIO>
+
+  <!--SDistrictFullKeys>11165903XXXX11457803XXXX11489303XXXX</SDistrictFullKeys-->
+  <SDistrictFullKeys></SDistrictFullKeys>
+  <!--SSchoolFullKeys>111659040020111659040040111659040060</SSchoolFullKeys-->
+  <SSchoolFullKeys></SSchoolFullKeys>
+  <SCounty>47</SCounty>
+  <SAthleticConf>45</SAthleticConf>
+  <SCESA>05</SCESA>
+  <S4orALL>1</S4orALL>
+  <!--&SDistrictFullKeys=03252703XXXX&SSchoolFullKeys=032527040040&SCounty=47&SAthleticConf=45&SCESA=05-->
+  
+  <TraceLevels>None</TraceLevels>
+	
+</StickyParameter>

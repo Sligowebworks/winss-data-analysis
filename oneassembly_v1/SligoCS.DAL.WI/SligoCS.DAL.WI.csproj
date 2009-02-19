@@ -1,0 +1,621 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9576A66A-F6D2-4EE2-BA40-F1A5D7BC29AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SligoCS.DAL.WI</RootNamespace>
+    <AssemblyName>SligoCS.DAL.WI</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DALAthleticConf.cs" />
+    <Compile Include="DALBase.cs" />
+    <Compile Include="DALCourseOfferings.cs" />
+    <Compile Include="DALCoursesTaken.cs" />
+    <Compile Include="DALExpulsionServices.cs" />
+    <Compile Include="DALStaff.cs" />
+    <Compile Include="DALExpenditure.cs" />
+    <Compile Include="DALRevenue.cs" />
+    <Compile Include="DALACT.cs" />
+    <Compile Include="DALAgencyFull.cs" />
+    <Compile Include="DALAP_TESTS.cs" />
+    <Compile Include="DALAttendance.cs" />
+    <Compile Include="DALDistrict.cs" />
+    <Compile Include="DALDropouts.cs" />
+    <Compile Include="DALGrad_Reqs.cs" />
+    <Compile Include="DALHSCompletion.cs" />
+    <Compile Include="DALPOST_GRAD_INTENT.cs" />
+    <Compile Include="DALRetention.cs" />
+    <Compile Include="DALSchools.cs" />
+    <Compile Include="DALTeacherQualifications.cs" />
+    <Compile Include="DALTruancy.cs" />
+    <Compile Include="DALWIBase.cs" />
+    <Compile Include="DALWRCT.cs" />
+    <Compile Include="DALSuspendExpel.cs" />
+    <Compile Include="DALWSAS.cs" />
+    <Compile Include="DataSets\vExpulsionServicesAndReturns.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vExpulsionServicesAndReturns.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_ACT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_ACT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_AgencyFull.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_AgencyFull.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_AP_TESTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_AP_TESTS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Athletic_Conf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Athletic_Conf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_AttendanceWWoDisSchoolDistState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_AttendanceWWoDisSchoolDistState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Coursework.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Coursework.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Course_Offerings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Course_Offerings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Disabilities2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Disabilities2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Districts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Districts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_DropoutsWWoDis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_DropoutsWWoDis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_DropoutsWWoDisEconELPSchoolDistState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_DropoutsWWoDisEconELPSchoolDistState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_dropoutsWWoDisSchoolDistState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_dropoutsWWoDisSchoolDistState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Enrollment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Enrollment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Expend_2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Expend_2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Explulsions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Explulsions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_ExplusionsDis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_ExplusionsDis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_ExpulsionServices.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_ExpulsionServices.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Grad_Reqs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Grad_Reqs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_HSCWWoDisSchoolDistState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_HSCWWoDisSchoolDistState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_POST_GRAD_INTENT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_POST_GRAD_INTENT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_RetentionWWoDisEconELPSchoolDistState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_RetentionWWoDisEconELPSchoolDistState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_RetentionWWoDisSchoolDistState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_RetentionWWoDisSchoolDistState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Revenues_2.cs">
+      <DependentUpon>v_Revenues_2.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\v_Revenues_2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Revenues_2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Schools.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Schools.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Staff.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Staff.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_Suspensions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_Suspensions.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_SuspensionsDis.cs">
+      <DependentUpon>v_SuspensionsDis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_SuspensionsDis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_SuspensionsDis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_SuspExpIncidents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_SuspExpIncidents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_TeacherQualifications.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_TeacherQualifications.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_TruancySchoolDistState.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_TruancySchoolDistState.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\v_WSAS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_WSAS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="DataSets\v_WRCT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>v_WRCT.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSets\vExpulsionServicesAndReturns.xsc">
+      <DependentUpon>vExpulsionServicesAndReturns.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\vExpulsionServicesAndReturns.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vExpulsionServicesAndReturns.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\vExpulsionServicesAndReturns.xss">
+      <DependentUpon>vExpulsionServicesAndReturns.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_ACT.xsc">
+      <DependentUpon>v_ACT.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_ACT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_ACT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_ACT.xss">
+      <DependentUpon>v_ACT.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_AgencyFull.xsc">
+      <DependentUpon>v_AgencyFull.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_AgencyFull.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_AgencyFull.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_AgencyFull.xss">
+      <DependentUpon>v_AgencyFull.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_AP_TESTS.xsc">
+      <DependentUpon>v_AP_TESTS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_AP_TESTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_AP_TESTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_AP_TESTS.xss">
+      <DependentUpon>v_AP_TESTS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Athletic_Conf.xsc">
+      <DependentUpon>v_Athletic_Conf.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Athletic_Conf.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Athletic_Conf.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Athletic_Conf.xss">
+      <DependentUpon>v_Athletic_Conf.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_AttendanceWWoDisSchoolDistState.xsc">
+      <DependentUpon>v_AttendanceWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_AttendanceWWoDisSchoolDistState.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_AttendanceWWoDisSchoolDistState.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_AttendanceWWoDisSchoolDistState.xss">
+      <DependentUpon>v_AttendanceWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Coursework.xsc">
+      <DependentUpon>v_Coursework.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Coursework.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Coursework.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Coursework.xss">
+      <DependentUpon>v_Coursework.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Course_Offerings.xsc">
+      <DependentUpon>v_Course_Offerings.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Course_Offerings.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Course_Offerings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Course_Offerings.xss">
+      <DependentUpon>v_Course_Offerings.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Disabilities2.xsc">
+      <DependentUpon>v_Disabilities2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Disabilities2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Disabilities2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Disabilities2.xss">
+      <DependentUpon>v_Disabilities2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Districts.xsc">
+      <DependentUpon>v_Districts.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Districts.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Districts.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Districts.xss">
+      <DependentUpon>v_Districts.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_DropoutsWWoDis.xsc">
+      <DependentUpon>v_DropoutsWWoDis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_DropoutsWWoDis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_DropoutsWWoDis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_DropoutsWWoDis.xss">
+      <DependentUpon>v_DropoutsWWoDis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_DropoutsWWoDisEconELPSchoolDistState.xsc">
+      <DependentUpon>v_DropoutsWWoDisEconELPSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_DropoutsWWoDisEconELPSchoolDistState.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_DropoutsWWoDisEconELPSchoolDistState.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_DropoutsWWoDisEconELPSchoolDistState.xss">
+      <DependentUpon>v_DropoutsWWoDisEconELPSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_dropoutsWWoDisSchoolDistState.xsc">
+      <DependentUpon>v_dropoutsWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_dropoutsWWoDisSchoolDistState.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_dropoutsWWoDisSchoolDistState.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_dropoutsWWoDisSchoolDistState.xss">
+      <DependentUpon>v_dropoutsWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Enrollment.xsc">
+      <DependentUpon>v_Enrollment.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Enrollment.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Enrollment.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Enrollment.xss">
+      <DependentUpon>v_Enrollment.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Expend_2.xsc">
+      <DependentUpon>v_Expend_2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Expend_2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Expend_2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Expend_2.xss">
+      <DependentUpon>v_Expend_2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Explulsions.xsc">
+      <DependentUpon>v_Explulsions.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Explulsions.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Explulsions.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Explulsions.xss">
+      <DependentUpon>v_Explulsions.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_ExplusionsDis.xsc">
+      <DependentUpon>v_ExplusionsDis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_ExplusionsDis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_ExplusionsDis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_ExplusionsDis.xss">
+      <DependentUpon>v_ExplusionsDis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_ExpulsionServices.xsc">
+      <DependentUpon>v_ExpulsionServices.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_ExpulsionServices.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_ExpulsionServices.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_ExpulsionServices.xss">
+      <DependentUpon>v_ExpulsionServices.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Grad_Reqs.xsc">
+      <DependentUpon>v_Grad_Reqs.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Grad_Reqs.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Grad_Reqs.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Grad_Reqs.xss">
+      <DependentUpon>v_Grad_Reqs.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_HSCWWoDisSchoolDistState.xsc">
+      <DependentUpon>v_HSCWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_HSCWWoDisSchoolDistState.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_HSCWWoDisSchoolDistState.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_HSCWWoDisSchoolDistState.xss">
+      <DependentUpon>v_HSCWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_POST_GRAD_INTENT.xsc">
+      <DependentUpon>v_POST_GRAD_INTENT.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_POST_GRAD_INTENT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_POST_GRAD_INTENT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_POST_GRAD_INTENT.xss">
+      <DependentUpon>v_POST_GRAD_INTENT.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_RetentionWWoDisEconELPSchoolDistState.xsc">
+      <DependentUpon>v_RetentionWWoDisEconELPSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_RetentionWWoDisEconELPSchoolDistState.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_RetentionWWoDisEconELPSchoolDistState.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_RetentionWWoDisEconELPSchoolDistState.xss">
+      <DependentUpon>v_RetentionWWoDisEconELPSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_RetentionWWoDisSchoolDistState.xsc">
+      <DependentUpon>v_RetentionWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_RetentionWWoDisSchoolDistState.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_RetentionWWoDisSchoolDistState.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_RetentionWWoDisSchoolDistState.xss">
+      <DependentUpon>v_RetentionWWoDisSchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Revenues_2.xsc">
+      <DependentUpon>v_Revenues_2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Revenues_2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Revenues_2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Revenues_2.xss">
+      <DependentUpon>v_Revenues_2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Schools.xsc">
+      <DependentUpon>v_Schools.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Schools.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Schools.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Schools.xss">
+      <DependentUpon>v_Schools.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Staff.xsc">
+      <DependentUpon>v_Staff.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Staff.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Staff.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Staff.xss">
+      <DependentUpon>v_Staff.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Suspensions.xsc">
+      <DependentUpon>v_Suspensions.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_Suspensions.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_Suspensions.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_Suspensions.xss">
+      <DependentUpon>v_Suspensions.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_SuspExpIncidents.xsc">
+      <DependentUpon>v_SuspExpIncidents.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_SuspExpIncidents.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_SuspExpIncidents.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_SuspExpIncidents.xss">
+      <DependentUpon>v_SuspExpIncidents.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_TeacherQualifications.xsc">
+      <DependentUpon>v_TeacherQualifications.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_TeacherQualifications.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_TeacherQualifications.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_TeacherQualifications.xss">
+      <DependentUpon>v_TeacherQualifications.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_TruancySchoolDistState.xsc">
+      <DependentUpon>v_TruancySchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_TruancySchoolDistState.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_TruancySchoolDistState.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_TruancySchoolDistState.xss">
+      <DependentUpon>v_TruancySchoolDistState.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_WSAS.xsc">
+      <DependentUpon>v_WSAS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_WSAS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_WSAS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_WSAS.xss">
+      <DependentUpon>v_WSAS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_WRCT.xsc">
+      <DependentUpon>v_WRCT.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_WRCT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_WRCT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_WRCT.xss">
+      <DependentUpon>v_WRCT.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_SuspensionsDis.xsc">
+      <DependentUpon>v_SuspensionsDis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\v_SuspensionsDis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>v_SuspensionsDis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\v_SuspensionsDis.xss">
+      <DependentUpon>v_SuspensionsDis.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
