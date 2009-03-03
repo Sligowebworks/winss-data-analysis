@@ -50,3 +50,7 @@ oneassembly_v3_end/SligoCS.Tests.WI/obj
 oneassembly_v3_end/SligoCS.Web.WI/BLL/bin
 oneassembly_v3_end/SligoCS.Web.WI/BLL/obj
 oneassembly_v3_end/SligoCS.Web.WI/DAL/bin
+replaceParamsLinkBox_begin/SligoCS.Tests.WI/obj
+replaceParamsLinkBox_begin/SligoCS.Web.WI/BL/bin
+replaceParamsLinkBox_begin/SligoCS.Web.WI/BL/obj
+replaceParamsLinkBox_begin/SligoCS.Web.WI/DAL/bin
