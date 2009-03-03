@@ -61,7 +61,11 @@ namespace SligoCS.Web.Base.WebServerControls.WI
             {
                 this.ForeColor = disabledColor;
             }
+        }
 
+        protected override void Render(System.Web.UI.HtmlTextWriter writer)
+        {
+            base.Render(writer);
         }
     }
 }

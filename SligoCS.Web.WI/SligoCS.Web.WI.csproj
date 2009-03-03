@@ -679,6 +679,20 @@
     <Compile Include="WebUserControls\Mixed_Header_Graphics.ascx.designer.cs">
       <DependentUpon>Mixed_Header_Graphics.ascx</DependentUpon>
     </Compile>
+    <Compile Include="WebUserControls\NavigationLinkRow.ascx.cs">
+      <DependentUpon>NavigationLinkRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\NavigationLinkRow.ascx.designer.cs">
+      <DependentUpon>NavigationLinkRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\NavSchoolType.ascx.cs">
+      <DependentUpon>NavSchoolType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\NavSchoolType.ascx.designer.cs">
+      <DependentUpon>NavSchoolType.ascx</DependentUpon>
+    </Compile>
     <Compile Include="WebUserControls\ParamsLinkBox.ascx.cs">
       <DependentUpon>ParamsLinkBox.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -896,6 +910,8 @@
     <Content Include="WebUserControls\DistrictInfo.ascx" />
     <Content Include="WebUserControls\DistrictMapInfo.ascx" />
     <Content Include="WebUserControls\Mixed_Header_Graphics.ascx" />
+    <Content Include="WebUserControls\NavigationLinkRow.ascx" />
+    <Content Include="WebUserControls\NavSchoolType.ascx" />
     <Content Include="WebUserControls\ParamsLinkBox.ascx" />
     <Content Include="WebUserControls\InitSelSchoolInfo.ascx" />
     <Content Include="WebUserControls\PlanningHelp.ascx" />

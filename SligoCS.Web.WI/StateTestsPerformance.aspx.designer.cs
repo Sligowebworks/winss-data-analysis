@@ -20,6 +20,15 @@ namespace SligoCS.Web.WI {
     public partial class StateTestsPerformance {
         
         /// <summary>
+        /// NavSchoolTypeRow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::SligoCS.Web.WI.WebUserControls.NavSchoolType NavSchoolTypeRow;
+        
+        /// <summary>
         /// ParamsLinkBox1 control.
         /// </summary>
         /// <remarks>
@@ -54,7 +63,7 @@ namespace SligoCS.Web.WI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::SligoCS.Web.WI.WebUserControls.GraphBarChart barChart;
-
+        
         /// <summary>
         /// SligoDataGrid2 control.
         /// </summary>

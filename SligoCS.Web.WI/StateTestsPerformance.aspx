@@ -10,10 +10,15 @@
 <%@ Register Src="WebUserControls/BottomLinkEnrollmentCounts.ascx" TagName="BottomLinkEnrollmentCounts" TagPrefix="uc10" %>
 <%@ Register Src="WebUserControls/BottomLinkWhyNotReported.ascx" TagName="BottomLinkWhyNotReported" TagPrefix="uc11" %>
 <%@ Register tagPrefix="Graph" namespace="SligoCS.Web.WI.WebUserControls" Assembly="SligoCS.Web.WI" %>
+<%@ Register TagPrefix="sli" namespace="SligoCS.Web.WI.WebUserControls" Assembly="SligoCS.Web.WI" %>
+<%@ Register Src="~/WebUserControls/NavigationLinkRow.ascx"  TagName="NavigationLinkRow" TagPrefix="sli"%>
+<%@ Register Src="~/WebUserControls/NavSchoolType.ascx"  TagName="NavSchoolType" TagPrefix="sli"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table style="padding:0px 0px 0px 0px; width:400px;">
-    <tr><td><uc2:ParamsLinkBox ID="ParamsLinkBox1" runat="server" ShowTR_CompareTo="true" ShowTR_Group="true" ShowTR_STYP="true" /></td></tr>
+    <tr><td>
+<sli:NavSchoolType ID="NavSchoolTypeRow" runat="server"></sli:NavSchoolType>
+    <uc2:ParamsLinkBox ID="ParamsLinkBox1" runat="server" ShowTR_CompareTo="true" ShowTR_Group="true" ShowTR_STYP="true" /></td></tr>
     <tr>
         <td>
             <asp:hyperlink ID="ChangeSelectedSchoolOrDistrict" Font-Size="Small" runat="server" />

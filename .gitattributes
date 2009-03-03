@@ -512,6 +512,12 @@ SligoCS.Web.WI/WebUserControls/InitSelSchoolInfo.ascx.designer.cs -text
 SligoCS.Web.WI/WebUserControls/Mixed_Header_Graphics.ascx -text
 SligoCS.Web.WI/WebUserControls/Mixed_Header_Graphics.ascx.cs -text
 SligoCS.Web.WI/WebUserControls/Mixed_Header_Graphics.ascx.designer.cs -text
+SligoCS.Web.WI/WebUserControls/NavSchoolType.ascx -text
+SligoCS.Web.WI/WebUserControls/NavSchoolType.ascx.cs -text
+SligoCS.Web.WI/WebUserControls/NavSchoolType.ascx.designer.cs -text
+SligoCS.Web.WI/WebUserControls/NavigationLinkRow.ascx -text
+SligoCS.Web.WI/WebUserControls/NavigationLinkRow.ascx.cs -text
+SligoCS.Web.WI/WebUserControls/NavigationLinkRow.ascx.designer.cs -text
 SligoCS.Web.WI/WebUserControls/OfferingsText1.ascx -text
 SligoCS.Web.WI/WebUserControls/OfferingsText1.ascx.cs -text
 SligoCS.Web.WI/WebUserControls/OfferingsText1.ascx.designer.cs -text
