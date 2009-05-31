@@ -1,0 +1,181 @@
+::ACTSubj::
+Reading | Reading | 1RE
+English | English | 2LA
+Math | Math | 3MA
+Science | Science | 4SC
+Summary | Summary | 0AS
+
+::TQShow::
+WisconsinLicenseStatus | Wisconsin License Status | LICSTAT
+DistrictExperience | District Experience | DISTEXP
+TotalExperience | Total Experience | TOTEXP
+HighestDegree | Highest Degree | DEGR
+ESEAQualified | ESEA Qualified | ESEAHIQ
+
+::TQSubjects::
+EngLangArt | English Language Arts | ELA
+Mathematics | Mathematics | MATH
+Science | Science | SCI
+SoclStd | Social Studies | SOC
+FrgnLang | Foreign Languages | FLANG
+Arts |The Arts Art And Design Dance Music Theatre | ARTS
+Elem | Elementary All Subjects | ELSUBJ
+SpecEdCore | Special Education Core Subjects | SPCORE
+SpecEdSumm | Special Education Summary | SPSUM
+Core | Core Subjects Summary | CORESUM
+All | Summary All Subjects | SUMALL
+
+::TQSubjectsSP::
+SpecEdCore | Special Education &amp; Core Subjects | SPCORE
+Core | Core Subjects Summary | CORESUM
+SpecEdSumm | Special Education Summary | SPSUM
+All | Summary All Subjects | SUMALL
+
+::TQRelateTo::
+Spending | District Spending | Spending
+DistrictSize | District Size | DistSize
+SchoolSize | School Size | SchoolSize
+EconomicStatus | &#37; Economically Disadvantaged | EconomicStatus
+EnglishProficiency | &#37; Limited English Proficient | EnglishProficiency
+Disability | &#37; Students with Disabilities | Disability
+NativeAm | &#37; Am Indian | Native
+Asian | &#37; Asian | Asian
+Black | &#37; Black | Black
+Hispanic | &#37; Hispanic | Hispanic
+White | &#37; White | White
+
+::TQTeacherVariable::
+WiscLicense | &#37; Full Wisconsin License | LICFULL
+EmergencyLic | &#37; Emergency Wisconsin License | LICEMER
+NoLicense | &#37; No License for Assignment | LICNO
+DistrictExp | &#37; 5 or More Years District Experience | DISTEXP
+TotalExp | &#37; 5 or MorevYears Total Experience | TOTEXP
+Degree | &#37; Masters or Higher Degree | DEGR
+ESEA | &#37; ESEA Qualified | ESEAHIQ
+
+::TQLocation::
+State | Entire State | ST
+CESA | My CESA | CE
+County | My County | CT
+
+::PostGradPlan::
+All | All Options | ALL
+FourYr | 4-Yr College/University | 4-YR
+VocTechCollege | Voc/Tec College | VOC
+Employment | Employment | EMP
+Military | Military | MILITARY
+Training | Job Training | JOB
+SeekEmploy | Seeking Employment | SEEKEMP
+Other | Other Plans | OTHER
+Undecided | Undecided | UNDECIDED
+NoResponse | No Response | NO-RESP
+
+::HighSchoolCompletion::
+All | All Types | All
+Certificate | Certificate | CERT
+HSED | HSED | HSED
+Regular | Regular Diploma | REG
+Summary | Combined | COMB
+
+::Ratio::
+Revenue | Revenue Per Member | REVENUE
+Expenditure | CostvPer Member | EXPENDITURE
+
+::CT::
+Cost | Total Cost | CT
+TotalEducation | Total Education Cost | TEC
+CurrentEducation | Current Education Cost | CEC
+
+::StaffRatio::
+Staff | Staff to Students | STAFFSTUDENT
+Student | Students to Staff | STUDENTSTAFF
+
+::CourseTypeID::
+AP | Advanced Placement  rogram&reg; | 1
+CAPP | CAPP | 2
+Other | Other Courses | 4
+IB | International Baccalaureate | 6
+
+::WMAS::
+Agricultur | Agricultural Education | 1
+Art | Art and Design | 2
+Business | Business | 3
+English | English Language Arts | 4
+Family | Family and Consumer Ed | 5
+WorldLang | World Languages | 6
+Marketing | Marketing Education | 7
+Mathematics | Mathematics | 8
+Music | Music | 9
+Science | Science | 10
+SocialStudies | Social Studies | 11
+TechEd | Technology Education | 12
+Other | Other Subjects | 13
+
+::Show::
+Extracurricular | Extra/Co-curricular Activites | EXTRA
+Community | Community Activities | COMM
+
+::Group::
+All | All Students | AllStudentsFAY
+Gender | Gender | Gender
+Race | Race/Ethnicity | RaceEthnicity
+Grade | Grade | Grade
+Disability | Disability | Disability
+EconDisadv | Economic Status | EconDisadv
+EngLangProf | English Proficiency | ELP
+Migrant | Migrant Status | Mig
+
+::CompareTo::
+Years | Prior Years | PRIORYEARS
+OrgLevel | District/State | DISTSTATE
+SelSchools | Selected Schools | SELSCHOOLS
+Current | Current School Data | CURRENTONLY
+SelDistricts | Selected Districts | SELDISTRICTS
+
+::STYP::
+AllTypes | All Types | 1
+Elem | Elem | 6
+Mid | Mid/Jr Hi | 5
+Hi | High |  3
+ElSec | El/Sec |  7
+StateSummary | School Summary | 9
+
+::OrgLevel::
+School | School | sc
+District | District | di
+State | State | st
+
+::S4orALL::
+FourSchoolsOrDistrictsIn | 4 Schools/Districts In |  1
+AllSchoolsOrDistrictsIn | All In | 2
+
+::SRegion::
+County | Country | 1
+AthleticConf | Athlectic Conference | 2
+CESA | CESA | 3
+
+::GraphFile::
+BLANK_REDIRECT_PAGE | *.aspx | BlankPageUrl 
+GRAPH_FILE_RETENTION | GridPage.aspx | RETENTION 
+GRAPH_FILE_HIGHSCHOOLCOMPLETION | HSCompletionPage.aspx | HIGHSCHOOLCOMPLETION 
+GRAPH_FILE_ATTENDANCE | AttendancePage.aspx | ATTENDANCE 
+GRAPH_FILE_TRUANCY | Truancy.aspx | TRUANCY 
+GRAPH_FILE_STAFF | StaffPage.aspx | STAFF 
+GRAPH_FILE_MONEY | MoneyPage.aspx | MONEY 
+GRAPH_FILE_AP | APTestsPage.aspx | AP 
+GRAPH_FILE_ACT | ACTPage.aspx | ACT 
+GRAPH_FILE_GGRADREQS | GradReqsPage.aspx | GGRADREQS 
+GRAPH_FILE_TEACHERQUALIFICATIONS | TeacherQualifications.aspx | TEACHERQUALIFICATIONS 
+GRAPH_FILE_DROPOUTS | DropOuts.aspx | DROPOUTS 
+GRAPH_FILE_ETHNICENROLL | EthnicEnroll.aspx | ETHNICENROLL 
+GRAPH_FILE_SUSPEXPINCIDENTS | SuspExpIncidents.aspx | SUSPEXPINCIDENTS 
+GRAPH_FILE_GEXPSERVICES | GExpServices.aspx | GEXPSERVICES 
+GRAPH_FILE_GROUPS | Groups.aspx | GROUPS 
+GRAPH_FILE_DISABILITIES | Disabilities.aspx | DISABILITIES 
+GRAPH_FILE_GWRCT | GWRCT.aspx | GWRCT 
+GRAPH_FILE_GGRADPLAN | GGradPlan.aspx | GGRADPLAN 
+GRAPH_FILE_StateTests | StateTestsPerformance.aspx | stp
+
+::WkceWsas::
+Wsas | [WSAS: WKCE and WAA Combined | ws
+Wkcs | WKCE Only] | wk

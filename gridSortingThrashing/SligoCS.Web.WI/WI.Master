@@ -1,0 +1,208 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WI.master.cs" Inherits="SligoCS.Web.WI.WI" %>
+
+<%@ Register Src="WebUserControls/Mixed_Header_Graphics.ascx" TagName="Mixed_Header_Graphics"
+ TagPrefix="uc12" %>
+<%@ Register Src="WebUserControls/StudentCharacteristics.ascx" TagName="StudentCharacteristics"
+    TagPrefix="uc9" %>
+<%@ Register Src="WebUserControls/AttendanceDataInfo.ascx" TagName="AttendanceDataInfo"
+    TagPrefix="uc8" %>
+<%@ Register Src="WebUserControls/StandardsPerformance.ascx" TagName="StandardsPerformance"
+    TagPrefix="uc6" %>
+<%@ Register Src="WebUserControls/PlanningHelp.ascx" TagName="PlanningHelp" TagPrefix="uc7" %>
+<%@ Register Src="WebUserControls/DataAnalysisInfo.ascx" TagName="DataAnalysisInfo" TagPrefix="uc5" %>
+<%@ Register Src="WebUserControls/DistrictInfo.ascx" TagName="DistrictInfo" TagPrefix="uc3" %>    
+<%@ Register Src="WebUserControls/WI_DPI_Disclaim.ascx" TagName="WI_DPI_Disclaim"
+    TagPrefix="uc4" %>
+<%@ Register Src="WebUserControls/DistrictMapInfo.ascx" TagName="DistrictMapInfo"
+    TagPrefix="uc2" %>
+<%@ Register Src="WebUserControls/InitSelSchoolInfo.ascx" TagName="InitSelSchoolInfo"
+    TagPrefix="uc1" %>
+<%@ Register Src="WebUserControls/Small_Header_Graphics.ascx" TagName="Small_Header_Graphics"
+    TagPrefix="uc11" %>
+<%@ Register Src="WebUserControls/Big_Header_Graphics.ascx" TagName="Big_Header_Graphics"
+    TagPrefix="uc10" %>
+
+<%@ Register Assembly="SligoCS.Web.Base" Namespace="SligoCS.Web.Base.WebServerControls.WI"
+    TagPrefix="cc1" %>
+   
+<%@ Register Src="WebUserControls/selMultiSchoolsDirections.ascx" TagName="selMultiSchoolsDirections"
+    TagPrefix="uc21" %>
+
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head id="Head1" runat="server">
+<title>Untitled Page</title>
+
+</head>
+
+<body>
+<div align="center">
+<uc10:Big_Header_Graphics ID="Big_Header_Graphics1" Visible="false" runat="server" />
+<uc11:Small_Header_Graphics ID="Small_Header_Graphics1" Visible="false" runat="server" />
+<uc12:Mixed_Header_Graphics ID="Mixed_Header_Graphics1" Visible="false" runat="server" />
+
+<table cellspacing="0" cellpadding="0" border="0" style="padding:5px 5px 5px 10px; width:600px;">
+<tr valign="top">
+<asp:Panel ID="LeftPanel" runat="server">
+<td bgcolor="#D82058" class="text"  style="padding:5px 5px 5px 10px; width: 447px;" align="left">
+    <uc1:InitSelSchoolInfo ID="InitSelSchoolInfo1" Visible="false" runat="server" />
+    <uc21:selMultiSchoolsDirections ID="selMultiSchoolsDirections1" Visible="false" runat="server" />
+ 
+    <uc2:DistrictMapInfo ID="DistrictMapInfo1" Visible="false" runat="server" />
+    <uc3:DistrictInfo ID="DistrictInfo1" Visible="false" runat="server" />
+    <uc4:WI_DPI_Disclaim ID="WI_DPI_Disclaim1" Visible="false" runat="server" /> 
+    <asp:Panel ID="linkSchoolDistrictPanel" Visible="true" runat="server" Width="122px">
+     <span class="dataschoolname">
+     <asp:Panel ID="ViewTitlePanel" Visible="true" runat="server">
+        <asp:Label ID="ViewTitle" runat="server" Font-Bold="true" CssClass="lightblue" />
+        <br />
+        <br />
+     </asp:Panel>
+     <b>School</b>
+     <br />
+     <%--<cc1:HyperLinkPlus ID="linkSchool" runat="server" ParamName="OrgLevel" ParamValue="School" Prefix="" NavigateUrl="">School</cc1:HyperLinkPlus>--%>
+     <asp:HyperLink ID="linkSchool" runat="server" CssClass="lightblue" >School</asp:HyperLink>
+     <br />
+     <asp:Panel ID="School_br_Panel" runat="server">
+         <br />
+      </asp:Panel>
+     <b>District</b><br />
+     <%--:BR   cc1:HyperLinkPlus ID="linkDistrict" runat="server" ParamName="OrgLevel" ParamValue="District" Prefix="" NavigateUrl="" >District</cc1:HyperLinkPlus>--%>
+     <asp:HyperLink ID="linkDistrict" runat="server" CssClass="lightblue" >District</asp:HyperLink>
+     <br /> 
+     <asp:Panel ID="District_br_Panel" runat="server">
+         <br />
+     </asp:Panel>
+     <cc1:HyperLinkPlus ID="linkState" runat="server" ParamName="OrgLevel" ParamValue="st" Prefix="">State</cc1:HyperLinkPlus>
+     <br /> 
+     <asp:Panel ID="State_br_Panel" runat="server">
+         <br />
+     </asp:Panel>
+     <asp:HyperLink ID="ChangeSchoolOrDistrict" runat="server" CssClass="lightblue" Text="Change school or district" />
+     
+     </span>
+     <br />
+    </asp:Panel>
+    
+    <asp:Panel ID="dataLinksPanel" Visible="false" runat="server" Width="122px">
+    <br />
+    <asp:HyperLink ID="districtHomePage" runat="server" CssClass="lightblue" />
+    <br />
+    <asp:HyperLink ID="schoolHomePage" runat="server" CssClass="lightblue"  />
+    <br /> 
+    <br />
+    <asp:HyperLink ID="HideShowNumbers" runat="server" CssClass="lightblue" />
+    <br />
+    <br />
+    <%--<a href="http://dpi.wi.gov/spr/colleg_q&a.html" target="help" onclick="popup('http://dpi.wi.gov/spr/colleg_q&a.html','help');" class="lightblue">Read about the data</a>--%>
+    <asp:HyperLink ID="readAbout" runat="server" CssClass="lightblue" Text="Read about the data" />
+    <br />
+    <br />
+    <asp:HyperLink ID="ScatterplotLink" runat="server" CssClass="lightblue" />
+        <br />   
+         <br />
+    <%--<a href="javascript:popup('http://dpi.wi.gov/winss/perfacademic_glossary.html')" class="lightblue" style="color:#bcbcbc;">Glossary</a>--%>
+    <asp:HyperLink ID="Glossary" runat="server" CssClass="lightblue" Text="Glossary" />
+    <br />
+    <br />
+    <a href="http://dpi.wi.gov/data/DataDownload/frm.SelectDataSet.asp" class="lightblue" target="http://dpi.wi.gov/data/DataDownload/frm.SelectDataSet.asp">Download Options</a>
+    </asp:Panel>
+    
+    <uc5:DataAnalysisInfo id="DataAnalysisInfo1" Visible="false" runat="server" />
+    <uc7:PlanningHelp ID="PlanningHelp1" Visible="false" runat="server" />
+    <uc6:StandardsPerformance ID="StandardsPerformance1" Visible="false" runat="server" />
+    <uc8:AttendanceDataInfo ID="AttendanceDataInfo1" Visible="false" runat="server" />
+    <uc9:StudentCharacteristics ID="StudentCharacteristics1" Visible="false" runat="server" />
+    &nbsp;&nbsp;
+</td>
+</asp:Panel>
+
+<!--	
+<td valign="top" align="left" style="padding:10px 10px 10px 10px; width:400px;">
+-->
+<td valign="top" align="left" style="padding:10px 10px 10px 10px;">
+    <form id="form1" runat="server">        
+        <b><div align="right"> <asp:Label ID="lblPageHeading" runat="server" CssClass="dataquestion" ></asp:Label></div></b>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</td>
+</tr>
+
+<tr bgcolor="#D82058">
+<td colspan="2" style="padding:0px 0px 0px 0px;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding:0px 5px 0px 0px;">
+	<tr valign="middle">
+	<td align="left">
+        <form action=" ">
+        <select name="section" onchange="a = this.options[this.selectedIndex].value; location=a;">
+        <option value="" selected="selected">Go to:</option><option value="/">DPI Home</option>
+        <option value="/sig/">WINSS Home</option>
+        <option value="/sig/assessment">Standards and Assessment</option>
+        <option value="/sig/assessment/sa1a.html"> --- What are our academic standards?</option>
+        <option value="/sig/assessment/sa1.html"> --- What are standards of the heart?</option>
+        <option value="/sig/assessment/success.html"> --- What indicates success in academic standards?</option>
+        <option value="/sig/assessment/sa4.html"> --- What indicates success in standards of the heart?</option>
+        <option value="/SligoWI/selschool.aspx">Data Analysis</option>
+        <option value="/SligoWI/performance.aspx"> --- How are students performing academically?</option>
+        <option value="/SligoWI/offerings.aspx"> --- What programs, staff and money are available?</option>
+        <option value="/SligoWI/attendance.aspx"> --- What about attendance and behavior?</option>
+        <option value="/SligoWI/demographics.aspx"> --- What are student demographics?</option>
+        <option value="/sig/improvement/">Continuous School Improvement</option>
+        <option value="/sig/improvement/character.html"> --- What makes a successful school?</option>
+        <option value="/sig/improvement/process.html"> --- How can we improve?</option>
+        <option value="/sig/improvement/tools.html"> --- Where can we find planning tools?</option>
+        <option value="/dpi/winss/tips.html"> --- Who should be involved in improvement?</option>
+        <option value="/sig/practices">Best Practices</option>
+        <option value="/sig/practices/vision.html"> --- Vision</option>
+        <option value="/sig/practices/evidence.html"> --- Evidence of success</option>
+        <option value="/sig/practices/standards.html"> --- High academic standards</option>
+        <option value="/sig/practices/family.html"> --- Family, school and community partnerships</option>
+        <option value="/sig/practices/heart.html"> --- Standards of the heart</option>
+        <option value="/sig/practices/professional.html"> --- Professional development</option>
+        <option value="/sig/practices/leadership.html"> --- Leadership</option>
+        <option value="/sig/sitemap.html">Site Map</option>
+        <option value="/dpi/search.html">Site Search</option>
+        </select>
+        </form>
+    </td>
+    <td align="right"><a href="/SligoWI/survey_popup.html" target="survey" onclick="manualPopup('/SligoWI/survey_popup.html','survey');" class="feedback">feedback</a>
+    </td>
+	</tr>
+    </table>
+</td>
+</tr>
+</table>
+
+<table cellpadding="10" cellspacing="0" style="font-size:7pt; background-color:#EFEFEF; padding:5px 5px 5px 25px; width:600px;">
+<tr>
+<%--<td align="right"><a href="/SligoWI/Default.aspx"><span style="color: #000000">Home</span></a></td>
+<td align="right" style="color: #000000"><a href="/SligoWI/QStringDemo/QStringLinks.aspx"><span style="color: #000000">QString<br />
+</span><span style="color: #000000">Links</span></a></td>    
+<td align="right" style="color: #000000"><asp:HyperLink ID="lnkRetention" runat="server">Retention</asp:HyperLink></td>  
+<td align="right" style="font-size: 9pt; color: #ffffcc"><asp:HyperLink ID="lnkDropouts" runat="server">Dropout</asp:HyperLink></td>     
+<td align="right"><asp:HyperLink ID="lnkAttendance" runat="server">Attendance</asp:HyperLink></td>
+<td align="right"><asp:HyperLink ID="lnkHSCompletion" runat="server">High&nbsp;School<br />Completion</asp:HyperLink></td>
+<td align="right"><asp:HyperLink ID="lnkTruancy" runat="server">Truancy</asp:HyperLink></td>
+<td align="right"><asp:HyperLink ID="lnkTeacherQual" runat="server">Teacher<br />Qualifications</asp:HyperLink></td>
+</tr>
+<tr>
+<td align="right"><asp:HyperLink ID="lnkAPTests" runat="server">AP<br />Test Scores</asp:HyperLink></td>
+<td align="right"><asp:HyperLink ID="lnkACT" runat="server">ACT<br />Test Scores</asp:HyperLink></td>
+<td align="right"><asp:HyperLink ID="lnkGradReq" runat="server">Graduation<br />Requirements</asp:HyperLink></td>
+<td align="right"><asp:HyperLink ID="lnkPostGrad" runat="server">Post Graduation<br />Plans</asp:HyperLink>
+</td>
+<td align="right"><asp:HyperLink ID="lnkMoney" runat="server">Money</asp:HyperLink></td>--%>
+<!--td align="right">
+<a href="MoneyPage.aspx?FULLKEY=012058040120&GraphFile=MONEY&CompareTo=PRIORYEARS&OrgLevel=District&LOWGRADE=9&HIGHGRADE=36&Group=AllStudentsFAY&DN=Germantown&SN=MacArthur%20El&DETAIL=YES&NumSchools=4&ZBackTo=performance.aspx&STYP=3&COUNTY=40&YearLocal=2007&TrendStartYearLocal=1997&WhichSchool=4&ConferenceKey=27&DistrictID=3619&GradeBreakout=999&GradeBreakoutLAG=555&GradeBreakoutEDISA=212&SubjectID=1RE&RATIO=REVENUE&CT=TE&CRED=R&TQShow=LICSTAT&TQSubjects=SUMALL&TraceLevels=None">Money 2</a>
+</td-->
+<!--td align="right">
+<a href="StaffPage.aspx?Ratio=STUDENTSTAFF&FULLKEY=022695040220&GraphFile=HIGHSCHOOLCOMPLETION&CompareTo=SELSCHOOLS&OrgLevel=DI&LOWGRADE=11&HIGHGRADE=36&Group=AllStudentsFAY&DN=Janesville&SN=Madison%20El&DETAIL=YES&NumSchools=4&ZBackTo=performance.aspx&FileName=c:\\sample.txt&SchoolWebaddress=http://mpsportal.milwaukee.k12.wi.us&DistrictWebaddress=http://www.milwaukee.k12.wi.us&STYP=3&COUNTY=40&YearLocal=2007&TrendStartYearLocal=1997&WhichSchool=4&ConferenceKey=27&DistrictID=3619&GradeBreakout=999&GradeBreakoutLAG=555&GradeBreakoutEDISA=212&TraceLevels=None" >Staff 2</a>
+</td-->
+</tr>
+</table>
+</div>
+</body>
+</html>

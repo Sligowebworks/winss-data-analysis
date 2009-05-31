@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="v_SuspExpIncidents" targetNamespace="http://tempuri.org/v_SuspExpIncidents.xsd" xmlns:mstns="http://tempuri.org/v_SuspExpIncidents.xsd" xmlns="http://tempuri.org/v_SuspExpIncidents.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="WI_2005_03_22ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="WI_2005_03_22ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SligoCS.Web.WI.Properties.Settings.GlobalReference.Default.WI_2005_03_22ConnectionString1" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_SuspExpIncidentsTableAdapter" GeneratorDataComponentClassName="v_SuspExpIncidentsTableAdapter" Name="v_SuspExpIncidents" UserDataComponentName="v_SuspExpIncidentsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WI_2005_03_22ConnectionString1 (Settings)" DbObjectName="Wisconsin.dbo.v_SuspExpIncidents" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT year, fullkey, Grade, GradeLabel, GradeLabelAbbr, race, RaceLabel, RaceShortName, sex, SexLabel, ldisabled, name, linkedname, agencykey, CESA, charter, [District Name], [District Number], [School Name], [School Number], schooltype, [Student Group], StudentGroupLabel, YearFormatted, IncidentsSuspDurationLong, IncidentsSuspDurationShort, IncidentsSuspWeaponDrugShort, IncidentsSuspWeaponDrugLong, IncidentsSuspNonWeaponDrugShort, IncidentsSuspNonWeaponDrugLong, IncidentsExpDurationTotal, enrollment, IncidentCountSuspWeaponDrug, IncidentCountSuspNonWeaponDrug, IncidentCountExpWeaponDrug, IncidentCountExpNonWeaponDrug, IncidentCountTotalWeaponDrug, IncidentCountTotalNonWeaponDrug, WeaponDrugIncidentRate, NonWeaponDrugIncidentRate, [%WeaponDrugAllSusp], [%WeaponDrugShortSusp], [%WeaponDrugLongSusp], [%WeaponDrugExp], [%NonWeaponDrugAllSusp], [%NonWeaponDrugShortSusp], [%NonWeaponDrugLongSusp], [%NonWeaponDrugExp] FROM dbo.v_SuspExpIncidents</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="year" DataSetColumn="year" />
+              <Mapping SourceColumn="fullkey" DataSetColumn="fullkey" />
+              <Mapping SourceColumn="Grade" DataSetColumn="Grade" />
+              <Mapping SourceColumn="GradeLabel" DataSetColumn="GradeLabel" />
+              <Mapping SourceColumn="GradeLabelAbbr" DataSetColumn="GradeLabelAbbr" />
+              <Mapping SourceColumn="race" DataSetColumn="race" />
+              <Mapping SourceColumn="RaceLabel" DataSetColumn="RaceLabel" />
+              <Mapping SourceColumn="RaceShortName" DataSetColumn="RaceShortName" />
+              <Mapping SourceColumn="sex" DataSetColumn="sex" />
+              <Mapping SourceColumn="SexLabel" DataSetColumn="SexLabel" />
+              <Mapping SourceColumn="ldisabled" DataSetColumn="ldisabled" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="linkedname" DataSetColumn="linkedname" />
+              <Mapping SourceColumn="agencykey" DataSetColumn="agencykey" />
+              <Mapping SourceColumn="CESA" DataSetColumn="CESA" />
+              <Mapping SourceColumn="charter" DataSetColumn="charter" />
+              <Mapping SourceColumn="District Name" DataSetColumn="District Name" />
+              <Mapping SourceColumn="District Number" DataSetColumn="District Number" />
+              <Mapping SourceColumn="School Name" DataSetColumn="School Name" />
+              <Mapping SourceColumn="School Number" DataSetColumn="School Number" />
+              <Mapping SourceColumn="schooltype" DataSetColumn="schooltype" />
+              <Mapping SourceColumn="Student Group" DataSetColumn="Student Group" />
+              <Mapping SourceColumn="StudentGroupLabel" DataSetColumn="StudentGroupLabel" />
+              <Mapping SourceColumn="YearFormatted" DataSetColumn="YearFormatted" />
+              <Mapping SourceColumn="IncidentsSuspDurationLong" DataSetColumn="IncidentsSuspDurationLong" />
+              <Mapping SourceColumn="IncidentsSuspDurationShort" DataSetColumn="IncidentsSuspDurationShort" />
+              <Mapping SourceColumn="IncidentsSuspWeaponDrugShort" DataSetColumn="IncidentsSuspWeaponDrugShort" />
+              <Mapping SourceColumn="IncidentsSuspWeaponDrugLong" DataSetColumn="IncidentsSuspWeaponDrugLong" />
+              <Mapping SourceColumn="IncidentsSuspNonWeaponDrugShort" DataSetColumn="IncidentsSuspNonWeaponDrugShort" />
+              <Mapping SourceColumn="IncidentsSuspNonWeaponDrugLong" DataSetColumn="IncidentsSuspNonWeaponDrugLong" />
+              <Mapping SourceColumn="IncidentsExpDurationTotal" DataSetColumn="IncidentsExpDurationTotal" />
+              <Mapping SourceColumn="enrollment" DataSetColumn="enrollment" />
+              <Mapping SourceColumn="IncidentCountSuspWeaponDrug" DataSetColumn="IncidentCountSuspWeaponDrug" />
+              <Mapping SourceColumn="IncidentCountSuspNonWeaponDrug" DataSetColumn="IncidentCountSuspNonWeaponDrug" />
+              <Mapping SourceColumn="IncidentCountExpWeaponDrug" DataSetColumn="IncidentCountExpWeaponDrug" />
+              <Mapping SourceColumn="IncidentCountExpNonWeaponDrug" DataSetColumn="IncidentCountExpNonWeaponDrug" />
+              <Mapping SourceColumn="IncidentCountTotalWeaponDrug" DataSetColumn="IncidentCountTotalWeaponDrug" />
+              <Mapping SourceColumn="IncidentCountTotalNonWeaponDrug" DataSetColumn="IncidentCountTotalNonWeaponDrug" />
+              <Mapping SourceColumn="WeaponDrugIncidentRate" DataSetColumn="WeaponDrugIncidentRate" />
+              <Mapping SourceColumn="NonWeaponDrugIncidentRate" DataSetColumn="NonWeaponDrugIncidentRate" />
+              <Mapping SourceColumn="%WeaponDrugAllSusp" DataSetColumn="%WeaponDrugAllSusp" />
+              <Mapping SourceColumn="%WeaponDrugShortSusp" DataSetColumn="%WeaponDrugShortSusp" />
+              <Mapping SourceColumn="%WeaponDrugLongSusp" DataSetColumn="%WeaponDrugLongSusp" />
+              <Mapping SourceColumn="%WeaponDrugExp" DataSetColumn="%WeaponDrugExp" />
+              <Mapping SourceColumn="%NonWeaponDrugAllSusp" DataSetColumn="%NonWeaponDrugAllSusp" />
+              <Mapping SourceColumn="%NonWeaponDrugShortSusp" DataSetColumn="%NonWeaponDrugShortSusp" />
+              <Mapping SourceColumn="%NonWeaponDrugLongSusp" DataSetColumn="%NonWeaponDrugLongSusp" />
+              <Mapping SourceColumn="%NonWeaponDrugExp" DataSetColumn="%NonWeaponDrugExp" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="v_SuspExpIncidents" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="v_SuspExpIncidents" msprop:Generator_DataSetName="v_SuspExpIncidents">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_SuspExpIncidents" msprop:Generator_UserTableName="v_SuspExpIncidents" msprop:Generator_RowDeletedName="v_SuspExpIncidentsRowDeleted" msprop:Generator_TableClassName="v_SuspExpIncidentsDataTable" msprop:Generator_RowChangedName="v_SuspExpIncidentsRowChanged" msprop:Generator_RowClassName="v_SuspExpIncidentsRow" msprop:Generator_RowChangingName="v_SuspExpIncidentsRowChanging" msprop:Generator_RowEvArgName="v_SuspExpIncidentsRowChangeEvent" msprop:Generator_RowEvHandlerName="v_SuspExpIncidentsRowChangeEventHandler" msprop:Generator_TablePropName="_v_SuspExpIncidents" msprop:Generator_TableVarName="tablev_SuspExpIncidents" msprop:Generator_RowDeletingName="v_SuspExpIncidentsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="year" msprop:Generator_UserColumnName="year" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_ColumnVarNameInTable="columnyear" msprop:Generator_ColumnPropNameInTable="yearColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fullkey" msprop:Generator_UserColumnName="fullkey" msprop:Generator_ColumnPropNameInRow="fullkey" msprop:Generator_ColumnVarNameInTable="columnfullkey" msprop:Generator_ColumnPropNameInTable="fullkeyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grade" msprop:Generator_UserColumnName="Grade" msprop:Generator_ColumnPropNameInRow="Grade" msprop:Generator_ColumnVarNameInTable="columnGrade" msprop:Generator_ColumnPropNameInTable="GradeColumn" type="xs:unsignedByte" />
+              <xs:element name="GradeLabel" msprop:Generator_UserColumnName="GradeLabel" msprop:Generator_ColumnPropNameInRow="GradeLabel" msprop:Generator_ColumnVarNameInTable="columnGradeLabel" msprop:Generator_ColumnPropNameInTable="GradeLabelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GradeLabelAbbr" msprop:Generator_UserColumnName="GradeLabelAbbr" msprop:Generator_ColumnPropNameInRow="GradeLabelAbbr" msprop:Generator_ColumnVarNameInTable="columnGradeLabelAbbr" msprop:Generator_ColumnPropNameInTable="GradeLabelAbbrColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="race" msprop:Generator_UserColumnName="race" msprop:Generator_ColumnPropNameInRow="race" msprop:Generator_ColumnVarNameInTable="columnrace" msprop:Generator_ColumnPropNameInTable="raceColumn" type="xs:unsignedByte" />
+              <xs:element name="RaceLabel" msprop:Generator_UserColumnName="RaceLabel" msprop:Generator_ColumnPropNameInRow="RaceLabel" msprop:Generator_ColumnVarNameInTable="columnRaceLabel" msprop:Generator_ColumnPropNameInTable="RaceLabelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RaceShortName" msprop:Generator_UserColumnName="RaceShortName" msprop:Generator_ColumnPropNameInRow="RaceShortName" msprop:Generator_ColumnVarNameInTable="columnRaceShortName" msprop:Generator_ColumnPropNameInTable="RaceShortNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sex" msprop:Generator_UserColumnName="sex" msprop:Generator_ColumnPropNameInRow="sex" msprop:Generator_ColumnVarNameInTable="columnsex" msprop:Generator_ColumnPropNameInTable="sexColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="SexLabel" msprop:Generator_UserColumnName="SexLabel" msprop:Generator_ColumnPropNameInRow="SexLabel" msprop:Generator_ColumnVarNameInTable="columnSexLabel" msprop:Generator_ColumnPropNameInTable="SexLabelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ldisabled" msprop:Generator_UserColumnName="ldisabled" msprop:Generator_ColumnPropNameInRow="ldisabled" msprop:Generator_ColumnVarNameInTable="columnldisabled" msprop:Generator_ColumnPropNameInTable="ldisabledColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInTable="nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="linkedname" msprop:Generator_UserColumnName="linkedname" msprop:Generator_ColumnPropNameInRow="linkedname" msprop:Generator_ColumnVarNameInTable="columnlinkedname" msprop:Generator_ColumnPropNameInTable="linkednameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="355" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="agencykey" msprop:Generator_UserColumnName="agencykey" msprop:Generator_ColumnPropNameInRow="agencykey" msprop:Generator_ColumnVarNameInTable="columnagencykey" msprop:Generator_ColumnPropNameInTable="agencykeyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CESA" msprop:Generator_UserColumnName="CESA" msprop:Generator_ColumnPropNameInRow="CESA" msprop:Generator_ColumnVarNameInTable="columnCESA" msprop:Generator_ColumnPropNameInTable="CESAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="charter" msprop:Generator_UserColumnName="charter" msprop:Generator_ColumnPropNameInRow="charter" msprop:Generator_ColumnVarNameInTable="columncharter" msprop:Generator_ColumnPropNameInTable="charterColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="District_x0020_Name" msprop:Generator_UserColumnName="District Name" msprop:Generator_ColumnPropNameInRow="District_Name" msprop:Generator_ColumnVarNameInTable="columnDistrict_Name" msprop:Generator_ColumnPropNameInTable="District_NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="47" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="District_x0020_Number" msprop:Generator_UserColumnName="District Number" msprop:Generator_ColumnPropNameInRow="District_Number" msprop:Generator_ColumnVarNameInTable="columnDistrict_Number" msprop:Generator_ColumnPropNameInTable="District_NumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="School_x0020_Name" msprop:Generator_UserColumnName="School Name" msprop:Generator_ColumnPropNameInRow="School_Name" msprop:Generator_ColumnVarNameInTable="columnSchool_Name" msprop:Generator_ColumnPropNameInTable="School_NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="48" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="School_x0020_Number" msprop:Generator_UserColumnName="School Number" msprop:Generator_ColumnPropNameInRow="School_Number" msprop:Generator_ColumnVarNameInTable="columnSchool_Number" msprop:Generator_ColumnPropNameInTable="School_NumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="schooltype" msprop:Generator_UserColumnName="schooltype" msprop:Generator_ColumnPropNameInRow="schooltype" msprop:Generator_ColumnVarNameInTable="columnschooltype" msprop:Generator_ColumnPropNameInTable="schooltypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Student_x0020_Group" msprop:Generator_UserColumnName="Student Group" msprop:Generator_ColumnPropNameInRow="Student_Group" msprop:Generator_ColumnVarNameInTable="columnStudent_Group" msprop:Generator_ColumnPropNameInTable="Student_GroupColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentGroupLabel" msprop:Generator_UserColumnName="StudentGroupLabel" msprop:Generator_ColumnPropNameInRow="StudentGroupLabel" msprop:Generator_ColumnVarNameInTable="columnStudentGroupLabel" msprop:Generator_ColumnPropNameInTable="StudentGroupLabelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YearFormatted" msprop:Generator_UserColumnName="YearFormatted" msprop:Generator_ColumnPropNameInRow="YearFormatted" msprop:Generator_ColumnVarNameInTable="columnYearFormatted" msprop:Generator_ColumnPropNameInTable="YearFormattedColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IncidentsSuspDurationLong" msprop:Generator_UserColumnName="IncidentsSuspDurationLong" msprop:Generator_ColumnPropNameInRow="IncidentsSuspDurationLong" msprop:Generator_ColumnVarNameInTable="columnIncidentsSuspDurationLong" msprop:Generator_ColumnPropNameInTable="IncidentsSuspDurationLongColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentsSuspDurationShort" msprop:Generator_UserColumnName="IncidentsSuspDurationShort" msprop:Generator_ColumnPropNameInRow="IncidentsSuspDurationShort" msprop:Generator_ColumnVarNameInTable="columnIncidentsSuspDurationShort" msprop:Generator_ColumnPropNameInTable="IncidentsSuspDurationShortColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentsSuspWeaponDrugShort" msprop:Generator_UserColumnName="IncidentsSuspWeaponDrugShort" msprop:Generator_ColumnPropNameInRow="IncidentsSuspWeaponDrugShort" msprop:Generator_ColumnVarNameInTable="columnIncidentsSuspWeaponDrugShort" msprop:Generator_ColumnPropNameInTable="IncidentsSuspWeaponDrugShortColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentsSuspWeaponDrugLong" msprop:Generator_UserColumnName="IncidentsSuspWeaponDrugLong" msprop:Generator_ColumnPropNameInRow="IncidentsSuspWeaponDrugLong" msprop:Generator_ColumnVarNameInTable="columnIncidentsSuspWeaponDrugLong" msprop:Generator_ColumnPropNameInTable="IncidentsSuspWeaponDrugLongColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentsSuspNonWeaponDrugShort" msprop:Generator_UserColumnName="IncidentsSuspNonWeaponDrugShort" msprop:Generator_ColumnPropNameInRow="IncidentsSuspNonWeaponDrugShort" msprop:Generator_ColumnVarNameInTable="columnIncidentsSuspNonWeaponDrugShort" msprop:Generator_ColumnPropNameInTable="IncidentsSuspNonWeaponDrugShortColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentsSuspNonWeaponDrugLong" msprop:Generator_UserColumnName="IncidentsSuspNonWeaponDrugLong" msprop:Generator_ColumnPropNameInRow="IncidentsSuspNonWeaponDrugLong" msprop:Generator_ColumnVarNameInTable="columnIncidentsSuspNonWeaponDrugLong" msprop:Generator_ColumnPropNameInTable="IncidentsSuspNonWeaponDrugLongColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentsExpDurationTotal" msprop:Generator_UserColumnName="IncidentsExpDurationTotal" msprop:Generator_ColumnPropNameInRow="IncidentsExpDurationTotal" msprop:Generator_ColumnVarNameInTable="columnIncidentsExpDurationTotal" msprop:Generator_ColumnPropNameInTable="IncidentsExpDurationTotalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="enrollment" msdata:ReadOnly="true" msprop:Generator_UserColumnName="enrollment" msprop:Generator_ColumnPropNameInRow="enrollment" msprop:Generator_ColumnVarNameInTable="columnenrollment" msprop:Generator_ColumnPropNameInTable="enrollmentColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentCountSuspWeaponDrug" msprop:Generator_UserColumnName="IncidentCountSuspWeaponDrug" msprop:Generator_ColumnPropNameInRow="IncidentCountSuspWeaponDrug" msprop:Generator_ColumnVarNameInTable="columnIncidentCountSuspWeaponDrug" msprop:Generator_ColumnPropNameInTable="IncidentCountSuspWeaponDrugColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentCountSuspNonWeaponDrug" msprop:Generator_UserColumnName="IncidentCountSuspNonWeaponDrug" msprop:Generator_ColumnPropNameInRow="IncidentCountSuspNonWeaponDrug" msprop:Generator_ColumnVarNameInTable="columnIncidentCountSuspNonWeaponDrug" msprop:Generator_ColumnPropNameInTable="IncidentCountSuspNonWeaponDrugColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentCountExpWeaponDrug" msprop:Generator_UserColumnName="IncidentCountExpWeaponDrug" msprop:Generator_ColumnPropNameInRow="IncidentCountExpWeaponDrug" msprop:Generator_ColumnVarNameInTable="columnIncidentCountExpWeaponDrug" msprop:Generator_ColumnPropNameInTable="IncidentCountExpWeaponDrugColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentCountExpNonWeaponDrug" msprop:Generator_UserColumnName="IncidentCountExpNonWeaponDrug" msprop:Generator_ColumnPropNameInRow="IncidentCountExpNonWeaponDrug" msprop:Generator_ColumnVarNameInTable="columnIncidentCountExpNonWeaponDrug" msprop:Generator_ColumnPropNameInTable="IncidentCountExpNonWeaponDrugColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IncidentCountTotalWeaponDrug" msdata:ReadOnly="true" msprop:Generator_UserColumnName="IncidentCountTotalWeaponDrug" msprop:Generator_ColumnPropNameInRow="IncidentCountTotalWeaponDrug" msprop:Generator_ColumnVarNameInTable="columnIncidentCountTotalWeaponDrug" msprop:Generator_ColumnPropNameInTable="IncidentCountTotalWeaponDrugColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IncidentCountTotalNonWeaponDrug" msdata:ReadOnly="true" msprop:Generator_UserColumnName="IncidentCountTotalNonWeaponDrug" msprop:Generator_ColumnPropNameInRow="IncidentCountTotalNonWeaponDrug" msprop:Generator_ColumnVarNameInTable="columnIncidentCountTotalNonWeaponDrug" msprop:Generator_ColumnPropNameInTable="IncidentCountTotalNonWeaponDrugColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeaponDrugIncidentRate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="WeaponDrugIncidentRate" msprop:Generator_ColumnPropNameInRow="WeaponDrugIncidentRate" msprop:Generator_ColumnVarNameInTable="columnWeaponDrugIncidentRate" msprop:Generator_ColumnPropNameInTable="WeaponDrugIncidentRateColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NonWeaponDrugIncidentRate" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NonWeaponDrugIncidentRate" msprop:Generator_ColumnPropNameInRow="NonWeaponDrugIncidentRate" msprop:Generator_ColumnVarNameInTable="columnNonWeaponDrugIncidentRate" msprop:Generator_ColumnPropNameInTable="NonWeaponDrugIncidentRateColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_x0025_WeaponDrugAllSusp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="%WeaponDrugAllSusp" msprop:Generator_ColumnPropNameInRow="__WeaponDrugAllSusp" msprop:Generator_ColumnVarNameInTable="_column_WeaponDrugAllSusp" msprop:Generator_ColumnPropNameInTable="__WeaponDrugAllSuspColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_x0025_WeaponDrugShortSusp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="%WeaponDrugShortSusp" msprop:Generator_ColumnPropNameInRow="__WeaponDrugShortSusp" msprop:Generator_ColumnVarNameInTable="_column_WeaponDrugShortSusp" msprop:Generator_ColumnPropNameInTable="__WeaponDrugShortSuspColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_x0025_WeaponDrugLongSusp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="%WeaponDrugLongSusp" msprop:Generator_ColumnPropNameInRow="__WeaponDrugLongSusp" msprop:Generator_ColumnVarNameInTable="_column_WeaponDrugLongSusp" msprop:Generator_ColumnPropNameInTable="__WeaponDrugLongSuspColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_x0025_WeaponDrugExp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="%WeaponDrugExp" msprop:Generator_ColumnPropNameInRow="__WeaponDrugExp" msprop:Generator_ColumnVarNameInTable="_column_WeaponDrugExp" msprop:Generator_ColumnPropNameInTable="__WeaponDrugExpColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_x0025_NonWeaponDrugAllSusp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="%NonWeaponDrugAllSusp" msprop:Generator_ColumnPropNameInRow="__NonWeaponDrugAllSusp" msprop:Generator_ColumnVarNameInTable="_column_NonWeaponDrugAllSusp" msprop:Generator_ColumnPropNameInTable="__NonWeaponDrugAllSuspColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_x0025_NonWeaponDrugShortSusp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="%NonWeaponDrugShortSusp" msprop:Generator_ColumnPropNameInRow="__NonWeaponDrugShortSusp" msprop:Generator_ColumnVarNameInTable="_column_NonWeaponDrugShortSusp" msprop:Generator_ColumnPropNameInTable="__NonWeaponDrugShortSuspColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_x0025_NonWeaponDrugLongSusp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="%NonWeaponDrugLongSusp" msprop:Generator_ColumnPropNameInRow="__NonWeaponDrugLongSusp" msprop:Generator_ColumnVarNameInTable="_column_NonWeaponDrugLongSusp" msprop:Generator_ColumnPropNameInTable="__NonWeaponDrugLongSuspColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_x0025_NonWeaponDrugExp" msdata:ReadOnly="true" msprop:Generator_UserColumnName="%NonWeaponDrugExp" msprop:Generator_ColumnPropNameInRow="__NonWeaponDrugExp" msprop:Generator_ColumnVarNameInTable="_column_NonWeaponDrugExp" msprop:Generator_ColumnPropNameInTable="__NonWeaponDrugExpColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
