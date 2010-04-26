@@ -1,3 +1,7 @@
+DisableCompareSimilarLink/SligoCS.Tests.WI/obj
+DisableCompareSimilarLink/SligoCS.Web.WI/BL/bin
+DisableCompareSimilarLink/SligoCS.Web.WI/BL/obj
+DisableCompareSimilarLink/SligoCS.Web.WI/DAL/bin
 gridSortingThrashing/SligoCS.Tests.WI/obj
 gridSortingThrashing/SligoCS.Web.WI/BL/bin
 gridSortingThrashing/SligoCS.Web.WI/BL/obj

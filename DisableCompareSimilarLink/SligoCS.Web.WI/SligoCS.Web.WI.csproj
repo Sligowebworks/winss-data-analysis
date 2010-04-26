@@ -1,0 +1,1059 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B48A567B-E58C-417F-9C2D-10D75F53F020}</ProjectGuid>
+    <ProjectGuid>{B48A567B-E58C-417F-9C2D-10D75F53F020}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SligoCS.Web.WI</RootNamespace>
+    <AssemblyName>SligoCS.Web.WI</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChartFX.WebForms, Version=7.0.2893.24916, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Adornments, Version=7.0.2893.24805, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="ChartFX.WebForms.Base, Version=7.0.2893.24781, Culture=neutral, PublicKeyToken=a1878e2052c08dce, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivitiesOffer.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ActivitiesOffer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivitiesOffer.aspx.designer.cs">
+      <DependentUpon>ActivitiesOffer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActivitiesParticipate.aspx.cs">
+      <DependentUpon>ActivitiesParticipate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivitiesParticipate.aspx.designer.cs">
+      <DependentUpon>ActivitiesParticipate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ACTPage.aspx.cs">
+      <DependentUpon>ACTPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ACTPage.aspx.designer.cs">
+      <DependentUpon>ACTPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APTestsPage.aspx.cs">
+      <DependentUpon>APTestsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APTestsPage.aspx.designer.cs">
+      <DependentUpon>APTestsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="attendance.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="attendance.aspx.designer.cs">
+      <DependentUpon>attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendancePage.aspx.cs">
+      <DependentUpon>AttendancePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendancePage.aspx.designer.cs">
+      <DependentUpon>AttendancePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BL\BLWIBase.cs" />
+    <Compile Include="BL\Utilities\BLUtil.cs" />
+    <Compile Include="ChooseSelected.aspx.cs">
+      <DependentUpon>ChooseSelected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChooseSelected.aspx.designer.cs">
+      <DependentUpon>ChooseSelected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseSelectedList.aspx.cs">
+      <DependentUpon>ChooseSelectedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChooseSelectedList.aspx.designer.cs">
+      <DependentUpon>ChooseSelectedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComparePerformance.aspx.cs">
+      <DependentUpon>ComparePerformance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComparePerformance.aspx.designer.cs">
+      <DependentUpon>ComparePerformance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoursesOffer.aspx.cs">
+      <DependentUpon>CoursesOffer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoursesOffer.aspx.designer.cs">
+      <DependentUpon>CoursesOffer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoursesTaking.aspx.cs">
+      <DependentUpon>CoursesTaking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoursesTaking.aspx.designer.cs">
+      <DependentUpon>CoursesTaking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DALACT.cs" />
+    <Compile Include="DAL\DALActivities.cs" />
+    <Compile Include="DAL\DALAgencies.cs" />
+    <Compile Include="DAL\DALAgency.cs" />
+    <Compile Include="DAL\DALALLAgencies.cs" />
+    <Compile Include="DAL\DALAP_TESTS.cs" />
+    <Compile Include="DAL\DALAthleticConf.cs" />
+    <Compile Include="DAL\DALAttendance.cs" />
+    <Compile Include="DAL\DALBase.cs" />
+    <Compile Include="DAL\DALCourseOfferings.cs" />
+    <Compile Include="DAL\DALCoursesTaken.cs" />
+    <Compile Include="DAL\DALDisabilities.cs" />
+    <Compile Include="DAL\DALDropouts.cs" />
+    <Compile Include="DAL\DALEnrollment.cs" />
+    <Compile Include="DAL\DALEnumerations.cs" />
+    <Compile Include="DAL\DALExpenditure.cs" />
+    <Compile Include="DAL\DALExpulsions.cs" />
+    <Compile Include="DAL\DALExpulsionsDaysLost.cs" />
+    <Compile Include="DAL\DALExpulsionServices.cs" />
+    <Compile Include="DAL\DALExpulsionServicesAndReturns.cs" />
+    <Compile Include="DAL\DALGrad_Reqs.cs" />
+    <Compile Include="DAL\DALHSCompletion.cs" />
+    <Compile Include="DAL\DALLowGradeHighGradePY.cs" />
+    <Compile Include="DAL\DALPOST_GRAD_INTENT.cs" />
+    <Compile Include="DAL\DALRetention.cs" />
+    <Compile Include="DAL\DALRevenue.cs" />
+    <Compile Include="DAL\DALStaff.cs" />
+    <Compile Include="DAL\DALSuspensions.cs" />
+    <Compile Include="DAL\DALSuspensionsDaysLost.cs" />
+    <Compile Include="DAL\DALSuspExpIncidents.cs" />
+    <Compile Include="DAL\DALTeacherQualifications.cs" />
+    <Compile Include="DAL\DALTeacherQualificationsScatterPlot.cs" />
+    <Compile Include="DAL\DALTruancy.cs" />
+    <Compile Include="DAL\DALWIBase.cs" />
+    <Compile Include="DAL\DALWRCT.cs" />
+    <Compile Include="DAL\DALWSAS.cs" />
+    <Compile Include="DAL\DALWSASDemographics.cs" />
+    <Compile Include="DAL\DALWSASSimilarSchools.cs" />
+    <Compile Include="DAL\SQLHelper.cs" />
+    <Compile Include="DAL\FieldConstants.cs" />
+    <Compile Include="DisabilEnroll.aspx.cs">
+      <DependentUpon>DisabilEnroll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisabilEnroll.aspx.designer.cs">
+      <DependentUpon>DisabilEnroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DropOuts.aspx.cs">
+      <DependentUpon>DropOuts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropOuts.aspx.designer.cs">
+      <DependentUpon>DropOuts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpLength.aspx.cs">
+      <DependentUpon>ExpLength.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpLength.aspx.designer.cs">
+      <DependentUpon>ExpLength.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpReturns.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ExpReturns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpReturns.aspx.designer.cs">
+      <DependentUpon>ExpReturns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpServices.aspx.cs">
+      <DependentUpon>ExpServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpServices.aspx.designer.cs">
+      <DependentUpon>ExpServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Expulsions.aspx.cs">
+      <DependentUpon>Expulsions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Expulsions.aspx.designer.cs">
+      <DependentUpon>Expulsions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpulsionsDaysLost.aspx.cs">
+      <DependentUpon>ExpulsionsDaysLost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpulsionsDaysLost.aspx.designer.cs">
+      <DependentUpon>ExpulsionsDaysLost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GroupEnroll.aspx.cs">
+      <DependentUpon>GroupEnroll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GroupEnroll.aspx.designer.cs">
+      <DependentUpon>GroupEnroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBase\PageBaseSligo.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageBase\WI\LinkControlAddedHandlerDelegate.cs" />
+    <Compile Include="PageBase\WI\PageBaseWI.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Retention.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Retention.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Retention.aspx.designer.cs">
+      <DependentUpon>Retention.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="serveRawDataCsv.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>serveRawDataCsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="serveRawDataCsv.aspx.designer.cs">
+      <DependentUpon>serveRawDataCsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoneyPage.aspx.cs">
+      <DependentUpon>MoneyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoneyPage.aspx.designer.cs">
+      <DependentUpon>MoneyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demographics.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>demographics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demographics.aspx.designer.cs">
+      <DependentUpon>demographics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GradReqsPage.aspx.cs">
+      <DependentUpon>GradReqsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GradReqsPage.aspx.designer.cs">
+      <DependentUpon>GradReqsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HSCompletionPage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>HSCompletionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HSCompletionPage.aspx.designer.cs">
+      <DependentUpon>HSCompletionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>offerings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Offerings.aspx.designer.cs">
+      <DependentUpon>offerings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="performance.aspx.cs">
+      <DependentUpon>performance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="performance.aspx.designer.cs">
+      <DependentUpon>performance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostGradIntentPage.aspx.cs">
+      <DependentUpon>PostGradIntentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostGradIntentPage.aspx.designer.cs">
+      <DependentUpon>PostGradIntentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="questions.aspx.cs">
+      <DependentUpon>questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="questions.aspx.designer.cs">
+      <DependentUpon>questions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolScript.aspx.cs">
+      <DependentUpon>SchoolScript.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolScript.aspx.designer.cs">
+      <DependentUpon>SchoolScript.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SelSchool.aspx.cs">
+      <DependentUpon>SelSchool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelSchool.aspx.designer.cs">
+      <DependentUpon>SelSchool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffPage.aspx.cs">
+      <DependentUpon>StaffPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffPage.aspx.designer.cs">
+      <DependentUpon>StaffPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StateTestsPerformance.aspx.cs">
+      <DependentUpon>StateTestsPerformance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StateTestsPerformance.aspx.designer.cs">
+      <DependentUpon>StateTestsPerformance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StateTestsScatterplot.aspx.cs">
+      <DependentUpon>StateTestsScatterplot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StateTestsScatterplot.aspx.designer.cs">
+      <DependentUpon>StateTestsScatterplot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StateTestsSimilarSchools.aspx.cs">
+      <DependentUpon>StateTestsSimilarSchools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StateTestsSimilarSchools.aspx.designer.cs">
+      <DependentUpon>StateTestsSimilarSchools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suspensions.aspx.cs">
+      <DependentUpon>Suspensions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suspensions.aspx.designer.cs">
+      <DependentUpon>Suspensions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuspensionsDaysLost.aspx.cs">
+      <DependentUpon>SuspensionsDaysLost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuspensionsDaysLost.aspx.designer.cs">
+      <DependentUpon>SuspensionsDaysLost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuspExpIncidents.aspx.cs">
+      <DependentUpon>SuspExpIncidents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuspExpIncidents.aspx.designer.cs">
+      <DependentUpon>SuspExpIncidents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherQualifications.aspx.cs">
+      <DependentUpon>TeacherQualifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherQualifications.aspx.designer.cs">
+      <DependentUpon>TeacherQualifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherQualificationsScatterPlot.aspx.cs">
+      <DependentUpon>TeacherQualificationsScatterPlot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherQualificationsScatterPlot.aspx.designer.cs">
+      <DependentUpon>TeacherQualificationsScatterPlot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truancy.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truancy.aspx.designer.cs" />
+    <Compile Include="WebSupportingClasses\ColumnPicker.cs" />
+    <Compile Include="WebSupportingClasses\FullKeyUtils.cs" />
+    <Compile Include="WebSupportingClasses\QueryMarshaller.cs" />
+    <Compile Include="WebSupportingClasses\SligoDataGrid.cs" />
+    <Compile Include="WebSupportingClasses\TitleBuilder.cs" />
+    <Compile Include="WebSupportingClasses\WinssDataGrid.cs" />
+    <Compile Include="WebSupportingClasses\WinssDataGridColumn.cs" />
+    <Compile Include="WebSupportingClasses\WI\DataTableSorter.cs" />
+    <Compile Include="WebSupportingClasses\WI\DownloadRawDataColumnHelper.cs" />
+    <Compile Include="WebSupportingClasses\HyperLinkToggle.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\CompareTo.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\DISABILITY.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\DnlRaw.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\ECON.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\FAYCode.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\Grade.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\GraphFile.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\Group2.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\GRSbj.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\Incident.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\LEP.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\Level.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\LF.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\NoChce.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\OrgLevel.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\PrDis.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\Rel.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\RevExp.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\S4orALL.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\SIZE.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\SORT.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\SPEND.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\SRegion.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\SubjectID.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\Weapon.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\WOW.cs" />
+    <Compile Include="WebSupportingClasses\WI\StickyParameter.PrivateMembers.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\STYP.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\WkceWsas.cs" />
+    <Compile Include="WebSupportingClasses\WI\QueryStringUtils.cs" />
+    <Compile Include="WebSupportingClasses\WI\GlobalValues.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\ACTSubj.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\CourseTypeID.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\CT.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\Group.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\HighSchoolCompletion.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\PostGradPlan.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\Show.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\StaffRatio.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\TQLocation.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\TQRelateTo.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\TQShow.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\TQSubjects.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\TQSubjectsSP.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\TQTeacherVariable.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\WMAS.cs" />
+    <Compile Include="WebSupportingClasses\WI\SerializableDictionary.cs" />
+    <Compile Include="WebSupportingClasses\WI\StickyParameter.cs" />
+    <Compile Include="WebSupportingClasses\WI\StickyParameter.PublicAccessors.cs" />
+    <Compile Include="WebSupportingClasses\WI\TraceStateUtils.cs" />
+    <Compile Include="WebUserControls\AlphaLinkWebUserControl.ascx.cs">
+      <DependentUpon>AlphaLinkWebUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\AlphaLinkWebUserControl.ascx.designer.cs">
+      <DependentUpon>AlphaLinkWebUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\AttendanceDataInfo.ascx.cs">
+      <DependentUpon>AttendanceDataInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\AttendanceDataInfo.ascx.designer.cs">
+      <DependentUpon>AttendanceDataInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\Big_Header_Graphics.ascx.cs">
+      <DependentUpon>Big_Header_Graphics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\Big_Header_Graphics.ascx.designer.cs">
+      <DependentUpon>Big_Header_Graphics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkAMO.ascx.cs">
+      <DependentUpon>BottomLinkAMO.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkAMO.ascx.designer.cs">
+      <DependentUpon>BottomLinkAMO.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkDownload.ascx.cs">
+      <DependentUpon>BottomLinkDownload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkDownload.ascx.designer.cs">
+      <DependentUpon>BottomLinkDownload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkEnrollmentCounts.ascx.cs">
+      <DependentUpon>BottomLinkEnrollmentCounts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkEnrollmentCounts.ascx.designer.cs">
+      <DependentUpon>BottomLinkEnrollmentCounts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkMoreData.ascx.cs">
+      <DependentUpon>BottomLinkMoreData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkMoreData.ascx.designer.cs">
+      <DependentUpon>BottomLinkMoreData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinks.ascx.cs">
+      <DependentUpon>BottomLinks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinks.ascx.designer.cs">
+      <DependentUpon>BottomLinks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkViewDistrictReport.ascx.cs">
+      <DependentUpon>BottomLinkViewDistrictReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkViewDistrictReport.ascx.designer.cs">
+      <DependentUpon>BottomLinkViewDistrictReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkViewProfile.ascx.cs">
+      <DependentUpon>BottomLinkViewProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkViewProfile.ascx.designer.cs">
+      <DependentUpon>BottomLinkViewProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkViewReport.ascx.cs">
+      <DependentUpon>BottomLinkViewReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkViewReport.ascx.designer.cs">
+      <DependentUpon>BottomLinkViewReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkWhatToConsider.ascx.cs">
+      <DependentUpon>BottomLinkWhatToConsider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkWhatToConsider.ascx.designer.cs">
+      <DependentUpon>BottomLinkWhatToConsider.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkWhyNotReported.ascx.cs">
+      <DependentUpon>BottomLinkWhyNotReported.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkWhyNotReported.ascx.designer.cs">
+      <DependentUpon>BottomLinkWhyNotReported.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESAMapBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map.ascx.cs">
+      <DependentUpon>CESA_Map.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map.ascx.designer.cs">
+      <DependentUpon>CESA_Map.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_1.ascx.cs">
+      <DependentUpon>CESA_Map_1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_1.ascx.designer.cs">
+      <DependentUpon>CESA_Map_1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_10.ascx.cs">
+      <DependentUpon>CESA_Map_10.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_10.ascx.designer.cs">
+      <DependentUpon>CESA_Map_10.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_11.ascx.cs">
+      <DependentUpon>CESA_Map_11.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_11.ascx.designer.cs">
+      <DependentUpon>CESA_Map_11.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_12.ascx.cs">
+      <DependentUpon>CESA_Map_12.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_12.ascx.designer.cs">
+      <DependentUpon>CESA_Map_12.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_1_2.ascx.cs">
+      <DependentUpon>CESA_Map_1_2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_1_2.ascx.designer.cs">
+      <DependentUpon>CESA_Map_1_2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_2.ascx.cs">
+      <DependentUpon>CESA_Map_2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_2.ascx.designer.cs">
+      <DependentUpon>CESA_Map_2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_2_2.ascx.cs">
+      <DependentUpon>CESA_Map_2_2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_2_2.ascx.designer.cs">
+      <DependentUpon>CESA_Map_2_2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_3.ascx.cs">
+      <DependentUpon>CESA_Map_3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_3.ascx.designer.cs">
+      <DependentUpon>CESA_Map_3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_4.ascx.cs">
+      <DependentUpon>CESA_Map_4.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_4.ascx.designer.cs">
+      <DependentUpon>CESA_Map_4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_5.ascx.cs">
+      <DependentUpon>CESA_Map_5.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_5.ascx.designer.cs">
+      <DependentUpon>CESA_Map_5.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_6.ascx.cs">
+      <DependentUpon>CESA_Map_6.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_6.ascx.designer.cs">
+      <DependentUpon>CESA_Map_6.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_6_2.ascx.cs">
+      <DependentUpon>CESA_Map_6_2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_6_2.ascx.designer.cs">
+      <DependentUpon>CESA_Map_6_2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_7.ascx.cs">
+      <DependentUpon>CESA_Map_7.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_7.ascx.designer.cs">
+      <DependentUpon>CESA_Map_7.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_8.ascx.cs">
+      <DependentUpon>CESA_Map_8.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_8.ascx.designer.cs">
+      <DependentUpon>CESA_Map_8.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_9.ascx.cs">
+      <DependentUpon>CESA_Map_9.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_9.ascx.designer.cs">
+      <DependentUpon>CESA_Map_9.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_9_2.ascx.cs">
+      <DependentUpon>CESA_Map_9_2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_9_2.ascx.designer.cs">
+      <DependentUpon>CESA_Map_9_2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_Control.ascx.cs">
+      <DependentUpon>CESA_Map_Control.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\CESA_Map_Control.ascx.designer.cs">
+      <DependentUpon>CESA_Map_Control.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\ChangeSelectedSchoolOrDistrictLink.ascx.cs">
+      <DependentUpon>ChangeSelectedSchoolOrDistrictLink.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\ChangeSelectedSchoolOrDistrictLink.ascx.designer.cs">
+      <DependentUpon>ChangeSelectedSchoolOrDistrictLink.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\DataAnalysisInfo.ascx.cs">
+      <DependentUpon>DataAnalysisInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\DataAnalysisInfo.ascx.designer.cs">
+      <DependentUpon>DataAnalysisInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\DistrictInfo.ascx.cs">
+      <DependentUpon>DistrictInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\DistrictInfo.ascx.designer.cs">
+      <DependentUpon>DistrictInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\DistrictMapInfo.ascx.cs">
+      <DependentUpon>DistrictMapInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\DistrictMapInfo.ascx.designer.cs">
+      <DependentUpon>DistrictMapInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\GraphBarChart.cs" />
+    <Compile Include="WebUserControls\GraphHorizBarChart.cs" />
+    <Compile Include="WebUserControls\GraphScatterplot.cs" />
+    <Compile Include="WebUserControls\Mixed_Header_Graphics.ascx.cs">
+      <DependentUpon>Mixed_Header_Graphics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\Mixed_Header_Graphics.ascx.designer.cs">
+      <DependentUpon>Mixed_Header_Graphics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\NavCompareTo.ascx.cs">
+      <DependentUpon>NavCompareTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\NavCompareTo.ascx.designer.cs">
+      <DependentUpon>NavCompareTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\NavigationLinkRow.ascx.cs">
+      <DependentUpon>NavigationLinkRow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\NavigationLinkRow.ascx.designer.cs">
+      <DependentUpon>NavigationLinkRow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\NavSchoolType.ascx.cs">
+      <DependentUpon>NavSchoolType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\NavSchoolType.ascx.designer.cs">
+      <DependentUpon>NavSchoolType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\InitSelSchoolInfo.ascx.cs">
+      <DependentUpon>InitSelSchoolInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\InitSelSchoolInfo.ascx.designer.cs">
+      <DependentUpon>InitSelSchoolInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\NavSimilarCriteria.ascx.cs">
+      <DependentUpon>NavSimilarCriteria.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\NavSimilarCriteria.ascx.designer.cs">
+      <DependentUpon>NavSimilarCriteria.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\NavViewByGroup.ascx.cs">
+      <DependentUpon>NavViewByGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\NavViewByGroup.ascx.designer.cs">
+      <DependentUpon>NavViewByGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\PlanningHelp.ascx.cs">
+      <DependentUpon>PlanningHelp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\PlanningHelp.ascx.designer.cs">
+      <DependentUpon>PlanningHelp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\selMultiSchoolsDirections.ascx.cs">
+      <DependentUpon>selMultiSchoolsDirections.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\selMultiSchoolsDirections.ascx.designer.cs">
+      <DependentUpon>selMultiSchoolsDirections.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\Small_Header_Graphics.ascx.cs">
+      <DependentUpon>Small_Header_Graphics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\Small_Header_Graphics.ascx.designer.cs">
+      <DependentUpon>Small_Header_Graphics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\StandardsPerformance.ascx.cs">
+      <DependentUpon>StandardsPerformance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\StandardsPerformance.ascx.designer.cs">
+      <DependentUpon>StandardsPerformance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\StudentCharacteristics.ascx.cs">
+      <DependentUpon>StudentCharacteristics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\StudentCharacteristics.ascx.designer.cs">
+      <DependentUpon>StudentCharacteristics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WIUserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WI_DPI_Disclaim.ascx.cs">
+      <DependentUpon>WI_DPI_Disclaim.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WI_DPI_Disclaim.ascx.designer.cs">
+      <DependentUpon>WI_DPI_Disclaim.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WI.Master.cs">
+      <DependentUpon>WI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WI.Master.designer.cs">
+      <DependentUpon>WI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WRCTPerformance.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>WRCTPerformance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WRCTPerformance.aspx.designer.cs">
+      <DependentUpon>WRCTPerformance.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SligoCS.Web.Base\SligoCS.Web.Base.csproj">
+      <Project>{3D27FCE9-C4AA-4F30-BA29-CFF7AF4E825E}</Project>
+      <Name>SligoCS.Web.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ActivitiesOffer.aspx" />
+    <Content Include="ActivitiesParticipate.aspx" />
+    <Content Include="ACTPage.aspx" />
+    <Content Include="APTestsPage.aspx" />
+    <Content Include="attendance.aspx" />
+    <Content Include="AttendancePage.aspx" />
+    <Content Include="ChooseSelected.aspx" />
+    <Content Include="ChooseSelectedList.aspx" />
+    <Content Include="ComparePerformance.aspx" />
+    <Content Include="CoursesOffer.aspx" />
+    <Content Include="CoursesTaking.aspx" />
+    <Content Include="DisabilEnroll.aspx" />
+    <Content Include="DropOuts.aspx" />
+    <Content Include="ExpLength.aspx" />
+    <Content Include="ExpReturns.aspx" />
+    <Content Include="ExpServices.aspx" />
+    <Content Include="Expulsions.aspx" />
+    <Content Include="ExpulsionsDaysLost.aspx" />
+    <Content Include="GroupEnroll.aspx" />
+    <Content Include="highlighter\LGPLv3.txt" />
+    <Content Include="highlighter\scripts\clipboard.swf" />
+    <Content Include="highlighter\scripts\shBrushAS3.js" />
+    <Content Include="highlighter\scripts\shBrushBash.js" />
+    <Content Include="highlighter\scripts\shBrushCpp.js" />
+    <Content Include="highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="highlighter\scripts\shBrushCss.js" />
+    <Content Include="highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="highlighter\scripts\shBrushDiff.js" />
+    <Content Include="highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="highlighter\scripts\shBrushJava.js" />
+    <Content Include="highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="highlighter\scripts\shBrushJScript.js" />
+    <Content Include="highlighter\scripts\shBrushPerl.js" />
+    <Content Include="highlighter\scripts\shBrushPhp.js" />
+    <Content Include="highlighter\scripts\shBrushPlain.js" />
+    <Content Include="highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="highlighter\scripts\shBrushPython.js" />
+    <Content Include="highlighter\scripts\shBrushRuby.js" />
+    <Content Include="highlighter\scripts\shBrushScala.js" />
+    <Content Include="highlighter\scripts\shBrushSql.js" />
+    <Content Include="highlighter\scripts\shBrushVb.js" />
+    <Content Include="highlighter\scripts\shBrushXml.js" />
+    <Content Include="highlighter\scripts\shCore.js" />
+    <Content Include="highlighter\scripts\shLegacy.js" />
+    <Content Include="highlighter\src\shCore.js" />
+    <Content Include="highlighter\src\shLegacy.js" />
+    <Content Include="highlighter\styles\help.png" />
+    <Content Include="highlighter\styles\magnifier.png" />
+    <Content Include="highlighter\styles\page_white_code.png" />
+    <Content Include="highlighter\styles\page_white_copy.png" />
+    <Content Include="highlighter\styles\printer.png" />
+    <Content Include="highlighter\styles\shCore.css" />
+    <Content Include="highlighter\styles\shThemeDefault.css" />
+    <Content Include="highlighter\styles\shThemeDjango.css" />
+    <Content Include="highlighter\styles\shThemeEmacs.css" />
+    <Content Include="highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="highlighter\styles\shThemeMidnight.css" />
+    <Content Include="highlighter\styles\shThemeRDark.css" />
+    <Content Include="highlighter\styles\wrapping.png" />
+    <Content Include="highlighter\test.html" />
+    <Content Include="ParameterDefaults.xml" />
+    <Content Include="Retention.aspx" />
+    <Content Include="images\guide_big.gif" />
+    <Content Include="images\mortar_big.gif" />
+    <Content Include="images\mortar_big_on.gif" />
+    <Content Include="images\wins_big.gif" />
+    <Content Include="serveRawDataCsv.aspx" />
+    <Content Include="MoneyPage.aspx" />
+    <Content Include="demographics.aspx" />
+    <Content Include="dpi_mac.css" />
+    <Content Include="dpi_pc.css" />
+    <Content Include="GradReqsPage.aspx" />
+    <Content Include="HSCompletionPage.aspx" />
+    <Content Include="images\2cesa1_445w.gif" />
+    <Content Include="images\assess_runner.gif" />
+    <Content Include="images\best_pract.gif" />
+    <Content Include="images\cesa10map385h.gif" />
+    <Content Include="images\cesa11map400h.gif" />
+    <Content Include="images\cesa12map350w.gif" />
+    <Content Include="images\cesa1map2.gif" />
+    <Content Include="images\cesa1map500h.gif" />
+    <Content Include="images\cesa2map2_445w.gif" />
+    <Content Include="images\cesa3map350w.gif" />
+    <Content Include="images\cesa4map.gif" />
+    <Content Include="images\cesa5map385h.gif" />
+    <Content Include="images\cesa6map2_385h.gif" />
+    <Content Include="images\cesa6map385h.gif" />
+    <Content Include="images\cesa7map500h.gif" />
+    <Content Include="images\cesa8map330w.gif" />
+    <Content Include="images\cesa9map2_385h.gif" />
+    <Content Include="images\cesa9map385h.gif" />
+    <Content Include="images\dataanalysis.gif" />
+    <Content Include="images\data_big.gif" />
+    <Content Include="images\data_sm_lft.gif" />
+    <Content Include="images\data_sm_lft_on.gif" />
+    <Content Include="images\data_sm_rt.gif" />
+    <Content Include="images\data_title1.gif" />
+    <Content Include="images\data_title2.gif" />
+    <Content Include="images\data_title3.gif" />
+    <Content Include="images\data_title4.gif" />
+    <Content Include="images\grey_dot.gif" />
+    <Content Include="images\guide_sm.gif" />
+    <Content Include="images\mast_head.gif" />
+    <Content Include="images\mortar.gif" />
+    <Content Include="images\mortartip_sm.gif" />
+    <Content Include="images\mortar_on.gif" />
+    <Content Include="images\perf_report.gif" />
+    <Content Include="images\pic1.gif" />
+    <Content Include="images\pic1_on.gif" />
+    <Content Include="images\pic2.gif" />
+    <Content Include="images\pic2_on.gif" />
+    <Content Include="images\pic3.gif" />
+    <Content Include="images\pic3_on.gif" />
+    <Content Include="images\pic4.gif" />
+    <Content Include="images\pic4_on.gif" />
+    <Content Include="images\school_improve.gif" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\standards_assessment.gif" />
+    <Content Include="images\standards_big.gif" />
+    <Content Include="images\state350h.gif" />
+    <Content Include="images\strategic_plan.gif" />
+    <Content Include="images\super_message.gif" />
+    <Content Include="images\usingwinss.gif" />
+    <Content Include="images\whatsnew1.gif" />
+    <Content Include="images\white.gif" />
+    <Content Include="images\wins_sm.gif" />
+    <Content Include="js\cookies.js" />
+    <Content Include="js\district_caption.js" />
+    <Content Include="js\image_manager.js" />
+    <Content Include="js\trans_popup.js" />
+    <Content Include="offerings.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="performance.aspx" />
+    <Content Include="PostGradIntentPage.aspx" />
+    <Content Include="questions.aspx" />
+    <Content Include="SchoolScript.aspx" />
+    <Content Include="SelSchool.aspx" />
+    <Content Include="StaffPage.aspx" />
+    <Content Include="StateTestsPerformance.aspx" />
+    <Content Include="StateTestsScatterplot.aspx" />
+    <Content Include="StateTestsSimilarSchools.aspx" />
+    <Content Include="survey_popup.html" />
+    <Content Include="Suspensions.aspx" />
+    <Content Include="SuspensionsDaysLost.aspx" />
+    <Content Include="SuspExpIncidents.aspx" />
+    <Content Include="TeacherQualifications.aspx" />
+    <Content Include="TeacherQualificationsScatterPlot.aspx" />
+    <Content Include="Truancy.aspx" />
+    <Content Include="WebUserControls\AlphabetXML.xml" />
+    <Content Include="WebUserControls\AlphaLinkWebUserControl.ascx" />
+    <Content Include="WebUserControls\AttendanceDataInfo.ascx" />
+    <Content Include="WebUserControls\Big_Header_Graphics.ascx" />
+    <Content Include="WebUserControls\BottomLinkAMO.ascx" />
+    <Content Include="WebUserControls\BottomLinkDownload.ascx" />
+    <Content Include="WebUserControls\BottomLinkEnrollmentCounts.ascx" />
+    <Content Include="WebUserControls\BottomLinkMoreData.ascx" />
+    <Content Include="WebUserControls\BottomLinks.ascx" />
+    <Content Include="WebUserControls\BottomLinkViewDistrictReport.ascx" />
+    <Content Include="WebUserControls\BottomLinkViewProfile.ascx" />
+    <Content Include="WebUserControls\BottomLinkViewReport.ascx" />
+    <Content Include="WebUserControls\BottomLinkWhatToConsider.ascx" />
+    <Content Include="WebUserControls\BottomLinkWhyNotReported.ascx" />
+    <Content Include="WebUserControls\CESA_Map.ascx" />
+    <Content Include="WebUserControls\CESA_Map_1.ascx" />
+    <Content Include="WebUserControls\CESA_Map_10.ascx" />
+    <Content Include="WebUserControls\CESA_Map_11.ascx" />
+    <Content Include="WebUserControls\CESA_Map_12.ascx" />
+    <Content Include="WebUserControls\CESA_Map_1_2.ascx" />
+    <Content Include="WebUserControls\CESA_Map_2.ascx" />
+    <Content Include="WebUserControls\CESA_Map_2_2.ascx" />
+    <Content Include="WebUserControls\CESA_Map_3.ascx" />
+    <Content Include="WebUserControls\CESA_Map_4.ascx" />
+    <Content Include="WebUserControls\CESA_Map_5.ascx" />
+    <Content Include="WebUserControls\CESA_Map_6.ascx" />
+    <Content Include="WebUserControls\CESA_Map_6_2.ascx" />
+    <Content Include="WebUserControls\CESA_Map_7.ascx" />
+    <Content Include="WebUserControls\CESA_Map_8.ascx" />
+    <Content Include="WebUserControls\CESA_Map_9.ascx" />
+    <Content Include="WebUserControls\CESA_Map_9_2.ascx" />
+    <Content Include="WebUserControls\CESA_Map_Control.ascx" />
+    <Content Include="WebUserControls\ChangeSelectedSchoolOrDistrictLink.ascx" />
+    <Content Include="WebUserControls\DataAnalysisInfo.ascx" />
+    <Content Include="WebUserControls\DistrictInfo.ascx" />
+    <Content Include="WebUserControls\DistrictMapInfo.ascx" />
+    <Content Include="WebUserControls\Mixed_Header_Graphics.ascx" />
+    <Content Include="WebUserControls\NavCompareTo.ascx" />
+    <Content Include="WebUserControls\NavigationLinkRow.ascx" />
+    <Content Include="WebUserControls\NavSchoolType.ascx" />
+    <Content Include="WebUserControls\InitSelSchoolInfo.ascx" />
+    <Content Include="WebUserControls\NavSimilarCriteria.ascx" />
+    <Content Include="WebUserControls\NavViewByGroup.ascx" />
+    <Content Include="WebUserControls\PlanningHelp.ascx" />
+    <Content Include="WebUserControls\selMultiSchoolsDirections.ascx" />
+    <Content Include="WebUserControls\Small_Header_Graphics.ascx" />
+    <Content Include="WebUserControls\StandardsPerformance.ascx" />
+    <Content Include="WebUserControls\StudentCharacteristics.ascx" />
+    <Content Include="WebUserControls\WI_DPI_Disclaim.ascx" />
+    <Content Include="WI.Master" />
+    <Content Include="WRCTPerformance.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="chartfx70\Temp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4437</DevelopmentServerPort>
+          <DevelopmentServerVPath>/SligoWI</DevelopmentServerVPath>
+          <IISUrl>http://localhost/featurebranch</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
