@@ -55,7 +55,7 @@
                 <slx:WinssDataGridColumn DataField="Students Eligible to Return to School" FormatString="#,##0.###"/>
                 <slx:WinssDataGridColumn DataField="Students Who Returned to School" FormatString="#,##0.###"/>
                 <slx:WinssDataGridColumn DataField="Students Who Didn't Return to School" FormatString="#,##0.###"/>
-                <slx:WinssDataGridColumn DataField="% of Eligibles Who Return" FormatString="#,##0%"/>
+                <slx:WinssDataGridColumn DataField="% of Eligibles Who Return" FormatString="#,##0.0%"/>
                 </Columns>
             </slx:WinssDataGrid>
         </td>
