@@ -58,7 +58,7 @@
                 <slx:WinssDataGridColumn DataField="Total # Students without Disabilities Expelled" FormatString="#,##0.###"/>
                 <slx:WinssDataGridColumn DataField="Total # Students without Disabilities Offered Post Expulsion Services" FormatString="#,##0.###"/>
                 <slx:WinssDataGridColumn DataField="Total # Students without Disabilities Not Offered Post Expulsion Services" FormatString="#,##0.###"/>
-                <slx:WinssDataGridColumn DataField="% of Expelled Students without Disabilities Offered Post Expulsion Services" FormatString="#,##0%"/>
+                <slx:WinssDataGridColumn DataField="% of Expelled Students without Disabilities Offered Post Expulsion Services" FormatString="#,##0.0%"/>
                 </Columns>
             </slx:WinssDataGrid>
         </td>
@@ -72,9 +72,9 @@
             <uc7:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>
             <uc11:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <uc8:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="16"/>
-            <SPAN class="text">
-	            <p><a href="javascript:popup('http://dpi.wi.gov/spr/discip_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
-            </p></SPAN>        
+            
+	            <p><span class="text"><a href="javascript:popup('http://dpi.wi.gov/spr/discip_use.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+            </span></p>        
         </td>
     </tr>
     </table>
