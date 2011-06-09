@@ -121,8 +121,8 @@ namespace SligoCS.BL.WI
         /// </summary>
         public void ManualQuery()
         {
-            if ((globals.TraceLevels & TraceStateUtils.TraceLevel.sql) 
-                == TraceStateUtils.TraceLevel.sql) 
+            if ((globals.TraceLevels & TraceStateUtils.TraceLevels.sql) 
+                == TraceStateUtils.TraceLevels.sql) 
                 globals.SQL = globals.SQL + "//" + Database.SQL;
 
             Database.Query();
@@ -358,14 +358,6 @@ namespace SligoCS.BL.WI
                 );
 
                 clause = SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, field, keylist);
-
-                //MZD: don't think this is valid, selected keys are not used accross orglevel:
-                /*foreach (String compareToSchool in FullKeyUtils.ParseFullKeyString(globals.SFullKeys(globals.OrgLevel)))
-                {
-                    String maskedFullKey = FullKeyUtils.GetMaskedFullkey(compareToSchool, globals.OrgLevel);
-                    keylist.Add(maskedFullKey);
-                }*/
-
             }
             return clause;
         }

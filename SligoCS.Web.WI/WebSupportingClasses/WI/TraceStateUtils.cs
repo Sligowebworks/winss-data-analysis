@@ -16,7 +16,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
     {
         [Flags()]
         // jdj: used for on-page debugging - controls what displays at the top of the page - 0 is default
-        public enum TraceLevel
+        public enum TraceLevels
         {
             none = 0,
             qs = 1,
@@ -32,10 +32,10 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             int sum = 0;
 
             sb.Append(SHOW_HIDE_SCRIPT);
-            foreach (TraceStateUtils.TraceLevel level in Enum.GetValues(typeof(TraceStateUtils.TraceLevel)))
+            foreach (TraceStateUtils.TraceLevels level in Enum.GetValues(typeof(TraceStateUtils.TraceLevels)))
             {
                 sb.Append(String.Format("<a href=\"{1}\">{0}</a> | ", 
-                    Enum.GetName(typeof(TraceStateUtils.TraceLevel), level),
+                    Enum.GetName(typeof(TraceStateUtils.TraceLevels), level),
                     globals.Page.Request.FilePath + 
                     globals.GetQueryString(new String[] {"TraceLevels=" + level})));
                 sum += (int)level;
@@ -47,51 +47,51 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
 
             sb.Append(PrintGridVisibleColumns(globals.Page));
 
-            if ((globals.TraceLevels & TraceStateUtils.TraceLevel.qs)
-                    == TraceStateUtils.TraceLevel.qs)
+            if ((globals.TraceLevels & TraceStateUtils.TraceLevels.qs)
+                    == TraceStateUtils.TraceLevels.qs)
                 sb.Append(PrintQuerystring().ToString());
 
-            if ((globals.TraceLevels & TraceStateUtils.TraceLevel.globals)
-                    == TraceStateUtils.TraceLevel.globals)
+            if ((globals.TraceLevels & TraceStateUtils.TraceLevels.globals)
+                    == TraceStateUtils.TraceLevels.globals)
                 sb.Append(PrintGlobalValues(globals).ToString());
 
-            if ((globals.TraceLevels & TraceStateUtils.TraceLevel.session)
-                    == TraceStateUtils.TraceLevel.session)
+            if ((globals.TraceLevels & TraceStateUtils.TraceLevels.session)
+                    == TraceStateUtils.TraceLevels.session)
                 sb.Append(PrintSession().ToString());
 
-            if ((globals.TraceLevels & TraceStateUtils.TraceLevel.sql)
-                    == TraceStateUtils.TraceLevel.sql)
+            if ((globals.TraceLevels & TraceStateUtils.TraceLevels.sql)
+                    == TraceStateUtils.TraceLevels.sql)
                 sb.Append("<br />" + globals.TraceSql);
 
-            if ((globals.TraceLevels & TraceStateUtils.TraceLevel.graph)
-                    == TraceStateUtils.TraceLevel.graph)
+            if ((globals.TraceLevels & TraceStateUtils.TraceLevels.graph)
+                    == TraceStateUtils.TraceLevels.graph)
                 sb.Append(PrintGraphProps(globals.Page));
 
-            if ((globals.TraceLevels & TraceStateUtils.TraceLevel.sort)
-                    == TraceStateUtils.TraceLevel.sort)
+            if ((globals.TraceLevels & TraceStateUtils.TraceLevels.sort)
+                    == TraceStateUtils.TraceLevels.sort)
                 sb.Append(PrintSortProps(globals.Page));
 
             return sb.ToString();
         }
         public static StringBuilder PrintSortProps(Page argPage)
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("<br />");
-
-            //safety check:
             if (argPage == null) return null;
+
             if (!(argPage is SligoCS.Web.Base.PageBase.WI.PageBaseWI))
                 throw new Exception("not PageBaseWI");
-
+            
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<br />");
+                        
             SligoCS.Web.Base.PageBase.WI.PageBaseWI page = (SligoCS.Web.Base.PageBase.WI.PageBaseWI)argPage;
 
             if (page.DataSet.Tables.Count < 1) return sb;
 
             sb.Append("[Default Order By]");
-            sb.Append(
-                String.Join(",",
+            sb.Append("[" +
+                String.Join("],[",
                 page.QueryMarshaller.BuildOrderByList(page.DataSet.Tables[0].Columns).ToArray()
-                )
+                ) + "]"
                 ).Append("<br /><br />");
 
             if (page.DataGrid is WinssDataGrid)
@@ -99,7 +99,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
                 WinssDataGrid grid = (WinssDataGrid)page.DataGrid;
 
                 sb.Append("[Page.DataGrid.OrderBy]  ");
-                sb.Append(grid.OrderBy).Append("<br /><br />");
+                sb.Append("[" + String.Join("],[", grid.OrderBy.Split(",".ToCharArray())) + "]").Append("<br /><br />");
 
             }
             else
@@ -122,7 +122,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
                     orderBy = "Scatterplot Control doesn't support Sorting";
 
                 sb.Append("[Page.Graph.OrderBy]  ");
-                sb.Append((orderBy == null)? "NULL" : orderBy).Append("<br /><br />");
+                sb.Append((orderBy == null)? "NULL" : "[" + String.Join("],[", orderBy.Split(",".ToCharArray())) + "]").Append("<br /><br />");
 
             }
             else

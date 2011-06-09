@@ -107,7 +107,7 @@ namespace SligoCS.Web.WI.WebUserControls
                         source, qm, OrderBy);
             }
 
-            if ((((PageBaseWI)Page).GlobalValues.TraceLevels & TraceStateUtils.TraceLevel.graph) == TraceStateUtils.TraceLevel.graph)
+            if ((((PageBaseWI)Page).GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.graph) == TraceStateUtils.TraceLevels.graph)
             {
                 //TraceStateUtils.DumpTableToResponse(table, Page.Response, "DataTable Post-Sort");
             }

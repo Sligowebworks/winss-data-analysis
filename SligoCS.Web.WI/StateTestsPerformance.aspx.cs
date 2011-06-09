@@ -496,7 +496,7 @@ namespace SligoCS.Web.WI
             List<String> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
 
             //debug GroupNum
-            if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevel.sql) == TraceStateUtils.TraceLevel.sql)
+            if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.sql) == TraceStateUtils.TraceLevels.sql)
                 cols.Add(v_WSAS.GroupNum);
 
             if (GlobalValues.Grade.Key == GradeKeys.AllDisAgg)

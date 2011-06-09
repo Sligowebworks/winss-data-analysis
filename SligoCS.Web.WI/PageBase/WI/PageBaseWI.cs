@@ -164,7 +164,7 @@ namespace SligoCS.Web.Base.PageBase.WI
                 //if not already hidden, Check whether there is any data to graph.
                 if (Graph.Visible) Graph.Visible = (DataSet.Tables[0].Rows.Count != 0);
                 //Always show when debug = graph
-                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevel.graph) == TraceStateUtils.TraceLevel.graph) Graph.Visible = true;
+                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.graph) == TraceStateUtils.TraceLevels.graph) Graph.Visible = true;
             }
 
             //No Data message:
@@ -418,7 +418,7 @@ namespace SligoCS.Web.Base.PageBase.WI
             if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
                 /*//trace To observe the raw Data Source
-                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevel.graph) == TraceStateUtils.TraceLevel.graph)
+                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.graph) == TraceStateUtils.TraceLevels.graph)
                 {
                     try
                     {
@@ -450,13 +450,13 @@ namespace SligoCS.Web.Base.PageBase.WI
                 // end Trace*/
 
                 graph.DataSource = ds.Tables[0].DefaultView;
-                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevel.graph) == TraceStateUtils.TraceLevel.graph && graph.DataSource != null)
+                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.graph) == TraceStateUtils.TraceLevels.graph && graph.DataSource != null)
                                 {
                                     Response.Write("<br />DataBindGraph(): graph.DataSource Assigned");
                                     Response.Write("<br /> ds.Tables.[0].DefaultView.Count:" + ds.Tables[0].DefaultView.Count);
                                 }
                 graph.DataBind();
-                                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevel.graph) == TraceStateUtils.TraceLevel.graph && graph.DataSource != null)
+                                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.graph) == TraceStateUtils.TraceLevels.graph && graph.DataSource != null)
                                 {
                                     Response.Write("<br />DataBindGraph(): graph.DataBind() called;");
                                     Response.Write("<br />graph.DataSource.GetType().Name:" + graph.DataSource.GetType().Name);
@@ -496,7 +496,7 @@ namespace SligoCS.Web.Base.PageBase.WI
             }
             else
             {
-                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevel.graph) == TraceStateUtils.TraceLevel.graph)
+                if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.graph) == TraceStateUtils.TraceLevels.graph)
                         Response.Write("<br />DataBindGraph: ds.Tables.Count NOT > 0");
             }
         }

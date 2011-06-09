@@ -74,7 +74,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
         private Show _show = new Show(); // For Activities pages 
         private WkceWsas wkceWsas = new WkceWsas(); //StateTestPerformance Page
         
-        private TraceStateUtils.TraceLevel traceBreakout;
+        private TraceStateUtils.TraceLevels traceBreakout;
 
         private GRSbj grsbj = new GRSbj();
         private PrDis prdis = new PrDis();

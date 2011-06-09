@@ -97,7 +97,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
 
         //jdj: used on the money page - cost per member
         public CT CT { get { return _cost; } set { _cost = value; } }
-        public TraceStateUtils.TraceLevel TraceLevels { get { if (traceBreakout == 0) traceBreakout = (TraceStateUtils.TraceLevel)Enum.Parse(typeof(TraceStateUtils.TraceLevel), InitializeProperty("TraceLevels"));  return traceBreakout; } set { traceBreakout = value; } }
+        public TraceStateUtils.TraceLevels TraceLevels { get { if (traceBreakout == 0) traceBreakout = (TraceStateUtils.TraceLevels)Enum.Parse(typeof(TraceStateUtils.TraceLevels), InitializeProperty("TraceLevels"));  return traceBreakout; } set { traceBreakout = value; } }
 
         //jdj: used on coursework pages
         public CourseTypeID CourseTypeID { get { return _courseTypeID; } set { _courseTypeID = value; } }

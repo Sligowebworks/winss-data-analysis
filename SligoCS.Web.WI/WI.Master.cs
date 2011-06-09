@@ -513,7 +513,7 @@ namespace SligoCS.Web.WI
         {
             if (globals != null)
             {                            
-                if (globals.TraceLevels != TraceStateUtils.TraceLevel.none)
+                if (globals.TraceLevels != TraceStateUtils.TraceLevels.none)
                 {
                     Response.Write(
                             TraceStateUtils.GetTrace(globals)
