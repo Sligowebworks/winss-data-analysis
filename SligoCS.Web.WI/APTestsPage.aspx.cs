@@ -55,7 +55,8 @@ namespace SligoCS.Web.WI
             GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
 
             QueryMarshaller.RaceDisagCodes.Add((int)QueryMarshaller.RaceCodes.RaceEth_NA);
-            QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
+            if (QueryMarshaller.RaceDisagCodes.Contains((int)QueryMarshaller.RaceCodes.Comb))
+                QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
 
             base.OnInitComplete(e);
 
