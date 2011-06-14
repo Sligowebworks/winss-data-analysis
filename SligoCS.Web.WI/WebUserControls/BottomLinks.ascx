@@ -18,7 +18,7 @@ More data are available at the Wisconsin finance data warehouse.</A>
 
 <p>
 <span class="text">	
-<a href="javascript:popup('http://www2.dpi.state.wi.us/sifi/ayp_summary.asp?year=2010&districtcd=3619&schoolcd=0022')" 
+<a href="javascript:popup('http://www2.dpi.state.wi.us/sifi/ayp_summary.asp?year=2011&districtcd=3619&schoolcd=0022')" 
     onClick="setCookie(question, url)">
 View Adequate Yearly Progress report</a>
 </span>
