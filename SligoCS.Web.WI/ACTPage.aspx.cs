@@ -48,7 +48,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.Grade.Key = GradeKeys.Combined_PreK_12;
-            GlobalValues.Year = 2010;
+            GlobalValues.Year = 2011;
 
             //STYP not supported
             GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
