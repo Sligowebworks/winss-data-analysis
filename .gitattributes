@@ -280,6 +280,7 @@ SligoCS.Web.WI/Web.config -text
 SligoCS.Web.WI/WebSupportingClasses/ColumnPicker.cs -text
 SligoCS.Web.WI/WebSupportingClasses/FullKeyUtils.cs -text
 SligoCS.Web.WI/WebSupportingClasses/HyperLinkToggle.cs -text
+SligoCS.Web.WI/WebSupportingClasses/QueryArgumentsWithDisAgg.cs -text
 SligoCS.Web.WI/WebSupportingClasses/QueryMarshaller.cs -text
 SligoCS.Web.WI/WebSupportingClasses/SligoDataGrid.cs -text
 SligoCS.Web.WI/WebSupportingClasses/TitleBuilder.cs -text
@@ -321,6 +322,7 @@ SligoCS.Web.WI/WebSupportingClasses/WI/ParameterValues/Show.cs -text
 SligoCS.Web.WI/WebSupportingClasses/WI/ParameterValues/Sim.cs -text
 SligoCS.Web.WI/WebSupportingClasses/WI/ParameterValues/StaffRatio.cs -text
 SligoCS.Web.WI/WebSupportingClasses/WI/ParameterValues/SubjectID.cs -text
+SligoCS.Web.WI/WebSupportingClasses/WI/ParameterValues/SupDwnld.cs -text
 SligoCS.Web.WI/WebSupportingClasses/WI/ParameterValues/TQLocation.cs -text
 SligoCS.Web.WI/WebSupportingClasses/WI/ParameterValues/TQRelateTo.cs -text
 SligoCS.Web.WI/WebSupportingClasses/WI/ParameterValues/TQShow.cs -text

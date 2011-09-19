@@ -28,7 +28,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.TrendStartYear = 2003;
-            GlobalValues.Year = 2010;
+            GlobalValues.Year = 2011;
 
             //View By Group not supported:
             GlobalValues.Group.Value = GlobalValues.Group.Range[GroupKeys.All];
@@ -86,103 +86,96 @@ namespace SligoCS.Web.WI
         }
         private void SetUpChart(DataSet ds)
         {
-            try
+            barChart.Title = DataSetTitle;
+
+            barChart.AxisYMin = 0;
+            barChart.AxisYMax = 100;
+            barChart.AxisYStep = 10;
+            barChart.AxisYDescription = "Percent of FTE Teachers";
+            barChart.AxisY.LabelsFormat.CustomFormat = "0" + "\\%";
+
+            //Bind Data Source & Display
+            
+            if (base.GlobalValues.TQShow.CompareToKey(TQShowKeys.WisconsinLicenseStatus))
             {
-                barChart.Title = DataSetTitle;
+                //Stacked Bar Chart
+                barChart.Type = SligoCS.Web.WI.WebUserControls.GraphBarChart.StackedType.Stacked100;
 
-                barChart.AxisYMin = 0;
-                barChart.AxisYMax = 100;
-                barChart.AxisYStep = 10;
-                barChart.AxisYDescription = "Percent of FTE Teachers";
-                barChart.AxisY.LabelsFormat.CustomFormat = "0" + "\\%";
+                barChart.LabelColumnName = ColumnPicker.GetCompareToColumnName(GlobalValues);
 
-                //Bind Data Source & Display
-                
-                if (base.GlobalValues.TQShow.CompareToKey(TQShowKeys.WisconsinLicenseStatus))
+                if (GlobalValues.CompareTo.Key == CompareToKeys.SelSchools
+                    || GlobalValues.CompareTo.Key == CompareToKeys.SelDistricts)
                 {
-                    //Stacked Bar Chart
-                    barChart.Type = SligoCS.Web.WI.WebUserControls.GraphBarChart.StackedType.Stacked100;
+                    barChart.Height = (int)(barChart.Height.Value * 1.25);
+                    Hashtable hashXLabels = new Hashtable();
+                    String col = barChart.LabelColumnName;
+                    String oldLabel;
+                    String newLabel;
+                    String trace = String.Empty;
 
-                    barChart.LabelColumnName = ColumnPicker.GetCompareToColumnName(GlobalValues);
-
-                    if (GlobalValues.CompareTo.Key == CompareToKeys.SelSchools
-                        || GlobalValues.CompareTo.Key == CompareToKeys.SelDistricts)
+                    int start, end, space;
+                    for (int n = 0; n < DataSet.Tables[0].Rows.Count; n++)
                     {
-                        barChart.Height = (int)(barChart.Height.Value * 1.25);
-                        Hashtable hashXLabels = new Hashtable();
-                        String col = barChart.LabelColumnName;
-                        String oldLabel;
-                        String newLabel;
-                        String trace = String.Empty;
-
-                        int start, end, space;
-                        for (int n = 0; n < DataSet.Tables[0].Rows.Count; n++)
+                        if (DataSet.Tables[0].Rows[n][col].ToString().Length > 30)
                         {
-                            if (DataSet.Tables[0].Rows[n][col].ToString().Length > 30)
+                            //Wrap Long Labels
+                            oldLabel = DataSet.Tables[0].Rows[n][col].ToString();
+                            if (!hashXLabels.Contains(oldLabel)
+                                && oldLabel.Length > 25)
                             {
-                                //Wrap Long Labels
-                                oldLabel = DataSet.Tables[0].Rows[n][col].ToString();
-                                if (!hashXLabels.Contains(oldLabel)
-                                    && oldLabel.Length > 25)
-                                {
-                                    start = (int)(oldLabel.Length /4);
-                                    end = start * 3;
-                                    space = oldLabel.LastIndexOf(" ", end, end-start);
-                                    newLabel = oldLabel.Replace(oldLabel.Remove(space), oldLabel.Remove(space) +Convert.ToChar(10).ToString()).ToString();
-                                    hashXLabels.Add(DataSet.Tables[0].Rows[n][col].ToString(), newLabel);
-                                    trace += DataSet.Tables[0].Rows[n][col] + "::" + newLabel;
-                                }
+                                start = (int)(oldLabel.Length /4);
+                                end = start * 3;
+                                space = oldLabel.LastIndexOf(" ", end, end-start);
+                                if (space < 0) space = oldLabel.LastIndexOf("-", end, end - start) + 1;
+                                newLabel = oldLabel.Replace(oldLabel.Remove(space), oldLabel.Remove(space) +Convert.ToChar(10).ToString()).ToString();
+                                hashXLabels.Add(DataSet.Tables[0].Rows[n][col].ToString(), newLabel);
+                                trace += DataSet.Tables[0].Rows[n][col] + "::" + newLabel;
                             }
                         }
-                        barChart.OverrideAxisXLabels = hashXLabels;
-                        //throw new Exception(trace);
-                        //WebUserControls.GraphBarChart.ReplaceColumnValues(DataSet.Tables[0], col, hashXLabels);
                     }
-
-                    List<String> graphColumns = barChart.MeasureColumns;
-                    graphColumns.Add(v_TeacherQualifications.FTELicenseFull);
-                    graphColumns.Add(v_TeacherQualifications.LicenseEmerFTE);
-                    graphColumns.Add(v_TeacherQualifications.LicenseNoFTE);
-
-                    Hashtable seriesLabels = barChart.OverrideSeriesLabels;
-                    seriesLabels.Add(v_TeacherQualifications.FTELicenseFull, "Full License");
-                    seriesLabels.Add(v_TeacherQualifications.LicenseEmerFTE, "Emergency License");
-                    seriesLabels.Add(v_TeacherQualifications.LicenseNoFTE, "No License For Assignment");
+                    barChart.OverrideAxisXLabels = hashXLabels;
+                    //throw new Exception(trace);
+                    //WebUserControls.GraphBarChart.ReplaceColumnValues(DataSet.Tables[0], col, hashXLabels);
                 }
-                else
-                {
-                    //Normal Bar Chart
-                    barChart.Type = SligoCS.Web.WI.WebUserControls.GraphBarChart.StackedType.No;
-                    
-                   Dictionary<String, String> mapping = new Dictionary<string,string>();
 
-                    SligoCS.Web.WI.WebSupportingClasses.WI.TQShow TQ = GlobalValues.TQShow;
+                List<String> graphColumns = barChart.MeasureColumns;
+                graphColumns.Add(v_TeacherQualifications.FTELicenseFull);
+                graphColumns.Add(v_TeacherQualifications.LicenseEmerFTE);
+                graphColumns.Add(v_TeacherQualifications.LicenseNoFTE);
 
-                    mapping.Add(
-                        TQShowKeys.DistrictExperience,
-                       v_TeacherQualifications.LocalExperience5YearsOrMoreFTEPercentage
-                        );
-                    mapping.Add(
-                        TQShowKeys.TotalExperience,
-                         v_TeacherQualifications.TotalExperience5YearsOrMoreFTEPercentage
-                         );
-                    mapping.Add(
-                        TQShowKeys.HighestDegree,
-                        v_TeacherQualifications.DegreeMastersOrHigherFTEPercentage
-                        );
-                    mapping.Add(
-                        TQShowKeys.ESEAQualified,
-                        v_TeacherQualifications.EHQYesFTEPercentage
-                        );
-
-                    barChart.DisplayColumnName = mapping[TQ.Key].ToString();
-                    barChart.FriendlyAxisXNames = new List<string>( new String[] {String.Empty });
-                }
+                Hashtable seriesLabels = barChart.OverrideSeriesLabels;
+                seriesLabels.Add(v_TeacherQualifications.FTELicenseFull, "Full License");
+                seriesLabels.Add(v_TeacherQualifications.LicenseEmerFTE, "Emergency License");
+                seriesLabels.Add(v_TeacherQualifications.LicenseNoFTE, "No License For Assignment");
             }
-            catch (Exception ex)
+            else
             {
-                System.Diagnostics.Debug.WriteLine(ex.Message);
-                throw new Exception(ex.Message);
+                //Normal Bar Chart
+                barChart.Type = SligoCS.Web.WI.WebUserControls.GraphBarChart.StackedType.No;
+                
+               Dictionary<String, String> mapping = new Dictionary<string,string>();
+
+                SligoCS.Web.WI.WebSupportingClasses.WI.TQShow TQ = GlobalValues.TQShow;
+
+                mapping.Add(
+                    TQShowKeys.DistrictExperience,
+                   v_TeacherQualifications.LocalExperience5YearsOrMoreFTEPercentage
+                    );
+                mapping.Add(
+                    TQShowKeys.TotalExperience,
+                     v_TeacherQualifications.TotalExperience5YearsOrMoreFTEPercentage
+                     );
+                mapping.Add(
+                    TQShowKeys.HighestDegree,
+                    v_TeacherQualifications.DegreeMastersOrHigherFTEPercentage
+                    );
+                mapping.Add(
+                    TQShowKeys.ESEAQualified,
+                    v_TeacherQualifications.EHQYesFTEPercentage
+                    );
+
+                barChart.DisplayColumnName = mapping[TQ.Key].ToString();
+                barChart.FriendlyAxisXNames = new List<string>( new String[] {String.Empty });
             }
         }
        protected string GetTitle()
@@ -214,8 +207,10 @@ namespace SligoCS.Web.WI
                 typeOfData = "ESEA Qualified Teachers";
             }
 
-            string title = typeOfData + DELIM +
-                 base.GlobalValues.TQSubjects.Key.Replace("_", " ");
+            string title = typeOfData + DELIM 
+                +( (GlobalValues.SuperDownload.Key!=SupDwnldKeys.True)
+                 ? base.GlobalValues.TQSubjects.Key.Replace("_", " ")
+                 :String.Empty);
 
            return base.GetTitleWithoutGroup(title);
         }
@@ -288,7 +283,9 @@ namespace SligoCS.Web.WI
 
             retval.Add(v_TeacherQualifications.FTETotal);
 
-            if (show.Key == TQShowKeys.WisconsinLicenseStatus)
+            bool statewide = (GlobalValues.SuperDownload.Key == SupDwnldKeys.True);
+
+            if (statewide || show.Key == TQShowKeys.WisconsinLicenseStatus)
             {
                 retval.Add(v_TeacherQualifications.FTELicenseFull);
                 retval.Add(v_TeacherQualifications.LicenseFullFTEPercentage);
@@ -297,24 +294,28 @@ namespace SligoCS.Web.WI
                 retval.Add(v_TeacherQualifications.LicenseNoFTE);
                 retval.Add(v_TeacherQualifications.LicenseNoFTEPercentage);
             }
-            else if (show.Key == TQShowKeys.DistrictExperience)
+
+            if (statewide || show.Key == TQShowKeys.DistrictExperience)
             {
                 retval.Add(v_TeacherQualifications.LocalExperience5YearsOrLessFTE);
                 retval.Add(v_TeacherQualifications.LocalExperience5YearsOrMoreFTE);
                 retval.Add(v_TeacherQualifications.LocalExperience5YearsOrMoreFTEPercentage);
             }
-            else if (show.Key == TQShowKeys.TotalExperience)
+
+            if (statewide || show.Key == TQShowKeys.TotalExperience)
             {
                 retval.Add(v_TeacherQualifications.TotalExperience5YearsOrLessFTE);
                 retval.Add(v_TeacherQualifications.TotalExperience5YearsOrMoreFTE);
                 retval.Add(v_TeacherQualifications.TotalExperience5YearsOrMoreFTEPercentage);
             }
-            else if (show.Key == TQShowKeys.HighestDegree)
+
+            if (statewide || show.Key == TQShowKeys.HighestDegree)
             {
                 retval.Add(v_TeacherQualifications.DegreeMastersOrHigherFTE);
                 retval.Add(v_TeacherQualifications.DegreeMastersOrHigherFTEPercentage);
             }
-            else if (show.Key == TQShowKeys.ESEAQualified)
+
+            if (statewide || show.Key == TQShowKeys.ESEAQualified)
             {
                 retval.Add(v_TeacherQualifications.EHQYesFTE);
                 retval.Add(v_TeacherQualifications.EHQYesFTEPercentage);
@@ -322,6 +323,26 @@ namespace SligoCS.Web.WI
                 retval.Add(v_TeacherQualifications.EHQNoFTEPercentage);
             }
             return retval;
+        }
+
+        protected override List<string> GetDownloadRawVisibleColumns()
+        {
+            List<String> cols = base.GetDownloadRawVisibleColumns();
+
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            {
+                try
+                {
+                    cols.Insert(cols.IndexOf(v_TeacherQualifications.FTETotal),
+                        v_TeacherQualifications.LinkSubjectLabel);
+                }
+                catch
+                {
+                    cols.Add(v_TeacherQualifications.LinkSubjectLabel);
+                }
+            }
+
+            return cols;
         }
 
         protected override SortedList<string, string> GetDownloadRawColumnLabelMapping()
@@ -348,6 +369,7 @@ namespace SligoCS.Web.WI
             newLabels.Add(v_TeacherQualifications.EHQYesFTEPercentage, "esea_qualified_percentage_of_total");
             newLabels.Add(v_TeacherQualifications.EHQNoFTE, "not_esea_qualified_number_fte");
             newLabels.Add(v_TeacherQualifications.EHQNoFTEPercentage, "not_esea_qualified_percentage_of_total");
+            newLabels.Add(v_TeacherQualifications.LinkSubjectLabel, "subject_taught");
             return newLabels;
         }
     }

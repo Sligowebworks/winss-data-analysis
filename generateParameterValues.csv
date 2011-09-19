@@ -220,6 +220,7 @@ AllSchoolsOrDistrictsIn | All In | 2
 County | Country | 1
 AthleticConf | Athlectic Conference | 2
 CESA | CESA | 3
+Statewide | Statewide | 4
 
 ::GraphFile::
 BLANK_REDIRECT_PAGE | *.aspx | BlankPageUrl 
@@ -235,7 +236,6 @@ GGRADREQS | GradReqsPage.aspx | GGRADREQS
 TEACHERQUALIFICATIONS | TeacherQualifications.aspx | TEACHERQUALIFICATIONS 
 TQSCATTERPLOT | TeacherQualificationsScatterPlot.aspx | TQSCATTER
 DROPOUTS | DropOuts.aspx | DROPOUTS 
-ETHNICENROLL | EthnicEnroll.aspx | ETHNICENROLL 
 SUSPEXPINCIDENTS | SuspExpIncidents.aspx | SUSPEXPINCIDENTS 
 SUSPENSIONS | Suspensions.aspx | SUSPENSIONS
 SUSPENSIONSDAYSLOST | SuspensionsDaysLost.aspx| SUSPENSIONSDAYSLOST
@@ -378,3 +378,8 @@ All | All Timeframes | A
 FourYear | Four-Year Rate | 4
 SixYear | Six-Year Rate | 6
 Legacy | Legacy Rate (By Age 21) | L
+
+::SupDwnld::
+True | True | 1
+False | False | 0
+

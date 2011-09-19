@@ -70,9 +70,15 @@ namespace SligoCS.Web.WI
         {
             //throw new Exception(fullkeys);
             if (GlobalValues.CompareTo.Key == CompareToKeys.SelSchools)
+            {
                 UserValues.SSchoolFullKeys = GlobalValues.SSchoolFullKeys = fullkeys;
+                if (!UserValues.inQS.Contains("SSchoolFullKeys")) UserValues.inQS.Add("SSchoolFullKeys");
+            }
             if (GlobalValues.CompareTo.Key == CompareToKeys.SelDistricts)
+            {
                 UserValues.SDistrictFullKeys = GlobalValues.SDistrictFullKeys = fullkeys;
+                if (!UserValues.inQS.Contains("SDistrictFullKeys")) UserValues.inQS.Add("SDistrictFullKeys");
+            }
         }
 
         private void set_state()

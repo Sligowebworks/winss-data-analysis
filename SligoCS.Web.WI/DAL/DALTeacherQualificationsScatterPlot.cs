@@ -24,9 +24,11 @@ namespace SligoCS.DAL.WI
         public override string  BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("SELECT * FROM v_TeacherQualificationsScatterPlot WHERE ");
+            String dbObject = "v_TeacherQualificationsScatterPlot";
 
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "SchoolTypeCode", Marshaller.stypList));
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            
+            sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.NONE, "SchoolTypeCode", dbObject));
 
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
 

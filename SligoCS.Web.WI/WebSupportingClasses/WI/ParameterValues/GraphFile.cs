@@ -19,7 +19,6 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
 		public const string TEACHERQUALIFICATIONS = "TeacherQualifications.aspx";
 		public const string TQSCATTERPLOT = "TeacherQualificationsScatterPlot.aspx";
 		public const string DROPOUTS = "DropOuts.aspx";
-		public const string ETHNICENROLL = "EthnicEnroll.aspx";
 		public const string SUSPEXPINCIDENTS = "SuspExpIncidents.aspx";
 		public const string SUSPENSIONS = "Suspensions.aspx";
 		public const string SUSPENSIONSDAYSLOST = "SuspensionsDaysLost.aspx";
@@ -71,7 +70,6 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
 			range.Add(GraphFileKeys.TEACHERQUALIFICATIONS, "TEACHERQUALIFICATIONS");
 			range.Add(GraphFileKeys.TQSCATTERPLOT, "TQSCATTER");
 			range.Add(GraphFileKeys.DROPOUTS, "DROPOUTS");
-			range.Add(GraphFileKeys.ETHNICENROLL, "ETHNICENROLL");
 			range.Add(GraphFileKeys.SUSPEXPINCIDENTS, "SUSPEXPINCIDENTS");
 			range.Add(GraphFileKeys.SUSPENSIONS, "SUSPENSIONS");
 			range.Add(GraphFileKeys.SUSPENSIONSDAYSLOST, "SUSPENSIONSDAYSLOST");

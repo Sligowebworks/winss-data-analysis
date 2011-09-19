@@ -9,11 +9,12 @@ namespace SligoCS.DAL.WI
         public override string  BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
+            String dbObject = "v_DropoutsWWoDisEconELPSchoolDistState";
 
-            sql.Append("SELECT * FROM v_DropoutsWWoDisEconELPSchoolDistState WHERE ");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));  
 
             //School Types
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "SchoolType", Marshaller.stypList));
+            sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.NONE, "SchoolType", dbObject));
 
             //Adds " ... AND (SexCode in (1, 2)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SexCode", Marshaller.sexCodes));
@@ -21,8 +22,7 @@ namespace SligoCS.DAL.WI
             //Adds " ... AND (RaceCode in (1, 2, 3, 4, 5)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "RaceCode", Marshaller.raceCodes));
 
-            //Adds " ... AND ((GradeCode >= 16) AND (GradeCode <= 64)) ..."
-            sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "GradeCode", Marshaller.gradeCodes));
+            sql.Append(Marshaller.GradeCodesClause(SQLHelper.WhereClauseJoiner.AND, "GradeCode", dbObject));
 
             //Adds " ... AND (DisabilityCode in (1, 2)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "DisabilityCode", Marshaller.disabilityCodes));
@@ -36,15 +36,7 @@ namespace SligoCS.DAL.WI
             //years
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
 
-            //fullkey
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(" " + SQLHelper.WhereClauseJoiner.AND + " " + Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
 
             //order by clause
             sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));

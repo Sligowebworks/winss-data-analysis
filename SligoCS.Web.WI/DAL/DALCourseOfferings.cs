@@ -24,9 +24,9 @@ namespace SligoCS.DAL.WI
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 
-            sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "CourseTypeID", Marshaller.GlobalValues.CourseTypeID.Value));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "CourseTypeID", Marshaller.CourseTypeCodes));
 
-            sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "WMASID1", Marshaller.GlobalValues.WMAS.Value));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "WMASID1", Marshaller.WMASCodes));
 
             //fullkey
             if (Marshaller.compareSelectedFullKeys)

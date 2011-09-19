@@ -9,8 +9,9 @@ namespace SligoCS.DAL.WI
         public override string BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {             
             StringBuilder sql = new StringBuilder();
+            String dbObject = "v_AP_TESTS";
 
-            sql.Append("SELECT * FROM v_AP_TESTS WHERE ");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
 
             //Adds " ... AND (SexCode in (1, 2)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "Sex", Marshaller.sexCodes));
@@ -18,8 +19,7 @@ namespace SligoCS.DAL.WI
             //Adds " ... AND (RaceCode in (1, 2, 3, 4, 5)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "Race", Marshaller.raceCodes));
 
-            //Adds " ... AND ((GradeCode >= 16) AND (GradeCode <= 64)) ..."
-            sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "Grade", Marshaller.gradeCodes));
+            sql.Append(Marshaller.GradeCodesClause(SQLHelper.WhereClauseJoiner.AND, "grade", dbObject));
 
             //Adds " ... AND ((year >= 1997) AND (year <= 2007)) ..."
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
@@ -27,15 +27,7 @@ namespace SligoCS.DAL.WI
             //Static required:
             sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "ExamCode", 99.ToString()));
 
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(SQLHelper.WhereClauseJoiner.AND + " ").Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(
-                    SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "fullkey"));
             
             //order by clause
             sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));

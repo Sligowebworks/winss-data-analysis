@@ -25,16 +25,7 @@ namespace SligoCS.DAL.WI
                 sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
             }
 
-            List<int> subjects;
-            if (Marshaller.GlobalValues.GRSbj.Key == GRSbjKeys.StateLaw)
-            {
-                subjects = new List<int>( new int[] {1, 7});
-            }
-            else
-            {
-                subjects = new List<int>(new int[] { 8, 13 });
-            }
-            sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "subjectID", subjects));
+            sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "subjectID", Marshaller.GradReqSubjCodes));
 
             //order by clause
             //sb.AppendFormat(" ORDER BY {0}", SQLHelper.ConvertToCSV(orderBy, false));

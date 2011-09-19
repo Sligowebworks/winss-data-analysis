@@ -10,8 +10,9 @@ namespace SligoCS.DAL.WI
         public override string BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
+            String dbObject = "v_WRCT";
 
-            sql.Append("SELECT *  FROM v_WRCT WHERE ");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 
@@ -20,7 +21,7 @@ namespace SligoCS.DAL.WI
                 sql.Append(" and ").Append(Marshaller.clauseForCompareSelected);
                 //view does not support schooltype, except for schools
                 if (Marshaller.GlobalValues.S4orALL.Key == S4orALLKeys.AllSchoolsOrDistrictsIn)
-                    sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SchoolType", Marshaller.stypList));
+                    sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
             }
             else
             {

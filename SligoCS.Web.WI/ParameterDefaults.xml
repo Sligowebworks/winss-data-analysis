@@ -70,18 +70,9 @@
    <SCounty>47</SCounty>
   <SAthleticConf>45</SAthleticConf>
   <SCESA>05</SCESA>
-  <S4orALL>1</S4orALL>
+  <S4orALL>2</S4orALL>
   <!--&SDistrictFullKeys=03252703XXXX&SSchoolFullKeys=032527040040&SCounty=47&SAthleticConf=45&SCESA=05-->
 
-  <LepPctG4 />
-  <SdisPctG4 />
-  <EconPctG4 />
-  <LepPctG8 />
-  <SdisPctG8 />
-  <EconPctG8 />
-  <LepPctG10 />
-  <SdisPctG10 />
-  <EconPctG10 />
   <Grade>98</Grade>
   
   <TraceLevels>0</TraceLevels>
@@ -105,5 +96,5 @@
   <DISABILITY>N</DISABILITY>
   <NoChce>N</NoChce>
   <Sim>D</Sim>
-  
+  <SupDwnld>0</SupDwnld>
 </StickyParameter>

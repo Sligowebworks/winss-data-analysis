@@ -11,29 +11,22 @@ namespace SligoCS.DAL.WI
         public override string  BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
+            String dbObject = "v_Coursework";
 
-            sql.Append("SELECT * FROM v_Coursework WHERE ");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 
-            //fullkey
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(SQLHelper.WhereClauseJoiner.AND).Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
 
             //Adds " ... AND (SexCode in (1, 2)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "Sex", Marshaller.sexCodes));
 
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "Grade", Marshaller.gradeCodes));
+            sql.Append(Marshaller.GradeCodesClause(SQLHelper.WhereClauseJoiner.AND, "Grade", dbObject));
 
-            sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "CourseTypeID", Marshaller.GlobalValues.CourseTypeID.Value));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "CourseTypeID", Marshaller.CourseTypeCodes));
 
-            sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "WMASID1", Marshaller.GlobalValues.WMAS.Value));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "WMASID1", Marshaller.WMASCodes));
 
             sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));
 

@@ -11,8 +11,9 @@ namespace SligoCS.DAL.WI
         public override string  BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
+            String dbObject = "v_ACT";
             
-            sql.Append("select * from v_ACT where ");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
 
             ////Adds " ... AND (SexCode in (1, 2)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "Sex", Marshaller.sexCodes));
@@ -41,7 +42,7 @@ namespace SligoCS.DAL.WI
             if (Marshaller.GlobalValues.S4orALL.Key == S4orALLKeys.AllSchoolsOrDistrictsIn &&
                 (Marshaller.GlobalValues.CompareTo.Key == CompareToKeys.SelDistricts ||
                 Marshaller.GlobalValues.CompareTo.Key == CompareToKeys.SelSchools))
-                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SchoolType", Marshaller.stypList));
+                    sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
 
             if (Marshaller.compareSelectedFullKeys)
             {

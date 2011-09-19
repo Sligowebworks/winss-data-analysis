@@ -27,10 +27,7 @@ namespace SligoCS.DAL.WI
             }
 
             ////CT for cost category
-            List<string> ctlist = new List<string>();
-            ctlist.Add("CC");
-            ctlist.Add(Marshaller.GlobalValues.CT);
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "CT", ctlist));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "CT", Marshaller.CostTypeCodes));
 
             ////Adds " ... AND ((year >= 1997) AND (year <= 2007)) ..."
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));

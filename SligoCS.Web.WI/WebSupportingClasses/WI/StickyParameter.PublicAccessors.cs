@@ -84,17 +84,6 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             set { sRegion = value; }
         }
 
-        // For WSAS scatter plot page
-        public int LepPctG4 { get { if (lepPctG4 == 0) lepPctG4 = Convert.ToInt16(InitializeProperty("LepPctG4")); return lepPctG4; } set { lepPctG4 = value; } }
-        public int SdisPctG4 { get { if (sdisPctG4 == 0) sdisPctG4 = Convert.ToInt16(InitializeProperty("SdisPctG4"));  return sdisPctG4; } set { sdisPctG4 = value; } }
-        public int EconPctG4 { get { if (econPctG4 == 0) econPctG4 = Convert.ToInt16(InitializeProperty("EconPctG4"));  return econPctG4; } set { econPctG4 = value; } }
-        public int LepPctG8 { get { if (lepPctG8 == 0) lepPctG8 = Convert.ToInt16(InitializeProperty("LepPctG8"));  return lepPctG8; } set { lepPctG8 = value; } }
-        public int SdisPctG8 { get { if (sdisPctG8 == 0) sdisPctG8 = Convert.ToInt16(InitializeProperty("SdisPctG8"));  return sdisPctG8; } set { sdisPctG8 = value; } }
-        public int EconPctG8 { get { if (econPctG8 == 0) econPctG8 = Convert.ToInt16(InitializeProperty("EconPctG8")); return econPctG8; } set { econPctG8 = value; } }
-        public int LepPctG10 { get { if (lepPctG10 == 0) lepPctG10 = Convert.ToInt16(InitializeProperty("LepPctG10")); return lepPctG10; } set { lepPctG10 = value; } }
-        public int SdisPctG10 { get { if (sdisPctG10 == 0)  sdisPctG10 = Convert.ToInt16(InitializeProperty("SdisPctG10")); return sdisPctG10; } set { sdisPctG10 = value; } }
-        public int EconPctG10 { get {if( econPctG10==0) econPctG10 = Convert.ToInt16(InitializeProperty("EconPctG10")); return econPctG10; } set { econPctG10 = value; } }
-
         //jdj: used on the money page - cost per member
         public CT CT { get { return _cost; } set { _cost = value; } }
         public TraceStateUtils.TraceLevels TraceLevels { get { if (traceBreakout == 0) traceBreakout = (TraceStateUtils.TraceLevels)Enum.Parse(typeof(TraceStateUtils.TraceLevels), InitializeProperty("TraceLevels"));  return traceBreakout; } set { traceBreakout = value; } }

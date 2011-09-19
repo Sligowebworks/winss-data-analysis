@@ -60,7 +60,7 @@ namespace SligoCS.Web.WI
             string title = "WRCT* - Grade 3 - Reading " + WebSupportingClasses.TitleBuilder.newline+ GlobalValues.Level.Key;
             DataSetTitle = GetTitleWithoutGroupForSchoolTypeUnsupported(title);
             DataSetTitle = DataSetTitle.Replace(
-                TitleBuilder.GetYearRangeInTitle(new List<int> (new int[] {GlobalValues.Year})),
+                TitleBuilder.GetYearRangeInTitle(new List<String> (new String[] {GlobalValues.Year.ToString()})),
                 "March " + GlobalValues.Year.ToString() + " Results");
 
             WrctDataGrid.AddSuperHeader(DataSetTitle);

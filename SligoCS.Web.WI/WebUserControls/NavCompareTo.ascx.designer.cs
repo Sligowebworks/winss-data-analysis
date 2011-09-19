@@ -27,5 +27,7 @@ namespace SligoCS.Web.WI.WebUserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::SligoCS.Web.WI.WebUserControls.NavigationLinkRow CompareTo_Links;
+
+        protected global::System.Web.UI.WebControls.DropDownList ddlYearOverride;
     }
 }

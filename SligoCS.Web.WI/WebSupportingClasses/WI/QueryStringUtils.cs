@@ -31,14 +31,11 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
     {
         public QueryStringUtils(): base()
         {
-            //Params to always include in the QueryString
+            //Get Params in current Request
             inQS = new List<String>(HttpContext.Current.Request.QueryString.AllKeys);
 
+            //Params to always include in the QueryString
             if (!inQS.Contains(GraphFile.Name)) inQS.Add(GraphFile.Name);
-            if (!inQS.Contains("SSchoolFullKeys")) inQS.Add("SSchoolFullKeys");
-            if (!inQS.Contains("SDistrictFullKeys")) inQS.Add("SDistrictFullKeys");
-            if (!inQS.Contains(S4orALL.Name)) inQS.Add(S4orALL.Name);
-            if (!inQS.Contains(SRegion.Name)) inQS.Add(SRegion.Name);
             if (!inQS.Contains("SCounty")) inQS.Add("SCounty");
             if (!inQS.Contains("SAthleticConf")) inQS.Add("SAthleticConf");
             if (!inQS.Contains("SCESA")) inQS.Add("SCESA");

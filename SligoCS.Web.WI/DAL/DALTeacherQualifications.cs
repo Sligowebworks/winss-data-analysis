@@ -20,10 +20,11 @@ namespace SligoCS.DAL.WI
             //v_TeacherQualifications ds = new v_TeacherQualifications();
 
             StringBuilder sql = new StringBuilder();
-            sql.Append("select * from v_TeacherQualifications where ");
+            String dbObject = "v_TeacherQualifications";
 
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "SchoolTypeCode", Marshaller.stypList));
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
 
+            sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.NONE, "SchoolTypeCode", dbObject));
 
             //Adds " ... AND (SexCode in (1, 2)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SexCode", Marshaller.sexCodes));
@@ -47,7 +48,7 @@ namespace SligoCS.DAL.WI
             
 
             //LinkSubjectCode
-            sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "LinkSubjectCode", Marshaller.GlobalValues.TQSubjects.Value ));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "LinkSubjectCode", Marshaller.TQSubjectCodes));
 
             //order by clause
             //sb.AppendFormat(" ORDER BY {0}", SQLHelper.ConvertToCSV(orderBy, false));

@@ -5,5 +5,6 @@
     <tr>
         <td style="width:60px; vertical-align:top;"><asp:PlaceHolder runat="server" ID="label" /></td>
         <td style="vertical-align:top;"><asp:PlaceHolder ID="links" runat="server" /></td>
+        <td style="vertical-align:top;"><asp:PlaceHolder ID="extensions" runat="Server" /></td>
     </tr>
     </table>

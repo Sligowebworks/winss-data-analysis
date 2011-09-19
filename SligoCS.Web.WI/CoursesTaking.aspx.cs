@@ -41,7 +41,10 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             setGradeCodeRange(GradeCodesActive);
-            if (!GradeCodesActive.Contains(GlobalValues.Grade.Value)) GlobalValues.Grade.Key = GradeKeys.Grades_6_12_Combined;
+            if (!GradeCodesActive.Contains(GlobalValues.Grade.Value) //invalid selection
+                || !GlobalValues.inQS.Contains(GlobalValues.Grade.Name)) //user hasn't specified a grade
+                GlobalValues.Grade.Key = GradeKeys.Grades_6_12_Combined;
+
 
             GlobalValues.TrendStartYear = 1997;
             GlobalValues.Year = 2010;
@@ -145,7 +148,7 @@ namespace SligoCS.Web.WI
                     && n >= GlobalValues.LOWGRADE)
                     codes.Add(n.ToString());
             }
-            codes.Add("94");
+            codes.Add("94"); //"Grade" 6-12
         }
     }
 }

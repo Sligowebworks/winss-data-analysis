@@ -51,6 +51,10 @@ namespace SligoCS.Web.WI.WebSupportingClasses
                 result = (new DALALLAgencies()).GetCESANameByID(
                     (GlobalValues.SCESA).Trim());
             }
+            else if (GlobalValues.SRegion.Key == SRegionKeys.Statewide)
+            {
+                result = " the State";
+            }
 
             return result;
         
@@ -225,11 +229,11 @@ namespace SligoCS.Web.WI.WebSupportingClasses
         /// </summary>
         /// <param name="years"></param>
         /// <returns></returns>
-        public String GetYearRangeInTitle( List<int> years)
+        public String GetYearRangeInTitle( List<String> years)
         {
             years.Sort();
             int max = years.Count -1;
-            return  String.Format("{0}-{1}", (years[max] - 1), years[max].ToString().Substring(2));
+            return  String.Format("{0}-{1}", (int.Parse(years[max]) - 1), years[max].ToString().Substring(2));
         }
 
         /// <summary>
@@ -361,9 +365,6 @@ namespace SligoCS.Web.WI.WebSupportingClasses
             title = expr.Replace(title, String.Empty);
 
             title = title.Replace(" - ", sep); // don't kill hyphens in years, so only catch when surrounded in spaces
-            //title = title.Replace("*", String.Empty);
-            //title = title.Replace("/", String.Empty);
-            //title = title.Replace(":", String.Empty);
             title = title.Replace("&reg;", String.Empty);
             title = System.Web.HttpUtility.HtmlDecode(title);
             //title = title.Replace("&#37; ", "Percent_");

@@ -262,6 +262,19 @@ namespace SligoCS.Web.WI
             RedirectUserAndSetS4OrAll(parameters);
         }
 
+        protected void StatewideButton_Click(object sender, EventArgs e)
+        {
+            List<String> parameters = new List<String>();
+
+            parameters.Add(
+                String.Format(paramFormat,
+                GlobalValues.SRegion.Name,
+                GlobalValues.SRegion.Range[SRegionKeys.Statewide])
+            );
+
+            RedirectUserAndSetS4OrAll(parameters);
+        }
+
         private void RedirectUserAndSetS4OrAll(List<String> parameters)
         {
             String link;

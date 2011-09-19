@@ -67,6 +67,8 @@ namespace SligoCS.Web.WI
             GlobalValues.CompareTo.Key = CompareToKeys.Current;
             GlobalValues.Group.Key = GroupKeys.All;
 
+            QueryMarshaller.gradeCodes.ObeyForceDisAgg = true;
+
             base.OnInitComplete(e);
         }
 

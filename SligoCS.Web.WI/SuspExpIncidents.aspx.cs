@@ -80,10 +80,14 @@ namespace SligoCS.Web.WI
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (GlobalValues.Weapon.Key == WeaponKeys.Yes)
-                DataSetTitle = GetTitle("Weapon/Drug Related Incidents \n Resulting in Suspension/Expulsion");
+            String titlePrefix;
+
+            if (GlobalValues.Weapon.Key == WeaponKeys.Yes || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+                titlePrefix = "Weapon/Drug Related Incidents \n Resulting in Suspension/Expulsion";
             else
-                DataSetTitle = GetTitle("Incidents Not Related To Weapon/Drug \n Resulting in Suspension/Expulsion");
+                titlePrefix = "Incidents Not Related To Weapon/Drug \n Resulting in Suspension/Expulsion";
+
+            DataSetTitle = GetTitle(titlePrefix);
 
             SuspExpIncDataGrid.AddSuperHeader(DataSetTitle);
           
@@ -243,9 +247,25 @@ namespace SligoCS.Web.WI
         public override System.Collections.Generic.List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
         {
             List<string> retval = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
-            if (GlobalValues.Incident.Key == IncidentKeys.Consequences)
+
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
             {
                 retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.enrollment);
+                retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountTotalWeaponDrug);
+                retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountTotalNonWeaponDrug);
+                retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.PRCWeaponDrugAllSusp);
+                retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.PRCWeaponDrugExp);
+                retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.WeaponDrugIncidentRate);
+                retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.PRCNonWeaponDrugAllSusp);
+                retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.PRCNonWeaponDrugExp);
+                retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.NonWeaponDrugIncidentRate);
+                return retval;
+            }
+
+            retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.enrollment);
+            
+            if (GlobalValues.Incident.Key == IncidentKeys.Consequences)
+            {
                 if (GlobalValues.Weapon.Key == WeaponKeys.Yes)
                 {
                     retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountTotalWeaponDrug);
@@ -261,8 +281,6 @@ namespace SligoCS.Web.WI
             }
             else
             {
-                retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.enrollment);
-
                 if (GlobalValues.Weapon.Key == WeaponKeys.Yes)
                 {
                     retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountTotalWeaponDrug);
@@ -274,23 +292,25 @@ namespace SligoCS.Web.WI
                     retval.Add(v_SuspExpIncidentsWWoDisSchoolDistState.NonWeaponDrugIncidentRate);
                 }
             }
+
             return retval;
         }
 
         protected override System.Collections.Generic.List<string> GetDownloadRawVisibleColumns()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
-            if (GlobalValues.Incident.Key == IncidentKeys.Consequences)
+            if (GlobalValues.Incident.Key == IncidentKeys.Consequences || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
             {
                 int index;
-                if (GlobalValues.Weapon.Key == WeaponKeys.Yes)
+                if (GlobalValues.Weapon.Key == WeaponKeys.Yes || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 {
                     index = cols.IndexOf(v_SuspExpIncidentsWWoDisSchoolDistState.PRCWeaponDrugAllSusp);
                     cols.Insert(index, v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountSuspWeaponDrug); 
                     index = cols.IndexOf(v_SuspExpIncidentsWWoDisSchoolDistState.PRCWeaponDrugExp);
                     cols.Insert(index, v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountExpWeaponDrug); 
                 }
-                else
+                
+                if (GlobalValues.Weapon.Key == WeaponKeys.No || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 {
                     index = cols.IndexOf(v_SuspExpIncidentsWWoDisSchoolDistState.PRCNonWeaponDrugAllSusp);
                     cols.Insert(index, v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountSuspNonWeaponDrug); 
@@ -298,19 +318,7 @@ namespace SligoCS.Web.WI
                     cols.Insert(index, v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountExpNonWeaponDrug); 
                 }
             }
-            else
-            {
-                if (GlobalValues.Weapon.Key == WeaponKeys.Yes)
-                {
-//                    cols.Add(v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountTotalWeaponDrug);
-//                    cols.Add(v_SuspExpIncidentsWWoDisSchoolDistState.WeaponDrugIncidentRate);
-                }
-                else
-                {
-//                    cols.Add(v_SuspExpIncidentsWWoDisSchoolDistState.IncidentCountTotalNonWeaponDrug);
-//                    cols.Add(v_SuspExpIncidentsWWoDisSchoolDistState.NonWeaponDrugIncidentRate);
-                }
-            }
+            
             return cols; 
         }
 

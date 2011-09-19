@@ -11,8 +11,10 @@ namespace SligoCS.DAL.WI
         public override string  BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("SELECT * FROM v_POST_GRAD_INTENT WHERE ");
+            String dbObject = "v_POST_GRAD_INTENT";
 
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            
             //fullkey
             if (Marshaller.compareSelectedFullKeys)
             {
@@ -26,7 +28,7 @@ namespace SligoCS.DAL.WI
             //view does not support schooltype, except for schools
             String compareToKey = Marshaller.GlobalValues.CompareTo.Key;
             if (compareToKey == CompareToKeys.SelSchools && Marshaller.GlobalValues.S4orALL.Key == S4orALLKeys.AllSchoolsOrDistrictsIn)
-                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SchoolType", Marshaller.stypList));
+                sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
 

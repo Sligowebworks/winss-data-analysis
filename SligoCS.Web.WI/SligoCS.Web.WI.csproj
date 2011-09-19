@@ -395,7 +395,9 @@
     <Compile Include="Truancy.aspx.designer.cs" />
     <Compile Include="WebSupportingClasses\ColumnPicker.cs" />
     <Compile Include="WebSupportingClasses\FullKeyUtils.cs" />
-    <Compile Include="WebSupportingClasses\QueryMarshaller.cs" />
+    <Compile Include="WebSupportingClasses\QueryArgumentsWithDisAgg.cs" />
+    <Compile Include="WebSupportingClasses\QueryMarshaller.cs">
+    </Compile>
     <Compile Include="WebSupportingClasses\SligoDataGrid.cs" />
     <Compile Include="WebSupportingClasses\TitleBuilder.cs" />
     <Compile Include="WebSupportingClasses\WinssDataGrid.cs" />
@@ -428,6 +430,7 @@
     <Compile Include="WebSupportingClasses\WI\ParameterValues\SPEND.cs" />
     <Compile Include="WebSupportingClasses\WI\ParameterValues\SRegion.cs" />
     <Compile Include="WebSupportingClasses\WI\ParameterValues\SubjectID.cs" />
+    <Compile Include="WebSupportingClasses\WI\ParameterValues\SupDwnld.cs" />
     <Compile Include="WebSupportingClasses\WI\ParameterValues\TmFrm.cs" />
     <Compile Include="WebSupportingClasses\WI\ParameterValues\Weapon.cs" />
     <Compile Include="WebSupportingClasses\WI\ParameterValues\WOW.cs" />

@@ -17,9 +17,9 @@
     </tr>
     <tr>
     <td class="smtext" style="padding:0px 0px 0px 5px; width: 50%;">
-        <asp:RadioButton ID="Radio4Schools" GroupName="FourOrAllSchools"  Checked="true" runat="server" />Select up to four, in...</td>
+        <asp:RadioButton ID="Radio4Schools" GroupName="FourOrAllSchools"  Checked="false" runat="server" />Select up to four, in...</td>
     <td class="smtext"style="padding:0px 0px 0px 5px; width: 50%;">
-        <asp:RadioButton ID="RadioAllSchools" runat="server" GroupName="FourOrAllSchools" />Select all, in...<br />(with this option pages may be slow to download)</td>
+        <asp:RadioButton ID="RadioAllSchools" runat="server" GroupName="FourOrAllSchools" Checked="true" />Select all, in...<br />(with this option pages may be slow to download)</td>
     </tr>
     </table>  
 </td></tr>
@@ -49,8 +49,8 @@
     </tr>
     <tr valign="top">
     <td class="smtext" >Statewide</td>
-    <td class="smtext" >Show all schools statewide<br />(coming soon) </td>
-    <td><asp:Button ID="StatewideButton"  runat="server" Text="GO" Enabled="false" /></td>
+    <td class="smtext" >Show all <%if (GlobalValues.OrgLevel.Key == SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevelKeys.School) { %>schools <% }else {%> districts <%} %>statewide<br /> </td>
+    <td><asp:Button ID="StatewideButton"  OnClick="StatewideButton_Click" runat="server" Text="GO" /></td>
     </tr>            
     </table>  
 </td></tr>

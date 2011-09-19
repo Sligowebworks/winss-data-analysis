@@ -14,4 +14,5 @@
             <cc1:HyperLinkPlus ID="linkCompareToCurrent" runat="server" ParamName="CompareTo" ParamValue="CURRENTONLY">Current School Data</cc1:HyperLinkPlus>
     </NavigationLinks>
 </sli:NavigationLinkRow>
+ 
   

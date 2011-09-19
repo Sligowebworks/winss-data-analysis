@@ -11,19 +11,19 @@ namespace SligoCS.DAL.WI
         public override string BuildSQL(QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
-
-            sql.Append("SELECT * FROM ");
+            String dbObject;
 
             if (Marshaller.GlobalValues.Group.Key == SligoCS.Web.WI.WebSupportingClasses.WI.GroupKeys.EngLangProf)
-                sql.Append("v_LEPSchoolDistState ");
+                dbObject = "v_LEPSchoolDistState ";
             else if (Marshaller.GlobalValues.Group.Key == SligoCS.Web.WI.WebSupportingClasses.WI.GroupKeys.EconDisadv)
-                sql.Append("v_ErateRollups ");
-            else 
-                sql.Append("v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat ");
+                dbObject = "v_ErateRollups ";
+            else
+                dbObject = "v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat ";
 
-            sql.Append(" WHERE ");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            
             //School Types
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "SchoolType", Marshaller.stypList));
+            sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.NONE, "SchoolType", dbObject));
 
             //years
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));

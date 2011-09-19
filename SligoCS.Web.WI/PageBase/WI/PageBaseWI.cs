@@ -121,6 +121,8 @@ namespace SligoCS.Web.Base.PageBase.WI
 
             if (Database != null) Database.DataSet = DataSet;
             if (QueryMarshaller != null) QueryMarshaller.Database = Database;
+
+            GlobalValues.OverrideWhenDownloadStateWide();
             
             OnAssociateCompareSelectedToOrgLevel(UserValues, GlobalValues);
 
@@ -183,14 +185,19 @@ namespace SligoCS.Web.Base.PageBase.WI
             //actually raises the Load Event, so child Pages' handler is not executed until this is called.
             base.OnLoad(e);
 
-            if (!String.IsNullOrEmpty(TitleBuilder.Prefix))//throw new Exception();
+            if (!String.IsNullOrEmpty(TitleBuilder.Prefix))
             {
                 rawCsvName = TitleBuilder.DownloadRawDataFileName(TitleBuilder.Prefix);
                 Session.Add("RawCsvName", rawCsvName);
                 Session.Add("RawCsvData", GenerateRawCsvData(DataSet));
-                //throw new Exception(session[rawCsvName].ToString());
-            }
 
+                if (globalValues.SuperDownload.Key == SupDwnldKeys.True
+                    && !((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.globals) !=0))
+                {
+                    Response.Redirect("serveRawDataCsv.aspx");
+                }
+            }
+            
             OnDataBindTable(); //must be called after Page Load has been
             if (Graph != null && Graph.Visible)OnDataBindGraph();
         }
@@ -605,13 +612,13 @@ namespace SligoCS.Web.Base.PageBase.WI
         {
             if (
                 (GlobalValues.CompareTo.Key != CompareToKeys.SelSchools && GlobalValues.CompareTo.Key != CompareToKeys.SelDistricts) 
-                || GlobalValues.S4orALL.Key != S4orALLKeys.FourSchoolsOrDistrictsIn 
-                //|| Request.QueryString["B2G"] == "1" 
+                || GlobalValues.SuperDownload.Key == SupDwnldKeys.True
+                || (GlobalValues.S4orALL.Key != S4orALLKeys.FourSchoolsOrDistrictsIn && GlobalValues.inQS.Contains(GlobalValues.S4orALL.Name))
                 || GlobalValues.OrgLevel.Key == OrgLevelKeys.State)
             {
                 return;
             }
-
+            
             if (
                 String.IsNullOrEmpty
                 (GlobalValues.SFullKeys(GlobalValues.OrgLevel) )

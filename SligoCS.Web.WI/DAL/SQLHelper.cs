@@ -133,7 +133,7 @@ namespace SligoCS.DAL.WI
         /// <param name="fieldName"></param>
         /// <param name="vals"></param>
         /// <returns></returns>
-        public static string WhereClauseSingleValueOrInclusiveRange(WhereClauseJoiner joiner, string fieldName, List<int> vals)
+        public static string WhereClauseSingleValueOrInclusiveRange(WhereClauseJoiner joiner, string fieldName, List<String> vals)
         {
             string retval = string.Empty;
             if (vals.Count > 2)
@@ -156,13 +156,13 @@ namespace SligoCS.DAL.WI
         /// <param name="min"></param>
         /// <param name="max"></param>
         /// <returns></returns>
-        public static string WhereClauseMinAndMaxInclusive(WhereClauseJoiner joiner, string fieldName, int min, int max)
+        public static string WhereClauseMinAndMaxInclusive(WhereClauseJoiner joiner, string fieldName, string min, string max)
         {
             string retval = string.Format(" {0} (({1} >= {2}) AND ({1} <= {3}))", GetJoinerString(joiner), fieldName, min, max);
             return retval;
         }
 
-        private static string GetJoinerString(WhereClauseJoiner joiner)
+        public static string GetJoinerString(WhereClauseJoiner joiner)
         {
             string retval;
             if (joiner == WhereClauseJoiner.NONE)
@@ -172,6 +172,9 @@ namespace SligoCS.DAL.WI
 
             return retval;
         }
-
+        public static string SelectStarFromWhereFormat(String dbObject)
+        {
+            return String.Format("SELECT * FROM {0} WHERE ", dbObject);
+        }
     }
 }

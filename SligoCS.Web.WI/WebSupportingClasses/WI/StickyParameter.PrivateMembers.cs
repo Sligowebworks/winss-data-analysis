@@ -59,16 +59,6 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
         private S4orALL s4orALL = new S4orALL();// = int.Parse(InitializeProperty("S4orALL"));  // 1 for 4 schools or districts in a county.Athletic conference or CESA, 2 for all schools or deistricts
         private SRegion sRegion = new SRegion(); // 1 county, 2 for Ath Conf 3 for CESA
 
-        private int lepPctG4; // For WSAS scatter plot page
-        private int sdisPctG4; // For WSAS scatter plot page
-        private int econPctG4; // For WSAS scatter plot page
-        private int lepPctG8; // For WSAS scatter plot page
-        private int sdisPctG8; // For WSAS scatter plot page
-        private int econPctG8;// For WSAS scatter plot page
-        private int lepPctG10; // For WSAS scatter plot page
-        private int sdisPctG10;// For WSAS scatter plot page
-        private int econPctG10; // For WSAS scatter plot page
-
         private CourseTypeID _courseTypeID = new CourseTypeID(); // For Coursework pages 
         private WMAS _WMASID1 = new WMAS(); // For Coursework pages 
         private Show _show = new Show(); // For Activities pages 

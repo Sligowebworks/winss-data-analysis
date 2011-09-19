@@ -76,7 +76,7 @@
      <br /><br />
     <asp:HyperLink ID="Glossary" runat="server" CssClass="lightblue" Text="Glossary" />
     <br /><br />
-    <a href="http://data.dpi.state.wi.us/DownloadOptions/frm.SelectDataSet.asp" class="lightblue" target="http://dpi.wi.gov/data/DataDownload/frm.SelectDataSet.asp">Download Options</a>
+    <a href="http://dpi.wi.gov/sig/data/download.html" class="lightblue" target="_blank">Download Options</a>
     </asp:Panel><!-- dataLinksPanel -->
     
     <slw:DataAnalysisInfo id="DataAnalysisInfo1" Visible="false" runat="server" />

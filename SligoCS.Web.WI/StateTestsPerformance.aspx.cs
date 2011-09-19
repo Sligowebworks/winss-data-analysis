@@ -126,6 +126,8 @@ namespace SligoCS.Web.WI
 
             base.OnInitComplete(e);
 
+            QueryMarshaller.gradeCodes.ObeyForceDisAgg = true;
+
             DataGrid.Columns.FieldsChanged += new EventHandler(Columns_FieldsChanged);
 
             nlrCompareTo.ShowSimilarSchoolsLink = true;

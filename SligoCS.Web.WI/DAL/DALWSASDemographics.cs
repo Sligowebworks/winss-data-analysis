@@ -13,14 +13,14 @@ namespace SligoCS.DAL.WI
         {
             StringBuilder sql = new StringBuilder();
             GlobalValues globals = Marshaller.GlobalValues;
+            String dbObject =
+                ((globals.SubjectID.Key == SubjectIDKeys.Reading
+                || globals.SubjectID.Key == SubjectIDKeys.Math) ?
+                "v_WSASDemographics"
+                : "v_WSASDemographics4810"
+                    );
 
-            sql.Append("SELECT * FROM "
-            + ((globals.SubjectID.Key == SubjectIDKeys.Reading
-            || globals.SubjectID.Key == SubjectIDKeys.Math)?
-            "v_WSASDemographics" 
-            : "v_WSASDemographics4810"
-                )
-            + " WHERE ");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 
@@ -46,7 +46,7 @@ namespace SligoCS.DAL.WI
 
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "migrantcode", Marshaller.migrantCodes));
 
-            sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "gradecode", Marshaller.gradeCodes));
+            sql.Append(Marshaller.GradeCodesClause(SQLHelper.WhereClauseJoiner.AND, "GradeCode", dbObject));
 
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FAYCode", Marshaller.FAYCodes));
 

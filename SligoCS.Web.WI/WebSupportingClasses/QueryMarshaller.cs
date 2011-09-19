@@ -22,9 +22,9 @@ namespace SligoCS.BL.WI
         private List<int> raceDisagCodes;
         private DataColumnCollection dataColumns;
 
-        public List<int> years, stypList, gradeCodes, sexCodes, raceCodes,
-            disabilityCodes,  econDisadvCodes, migrantCodes, ELPCodes, FAYCodes;
-        public List<String> fullkeylist, ActivityCodes, WsasSubjectCodes;
+        public List<String> years, FAYCodes, fullkeylist;
+
+        public QueryArgumentsWithDisagg stypList, gradeCodes, sexCodes, raceCodes, disabilityCodes, econDisadvCodes, migrantCodes, ELPCodes, WsasSubjectCodes, WMASCodes, CourseTypeCodes, ActivityCodes, GradReqSubjCodes, TQSubjectCodes, CostTypeCodes;
         
         public String clauseForCompareSelected;
         /// <summary>
@@ -93,17 +93,43 @@ namespace SligoCS.BL.WI
                     ;
             }
         }
+        #endregion //properties
 
         public QueryMarshaller()
-        {
-            globals = new GlobalValues();
-        }
+            :this(new GlobalValues()) {        }
 
        public  QueryMarshaller(GlobalValues initGlobals)
         {
             globals = initGlobals;
+            InitQueryArgumentObjects();
+       }
+
+        private void InitQueryArgumentObjects() 
+        {
+            sexCodes = new QueryArgumentsWithDisagg(globals);
+            raceCodes = new QueryArgumentsWithDisagg(globals);
+            disabilityCodes = new QueryArgumentsWithDisagg(globals);
+            migrantCodes = new QueryArgumentsWithDisagg(globals);
+            econDisadvCodes = new QueryArgumentsWithDisagg(globals);
+            ELPCodes = new QueryArgumentsWithDisagg(globals);
+            gradeCodes = new QueryArgumentsWithDisagg(globals);
+
+            stypList = new QueryArgumentsWithDisagg(globals);
+            WMASCodes = new QueryArgumentsWithDisagg(globals);
+            CourseTypeCodes = new QueryArgumentsWithDisagg(globals);
+            ActivityCodes = new QueryArgumentsWithDisagg(globals);
+            GradReqSubjCodes = new QueryArgumentsWithDisagg(globals);
+            TQSubjectCodes = new QueryArgumentsWithDisagg(globals);
+            CostTypeCodes = new QueryArgumentsWithDisagg(globals);
+
+            stypList.ObeyForceDisAgg = true;
+            WMASCodes.ObeyForceDisAgg = true;
+            CourseTypeCodes.ObeyForceDisAgg = true;
+            GradReqSubjCodes.ObeyForceDisAgg = true;
+            TQSubjectCodes.ObeyForceDisAgg = true;
+            CostTypeCodes.ObeyForceDisAgg = true;
         }
-        #endregion //properties
+        
         /// <summary>
         /// Marshalls and Executes the AutoQuery, be sure that prerequisites have been assigned before calling.
         /// </summary>
@@ -113,10 +139,12 @@ namespace SligoCS.BL.WI
             Database = dalObj;
             InitLists(); // might have already been called, but will catch any changes
             globals.SQL = Database.SQL = Database.BuildSQL(this);
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True && ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.sql) != 0))
+                throw new Exception(Database.SQL);
             Database.Query();
         }
         /// <summary>
-        /// Performs no checks, simply queries using the properties already assigned.
+        /// Performs no checks, simply queries using the properties already assigned.    
         /// Be sure to call: InitLists(); assign a DAL(Database) Object; and a SQL string.
         /// </summary>
         public void ManualQuery()
@@ -134,93 +162,224 @@ namespace SligoCS.BL.WI
             Database.Query();
         }
         /// <summary>
-        /// analyses Application State and marshalls Lists used in Querying.
+        /// Analyzes Application State and marshalls Lists used in Querying.
         /// </summary>
         public void InitLists()
         {
-            System.Diagnostics.Debug.WriteLine("QueryMarshaller.InitLists() Entered");
-            stypList = GetSchoolTypesList(globals.STYP);
-            sexCodes = ( globals.Group.Key == GroupKeys.Gender || globals.Group.Key == GroupKeys.RaceGender)?
-                    new List<int>(new int[3]{ 1,2,8 })
-                    : new List<int>(new int[1]{9});
-            raceCodes = (globals.Group.Key == GroupKeys.Race || globals.Group.Key == GroupKeys.RaceGender) ?
-                    RaceDisagCodes
-                    : new List<int>(new int[] {(int) RaceCodes.All_Races });
-            disabilityCodes = (globals.Group.Key == GroupKeys.Disability) ?
-                    new List<int>(new int[] { 1, 2 })
-                    : new List<int>(new int[] { 9 });
-            migrantCodes = (globals.Group.Key == GroupKeys.Migrant) ?
-                    new List<int>(new int[] { 1, 2 })
-                    : new List<int>(new int[] { 9 });
-            if (globals.Group.Key == GroupKeys.Grade
-                || GlobalValues.Grade.Key == GradeKeys.AllDisAgg)
+            SetSubsSTYPlist(stypList);
+
+            sexCodes.DisAggValues = delegate  () { return new List<String>( new String[] { "1","2","8"}); };
+            sexCodes.ArgSub = delegate()
+                { return
+                    (globals.Group.Key == GroupKeys.Gender || globals.Group.Key == GroupKeys.RaceGender)
+                      ? sexCodes.DisAggValues()
+                      : new List<String>(new String[1] { "9" });
+                };
+
+            raceCodes.DisAggValues = delegate() { return RaceDisagCodes.ConvertAll<String>(SQLHelper.ConvertIntToString); };
+            raceCodes.ArgSub = delegate()
+                { return 
+                  (globals.Group.Key == GroupKeys.Race || globals.Group.Key == GroupKeys.RaceGender) 
+                      ? raceCodes.DisAggValues()
+                      : new List<String>(new String[] {((int)RaceCodes.All_Races).ToString() });
+                };
+
+            disabilityCodes.DisAggValues = delegate() { return new List<String>(new string[] { "1", "2" }); };
+            disabilityCodes .ArgSub = delegate()
+            { return 
+                    (globals.Group.Key == GroupKeys.Disability)
+                    ? disabilityCodes.DisAggValues()
+                    : new List<String>(new String[] { "9" });
+            };
+
+            migrantCodes.DisAggValues = delegate() { return new List<String>(new String[] { "1", "2" }); };
+            migrantCodes.ArgSub = delegate()
+            { return  (globals.Group.Key == GroupKeys.Migrant) 
+                    ? migrantCodes.DisAggValues()
+                    : new List<String>(new String[] { "9" });
+            };
+            
+            econDisadvCodes.DisAggValues = delegate () {return new List<String>( new String[] {"1","2"}); };
+            econDisadvCodes.ArgSub = delegate()
+            { return (globals.Group.Key == GroupKeys.EconDisadv) 
+                ? econDisadvCodes.DisAggValues()
+                : new List<String>(new String[] {"9" });
+            };
+
+            ELPCodes.DisAggValues = delegate() {return new List<String>( new String[] { "1","2"}); };
+            ELPCodes.ArgSub = delegate()
+            { return (globals.Group.Key == GroupKeys.EngLangProf)
+                    ? ELPCodes.DisAggValues()
+                    : new List<String>(new String[] { "9" });
+            };
+
+            gradeCodes.DisAggValues = delegate()
             {
                 SetLowGradeFloors(globals);
-                gradeCodes = new List<int>(new int[] {
-                    globals.LOWGRADE,
-                    globals.HIGHGRADE
+                return new List<String>(new String[] {
+                    globals.LOWGRADE.ToString(),
+                    globals.HIGHGRADE.ToString()
                     });
-            }
-           else
-            {
-                gradeCodes = new List<int>(new int[] {int.Parse(GlobalValues.Grade.Value)});
-            }
-            econDisadvCodes = (globals.Group.Key == GroupKeys.EconDisadv) ?
-                    new List<int>(new int[] { 1, 2 })
-                    : new List<int>(new int[] { 9 });
-            ELPCodes = (globals.Group.Key == GroupKeys.EngLangProf) ?
-                    new List<int>(new int[] { 1, 2 })
-                    : new List<int>(new int[] { 9 });
-            years = (globals.CompareTo.Key != CompareToKeys.Years) ?
-                    new List<int>(new int[] { globals.Year })
-                    : new List<int>(new int[] { globals.TrendStartYear, globals.Year });
+            };
+            gradeCodes.ArgSub = delegate()
+            { return
+                  (globals.Group.Key == GroupKeys.Grade
+                  || GlobalValues.Grade.Key == GradeKeys.AllDisAgg)
+                  ? gradeCodes.DisAggValues()
+                  : new List<String>(new String[] { GlobalValues.Grade.Value });
+            };
 
-            ActivityCodes = GetActivityCodesList(globals.Show);
+            if (globals.Group.Key == GroupKeys.Grade) gradeCodes.ObeyForceDisAgg = true;
+
+            years = (globals.CompareTo.Key != CompareToKeys.Years) ?
+                    new List<String>(new String[] { globals.Year.ToString() })
+                    : new List<String>(new String[] { globals.TrendStartYear.ToString(), globals.Year.ToString() });
+
+            WMASCodes.ArgSub = delegate()
+            {
+                return new List<String>(new String [] {GlobalValues.WMAS.Value});
+            };
+            WMASCodes.DisAggValues = delegate()
+            {
+                List<String> list = new List<string>();
+
+                foreach (String key in GlobalValues.WMAS.Range.Keys)
+                {
+                        list.Add(GlobalValues.WMAS.Range[key]);
+                }
+                return list;
+            };
+
+            CourseTypeCodes.ArgSub = delegate()
+            {
+                return new List<String>(new String[] { GlobalValues.CourseTypeID.Value });
+            };
+            CourseTypeCodes.DisAggValues = delegate()
+            {
+                List<string> list = new List<string>();
+
+                foreach (String key in GlobalValues.CourseTypeID.Range.Keys)
+                {
+                    list.Add(GlobalValues.CourseTypeID.Range[key]);
+                }
+                return list;
+            };
+
+            ActivityCodes.ArgSub = delegate()
+            {
+                List<String> list = new List<String>();
+                if (GlobalValues.Show.Key == ShowKeys.Community)
+                {
+                    list.AddRange(new String[] { "RE", "VO" });
+                }
+                else//( show.Value == ShowKeys.Extracurricular)
+                {
+                    list.AddRange(new String[] { "AT", "AC", "MS" });
+                }
+                return list;
+            };
+            ActivityCodes.DisAggValues = delegate()
+            {
+                return new List<String>
+                    (new String[] { "AT", "AC", "MS", "RE", "VO" });
+            };
+
+            GradReqSubjCodes.ArgSub = delegate()
+            {
+                List<String> subjects;
+                if (GlobalValues.GRSbj.Key == GRSbjKeys.StateLaw)
+                {
+                    subjects = new List<String>(new String[] { "1", "7" });
+                }
+                else
+                {
+                    subjects = new List<String>(new String[] { "8", "13" });
+                }
+                return subjects;
+            };
+            GradReqSubjCodes.DisAggValues = delegate()
+            {
+                return new List<String>(new String[] { "1", "13" });
+            };
+
+            TQSubjectCodes.ArgSub = delegate(){ return new List<String>(new String[] { GlobalValues.TQSubjects.Value });};
+            TQSubjectCodes.DisAggValues = delegate()
+            {
+                List<String> list = new List<String>();
+                foreach (string key in GlobalValues.TQSubjects.Range.Keys)
+                {
+                    if (GlobalValues.TQSubjects.Key != TQSubjectsKeys.All)
+                        list.Add(GlobalValues.TQSubjects.Range[key]);
+                }
+                return list;
+            };
+
+            CostTypeCodes.ArgSub = delegate()
+            {
+                return new List<string>
+                    (new String[] {"CC", GlobalValues.CT });
+            };
+            CostTypeCodes.DisAggValues = delegate()
+            {
+                List<String> ct = new List<string>(new String[] { "CC" });
+                foreach (String key in GlobalValues.CT.Range.Keys)
+                {
+                    ct.Add(GlobalValues.CT.Range[key]);
+                } 
+                
+                return ct;
+            };
 
             InitFullkeyList();
 
-            FAYCodes = new List<int>();
+            FAYCodes = new List<String>();
 
             if (globals.FAYCode.Key == FAYCodeKeys.CompareFayALL)
             {
-                FAYCodes.Add(2);
-                FAYCodes.Add(9);
+                FAYCodes.Add("2");
+                FAYCodes.Add("9");
             }
             else if (globals.FAYCode.Key == FAYCodeKeys.FAY)
             {
-                FAYCodes.Add(2);
+                FAYCodes.Add("2");
             }
             else
             {
-                FAYCodes.Add(9);
+                FAYCodes.Add("9");
             }
-            WsasSubjectCodes = InitWsasSubjectList();
 
-            clauseForCompareSelected = BuildClauseForCompareToSelected();
-
-            if (OnListsInitialized != null) OnListsInitialized(this);
-        }
-        public delegate void ListsInitializedhandler( QueryMarshaller qm);
-        public event ListsInitializedhandler OnListsInitialized;
-        
-        public List<String> InitWsasSubjectList()
-        {
-            List<String> list = new List<string>();
+            WsasSubjectCodes = new QueryArgumentsWithDisagg(GlobalValues);
             
-            if (GlobalValues.SubjectID.Key == SubjectIDKeys.AllTested)
+            WsasSubjectCodes.DisAggValues =  delegate()
             {
+                List<String> list = new List<string>();
+
                 foreach (String key in GlobalValues.SubjectID.Range.Keys)
                 {
                     if (key != SubjectIDKeys.AllTested)
                         list.Add(GlobalValues.SubjectID.Range[key]);
                 }
-            }
-            else
+                return list;
+            };
+
+            WsasSubjectCodes.ArgSub = delegate() 
             {
-                list.Add(GlobalValues.SubjectID.Value);
-            }
-            return list;
+                if (GlobalValues.SubjectID.Key == SubjectIDKeys.AllTested)
+                { return WsasSubjectCodes.DisAggValues(); }
+                else
+                {
+                    return new List<String>(new string[] { GlobalValues.SubjectID.Value });
+                }
+            };
+
+            clauseForCompareSelected = BuildClauseForCompareToSelected();
+
+            if (OnListsInitialized != null) OnListsInitialized(this);
         }
+
+        public delegate void ListsInitializedhandler( QueryMarshaller qm);
+        public event ListsInitializedhandler OnListsInitialized;
+        
          /// <summary>
         /// prepare fullkeylist for use
         /// </summary>
@@ -245,8 +404,10 @@ namespace SligoCS.BL.WI
         public static void SetLowGradeFloor(GlobalValues globals, int gradecode, int floor)
         {
             if (globals.Grade.Value == gradecode.ToString()
-                    && globals.HIGHGRADE > floor
-                    && globals.LOWGRADE < floor)
+                    && (
+                    ( globals.HIGHGRADE > floor && globals.LOWGRADE < floor )
+                    || globals.SuperDownload.Key == SupDwnldKeys.True)
+                )
                     globals.LOWGRADE = floor;
         }
         
@@ -279,45 +440,98 @@ namespace SligoCS.BL.WI
 
             return keylist;
         }
-        delegate int getIntDelegate(String str);
-        public List<int> GetSchoolTypesList(STYP schoolType)
+        public delegate String getStringDelegate(String str);
+        public void SetSubsSTYPlist(QueryArgumentsWithDisagg schoolTypes)
         {
-            List<int> schoolTypes;
-
-            if (schoolType.Key != STYPKeys.AllTypes)
+            schoolTypes.DisAggValues = delegate() 
             {
-                schoolTypes = new List<int>( new int[] {int.Parse(schoolType.Value)});
+                getStringDelegate getSchoolType = delegate(String str) { return int.Parse(GlobalValues.STYP.Range[str]).ToString(); };
+
+                List<String> list =  new List<String>(new String[] {
+                    getSchoolType(STYPKeys.Elem),
+                    getSchoolType(STYPKeys.Mid),
+                    getSchoolType(STYPKeys.Hi),
+                    getSchoolType(STYPKeys.ElSec)
+                });
+
+                if (schoolTypes.ForceDisAgg) list.Add(getSchoolType(STYPKeys.StateSummary));
+
+                return list;
+            };
+
+            schoolTypes.ArgSub =  delegate()
+            {
+                if (GlobalValues.STYP.Key != STYPKeys.AllTypes)
+                {
+                    return new List<String>(new String[] { GlobalValues.STYP.Value });
+                }
+                else
+                {
+                    return schoolTypes.DisAggValues();
+                }
+            };
+        }
+
+        public String STYPClause(SQLHelper.WhereClauseJoiner join, String field, String dbObject)
+        {
+            String clause;
+
+             if (stypList.ForceDisAgg && GlobalValues.Group.Key == GroupKeys.Grade)
+            {
+                clause =  "  " + SQLHelper.GetJoinerString(join) + " ( SchoolType in ('9') AND right(fullkey, 1) = 'X' OR right(fullkey, 1) <> 'X' "
+                    + SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, field, stypList) + " ) ";
             }
             else
             {
-                getIntDelegate getSchoolTypeInt = delegate (String str){return int.Parse(schoolType.Range[str]); };
-                schoolTypes = new List<int>(new int[] {
-                    getSchoolTypeInt(STYPKeys.Elem),
-                    getSchoolTypeInt(STYPKeys.Mid),
-                    getSchoolTypeInt(STYPKeys.Hi),
-                    getSchoolTypeInt(STYPKeys.ElSec)
-                    //, int.MinValue  // researching why this is in here
-                });
+                clause =  SQLHelper.WhereClauseValuesInList(join, field, stypList);
             }
-            return schoolTypes;
+
+            return clause + SQLHelper.GetJoinerString(SQLHelper.WhereClauseJoiner.AND) + " AgencyType IN ('03', '04', '4C', '49', 'XX')";
         }
-        public List<String> GetActivityCodesList(Show show)
+
+        public String GradeCodesClause(SQLHelper.WhereClauseJoiner join, String field, String dbObject )
         {
-            List<String> list = new List<String>();
-            if (show.Key == ShowKeys.Community)
+            if (gradeCodes.ForceDisAgg)
             {
-                list.AddRange(new String[] { "RE", "VO" }); 
+                return BuildAutoGradeCodeClause(join, field, dbObject, GlobalValues.LOWGRADE);
             }
-            else//( show.Value == ShowKeys.Extracurricular)
+            else
             {
-                list.AddRange(new String[] { "AT", "AC", "MS" }); 
+                return SQLHelper.WhereClauseSingleValueOrInclusiveRange(join, field, gradeCodes);
             }
-            return list;
         }
+
+        public String BuildAutoGradeCodeClause(SQLHelper.WhereClauseJoiner join, String field, String dbObject, int lowgrade )
+        {
+            return "  "+SQLHelper.GetJoinerString(join)+" " + 
+                String.Format(@"(
+    {0} >= (select distinct lowgrade from agency where  {1}.year = agency.year and {1}.agencykey = agency.agencykey)
+    AND {0} <= (select distinct highgrade from agency where {1}.year = agency.year and {1}.agencykey = agency.agencykey)
+   AND {0} >= '{2}'
+) "
+        , field
+        , dbObject
+        , lowgrade.ToString()
+            );
+        }
+
+        public String FullkeyClause(SQLHelper.WhereClauseJoiner join, String field)
+        {
+            if (globals.CompareTo.Key == CompareToKeys.SelSchools
+                    || globals.CompareTo.Key == CompareToKeys.SelDistricts)
+            {
+                return " "+SQLHelper.GetJoinerString(join)+" "+BuildClauseForCompareToSelected();
+            }
+            else
+            {
+                return SQLHelper.WhereClauseValuesInList(join, field, fullkeylist);
+            }
+        }
+
         public String BuildClauseForCompareToSelected()
         {
             String clause = String.Empty;
-            String field = String.Empty;
+            String region = String.Empty;
             String value = String.Empty;
             String comparison =
                 (globals.OrgLevel.Key == OrgLevelKeys.School) ?
@@ -327,25 +541,28 @@ namespace SligoCS.BL.WI
             {
                 if (globals.SRegion.Key == SRegionKeys.County)
                 {
-                    field = "County";
+                    region = "County";
                     value = globals.SCounty;
                 }
                 else if (globals.SRegion.Key == SRegionKeys.CESA)
                 {
-                    field = "CESA";
+                    region = "CESA";
                     value = globals.SCESA;
                 }
                 else if (globals.SRegion.Key == SRegionKeys.AthleticConf)
                 {
-                    field = "ConferenceKey";
+                    region = "ConferenceKey";
                     value = globals.SAthleticConf;
                 }
 
-                clause = CompareSelectedClauseTemplate(comparison, field, value);
+                if (globals.SRegion.Key == SRegionKeys.Statewide)
+                    clause = CompareSelectedClauseStatewideTemplate(comparison);
+                else
+                    clause = CompareSelectedClauseTemplate(comparison, region, value);
             }
             else
             {
-                field = "fullkey";
+                region = "fullkey";
 
                 List<String> keylist = new List<String>();
 
@@ -357,7 +574,7 @@ namespace SligoCS.BL.WI
                     )
                 );
 
-                clause = SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, field, keylist);
+                clause = SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, region, keylist);
             }
             return clause;
         }
@@ -368,6 +585,18 @@ namespace SligoCS.BL.WI
             
             return String.Format(template,
                Name, Value, Operator, 
+                FullKeyUtils.GetMaskedFullkey(globals.FULLKEY, globals.OrgLevel)
+                );
+        }
+        private String CompareSelectedClauseStatewideTemplate(String Operator)
+        {
+            String template = " ( ( right(fullkey,1){0}'X' ) or FullKey in ('{1}')) ";
+
+            //return an inocuous where clause:
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True) return " 1=1 ";
+
+            return String.Format(template,
+                Operator,
                 FullKeyUtils.GetMaskedFullkey(globals.FULLKEY, globals.OrgLevel)
                 );
         }

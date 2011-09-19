@@ -22,6 +22,7 @@ namespace SligoCS.Web.WI.WebUserControls
         {
             label = new PlaceHolder();
             links = new PlaceHolder();
+            extensions = new PlaceHolder();
             rowLabel = new Label();
         }
 
@@ -36,11 +37,15 @@ namespace SligoCS.Web.WI.WebUserControls
             get { return rowLabel.Text; }
             set {  rowLabel.Text = value; }
         }
-        
         [PersistenceMode(PersistenceMode.InnerProperty)]
         public NavigationLinks NavigationLinks
         {
             get { return navigationLinks; }
+        }
+        [PersistenceMode(PersistenceMode.InnerProperty)]
+        public PlaceHolder Extensions
+        {
+            get { return extensions; }
         }
 
        protected override void CreateChildControls()

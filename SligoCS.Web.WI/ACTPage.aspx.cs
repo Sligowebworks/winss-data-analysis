@@ -165,7 +165,26 @@ namespace SligoCS.Web.WI
             newLabels.Add(v_ACT.PupilCount, "number_tested");
             newLabels.Add(v_ACT.Perc_Tested, "percent_tested");
             newLabels.Add(v_ACT.Composite, "average_score_composite");
+            newLabels.Add(v_ACT.Reading, "average_score_" + v_ACT.Reading);
+            newLabels.Add(v_ACT.Science, "average_score_" + v_ACT.Science);
+            newLabels.Add(v_ACT.Math, "average_score_" + v_ACT.Math);
+            newLabels.Add(v_ACT.English, "average_score_" + v_ACT.English);
             return newLabels;
+        }
+
+        protected override List<string> GetDownloadRawVisibleColumns()
+        {
+            List<String> cols = base.GetDownloadRawVisibleColumns();
+
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            {
+                foreach (String key in GlobalValues.ACTSubj.Range.Keys)
+                {
+                    if (!cols.Contains(key))
+                        cols.Add(key);
+                }
+            }
+            return cols;
         }
     
     }

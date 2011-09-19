@@ -110,25 +110,22 @@ namespace SligoCS.DAL.WI
         public string BuildWsasSimilarCurrentAgencyQuery(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
+            String dbObject = "v_WSASDemographics";
             Marshaller.InitFullkeyList();
 
-            //sql.Append("SELECT fullkey,  [PctEcon], [PctLEP], [PctDisabled], [PctWhite], [PctBlack], [PctHisp], [PctAsian], [PctAmInd], [Cost Per Member], [District Size]");
-            sql.Append("SELECT * ");
-            sql.Append(" FROM v_WSASDemographics WHERE");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
-             sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "fullkey",
-                 SligoCS.BL.WI.FullKeyUtils.GetMaskedFullkey(Marshaller.GlobalValues.FULLKEY,
-                 Marshaller.GlobalValues.OrgLevel)));
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
             
             //and grade = '4' and subjectid = '1RE' and
-             if (Marshaller.GlobalValues.Grade.Value == GradeKeys.AllDisAgg)
+             if (Marshaller.GlobalValues.Grade.Value == GradeKeys.AllDisAgg && Marshaller.GlobalValues.SuperDownload.Key != SupDwnldKeys.True)
             {
                 sql.Append(" AND GradeCode <> 99 ");
             }
             else
             {
-                sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "GradeCode", Marshaller.gradeCodes));
+                sql.Append(Marshaller.GradeCodesClause(SQLHelper.WhereClauseJoiner.AND, "GradeCode", dbObject));
             }
 
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SubjectID", Marshaller.WsasSubjectCodes));

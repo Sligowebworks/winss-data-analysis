@@ -392,7 +392,9 @@ namespace SligoCS.Web.WI
 
             cols.Add(v_Disabilities2.Enrollment_PK12);
 
-            if (GlobalValues.PrDis.Key == PrDisKeys.AllDisabilities)
+            bool statewide = (GlobalValues.SuperDownload.Key == SupDwnldKeys.True);
+
+            if (GlobalValues.PrDis.Key == PrDisKeys.AllDisabilities && !statewide)
             {
                 cols.Add(v_Disabilities2.CDPercent);
                 cols.Add(v_Disabilities2.EBDPercent);
@@ -401,97 +403,133 @@ namespace SligoCS.Web.WI
                 cols.Add(v_Disabilities2.OtherPercent);
                 cols.Add(v_Disabilities2.StudentsWODisPercent);
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Autism)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Autism || statewide)
             {
                 cols.Add(v_Disabilities2.ACount);
                 cols.Add(v_Disabilities2.APercent);
-                cols.Add(v_Disabilities2.NonACount);
-                cols.Add(v_Disabilities2.NonAPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonACount);
+                    cols.Add(v_Disabilities2.NonAPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Cognitive)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Cognitive || statewide)
             {
                 cols.Add(v_Disabilities2.CDCount);
                 cols.Add(v_Disabilities2.CDPercent);
-                cols.Add(v_Disabilities2.NonCDCount);
-                cols.Add(v_Disabilities2.NonCDPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonCDCount);
+                    cols.Add(v_Disabilities2.NonCDPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.DeafBlind)
+            if (GlobalValues.PrDis.Key == PrDisKeys.DeafBlind || statewide)
             {
                 cols.Add(v_Disabilities2.DBCount);
                 cols.Add(v_Disabilities2.DBPercent);
-                cols.Add(v_Disabilities2.NonDBCount);
-                cols.Add(v_Disabilities2.NonDBPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonDBCount);
+                    cols.Add(v_Disabilities2.NonDBPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Developmental)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Developmental || statewide)
             {
                 cols.Add(v_Disabilities2.SDDCount);
                 cols.Add(v_Disabilities2.SDDPercent);
-                cols.Add(v_Disabilities2.NonSDDCount);
-                cols.Add(v_Disabilities2.NonSDDPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonSDDCount);
+                    cols.Add(v_Disabilities2.NonSDDPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Emotional)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Emotional || statewide)
             {
                 cols.Add(v_Disabilities2.EBDCount);
                 cols.Add(v_Disabilities2.EBDPercent);
-                cols.Add(v_Disabilities2.NonEBDCount);
-                cols.Add(v_Disabilities2.NonEBDPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonEBDCount);
+                    cols.Add(v_Disabilities2.NonEBDPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Hearing)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Hearing || statewide)
             {
                 cols.Add(v_Disabilities2.HCount);
                 cols.Add(v_Disabilities2.HPercent);
-                cols.Add(v_Disabilities2.NonHCount);
-                cols.Add(v_Disabilities2.NonHPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonHCount);
+                    cols.Add(v_Disabilities2.NonHPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Learning)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Learning || statewide)
             {
                 cols.Add(v_Disabilities2.LDCount);
                 cols.Add(v_Disabilities2.LDPercent);
-                cols.Add(v_Disabilities2.NonLDCount);
-                cols.Add(v_Disabilities2.NonLDPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonLDCount);
+                    cols.Add(v_Disabilities2.NonLDPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Orthopedic)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Orthopedic || statewide)
             {
                 cols.Add(v_Disabilities2.OICount);
                 cols.Add(v_Disabilities2.OIPercent);
-                cols.Add(v_Disabilities2.NonOICount);
-                cols.Add(v_Disabilities2.NonOIPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonOICount);
+                    cols.Add(v_Disabilities2.NonOIPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.OtherHealth)
+            if (GlobalValues.PrDis.Key == PrDisKeys.OtherHealth || statewide)
             {
                 cols.Add(v_Disabilities2.OHICount);
                 cols.Add(v_Disabilities2.OHIPercent);
-                cols.Add(v_Disabilities2.NonOHICount);
-                cols.Add(v_Disabilities2.NonOHIPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonOHICount);
+                    cols.Add(v_Disabilities2.NonOHIPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.SpeachLanguage)
+            if (GlobalValues.PrDis.Key == PrDisKeys.SpeachLanguage || statewide)
             {
                 cols.Add(v_Disabilities2.SLCount);
                 cols.Add(v_Disabilities2.SLPercent);
-                cols.Add(v_Disabilities2.NonSLCount);
-                cols.Add(v_Disabilities2.NonSLPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonSLCount);
+                    cols.Add(v_Disabilities2.NonSLPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.TraumaticBrain)
+            if (GlobalValues.PrDis.Key == PrDisKeys.TraumaticBrain || statewide)
             {
                 cols.Add(v_Disabilities2.TBICount);
                 cols.Add(v_Disabilities2.TBIPercent);
-                cols.Add(v_Disabilities2.NonTBICount);
-                cols.Add(v_Disabilities2.NonTBIPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonTBICount);
+                    cols.Add(v_Disabilities2.NonTBIPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Visual)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Visual || statewide)
             {
                 cols.Add(v_Disabilities2.VICount);
                 cols.Add(v_Disabilities2.VIPercent);
-                cols.Add(v_Disabilities2.NonVICount);
-                cols.Add(v_Disabilities2.NonVIPercent);
+                if (!statewide)
+                {
+                    cols.Add(v_Disabilities2.NonVICount);
+                    cols.Add(v_Disabilities2.NonVIPercent);
+                }
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Combined)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Combined || statewide)
             {
                 cols.Add(v_Disabilities2.SWDCount);
                 cols.Add(v_Disabilities2.SWDPercent);
             }
             // Common Columns:
-            if (GlobalValues.PrDis.Key != PrDisKeys.AllDisabilities)
+            if (GlobalValues.PrDis.Key != PrDisKeys.AllDisabilities || statewide)
             {
                 cols.Add(v_Disabilities2.StudentsWODisCount);
                 cols.Add(v_Disabilities2.StudentsWODisPercent);
@@ -505,7 +543,7 @@ namespace SligoCS.Web.WI
             {
                 return String.Empty;
             }
-            else if (GlobalValues.PrDis.Key == PrDisKeys.Autism)
+            if (GlobalValues.PrDis.Key == PrDisKeys.Autism)
             {
                 return v_Disabilities2.APercent;
             }
@@ -564,7 +602,8 @@ namespace SligoCS.Web.WI
         {
             List <String> cols = base.GetDownloadRawVisibleColumns();
 
-            if (GlobalValues.PrDis.Key == PrDisKeys.AllDisabilities)
+            if (GlobalValues.PrDis.Key == PrDisKeys.AllDisabilities
+                && GlobalValues.SuperDownload.Key == SupDwnldKeys.False)
             {
                 int index = cols.IndexOf(v_Disabilities2.CDPercent);
                 cols.Insert(index, v_Disabilities2.CDCount);
@@ -583,55 +622,95 @@ namespace SligoCS.Web.WI
 
                 index = cols.IndexOf(v_Disabilities2.StudentsWODisPercent);
                 cols.Insert(index, v_Disabilities2.StudentsWODisCount);
+            }
 
-                // mzd: why not working?
-                //index = cols.IndexOf(v_Disabilities2.agencykey);
-                //cols.Insert(index, v_Disabilities2.fullkey.ToString().Substring(7,2));
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            {
 
             }
-            // sample column removal code 
-            // cols.Remove(v_Disabilities2.OrgSchoolTypeLabelAbbr);
+            
             return cols;
         }
 
         protected override SortedList<string, string> GetDownloadRawColumnLabelMapping()
         {
             SortedList<string, string> newLabels = base.GetDownloadRawColumnLabelMapping();
-            newLabels.Add(v_Disabilities2.NonCDCount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonCDPercent, "other_primary_disability_percent");
 
-            newLabels.Add(v_Disabilities2.NonEBDCount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonEBDPercent, "other_primary_disability_percent");
-            
-            newLabels.Add(v_Disabilities2.NonLDCount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonLDPercent, "other_primary_disability_percent");
-            
-            newLabels.Add(v_Disabilities2.NonSLCount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonSLPercent, "other_primary_disability_percent");
-            
-            newLabels.Add(v_Disabilities2.NonACount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonAPercent, "other_primary_disability_percent");
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.False)
+            {
+                newLabels.Add(v_Disabilities2.NonCDCount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonCDPercent, "other_primary_disability_percent");
 
-            newLabels.Add(v_Disabilities2.NonHCount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonHPercent, "other_primary_disability_percent");
+                newLabels.Add(v_Disabilities2.NonEBDCount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonEBDPercent, "other_primary_disability_percent");
 
-            newLabels.Add(v_Disabilities2.NonOHICount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonOHIPercent, "other_primary_disability_percent");
+                newLabels.Add(v_Disabilities2.NonLDCount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonLDPercent, "other_primary_disability_percent");
 
-            newLabels.Add(v_Disabilities2.NonOICount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonOIPercent, "other_primary_disability_percent");
+                newLabels.Add(v_Disabilities2.NonSLCount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonSLPercent, "other_primary_disability_percent");
 
-            newLabels.Add(v_Disabilities2.NonSDDCount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonSDDPercent, "other_primary_disability_percent");
+                newLabels.Add(v_Disabilities2.NonACount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonAPercent, "other_primary_disability_percent");
 
-            newLabels.Add(v_Disabilities2.NonTBICount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonTBIPercent, "other_primary_disability_percent");
+                newLabels.Add(v_Disabilities2.NonHCount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonHPercent, "other_primary_disability_percent");
 
-            newLabels.Add(v_Disabilities2.NonVICount, "other_primary_disability_count");
-            newLabels.Add(v_Disabilities2.NonVIPercent, "other_primary_disability_percent");
+                newLabels.Add(v_Disabilities2.NonOHICount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonOHIPercent, "other_primary_disability_percent");
+
+                newLabels.Add(v_Disabilities2.NonOICount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonOIPercent, "other_primary_disability_percent");
+
+                newLabels.Add(v_Disabilities2.NonSDDCount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonSDDPercent, "other_primary_disability_percent");
+
+                newLabels.Add(v_Disabilities2.NonTBICount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonTBIPercent, "other_primary_disability_percent");
+
+                newLabels.Add(v_Disabilities2.NonVICount, "other_primary_disability_count");
+                newLabels.Add(v_Disabilities2.NonVIPercent, "other_primary_disability_percent");
+            }
+ 
+            newLabels.Add(v_Disabilities2.CDCount, "number_cognitively_disabled");
+            newLabels.Add(v_Disabilities2.CDPercent, "percent_cognitively_disabled");
+
+            newLabels.Add(v_Disabilities2.EBDCount, "number_emotional_behavioral_disability");
+            newLabels.Add(v_Disabilities2.EBDPercent, "percent_emotional_behavioral_disability");
+
+            newLabels.Add(v_Disabilities2.LDCount, "number_specific_learning_disabilities");
+            newLabels.Add(v_Disabilities2.LDPercent, "percent_specific_learning_disabilities");
+
+            newLabels.Add(v_Disabilities2.SLCount, "number_speech_or_language_impairment");
+            newLabels.Add(v_Disabilities2.SLPercent, "percent_speech_or_language_impairment");
+
+            newLabels.Add(v_Disabilities2.ACount, "number_autism");
+            newLabels.Add(v_Disabilities2.APercent, "percent_autism");
+
+            newLabels.Add(v_Disabilities2.HCount, "number_hearing_impairment");
+            newLabels.Add(v_Disabilities2.HPercent, "percent_hearing_impairment");
+
+            newLabels.Add(v_Disabilities2.OHICount, "number_other_health_impairment");
+            newLabels.Add(v_Disabilities2.OHIPercent, "percent_other_health_impairment");
+
+            newLabels.Add(v_Disabilities2.OICount, "number_orthopedic_impairment");
+            newLabels.Add(v_Disabilities2.OIPercent, "percent_orthopedic_impairment");
+
+            newLabels.Add(v_Disabilities2.SDDCount, "number_significant_development_delay");
+            newLabels.Add(v_Disabilities2.SDDPercent, "percent_significant_development_delay");
+
+            newLabels.Add(v_Disabilities2.TBICount, "number_traumatic_brain_injury");
+            newLabels.Add(v_Disabilities2.TBIPercent, "percent_traumatic_brain_injury");
+
+            newLabels.Add(v_Disabilities2.VICount, "number_visual_impairment");
+            newLabels.Add(v_Disabilities2.VIPercent, "percent_visual_impairment");
+
+            newLabels.Add(v_Disabilities2.SWDCount, "number_total_students_with_disability");
+            newLabels.Add(v_Disabilities2.SWDPercent, "percent_total_students_with_disability");
+            newLabels.Add(v_Disabilities2.StudentsWODisCount, "number_students_without_disability");
+            newLabels.Add(v_Disabilities2.StudentsWODisPercent, "percent_students_without_disability");
 
             return newLabels;
         }
-
     }
 }

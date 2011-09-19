@@ -4,15 +4,13 @@ using System.Text;
 
 namespace SligoCS.Web.WI.WebSupportingClasses.WI
 {
-	public struct SRegionKeys
+	public struct SupDwnldKeys
 	{
-		public const string County = "Country";
-		public const string AthleticConf = "Athlectic Conference";
-		public const string CESA = "CESA";
-		public const string Statewide = "Statewide";
+		public const string True = "True";
+		public const string False = "False";
 	}
 
-	public class SRegion : ParameterValues
+	public class SupDwnld : ParameterValues
 	{
 		private static SerializableDictionary<String, String> range;
 
@@ -28,10 +26,8 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
 		{
 			SerializableDictionary<String, String> range = new SerializableDictionary<String, String>();
 
-			range.Add(SRegionKeys.County, "1");
-			range.Add(SRegionKeys.AthleticConf, "2");
-			range.Add(SRegionKeys.CESA, "3");
-			range.Add(SRegionKeys.Statewide, "4");
+			range.Add(SupDwnldKeys.True, "1");
+			range.Add(SupDwnldKeys.False, "0");
 
 			return range;
 		}

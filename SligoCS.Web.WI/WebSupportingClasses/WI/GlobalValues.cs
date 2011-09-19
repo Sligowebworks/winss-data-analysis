@@ -26,7 +26,8 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             this.STYP = InitSchoolType();
             this.Grade = InitGrade();
         }
-
+        
+        #region properties
         private string sql;
         private string traceSql = String.Empty;
         private bool shortCircuitRedirectTests = false;
@@ -38,9 +39,14 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             set { myPage = value; }
         }
 
-        public FAYCode FAYCode = new FAYCode();
+        private  FAYCode fayCode = new FAYCode();
+        public FAYCode FAYCode { get { return fayCode; } set { fayCode = value; } }
 
-        public List<String> GradeCodesActive = new List<String>();
+        private List<String> gradeCodesActive = new List<String>();
+        public List<String> GradeCodesActive { get { return gradeCodesActive; } set { gradeCodesActive = value; } }
+
+        private SupDwnld superDownload = new SupDwnld();
+        public SupDwnld SuperDownload { get { return superDownload; } set { superDownload = value; } }
         
         /// <summary>
         /// For Tracing, all assignments wil be cached for Tracing. Field may be assigned and used locally for a single SQL statement.
@@ -53,7 +59,6 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             get { return traceSql; }
             set { traceSql = value; }
         }
-
 
         /// <summary>
         /// Stops all redirects raised by OnRedirectUser;
@@ -113,121 +118,14 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
 
         public string SFullKeys(OrgLevel level)
         {
-            if (S4orALL.Key == S4orALLKeys.FourSchoolsOrDistrictsIn)
-            {
-                if (level.Key == OrgLevelKeys.School)
-                    return SSchoolFullKeys;
-                else if (level.Key == OrgLevelKeys.District)
-                    return SDistrictFullKeys;
-            }
-            else if (S4orALL.Key == S4orALLKeys.AllSchoolsOrDistrictsIn)
-            {
-                if (SRegion.Key == SRegionKeys.AthleticConf)
-                    return SAthleticConf;
-                else if (SRegion.Key == SRegionKeys.CESA)
-                    return SCESA;
-                else //if (SRegion.Key == SRegionKeys.County)
-                    return SCounty;
-            }
-            return null;
+            if (level.Key == OrgLevelKeys.School)
+                return SSchoolFullKeys;
+            else if (level.Key == OrgLevelKeys.District)
+                return SDistrictFullKeys;
+            else
+                return null;
         }
-        public static void associateCompareSelectedToOrgLevel(GlobalValues user, GlobalValues app)
-        {
-            //CompareSelected Overrides are propagated to the User Values so that Dialogues (ChooseSelected) can pick up overrides
 
-            if (app.OrgLevel.Key == OrgLevelKeys.District
-                && app.CompareTo.Key == CompareToKeys.SelSchools)
-                user.CompareTo.Value = app.CompareTo.Value = app.CompareTo.Range[CompareToKeys.SelDistricts];
-            
-            if (app.OrgLevel.Key == OrgLevelKeys.School
-            && app.CompareTo.Key == CompareToKeys.SelDistricts)
-                user.CompareTo.Value = app.CompareTo.Value = app.CompareTo.Range[CompareToKeys.SelSchools];
-        }
-        /// <summary>
-        /// Forces CompareTo to Prior Years when State Level is selected
-        /// </summary>
-        /// <param name="Sender"></param>
-        /// <param name="e"></param>
-        public void OverrideCompareToWhenOrgLevelIsState(Object sender, EventArgs e)
-        {
-            if (OrgLevel.Key == OrgLevelKeys.State
-                && !(CompareTo.Key == CompareToKeys.Current|| CompareTo.Key == CompareToKeys.Years)
-                )
-            {
-                CompareTo.Value = CompareTo.Range[CompareToKeys.Years];
-            }
-        }
-        public void OverrideSchoolTypeWhenGroupIsGrade(Object sender, EventArgs e)
-        {
-            if (Group.Key == GroupKeys.Grade
-                && STYP.Key != STYPKeys.StateSummary
-                && OrgLevel.Key != OrgLevelKeys.School)
-            {
-                STYP.Value = STYP.Range[STYPKeys.StateSummary];
-            }
-        }
-        public void OverrideSchoolTypeWhenOrgLevelIsSchool(Object sender, EventArgs e)
-        {
-            if (OrgLevel.Key == OrgLevelKeys.School)
-                STYP.Value = Agency.STYP;
-
-            if (OverrideSchoolTypeWhenOrgLevelIsSchool_Complete != null) OverrideSchoolTypeWhenOrgLevelIsSchool_Complete(this, new EventArgs());
-        }
-        public event EventHandler OverrideSchoolTypeWhenOrgLevelIsSchool_Complete;
-
-        public void OverrideGroupWhenSchoolTypeIsAll(Object sender, EventArgs e)
-        {
-            if (STYP.Key == STYPKeys.AllTypes
-                && CompareTo.Key != CompareToKeys.Current)
-            {
-                Group.Value = Group.Range[GroupKeys.All];
-            }
-        }
-        public void OverrideGroupByLinksShown(NavViewByGroup.EnableLinksVector show)
-        {
-            bool ovr = false;
-            ovr =
-                (
-                    Group.Key == GroupKeys.Gender
-                    && show < NavViewByGroup.EnableLinksVector.Gender
-                )
-                ||
-                (
-                    Group.Key == GroupKeys.Race
-                    && show < NavViewByGroup.EnableLinksVector.Race
-                )
-                ||
-                (
-                    Group.Key == GroupKeys.RaceGender
-                    &&( show< NavViewByGroup.EnableLinksVector.RaceGender
-                    || ! Page.NavRowGroups.AddRaceGender)
-                )
-                ||
-                (
-                    Group.Key == GroupKeys.Grade
-                    && show < NavViewByGroup.EnableLinksVector.Grade
-                )
-                ||
-                (
-                       Group.Key == GroupKeys.Disability
-                       && show < NavViewByGroup.EnableLinksVector.Disability
-                )
-                ||
-                (
-                   (Group.Key == GroupKeys.EconDisadv
-                   || Group.Key == GroupKeys.EngLangProf)
-                   && show < NavViewByGroup.EnableLinksVector.EconElp
-                )
-                ||
-                (
-                       Group.Key == GroupKeys.Migrant
-                       && show < NavViewByGroup.EnableLinksVector.Migrant
-                )
-            ;
-            
-            if (ovr) Group.Value = Group.Range[GroupKeys.All];
-            if (TraceLevels > 0 && ovr) Page.Response.Write("OverrideGroupByLinksShown::" + show);
-        }
         /// <summary>
         /// Returns a District Code from the current District or School Fullkey 
         /// </summary>
@@ -262,48 +160,6 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             }
         }
 
-        /// <summary>
-        /// Allows for aspx to be used to fully configure which options are available
-        /// Utilizes ParameterValues.OverrideIfNotInList() to override.
-        /// If the current selection is not configured in the page aspx, then the defaultValue argument is applied
-        /// </summary>
-        /// <param name="param"></param>
-        /// <param name="nlr"></param>
-        /// <param name="defaultValue">Can be a Value or a Key. </param>
-        public void OverrideByNavLinksNotPresent(ParameterValues param, NavigationLinkRow nlr, String defaultValue)
-        {
-            if (!param.Range.ContainsValue(defaultValue) && param.Range.ContainsKey(defaultValue))
-            {// argument was a key, not a value, so convert
-                defaultValue = param.Range[defaultValue];
-            }
-
-            SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus lnk;
-            List<String> values = new List<String>();
-
-            foreach (SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus ctrl in nlr.NavigationLinks)
-            {
-                lnk = (SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus) ctrl;
-                values.Add(lnk.ParamValue.ToString());
-            }
-
-            if (values.Count > 0) param.OverrideIfNotInList(values, defaultValue);
-        }
-        public void OverrideLowGradeHighGradeForPriorYears(Object sender, EventArgs e)
-        {
-            if (!(CompareTo.Key == CompareToKeys.Years && Group.Key == GroupKeys.Grade))
-                return;
-            
-            DALLowGradeHighGradePY dal = new DALLowGradeHighGradePY();
-            QueryMarshaller qm = new QueryMarshaller(this);
-
-            System.Collections.Hashtable lowhi = dal.GetLowGradeHiGradePY(qm);
-            if (lowhi == null) return;
-            
-            this.LOWGRADE = int.Parse((string)lowhi["low"]);
-            this.HIGHGRADE = int.Parse((string)lowhi["hi"]);
-
-            SligoCS.BL.WI.QueryMarshaller.SetLowGradeFloors(this);
-        }
         private DALAgency agency;
 
         public DALAgency Agency
@@ -363,5 +219,159 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             } 
             set { lowgrade = value; }
         }
+
+#endregion
+
+#region Constraints on Parameters
+        public static void associateCompareSelectedToOrgLevel(GlobalValues user, GlobalValues app)
+        {
+            //CompareSelected Overrides are propagated to the User Values so that Dialogues (ChooseSelected) can pick up overrides
+
+            if (app.OrgLevel.Key == OrgLevelKeys.District
+                && app.CompareTo.Key == CompareToKeys.SelSchools)
+                user.CompareTo.Value = app.CompareTo.Value = app.CompareTo.Range[CompareToKeys.SelDistricts];
+
+            if (app.OrgLevel.Key == OrgLevelKeys.School
+            && app.CompareTo.Key == CompareToKeys.SelDistricts)
+                user.CompareTo.Value = app.CompareTo.Value = app.CompareTo.Range[CompareToKeys.SelSchools];
+        }
+        /// <summary>
+        /// Forces CompareTo to Prior Years when State Level is selected
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+        public void OverrideCompareToWhenOrgLevelIsState(Object sender, EventArgs e)
+        {
+            if (OrgLevel.Key == OrgLevelKeys.State
+                && !(CompareTo.Key == CompareToKeys.Current || CompareTo.Key == CompareToKeys.Years)
+                )
+            {
+                CompareTo.Value = CompareTo.Range[CompareToKeys.Years];
+            }
+        }
+        public void OverrideSchoolTypeWhenGroupIsGrade(Object sender, EventArgs e)
+        {
+            if (Group.Key == GroupKeys.Grade
+                && STYP.Key != STYPKeys.StateSummary
+                && OrgLevel.Key != OrgLevelKeys.School)
+            {
+                STYP.Value = STYP.Range[STYPKeys.StateSummary];
+            }
+        }
+        public void OverrideSchoolTypeWhenOrgLevelIsSchool(Object sender, EventArgs e)
+        {
+            if (OrgLevel.Key == OrgLevelKeys.School)
+                STYP.Value = Agency.STYP;
+
+            if (OverrideSchoolTypeWhenOrgLevelIsSchool_Complete != null) OverrideSchoolTypeWhenOrgLevelIsSchool_Complete(this, new EventArgs());
+        }
+        public event EventHandler OverrideSchoolTypeWhenOrgLevelIsSchool_Complete;
+
+        public void OverrideGroupWhenSchoolTypeIsAll(Object sender, EventArgs e)
+        {
+            if (STYP.Key == STYPKeys.AllTypes
+                && CompareTo.Key != CompareToKeys.Current)
+            {
+                Group.Value = Group.Range[GroupKeys.All];
+            }
+        }
+        public void OverrideGroupByLinksShown(NavViewByGroup.EnableLinksVector show)
+        {
+            bool ovr = false;
+            ovr =
+                (
+                    Group.Key == GroupKeys.Gender
+                    && show < NavViewByGroup.EnableLinksVector.Gender
+                )
+                ||
+                (
+                    Group.Key == GroupKeys.Race
+                    && show < NavViewByGroup.EnableLinksVector.Race
+                )
+                ||
+                (
+                    Group.Key == GroupKeys.RaceGender
+                    && (show < NavViewByGroup.EnableLinksVector.RaceGender
+                    || !Page.NavRowGroups.AddRaceGender)
+                )
+                ||
+                (
+                    Group.Key == GroupKeys.Grade
+                    && show < NavViewByGroup.EnableLinksVector.Grade
+                )
+                ||
+                (
+                       Group.Key == GroupKeys.Disability
+                       && show < NavViewByGroup.EnableLinksVector.Disability
+                )
+                ||
+                (
+                   (Group.Key == GroupKeys.EconDisadv
+                   || Group.Key == GroupKeys.EngLangProf)
+                   && show < NavViewByGroup.EnableLinksVector.EconElp
+                )
+                ||
+                (
+                       Group.Key == GroupKeys.Migrant
+                       && show < NavViewByGroup.EnableLinksVector.Migrant
+                )
+            ;
+
+            if (ovr) Group.Value = Group.Range[GroupKeys.All];
+            if (TraceLevels > 0 && ovr) Page.Response.Write("OverrideGroupByLinksShown::" + show);
+        }
+
+        /// <summary>
+        /// Allows for aspx to be used to fully configure which options are available
+        /// Utilizes ParameterValues.OverrideIfNotInList() to override.
+        /// If the current selection is not configured in the page aspx, then the defaultValue argument is applied
+        /// </summary>
+        /// <param name="param"></param>
+        /// <param name="nlr"></param>
+        /// <param name="defaultValue">Can be a Value or a Key. </param>
+        public void OverrideByNavLinksNotPresent(ParameterValues param, NavigationLinkRow nlr, String defaultValue)
+        {
+            if (!param.Range.ContainsValue(defaultValue) && param.Range.ContainsKey(defaultValue))
+            {// argument was a key, not a value, so convert
+                defaultValue = param.Range[defaultValue];
+            }
+
+            SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus lnk;
+            List<String> values = new List<String>();
+
+            foreach (SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus ctrl in nlr.NavigationLinks)
+            {
+                lnk = (SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus)ctrl;
+                values.Add(lnk.ParamValue.ToString());
+            }
+
+            if (values.Count > 0) param.OverrideIfNotInList(values, defaultValue);
+        }
+        public void OverrideLowGradeHighGradeForPriorYears(Object sender, EventArgs e)
+        {
+            if (!(CompareTo.Key == CompareToKeys.Years && Group.Key == GroupKeys.Grade))
+                return;
+
+            DALLowGradeHighGradePY dal = new DALLowGradeHighGradePY();
+            QueryMarshaller qm = new QueryMarshaller(this);
+
+            System.Collections.Hashtable lowhi = dal.GetLowGradeHiGradePY(qm);
+            if (lowhi == null) return;
+
+            this.LOWGRADE = int.Parse((string)lowhi["low"]);
+            this.HIGHGRADE = int.Parse((string)lowhi["hi"]);
+
+            SligoCS.BL.WI.QueryMarshaller.SetLowGradeFloors(this);
+        }
+        public void OverrideWhenDownloadStateWide()
+        {
+            if (SuperDownload.Key == SupDwnldKeys.True)
+            {
+                CompareTo.Key = CompareToKeys.SelSchools;
+                S4orALL.Key = S4orALLKeys.AllSchoolsOrDistrictsIn;
+                SRegion.Key = SRegionKeys.Statewide;
+            }
+        }
+#endregion
     }
 }

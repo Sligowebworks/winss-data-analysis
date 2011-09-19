@@ -10,63 +10,54 @@ namespace SligoCS.DAL.WI
     {
         public override String BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sql = new StringBuilder();
+            String dbObject = "v_HSCWWoDisSchoolDistStateEconELPXYearRate";
 
-            sb.Append(@"SELECT * FROM v_HSCWWoDisSchoolDistStateEconELPXYearRate WHERE ");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
            
             //Adds " ... AND (SexCode in (1, 2)) ..."
-            sb.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "SexCode", Marshaller.sexCodes));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "SexCode", Marshaller.sexCodes));
 
             ////Adds " ... AND (RaceCode in (1, 2, 3, 4, 5)) ..."
-            sb.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "RaceCode", Marshaller.raceCodes));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "RaceCode", Marshaller.raceCodes));
 
-            //Adds " ... AND ((GradeCode >= 16) AND (GradeCode <= 64)) ..."
-            sb.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "GradeCode", Marshaller.gradeCodes));
+            sql.Append(Marshaller.GradeCodesClause(SQLHelper.WhereClauseJoiner.AND, "GradeCode", dbObject));
 
             //Adds " ... AND (DisabilityCode in (1, 2)) ..."
-            sb.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "DisabilityCode", Marshaller.disabilityCodes));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "DisabilityCode", Marshaller.disabilityCodes));
 
             //Adds " ... AND (EconDisadvCode in (1, 2)) ..."
-            sb.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "EconDisadv", Marshaller.econDisadvCodes));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "EconDisadv", Marshaller.econDisadvCodes));
 
             //Adds " ... AND (ELPCode in (1, 2)) ..."
-            sb.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "ELPCode", Marshaller.ELPCodes));
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "ELPCode", Marshaller.ELPCodes));
 
             //Adds " ... AND ((year >= 1997) AND (year <= 2007)) ..."
-            sb.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
+            sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
 
-            //fullkey
-            if (!Marshaller.compareSelectedFullKeys)
-            {
-                sb.Append(SQLHelper.WhereClauseValuesInList(
-                    SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
-            else
-            {
-                sb.Append(" and ").Append(Marshaller.clauseForCompareSelected);
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
 
             //Special Case for Compare To OrgLevel
             //Distirct and State Levels should not reflect SchoolType
             if (Marshaller.GlobalValues.CompareTo.Key == CompareToKeys.OrgLevel)
             {
-                sb.Append(SQLHelper.WhereClauseJoiner.AND);
-                sb.Append("((");
-                sb.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.NONE, "right(fullkey, 4)", "XXXX"));
-                sb.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "SchoolType", Marshaller.GlobalValues.STYP.Range[STYPKeys.StateSummary]));
-                sb.Append(") OR (");
-                sb.Append(SQLHelper.WhereClauseNotEquals(SQLHelper.WhereClauseJoiner.NONE, "right(fullkey, 4)", "XXXX"));
-                sb.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SchoolType", Marshaller.stypList));
-                sb.Append("))");
+                sql.Append(SQLHelper.WhereClauseJoiner.AND);
+                sql.Append("((");
+                sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.NONE, "right(fullkey, 4)", "XXXX"));
+                sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "SchoolType", Marshaller.GlobalValues.STYP.Range[STYPKeys.StateSummary]));
+                sql.Append(") OR (");
+                sql.Append(SQLHelper.WhereClauseNotEquals(SQLHelper.WhereClauseJoiner.NONE, "right(fullkey, 4)", "XXXX"));
+                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SchoolType", Marshaller.stypList));
+                sql.Append("))");
             }
-            
+
             if (Marshaller.GlobalValues.CompareTo.Key != CompareToKeys.OrgLevel)
-                sb.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SchoolType", Marshaller.stypList));
+                sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
             
             //Timeframe
             TmFrm frame = Marshaller.GlobalValues.TmFrm;
 
-            sb.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "timeframe", 
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "timeframe", 
                 ( (frame.Key == TmFrmKeys.All)
                 ? new List<int>(new int[] { 0,1}) 
                 : new List<int>( new int[] { 
@@ -75,9 +66,9 @@ namespace SligoCS.DAL.WI
 
             //order by clause
             //sb.AppendFormat(" ORDER BY {0}", SQLHelper.ConvertToCSV(orderBy, false));
-            sb.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));
+            sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));
             
-            return sb.ToString();
+            return sql.ToString();
         }
 
     }

@@ -309,9 +309,6 @@ namespace SligoCS.Web.WI
                     case GraphFileKeys.MONEY:
                         readAbout_NavigateUrl = "http://dpi.wi.gov/spr/money_q&a.html";
                         break;
-                    case GraphFileKeys.ETHNICENROLL:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/tru_q&a.html";
-                        break;
                     case GraphFileKeys.SUSPEXPINCIDENTS:
                         readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
                         break;
