@@ -2,3 +2,7 @@ compare_statewide/SligoCS.Tests.WI/obj
 compare_statewide/SligoCS.Web.WI/BL/bin
 compare_statewide/SligoCS.Web.WI/BL/obj
 compare_statewide/SligoCS.Web.WI/DAL/bin
+compare_statewide_first_release/SligoCS.Tests.WI/obj
+compare_statewide_first_release/SligoCS.Web.WI/BL/bin
+compare_statewide_first_release/SligoCS.Web.WI/BL/obj
+compare_statewide_first_release/SligoCS.Web.WI/DAL/bin

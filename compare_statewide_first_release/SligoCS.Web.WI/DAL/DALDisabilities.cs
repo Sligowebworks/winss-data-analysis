@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SligoCS.DAL.WI
+{
+    public class DALDisabilities :DALWIBase
+    {
+        public override string BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
+        {
+            StringBuilder sql = new StringBuilder();
+            String dbObject = "v_Disabilities2";
+
+            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+
+            sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
+
+            ////fullkey
+            if (Marshaller.compareSelectedFullKeys)
+            {
+                sql.Append(" AND ").Append(Marshaller.clauseForCompareSelected);
+            }
+            else
+            {
+                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
+            }
+
+            sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolTypeCode", dbObject));
+
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "RaceCode", Marshaller.raceCodes));
+
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "SexCode", Marshaller.sexCodes));
+
+            sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));
+
+            return sql.ToString();
+        }
+    }
+}
