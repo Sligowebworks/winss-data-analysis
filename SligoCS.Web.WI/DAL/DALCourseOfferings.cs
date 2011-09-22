@@ -28,16 +28,7 @@ namespace SligoCS.DAL.WI
 
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "WMASID1", Marshaller.WMASCodes));
 
-            //fullkey
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(SQLHelper.WhereClauseJoiner.AND).Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(
-                    SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
             
             // jdj: must exclude null district records - workaround - databse object design is messy and needs refactoring
             sql.Append(" and linkeddistrictname IS NOT NULL ");

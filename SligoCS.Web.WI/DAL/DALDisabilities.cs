@@ -15,15 +15,7 @@ namespace SligoCS.DAL.WI
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 
-            ////fullkey
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(" AND ").Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
 
             sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolTypeCode", dbObject));
 

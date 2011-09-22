@@ -13,7 +13,7 @@ namespace SligoCS.DAL.WI
 
             sql.Append("select 'LowGradePY' = isnull(min(LowGrade),'12'), 'HighGradePY' = isnull(max(HighGrade),'64') FROM [tblAgencyFull] where ");
 
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "FullKey", Marshaller.fullkeylist));
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.NONE, "FullKey"));
 
             return sql.ToString();
         }

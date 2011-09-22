@@ -14,17 +14,7 @@ namespace SligoCS.DAL.WI
             StringBuilder sql = new StringBuilder();
             sql.Append("SELECT * FROM v_Expend_2 WHERE ");
 
-             ////fullkey
-            //sql.Append(SQLHelper.WhereClauseCSV(SQLHelper.WhereClauseJoiner.NONE, "FullKey", fullKey));
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(
-                    SQLHelper.WhereClauseJoiner.NONE, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.NONE, "FullKey"));
 
             ////CT for cost category
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "CT", Marshaller.CostTypeCodes));

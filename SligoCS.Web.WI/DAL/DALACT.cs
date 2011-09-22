@@ -44,15 +44,7 @@ namespace SligoCS.DAL.WI
                 Marshaller.GlobalValues.CompareTo.Key == CompareToKeys.SelSchools))
                     sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
 
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(" AND ").Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(
-                    SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
             
             //order by clause
             sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));

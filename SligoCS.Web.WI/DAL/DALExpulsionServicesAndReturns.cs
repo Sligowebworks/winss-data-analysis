@@ -10,18 +10,11 @@ namespace SligoCS.DAL.WI
         {
             StringBuilder sql = new StringBuilder();
 
-            sql.Append("SELECT * FROM vExpulsionServicesAndReturns WHERE ");
+            sql.Append(SQLHelper.SelectStarFromWhereFormat("vExpulsionServicesAndReturns"));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(" and ").Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
             
             sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));
 

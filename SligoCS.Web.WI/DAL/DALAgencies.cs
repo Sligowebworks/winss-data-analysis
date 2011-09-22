@@ -19,7 +19,7 @@ namespace SligoCS.DAL.WI
 
             sql.Append(SELECT_STAR_WHERE);
 
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "FULLKEY", Marshaller.fullkeylist));
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.NONE, "FullKey"));
 
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "AND", Marshaller.years));
 

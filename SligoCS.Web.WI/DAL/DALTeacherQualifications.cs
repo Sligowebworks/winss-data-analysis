@@ -35,17 +35,7 @@ namespace SligoCS.DAL.WI
             //Adds " ... AND ((year >= 1997) AND (year <= 2007)) ..."
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
 
-            //fullkey
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(" and ").Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(
-                    SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
-            
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
 
             //LinkSubjectCode
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "LinkSubjectCode", Marshaller.TQSubjectCodes));

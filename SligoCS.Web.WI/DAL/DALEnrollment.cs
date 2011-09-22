@@ -28,15 +28,7 @@ namespace SligoCS.DAL.WI
             //years
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
 
-            //fullkey
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(" and ").Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
 
             //order by clause
             sql.AppendFormat(SQLHelper.GetOrderByClause(Marshaller.orderByList));

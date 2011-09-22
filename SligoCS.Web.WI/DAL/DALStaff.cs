@@ -9,18 +9,12 @@ namespace SligoCS.DAL.WI
        public override string  BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("SELECT * FROM v_Stafffull WHERE ");
+            
+            sql.Append(SQLHelper.SelectStarFromWhereFormat("v_StaffFull"));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 
-            if (!Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
-            else
-            {
-                sql.Append(" and ").Append(Marshaller.clauseForCompareSelected);
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
 
             sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));
 
