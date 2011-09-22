@@ -91,7 +91,7 @@ namespace SligoCS.Web.WI.WebUserControls
                 }
             );
 
-            return pages.Contains(globals.GraphFile.Key);
+            return (((globals.TraceLevels & TraceStateUtils.TraceLevels.none) == 0))? true : pages.Contains(globals.GraphFile.Key);
         }
     }
 }
