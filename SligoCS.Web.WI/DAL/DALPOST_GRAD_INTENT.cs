@@ -14,21 +14,10 @@ namespace SligoCS.DAL.WI
             String dbObject = "v_POST_GRAD_INTENT";
 
             sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
-            
-            //fullkey
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(Marshaller.clauseForCompareSelected);
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "FullKey", Marshaller.fullkeylist));
-            }
 
-            //view does not support schooltype, except for schools
-            String compareToKey = Marshaller.GlobalValues.CompareTo.Key;
-            if (compareToKey == CompareToKeys.SelSchools && Marshaller.GlobalValues.S4orALL.Key == S4orALLKeys.AllSchoolsOrDistrictsIn)
-                sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.NONE, "fullkey"));
+
+            sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
 
