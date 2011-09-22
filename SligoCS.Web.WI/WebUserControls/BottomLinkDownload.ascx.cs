@@ -75,8 +75,10 @@ namespace SligoCS.Web.WI.WebUserControls
                     GraphFileKeys.ATTENDANCE,
                     GraphFileKeys.DISABILITIES,
                     GraphFileKeys.DROPOUTS,
+                    GraphFileKeys.EXPULSIONS,
                     GraphFileKeys.EXPULSIONSDAYSLOST,
-                    GraphFileKeys.EXPULSIONSDAYSLOST,
+                    GraphFileKeys.GEXPRETURNS,
+                    GraphFileKeys.GEXPSERVICES,
                     GraphFileKeys.GGRADREQS,
                     GraphFileKeys.GROUPS,
                     GraphFileKeys.HIGHSCHOOLCOMPLETION,
@@ -88,6 +90,11 @@ namespace SligoCS.Web.WI.WebUserControls
                     GraphFileKeys.SUSPEXPINCIDENTS,
                     GraphFileKeys.TEACHERQUALIFICATIONS,
                     GraphFileKeys.TRUANCY,
+                    GraphFileKeys.StateTests,
+                    GraphFileKeys.GWRCT,
+                    GraphFileKeys.HIGHSCHOOLCOMPLETION,
+                    GraphFileKeys.RETENTION,
+                    GraphFileKeys.POSTGRADPLAN,
                 }
             );
 
