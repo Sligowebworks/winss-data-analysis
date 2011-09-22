@@ -25,7 +25,6 @@ namespace SligoCS.Web.WI
     /// </summary>
     public partial class APTestsPage : PageBaseWI
     {
-
         protected override DALWIBase InitDatabase()
         {
             return new DALAP_TESTS();
@@ -59,21 +58,7 @@ namespace SligoCS.Web.WI
                 QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
 
             base.OnInitComplete(e);
-
-            APTestsDataGrid.Columns.FieldsChanged += new EventHandler(RenameExamsPassed_FieldsChanged);
         }
-
-        void RenameExamsPassed_FieldsChanged(object sender, EventArgs e)
-        {
-            DataControlFieldCollection columns = (DataControlFieldCollection)sender;
-
-            foreach (DataControlField field in columns)
-            {
-                if (field.HeaderText == "# Exams Passed" || field.HeaderText == "% of Exams Passed")
-                    field.HeaderText = field.HeaderText.Replace("Exams Passed", "Scores 3 or Above");
-            }
-        }
-
        
         protected override string SetPageHeading()
         {
@@ -82,7 +67,6 @@ namespace SligoCS.Web.WI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
                 DataSetTitle = GetTitleForSchoolTypeUnsupported("Advanced Placement Program Exams - All Subjects");
 
                 APTestsDataGrid.AddSuperHeader(DataSetTitle);
@@ -125,7 +109,7 @@ namespace SligoCS.Web.WI
                 barChart.AxisYDescription = "% of All Exams Scores 3 or Above";
 
                 //Bind Data Source & Display
-                barChart.DisplayColumnName = "% of Exams Passed";
+                barChart.DisplayColumnName = v_AP_TESTS.PRC_of_Exams_Passed;
             }
             catch (Exception ex)
             {
@@ -163,6 +147,16 @@ namespace SligoCS.Web.WI
             retval.Add(v_AP_TESTS.PRC_of_Exams_Passed);
             retval.Add(v_AP_TESTS.NUM_Exams_Passed);
             return retval;
+        }
+
+        protected override SortedList<string, string> GetDownloadRawColumnLabelMapping()
+        {
+            SortedList<String,String> replace = base.GetDownloadRawColumnLabelMapping();
+
+            replace.Add(v_AP_TESTS.NUM_Exams_Passed, "number_scores_3_or_above");
+            replace.Add(v_AP_TESTS.PRC_of_Exams_Passed, "percent_scores_3_or_above");
+
+            return replace;
         }
     }
 }

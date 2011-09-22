@@ -62,8 +62,8 @@
                     <slx:WinssDataGridColumn DataField="# Taking Exams" HeaderText="# Taking Exams" FormatString="#,##0" />
                     <slx:WinssDataGridColumn DataField="% Taking Exams" HeaderText="% Taking Exams" FormatString="#,##0.0%" />
                     <slx:WinssDataGridColumn DataField="# Exams Taken" HeaderText="# Exams Taken"  FormatString="#,##0"/>
-                    <slx:WinssDataGridColumn DataField="# Exams Passed" FormatString="#,##0"/>
-                    <slx:WinssDataGridColumn DataField="% of Exams Passed" FormatString="#,##0.0%"/>
+                    <slx:WinssDataGridColumn DataField="# Exams Passed" FormatString="#,##0" HeaderText="# of Scores 3 or Above"/>
+                    <slx:WinssDataGridColumn DataField="% of Exams Passed" FormatString="#,##0.0%" HeaderText="% of Scores 3 or Above"/>
                 </Columns>
             </slx:WinssDataGrid>
         </td>
