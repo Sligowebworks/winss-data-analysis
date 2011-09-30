@@ -38,11 +38,7 @@ namespace SligoCS.DAL.WI
             ////Adds " ... AND ((year >= 1997) AND (year <= 2007)) ..."
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
 
-            //view does not support schooltype, except for schools
-            if (Marshaller.GlobalValues.S4orALL.Key == S4orALLKeys.AllSchoolsOrDistrictsIn &&
-                (Marshaller.GlobalValues.CompareTo.Key == CompareToKeys.SelDistricts ||
-                Marshaller.GlobalValues.CompareTo.Key == CompareToKeys.SelSchools))
-                    sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
+            sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
 
             sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
             

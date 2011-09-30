@@ -27,6 +27,8 @@ namespace SligoCS.DAL.WI
             //Static required:
             sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "ExamCode", 99.ToString()));
 
+            sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
+            
             sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "fullkey"));
             
             //order by clause

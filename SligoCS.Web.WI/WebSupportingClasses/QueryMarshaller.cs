@@ -486,7 +486,7 @@ namespace SligoCS.BL.WI
                 clause =  SQLHelper.WhereClauseValuesInList(join, field, stypList);
             }
 
-            return clause + SQLHelper.GetJoinerString(SQLHelper.WhereClauseJoiner.AND) + " AgencyType IN ('03', '04', '4C', '49', 'XX')";
+            return clause +" "+ SQLHelper.GetJoinerString(SQLHelper.WhereClauseJoiner.AND) + " AgencyType IN ('03', '04', '4C', '49', 'XX')";
         }
 
         public String GradeCodesClause(SQLHelper.WhereClauseJoiner join, String field, String dbObject )
