@@ -68,6 +68,7 @@ namespace SligoCS.Web.WI
             GlobalValues.Group.Key = GroupKeys.All;
 
             QueryMarshaller.gradeCodes.ObeyForceDisAgg = true;
+            QueryMarshaller.WsasSubjectCodes.ObeyForceDisAgg = true;
 
             base.OnInitComplete(e);
         }
