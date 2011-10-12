@@ -38,8 +38,9 @@ namespace SligoCS.DAL.WI
 
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "Migrantcode", Marshaller.migrantCodes));
 
-            if (Marshaller.GlobalValues.CompareTo.Key != CompareToKeys.OrgLevel 
+            if ((Marshaller.GlobalValues.CompareTo.Key != CompareToKeys.OrgLevel 
                 || Marshaller.GlobalValues.FAYCode.Key == FAYCodeKeys.NonFAY)
+                && Marshaller.GlobalValues.SuperDownload.Key == SupDwnldKeys.False)
                 sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "FAYCode", Marshaller.FAYCodes));
             else 
             {
