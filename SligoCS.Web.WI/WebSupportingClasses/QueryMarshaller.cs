@@ -508,6 +508,7 @@ namespace SligoCS.BL.WI
     {0} >= (select top 1  lowgrade from agency where  {1}.year = agency.year and {1}.fullkey = agency.fullkey)
     AND {0} <= (select top 1 highgrade from agency where {1}.year = agency.year and {1}.fullkey = agency.fullkey)
    AND {0} >= '{2}'
+    OR (fullkey = 'XXXXXXXXXXXX' AND {0} = '99')
 ) "
         , field
         , dbObject
