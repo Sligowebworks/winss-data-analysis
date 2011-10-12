@@ -116,6 +116,7 @@ namespace SligoCS.BL.WI
 
             stypList = new QueryArgumentsWithDisagg(globals);
             WMASCodes = new QueryArgumentsWithDisagg(globals);
+            WsasSubjectCodes = new QueryArgumentsWithDisagg(GlobalValues);
             CourseTypeCodes = new QueryArgumentsWithDisagg(globals);
             ActivityCodes = new QueryArgumentsWithDisagg(globals);
             GradReqSubjCodes = new QueryArgumentsWithDisagg(globals);
@@ -348,8 +349,6 @@ namespace SligoCS.BL.WI
                 FAYCodes.Add("9");
             }
 
-            WsasSubjectCodes = new QueryArgumentsWithDisagg(GlobalValues);
-            
             WsasSubjectCodes.DisAggValues =  delegate()
             {
                 List<String> list = new List<string>();
@@ -508,7 +507,8 @@ namespace SligoCS.BL.WI
     {0} >= (select top 1  lowgrade from agency where  {1}.year = agency.year and {1}.fullkey = agency.fullkey)
     AND {0} <= (select top 1 highgrade from agency where {1}.year = agency.year and {1}.fullkey = agency.fullkey)
    AND {0} >= '{2}'
-    OR (fullkey = 'XXXXXXXXXXXX' AND {0} = '99')
+    OR fullkey = 'XXXXXXXXXXXX'  
+    OR {0}='99'
 ) "
         , field
         , dbObject
