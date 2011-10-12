@@ -474,12 +474,10 @@ namespace SligoCS.Web.WI
 
             if (GlobalValues.Group.Key != GroupKeys.All
                 &&
-                (GlobalValues.CompareTo.Key == CompareToKeys.SelDistricts
-                || GlobalValues.CompareTo.Key == CompareToKeys.SelSchools)
+                (GlobalValues.CompareTo.Key == CompareToKeys.SelSchools)
                 )
             {               
-                order.Add(v_WSAS.School_Name);
-                order.Add(v_WSAS.District_Name);//district, school
+                order.Insert(0, v_WSAS.District_Name);//district, school
             }
 
             if (GlobalValues.Grade.Key == GradeKeys.AllDisAgg)
