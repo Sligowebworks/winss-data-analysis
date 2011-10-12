@@ -73,6 +73,7 @@ namespace SligoCS.Web.WI.WebUserControls
                     GraphFileKeys.ActivitiesPartic,
                     GraphFileKeys.ActivityOffer,
                     GraphFileKeys.ATTENDANCE,
+                    GraphFileKeys.CompareContinuing,
                     GraphFileKeys.DISABILITIES,
                     GraphFileKeys.DROPOUTS,
                     GraphFileKeys.EXPULSIONS,
@@ -90,7 +91,6 @@ namespace SligoCS.Web.WI.WebUserControls
                     GraphFileKeys.SUSPEXPINCIDENTS,
                     GraphFileKeys.TEACHERQUALIFICATIONS,
                     GraphFileKeys.TRUANCY,
-                    GraphFileKeys.StateTests,
                     GraphFileKeys.GWRCT,
                     GraphFileKeys.HIGHSCHOOLCOMPLETION,
                     GraphFileKeys.RETENTION,
@@ -98,7 +98,12 @@ namespace SligoCS.Web.WI.WebUserControls
                 }
             );
 
-            return (((globals.TraceLevels & TraceStateUtils.TraceLevels.none) == 0))? true : pages.Contains(globals.GraphFile.Key);
+            if (globals.SubjectID.Key != SubjectIDKeys.AllTested || globals.Group.Key == GroupKeys.All) pages.Add(GraphFileKeys.StateTests);
+
+            if (globals.TraceLevels == 0)
+                return pages.Contains(globals.GraphFile.Key);
+            else
+                return true;
         }
     }
 }
