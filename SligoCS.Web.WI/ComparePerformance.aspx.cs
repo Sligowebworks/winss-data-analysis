@@ -148,7 +148,7 @@ namespace SligoCS.Web.WI
 
             cols.Add(v_WSAS.Enrolled);
             cols.Add(v_WSAS.No_WSAS_Total);
-            if (GlobalValues.WOW.Key == WOWKeys.WKCE)
+            if (GlobalValues.WOW.Key == WOWKeys.WKCE || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
             {
                 cols.Add(v_WSAS.Percent_PreReq_Skill);
                 cols.Add(v_WSAS.Percent_PreReq_Eng);
@@ -157,7 +157,7 @@ namespace SligoCS.Web.WI
                 cols.Add(v_WSAS.Percent_Proficient);
                 cols.Add(v_WSAS.Percent_Advanced);
             }
-            else
+            if ( GlobalValues.WOW.Key == WOWKeys.WSASCombined || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
             {
                 cols.Add(v_WSAS.MinPerfWSAS);
                 cols.Add(v_WSAS.BasicWSAS);
@@ -202,7 +202,7 @@ namespace SligoCS.Web.WI
             index = cols.IndexOf(v_WSAS.No_WSAS_Total);
             cols.Insert(index, v_WSAS.Number_No_WSAS_Total);
             cols.Insert(index, v_WSAS.SubjectLabel);
-            if (GlobalValues.WOW.Key == WOWKeys.WKCE)
+            if (GlobalValues.WOW.Key == WOWKeys.WKCE || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
             {
                 index = cols.IndexOf(v_WSAS.Percent_PreReq_Skill);
                 cols.Insert(index, v_WSAS.Number_PreReq_Skill);
@@ -217,7 +217,7 @@ namespace SligoCS.Web.WI
                 index = cols.IndexOf(v_WSAS.Percent_Advanced);
                 cols.Insert(index, v_WSAS.Number_Advanced);
             }
-            else
+            if (GlobalValues.WOW.Key == WOWKeys.WSASCombined || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
             {
                 index = cols.IndexOf(v_WSAS.MinPerfWSAS);
                 cols.Insert(index, v_WSAS.Number_MinPerfWSAS);
@@ -241,7 +241,7 @@ namespace SligoCS.Web.WI
         {
             SortedList<string, string> newLabels = base.GetDownloadRawColumnLabelMapping();
             newLabels.Remove(v_WSAS.GradeLabel);
-            newLabels.Add(v_WSAS.GradeLabel, "tested_grades_combined");
+            newLabels.Add(v_WSAS.GradeLabel, "tested_grade(s)");
             newLabels.Add(v_WSAS.ExcusedByParent, "percent_excused_by_parent");
             newLabels.Add(v_WSAS.Number_ExcusedByParent, "number_excused_by_parent");
             newLabels.Add(v_WSAS.EligibleButNotTested, "percent_eligible_not_tested");

@@ -517,9 +517,9 @@ namespace SligoCS.Web.WI
             if (GlobalValues.Group.Key == GroupKeys.Migrant)
                 cols.Add(v_WSAS.MigrantLabel);
 
-            if (GlobalValues.Level.Key == LevelKeys.All)
+            if (GlobalValues.Level.Key == LevelKeys.All || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
             {
-                if (GlobalValues.WOW.Key == WOWKeys.WSASCombined)
+                if (GlobalValues.WOW.Key == WOWKeys.WSASCombined || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 {
                     cols.Add(v_WSAS.No_WSAS_Total);
                     cols.Add(v_WSAS.MinPerfWSAS);
@@ -527,7 +527,7 @@ namespace SligoCS.Web.WI
                     cols.Add(v_WSAS.ProficientWSAS);
                     cols.Add(v_WSAS.AdvancedWSAS);
                 }
-                else
+                if (GlobalValues.WOW.Key == WOWKeys.WKCE || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 {
                     cols.Add(v_WSAS.No_WSAS_Total);
                     cols.Add(v_WSAS.Percent_PreReq_Skill);
@@ -596,9 +596,9 @@ namespace SligoCS.Web.WI
             //cols.Insert(index+1, v_WSAS.Included);
             cols.Insert(index, v_WSAS.SubjectLabel);
 
-            if (GlobalValues.Level.Key == LevelKeys.All)
+            if (GlobalValues.Level.Key == LevelKeys.All || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
             {
-                if (GlobalValues.WOW.Key == WOWKeys.WSASCombined)
+                if (GlobalValues.WOW.Key == WOWKeys.WSASCombined || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 {
                     index = cols.IndexOf(v_WSAS.MinPerfWSAS);
                     cols.Insert(index, v_WSAS.Number_MinPerfWSAS);
@@ -611,7 +611,8 @@ namespace SligoCS.Web.WI
                     index = cols.IndexOf(v_WSAS.No_WSAS_Total);
                     cols.Insert(index, v_WSAS.Number_No_WSAS_Total);
                 }
-                else
+                
+                if (GlobalValues.WOW.Key == WOWKeys.WKCE || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 {
                     index = cols.IndexOf(v_WSAS.No_WSAS_Total);
                     cols.Insert(index, v_WSAS.Number_No_WSAS_Total);
@@ -711,7 +712,7 @@ namespace SligoCS.Web.WI
         {
             SortedList<string, string> newLabels = base.GetDownloadRawColumnLabelMapping();
             newLabels.Remove(v_WSAS.GradeLabel);
-            newLabels.Add(v_WSAS.GradeLabel, "tested_grades_combined");
+            newLabels.Add(v_WSAS.GradeLabel, "tested_grade(s)");
             newLabels.Add(v_WSAS.Enrolled, "enrolled_at_test_time");
             newLabels.Add(v_WSAS.Included, "number_included_in_percents");
             newLabels.Add(v_WSAS.AdvancedWSAS, "percent_advanced_wsas");
