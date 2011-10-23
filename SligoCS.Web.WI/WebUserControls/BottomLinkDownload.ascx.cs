@@ -72,6 +72,7 @@ namespace SligoCS.Web.WI.WebUserControls
                     GraphFileKeys.ACT,
                     GraphFileKeys.ActivitiesPartic,
                     GraphFileKeys.ActivityOffer,
+                    GraphFileKeys.AP,
                     GraphFileKeys.ATTENDANCE,
                     GraphFileKeys.CompareContinuing,
                     GraphFileKeys.DISABILITIES,
