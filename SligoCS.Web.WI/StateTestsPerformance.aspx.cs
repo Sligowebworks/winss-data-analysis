@@ -83,7 +83,7 @@ namespace SligoCS.Web.WI
             //SchoolType Unsupported.
             GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
 
-            if (GlobalValues.OrgLevel.Key != OrgLevelKeys.State)
+            if (GlobalValues.OrgLevel.Key != OrgLevelKeys.State || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 GlobalValues.FAYCode.Key = FAYCodeKeys.FAY;
             else
                 GlobalValues.FAYCode.Key = FAYCodeKeys.NonFAY;
