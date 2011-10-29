@@ -735,8 +735,8 @@ namespace SligoCS.Web.WI
             newLabels.Add(v_WSAS.Number_ExcusedByParent, "number_excused_by_parent");
             newLabels.Add(v_WSAS.EligibleButNotTested, "percent_eligible_not_tested");
             newLabels.Add(v_WSAS.Number_EligibleButNotTested, "number_eligible_not_tested");
-            newLabels.Add(v_WSAS.No_WSAS_Total, "percent_no_wsas");
-            newLabels.Add(v_WSAS.Number_No_WSAS_Total, "number_no_wsas");
+            newLabels.Add(v_WSAS.No_WSAS_Total, "percent_no_wsas_total");
+            newLabels.Add(v_WSAS.Number_No_WSAS_Total, "number_no_wsas_total");
             newLabels.Add(v_WSAS.MinPerfWSAS, "percent_minperf_wsas");
             newLabels.Add(v_WSAS.Number_MinPerfWSAS, "number_minperf_wsas");
             newLabels.Add(v_WSAS.BasicWSAS, "percent_basic_wsas");
@@ -750,6 +750,8 @@ namespace SligoCS.Web.WI
             newLabels.Add(v_WSAS.Percent_Proficient, "percent_proficient_wkce");
             newLabels.Add(v_WSAS.Number_Proficient, "number_proficient_wkce");
             newLabels.Add(v_WSAS.SubjectLabel, "subject");
+            newLabels.Add(v_WSASDemographics.Number_PreReq_Skill, "number_waa_swd_total");
+            newLabels.Add(v_WSASDemographics.Percent_PreReq_Skill, "percent_waa_swd_total");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Skill_Level_1, "percent_waa_swd_minimal");
             newLabels.Add(v_WSASDemographics.Number_PreReq_Skill_Level_1, "number_waa_swd_minimal");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Skill_Level_2, "percent_waa_swd_basic");
@@ -758,6 +760,8 @@ namespace SligoCS.Web.WI
             newLabels.Add(v_WSASDemographics.Number_PreReq_Skill_Level_3, "number_waa_swd_proficient");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Skill_Level_4, "percent_waa_swd_advanced");
             newLabels.Add(v_WSASDemographics.Number_PreReq_Skill_Level_4, "number_waa_swd_advanced");
+            newLabels.Add(v_WSASDemographics.Number_PreReq_Eng, "number_waa_ell_total");
+            newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng, "number_waa_ell_total");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng_Basic, "percent_waa_ell_basic");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng_Minimal, "percent_waa_ell_minimal");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng_Proficient, "percent_waa_ell_proficient");
