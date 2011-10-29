@@ -517,9 +517,9 @@ namespace SligoCS.Web.WI
             if (GlobalValues.Group.Key == GroupKeys.Migrant)
                 cols.Add(v_WSAS.MigrantLabel);
 
-            if (GlobalValues.Level.Key == LevelKeys.All || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            if (GlobalValues.Level.Key == LevelKeys.All)
             {
-                if (GlobalValues.WOW.Key == WOWKeys.WSASCombined || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+                if (GlobalValues.WOW.Key == WOWKeys.WSASCombined)
                 {
                     cols.Add(v_WSAS.No_WSAS_Total);
                     cols.Add(v_WSAS.MinPerfWSAS);
@@ -527,7 +527,7 @@ namespace SligoCS.Web.WI
                     cols.Add(v_WSAS.ProficientWSAS);
                     cols.Add(v_WSAS.AdvancedWSAS);
                 }
-                if (GlobalValues.WOW.Key == WOWKeys.WKCE || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+                else
                 {
                     cols.Add(v_WSAS.No_WSAS_Total);
                     cols.Add(v_WSAS.Percent_PreReq_Skill);
@@ -596,9 +596,9 @@ namespace SligoCS.Web.WI
             //cols.Insert(index+1, v_WSAS.Included);
             cols.Insert(index, v_WSAS.SubjectLabel);
 
-            if (GlobalValues.Level.Key == LevelKeys.All || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            if (GlobalValues.Level.Key == LevelKeys.All)
             {
-                if (GlobalValues.WOW.Key == WOWKeys.WSASCombined || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+                if (GlobalValues.WOW.Key == WOWKeys.WSASCombined)
                 {
                     index = cols.IndexOf(v_WSAS.MinPerfWSAS);
                     cols.Insert(index, v_WSAS.Number_MinPerfWSAS);
@@ -611,8 +611,7 @@ namespace SligoCS.Web.WI
                     index = cols.IndexOf(v_WSAS.No_WSAS_Total);
                     cols.Insert(index, v_WSAS.Number_No_WSAS_Total);
                 }
-                
-                if (GlobalValues.WOW.Key == WOWKeys.WKCE || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+                else
                 {
                     index = cols.IndexOf(v_WSAS.No_WSAS_Total);
                     cols.Insert(index, v_WSAS.Number_No_WSAS_Total);
@@ -711,6 +710,10 @@ namespace SligoCS.Web.WI
         protected override SortedList<string, string> GetDownloadRawColumnLabelMapping()
         {
             SortedList<string, string> newLabels = base.GetDownloadRawColumnLabelMapping();
+            return WsasColumnLabelMapping(newLabels);
+        }
+        public static SortedList<string, string> WsasColumnLabelMapping(SortedList<string, string> newLabels)
+        {            
             newLabels.Remove(v_WSAS.GradeLabel);
             newLabels.Add(v_WSAS.GradeLabel, "tested_grade(s)");
             newLabels.Add(v_WSAS.Enrolled, "enrolled_at_test_time");
@@ -729,7 +732,7 @@ namespace SligoCS.Web.WI
             newLabels.Add(v_WSAS.Number_BasicPlusMinPerfPlusPreReqSkillsEngPlusNoWSASTotal, "number_basic_plus_minperf_plus_waa_swd_ell_plus_no_wsas_wkce");
             newLabels.Add(v_WSAS.PctTotalWAADisabil, "percent_waa_swd_total_wkce");
             newLabels.Add(v_WSAS.Number_TotalWAADisabil, "number_waa_swd_total_wkce");
-             newLabels.Add(v_WSAS.PctTotalWAALep, "percent_waa_ell_total_wkce");
+            newLabels.Add(v_WSAS.PctTotalWAALep, "percent_waa_ell_total_wkce");
             newLabels.Add(v_WSAS.Number_TotalWAALep, "number_waa_ell_total_wkce");
             newLabels.Add(v_WSAS.ExcusedByParent, "percent_excused_by_parent");
             newLabels.Add(v_WSAS.Number_ExcusedByParent, "number_excused_by_parent");

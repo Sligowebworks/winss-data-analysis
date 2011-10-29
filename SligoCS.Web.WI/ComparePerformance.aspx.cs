@@ -148,7 +148,7 @@ namespace SligoCS.Web.WI
 
             cols.Add(v_WSAS.Enrolled);
             cols.Add(v_WSAS.No_WSAS_Total);
-            if (GlobalValues.WOW.Key == WOWKeys.WKCE || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            if (GlobalValues.WOW.Key == WOWKeys.WKCE)
             {
                 cols.Add(v_WSAS.Percent_PreReq_Skill);
                 cols.Add(v_WSAS.Percent_PreReq_Eng);
@@ -157,7 +157,7 @@ namespace SligoCS.Web.WI
                 cols.Add(v_WSAS.Percent_Proficient);
                 cols.Add(v_WSAS.Percent_Advanced);
             }
-            if ( GlobalValues.WOW.Key == WOWKeys.WSASCombined || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            else
             {
                 cols.Add(v_WSAS.MinPerfWSAS);
                 cols.Add(v_WSAS.BasicWSAS);
@@ -202,7 +202,7 @@ namespace SligoCS.Web.WI
             index = cols.IndexOf(v_WSAS.No_WSAS_Total);
             cols.Insert(index, v_WSAS.Number_No_WSAS_Total);
             cols.Insert(index, v_WSAS.SubjectLabel);
-            if (GlobalValues.WOW.Key == WOWKeys.WKCE || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            if (GlobalValues.WOW.Key == WOWKeys.WKCE)
             {
                 index = cols.IndexOf(v_WSAS.Percent_PreReq_Skill);
                 cols.Insert(index, v_WSAS.Number_PreReq_Skill);
@@ -217,7 +217,7 @@ namespace SligoCS.Web.WI
                 index = cols.IndexOf(v_WSAS.Percent_Advanced);
                 cols.Insert(index, v_WSAS.Number_Advanced);
             }
-            if (GlobalValues.WOW.Key == WOWKeys.WSASCombined || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            else
             {
                 index = cols.IndexOf(v_WSAS.MinPerfWSAS);
                 cols.Insert(index, v_WSAS.Number_MinPerfWSAS);
@@ -240,46 +240,7 @@ namespace SligoCS.Web.WI
         protected override SortedList<string, string> GetDownloadRawColumnLabelMapping()
         {
             SortedList<string, string> newLabels = base.GetDownloadRawColumnLabelMapping();
-            newLabels.Remove(v_WSAS.GradeLabel);
-            newLabels.Add(v_WSAS.GradeLabel, "tested_grade(s)");
-            newLabels.Add(v_WSAS.ExcusedByParent, "percent_excused_by_parent");
-            newLabels.Add(v_WSAS.Number_ExcusedByParent, "number_excused_by_parent");
-            newLabels.Add(v_WSAS.EligibleButNotTested, "percent_eligible_not_tested");
-            newLabels.Add(v_WSAS.Number_EligibleButNotTested, "number_eligible_not_tested");
-            newLabels.Add(v_WSAS.No_WSAS_Total, "percent_no_wsas");
-            newLabels.Add(v_WSAS.Number_No_WSAS_Total, "number_no_wsas");
-            newLabels.Add(v_WSAS.No_WSAS, "percent_no_wsas");
-            newLabels.Add(v_WSAS.Number_No_WSAS, "number_no_wsas");
-            newLabels.Add(v_WSAS.MinPerfWSAS, "percent_minperf_wsas");
-            newLabels.Add(v_WSAS.Number_MinPerfWSAS, "number_minperf_wsas");
-            newLabels.Add(v_WSAS.BasicWSAS, "percent_basic_wsas");
-            newLabels.Add(v_WSAS.Number_BasicWSAS, "number_basic_wsas");
-            newLabels.Add(v_WSAS.ProficientWSAS, "percent_proficient_wsas");
-            newLabels.Add(v_WSAS.Number_ProficientWSAS, "number_proficient_wsas");
-            newLabels.Add(v_WSAS.AdvancedWSAS, "percent_advanced_wsas");
-            newLabels.Add(v_WSAS.Number_AdvancedWSAS, "number_advanced_wsas");
-            newLabels.Add(v_WSAS.AdvancedPlusProficientTotalWSAS, "percent_advanced_plus_proficient_wsas");
-            newLabels.Add(v_WSAS.Number_AdvancedPlusProficientTotalWSAS, "number_advanced_plus_proficient_wsas");
-            newLabels.Add(v_WSAS.BasicPlusMinPerfPlusNoWSASTotalWSAS, "percent_basic_plus_minperf_plus_nowsas_wsas");
-            newLabels.Add(v_WSAS.Number_BasicPlusMinPerfPlusNoWSASTotalWSAS, "number_basic_plus_minperf_plus_nowsas_wsas");
-            newLabels.Add(v_WSAS.PctTotalWAADisabil, "percent_prereq_skill_total_wkce");
-            newLabels.Add(v_WSAS.Number_TotalWAADisabil, "number_prereq_skill_total_wkce");
-            newLabels.Add(v_WSAS.PctTotalWAALep, "percent_prereq_eng_total_wkce");
-            newLabels.Add(v_WSAS.Number_TotalWAALep, "number_prereq_eng_total_wkce");
-            newLabels.Add(v_WSAS.Percent_Minimal, "percent_minperf_wkce");
-            newLabels.Add(v_WSAS.Number_Minimal, "number_minperf_wkce");
-            newLabels.Add(v_WSAS.Percent_Basic, "percent_basic_wkce");
-            newLabels.Add(v_WSAS.Number_Basic, "number_basic_wkce");
-            newLabels.Add(v_WSAS.Percent_Proficient, "percent_proficient_wkce");
-            newLabels.Add(v_WSAS.Number_Proficient, "number_proficient_wkce");
-            newLabels.Add(v_WSAS.Percent_Advanced, "percent_advanced_wkce");
-            newLabels.Add(v_WSAS.Number_Advanced, "number_advanced_wkce");
-            newLabels.Add(v_WSAS.PCTAdvPlusPCTPrf, "percent_advanced_plus_proficient_wkce");
-            newLabels.Add(v_WSAS.Number_AdvPlusPCTPrf, "number_advanced_plus_proficient_wkce");
-            newLabels.Add(v_WSAS.BasicPlusMinPerfPlusPreReqSkillsEngPlusNoWSASTotal, "percent_basic_plus_minperf_plus_prereq_skills_eng_plus_no_wsas_wkce");
-            newLabels.Add(v_WSAS.Number_BasicPlusMinPerfPlusPreReqSkillsEngPlusNoWSASTotal, "number_basic_plus_minperf_plus_prereq_skills_eng_plus_no_wsas_wkce");
-            newLabels.Add(v_WSAS.SubjectLabel, "subject");
-            return newLabels;
+            return StateTestsPerformance.WsasColumnLabelMapping( newLabels);
         }
     }
 }
