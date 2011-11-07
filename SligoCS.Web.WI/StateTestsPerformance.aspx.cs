@@ -495,6 +495,9 @@ namespace SligoCS.Web.WI
         {
             List<String> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
 
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+                return cols; // return only generic (base) columns
+
             //debug GroupNum
             if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.sql) == TraceStateUtils.TraceLevels.sql)
                 cols.Add(v_WSAS.GroupNum);
@@ -587,13 +590,79 @@ namespace SligoCS.Web.WI
             
             return cols;
         }
+        public List<string> StatewideDownloadVisibleColumns(List<string> cols)
+        {
+            cols.Add(v_WSAS.AdvancedPlusProficientTotalWSAS);
+            cols.Add(v_WSAS.Number_AdvancedPlusProficientTotalWSAS);
+            cols.Add(v_WSAS.AdvancedWSAS);
+            cols.Add(v_WSAS.Number_AdvancedWSAS);
+            cols.Add(v_WSAS.BasicPlusMinPerfPlusNoWSASTotalWSAS);
+            cols.Add(v_WSAS.Number_BasicPlusMinPerfPlusNoWSASTotalWSAS);
+            cols.Add(v_WSAS.BasicPlusMinPerfPlusPreReqSkillsEngPlusNoWSASTotal);
+            cols.Add(v_WSAS.Number_BasicPlusMinPerfPlusPreReqSkillsEngPlusNoWSASTotal);
+            cols.Add(v_WSAS.BasicWSAS);
+            cols.Add(v_WSAS.Number_BasicWSAS);
+            cols.Add(v_WSAS.EligibleButNotTested);
+            cols.Add(v_WSAS.Number_EligibleButNotTested);
+            cols.Add(v_WSAS.Enrolled);
+            cols.Add(v_WSAS.Included);
+            cols.Add(v_WSAS.ExcusedByParent);
+            cols.Add(v_WSAS.Number_ExcusedByParent);
+            cols.Add(v_WSAS.GradeLabel);
+            cols.Add(v_WSAS.SubjectLabel);
+            //cols.Add(v_WSAS.MigrantLabel); //included in base column-list
+            cols.Add(v_WSAS.MinPerfWSAS);
+            cols.Add(v_WSAS.Number_MinPerfWSAS);
+            cols.Add(v_WSAS.No_WSAS_Total);
+            cols.Add(v_WSAS.Number_No_WSAS_Total);
+            cols.Add(v_WSAS.PCTAdvPlusPCTPrf);
+            cols.Add(v_WSAS.Number_AdvPlusPCTPrf);
+            cols.Add(v_WSAS.PctTotalWAADisabil);
+            cols.Add(v_WSAS.Number_TotalWAADisabil);
+            cols.Add(v_WSAS.PctTotalWAALep);
+            cols.Add(v_WSAS.Number_TotalWAALep);
+            cols.Add(v_WSAS.Percent_Advanced);
+            cols.Add(v_WSAS.Number_Advanced);
+            cols.Add(v_WSAS.Percent_Basic);
+            cols.Add(v_WSAS.Number_Basic);
+            cols.Add(v_WSAS.Percent_Minimal);
+            cols.Add(v_WSAS.Number_Minimal);
+            cols.Add(v_WSAS.Percent_PreReq_Eng);
+            cols.Add(v_WSAS.Number_PreReq_Eng);
+            cols.Add(v_WSAS.Percent_PreReq_Eng_Advanced);
+            cols.Add(v_WSAS.Number_PreReq_Eng_Advanced);
+            cols.Add(v_WSAS.Percent_PreReq_Eng_Basic);
+            cols.Add(v_WSAS.Number_PreReq_Eng_Basic);
+            cols.Add(v_WSAS.Percent_PreReq_Eng_Minimal);
+            cols.Add(v_WSAS.Number_PreReq_Eng_Minimal);
+            cols.Add(v_WSAS.Percent_PreReq_Eng_Proficient);
+            cols.Add(v_WSAS.Number_PreReq_Eng_Proficient);
+            cols.Add(v_WSAS.Percent_PreReq_Skill);
+            cols.Add(v_WSAS.Number_PreReq_Skill);
+            cols.Add(v_WSAS.Percent_PreReq_Skill_Level_1);
+            cols.Add(v_WSAS.Number_PreReq_Skill_Level_1);
+            cols.Add(v_WSAS.Percent_PreReq_Skill_Level_2);
+            cols.Add(v_WSAS.Number_PreReq_Skill_Level_2);
+            cols.Add(v_WSAS.Percent_PreReq_Skill_Level_3);
+            cols.Add(v_WSAS.Number_PreReq_Skill_Level_3);
+            cols.Add(v_WSAS.Percent_PreReq_Skill_Level_4);
+            cols.Add(v_WSAS.Number_PreReq_Skill_Level_4);
+            cols.Add(v_WSAS.Percent_Proficient);
+            cols.Add(v_WSAS.Number_Proficient);
+            cols.Add(v_WSAS.ProficientWSAS);
+            cols.Add(v_WSAS.Number_ProficientWSAS);
+
+            return cols;
+        }
         protected override List<string> GetDownloadRawVisibleColumns()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
             int index = 0;
+
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+                return StatewideDownloadVisibleColumns(cols);
             
             index = cols.IndexOf(v_WSAS.Enrolled);
-            //cols.Insert(index+1, v_WSAS.Included);
             cols.Insert(index, v_WSAS.SubjectLabel);
 
             if (GlobalValues.Level.Key == LevelKeys.All)
@@ -763,11 +832,17 @@ namespace SligoCS.Web.WI
             newLabels.Add(v_WSASDemographics.Number_PreReq_Skill_Level_3, "number_waa_swd_proficient");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Skill_Level_4, "percent_waa_swd_advanced");
             newLabels.Add(v_WSASDemographics.Number_PreReq_Skill_Level_4, "number_waa_swd_advanced");
+            newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng, "percent_waa_ell_total");
             newLabels.Add(v_WSASDemographics.Number_PreReq_Eng, "number_waa_ell_total");
-            newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng, "number_waa_ell_total");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng_Basic, "percent_waa_ell_basic");
+            newLabels.Add(v_WSASDemographics.Number_PreReq_Eng_Basic, "number_waa_ell_basic");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng_Minimal, "percent_waa_ell_minimal");
+            newLabels.Add(v_WSASDemographics.Number_PreReq_Eng_Minimal, "number_waa_ell_minimal");
             newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng_Proficient, "percent_waa_ell_proficient");
+            newLabels.Add(v_WSASDemographics.Number_PreReq_Eng_Proficient, "number_waa_ell_proficient");
+            newLabels.Add(v_WSASDemographics.Percent_PreReq_Eng_Advanced, "percent_waa_ell_advanced");
+            newLabels.Add(v_WSASDemographics.Number_PreReq_Eng_Advanced, "number_waa_ell_advanced");
+
             return newLabels;
         }
         private void set_state()
