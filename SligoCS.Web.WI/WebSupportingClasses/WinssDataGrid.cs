@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 
 using SligoCS.Web.Base.WebServerControls.WI;
+using SligoCS.Web.WI.WebSupportingClasses.WI;
 using SligoCS.BL.WI;
 using SligoCS.Web.Base.PageBase.WI;
 
@@ -429,7 +430,8 @@ namespace SligoCS.Web.WI.WebSupportingClasses
 
                 OrderBy = OrderBy.Replace("year ASC", "year DESC");
 
-                Boolean forceFloat = (ForceCurrentFloatToTopOrdering || qm.compareSelectedFullKeys);
+                Boolean forceFloat = (ForceCurrentFloatToTopOrdering || (qm.GlobalValues.CompareTo.Key == CompareToKeys.SelSchools
+                    || qm.GlobalValues.CompareTo.Key == CompareToKeys.SelDistricts));
 
                 if (OrderBy == String.Empty) //don't sort
                 {

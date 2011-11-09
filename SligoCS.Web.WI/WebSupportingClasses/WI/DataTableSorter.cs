@@ -67,7 +67,8 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
         }
         public static DataTable SortAndCompareSelectedFloatToTop(DataTable sourceTable, SligoCS.BL.WI.QueryMarshaller qm, String orderBy)
         {
-            return SortAndCompareSelectedFloatToTop(sourceTable, qm, orderBy, qm.compareSelectedFullKeys);
+            return SortAndCompareSelectedFloatToTop(sourceTable, qm, orderBy, (qm.GlobalValues.CompareTo.Key == CompareToKeys.SelSchools
+                    || qm.GlobalValues.CompareTo.Key == CompareToKeys.SelDistricts));
         }
         public static DataTable SortAndCompareSelectedFloatToTop(DataTable sourceTable, SligoCS.BL.WI.QueryMarshaller qm, String orderBy, Boolean ForceFloatToTop)
         {

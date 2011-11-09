@@ -16,18 +16,12 @@ namespace SligoCS.DAL.WI
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 
-            if (Marshaller.compareSelectedFullKeys)
-            {
-                sql.Append(" and ").Append(Marshaller.clauseForCompareSelected);
-                //view does not support schooltype, except for schools
-                if (Marshaller.GlobalValues.S4orALL.Key == S4orALLKeys.AllSchoolsOrDistrictsIn)
-                    sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
-            }
-            else
-            {
-                sql.Append(SQLHelper.WhereClauseValuesInList(
-                    SQLHelper.WhereClauseJoiner.AND, "FullKey", Marshaller.fullkeylist));
-            }
+            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "fullkey"));
+
+            //view does not support schooltype, except for schools
+            if ((Marshaller.GlobalValues.CompareTo.Key == CompareToKeys.SelSchools || Marshaller.GlobalValues.CompareTo.Key == CompareToKeys.SelDistricts)
+                && Marshaller.GlobalValues.S4orALL.Key == S4orALLKeys.AllSchoolsOrDistrictsIn)
+                sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
 
             sql.AppendFormat(SQLHelper.GetOrderByClause(Marshaller.orderByList));
 

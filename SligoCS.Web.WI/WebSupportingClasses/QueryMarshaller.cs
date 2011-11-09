@@ -83,16 +83,6 @@ namespace SligoCS.BL.WI
             }
         }
 
-        public Boolean compareSelectedFullKeys
-        {
-            get
-            {
-                return
-                     (globals.CompareTo.Key == CompareToKeys.SelSchools
-                    || globals.CompareTo.Key == CompareToKeys.SelDistricts)
-                    ;
-            }
-        }
         #endregion //properties
 
         public QueryMarshaller()
