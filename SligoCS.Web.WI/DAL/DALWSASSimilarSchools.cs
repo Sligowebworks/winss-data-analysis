@@ -116,7 +116,9 @@ namespace SligoCS.DAL.WI
             sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
-            sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
+
+            String fullkey = SligoCS.BL.WI.FullKeyUtils.GetMaskedFullkey(Marshaller.GlobalValues.FULLKEY, Marshaller.GlobalValues.OrgLevel);
+            sql.Append(SQLHelper.WhereClauseEquals(SQLHelper.WhereClauseJoiner.AND, "FullKey",fullkey));
             
             //and grade = '4' and subjectid = '1RE' and
              if (Marshaller.GlobalValues.Grade.Value == GradeKeys.AllDisAgg && Marshaller.GlobalValues.SuperDownload.Key != SupDwnldKeys.True)
@@ -183,6 +185,7 @@ namespace SligoCS.DAL.WI
             Marshaller.InitLists();
             Marshaller.Database.SQL = BuildWsasSimilarCurrentAgencyQuery(Marshaller);
             Marshaller.ManualQuery();
+//            throw new Exception(Marshaller.Database.SQL);
 
             GlobalValues globals = Marshaller.GlobalValues;
 
