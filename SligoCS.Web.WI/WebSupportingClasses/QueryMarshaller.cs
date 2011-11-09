@@ -506,7 +506,7 @@ namespace SligoCS.BL.WI
                 String.Format(@"(
     {0} >= (select top 1  lowgrade from agency where  {1}.year = agency.year and {1}.fullkey = agency.fullkey)
     AND {0} <= (select top 1 highgrade from agency where {1}.year = agency.year and {1}.fullkey = agency.fullkey)
-   AND {0} >= '{2}'
+   AND {0} >= (select top 1 lowgrade from agency where {1}.year = agency.year and {1}.fullkey = agency.fullkey)
     OR fullkey = 'XXXXXXXXXXXX'  
     OR {0}='99'
 ) "
