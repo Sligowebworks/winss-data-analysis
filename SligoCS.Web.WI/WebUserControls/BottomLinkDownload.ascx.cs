@@ -19,6 +19,7 @@ namespace SligoCS.Web.WI.WebUserControls
         private string url;
         private string statewideDownloadUrl;
         public Panel pnlStatewideDownload = new Panel();
+        private Boolean disable;
 
         public string Url
         {
@@ -32,11 +33,22 @@ namespace SligoCS.Web.WI.WebUserControls
             }
         }
 
+        public Boolean Disable
+        {
+            get { return disable; }
+            set { disable = value; }
+        }
+
+        public String DisableAttr
+        {
+            get { return (Disable) ? "disabled=\"true\"" : String.Empty; }
+        }
+
         public string StatewideDownloadUrl
         {
             get
             {
-                return statewideDownloadUrl;
+                return (Disable)? "javascript:void(0);": statewideDownloadUrl;
             }
             set
             {
@@ -96,10 +108,15 @@ namespace SligoCS.Web.WI.WebUserControls
                     GraphFileKeys.HIGHSCHOOLCOMPLETION,
                     GraphFileKeys.RETENTION,
                     GraphFileKeys.POSTGRADPLAN,
+                    GraphFileKeys.StateTests,
                 }
             );
 
-            if (globals.SubjectID.Key != SubjectIDKeys.AllTested || globals.Group.Key == GroupKeys.All) pages.Add(GraphFileKeys.StateTests);
+            if (globals.GraphFile.Key == GraphFileKeys.StateTests
+                && globals.SubjectID.Key == SubjectIDKeys.AllTested)
+            {
+                Disable = true;
+            }
 
             if (globals.TraceLevels == 0)
                 return pages.Contains(globals.GraphFile.Key);
