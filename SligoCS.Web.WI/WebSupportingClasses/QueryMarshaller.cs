@@ -482,7 +482,7 @@ namespace SligoCS.BL.WI
         {
             if (gradeCodes.ForceDisAgg)
             {
-                return BuildAutoGradeCodeClause(join, field, dbObject, GlobalValues.LOWGRADE);
+                return BuildAutoGradeCodeClause(join, field, dbObject);
             }
             else
             {
@@ -490,19 +490,17 @@ namespace SligoCS.BL.WI
             }
         }
 
-        public String BuildAutoGradeCodeClause(SQLHelper.WhereClauseJoiner join, String field, String dbObject, int lowgrade )
+        public String BuildAutoGradeCodeClause(SQLHelper.WhereClauseJoiner join, String field, String dbObject)
         {
             return "  "+SQLHelper.GetJoinerString(join)+" " + 
                 String.Format(@"(
     {0} >= (select top 1  lowgrade from agency where  {1}.year = agency.year and {1}.fullkey = agency.fullkey)
     AND {0} <= (select top 1 highgrade from agency where {1}.year = agency.year and {1}.fullkey = agency.fullkey)
-   AND {0} >= (select top 1 lowgrade from agency where {1}.year = agency.year and {1}.fullkey = agency.fullkey)
     OR fullkey = 'XXXXXXXXXXXX'  
     OR {0}='99'
 ) "
         , field
         , dbObject
-        , lowgrade.ToString()
             );
         }
 
