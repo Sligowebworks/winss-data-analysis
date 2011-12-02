@@ -30,6 +30,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
 
         public int Year { get { if (year == 0) year = Convert.ToInt16(InitializeProperty("Year")); return year; } set { year = value; } }
         public int TrendStartYear { get { if (trendStartYear == 0)trendStartYear = Convert.ToInt16(InitializeProperty("TrendStartYear"));  return trendStartYear; } set { trendStartYear = value; } }
+        public int LatestYear { get { if (latestYear == 0) latestYear = Convert.ToInt16(InitializeProperty("TrendStartYear")); return latestYear; } set { latestYear = value; } }
         public int ConferenceKey { get { if (conferenceKey == 0) conferenceKey = Convert.ToInt16(InitializeProperty("ConferenceKey")); return conferenceKey; } set { conferenceKey = value; } }
         public int DistrictID { get { return districtID; } set { districtID = value; } }
 

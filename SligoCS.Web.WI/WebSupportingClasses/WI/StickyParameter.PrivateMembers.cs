@@ -25,7 +25,8 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
         private string numSchools;//: (used in selected Schools/Districts view) 
         protected STYP sTYP = new STYP(); // Initialized by GlobalValues.InitShcoolType() //: 9 (URL code for schooltype links and maybe other schooltype functionality) in 
         private int year;//: 2007 (indicates current year of data shown on page - used in query and titles) 
-        private int trendStartYear;//: 1997 (indicates which year is the first year in Prior Years view - used in query) 
+        private int trendStartYear;//: 9999 (indicates which year is the first year in Prior Years view - used in query) 
+        private int latestYear;//: 9999 (indicates which year is the last year in Prior Years view - used in query also the default value of Year property) 
         private int conferenceKey;//: 27 (used in SQL concatenation; selected schools queries (schools from the same Athletic Conference); and maybe more)         
         private int districtID;//: 3619 (not sure where this is used; maybe in queries - may be deprecated) 
 
