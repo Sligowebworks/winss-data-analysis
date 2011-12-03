@@ -39,7 +39,7 @@ namespace SligoCS.Web.WI.WebUserControls
                 link = new HyperLinkPlus();
                 link.ParamName = "Year";
                 link.ParamValue = linkYear.ToString();
-                link.Text = (SingleYearLabel)
+                link.Text = (SingleYearLabel || SingleYearPrevLabel)
                     ? LinkPrefix + ((SingleYearPrevLabel) ? linkYear - 1 : linkYear)
                     : LinkPrefix + String.Format("{0}-{1}", (linkYear - 1), linkYear.ToString().Substring(2))
                     ;
