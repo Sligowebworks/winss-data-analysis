@@ -473,6 +473,9 @@ SligoCS.Web.WI/WebUserControls/NavCompareTo.ascx.designer.cs -text
 SligoCS.Web.WI/WebUserControls/NavSchoolType.ascx -text
 SligoCS.Web.WI/WebUserControls/NavSchoolType.ascx.cs -text
 SligoCS.Web.WI/WebUserControls/NavSchoolType.ascx.designer.cs -text
+SligoCS.Web.WI/WebUserControls/NavSelectYear.ascx -text
+SligoCS.Web.WI/WebUserControls/NavSelectYear.ascx.cs -text
+SligoCS.Web.WI/WebUserControls/NavSelectYear.ascx.designer.cs -text
 SligoCS.Web.WI/WebUserControls/NavSimilarCriteria.ascx -text
 SligoCS.Web.WI/WebUserControls/NavSimilarCriteria.ascx.cs -text
 SligoCS.Web.WI/WebUserControls/NavSimilarCriteria.ascx.designer.cs -text

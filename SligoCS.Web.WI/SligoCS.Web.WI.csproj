@@ -745,6 +745,13 @@
     <Compile Include="WebUserControls\InitSelSchoolInfo.ascx.designer.cs">
       <DependentUpon>InitSelSchoolInfo.ascx</DependentUpon>
     </Compile>
+    <Compile Include="WebUserControls\NavSelectYear.ascx.cs">
+      <DependentUpon>NavSelectYear.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\NavSelectYear.ascx.designer.cs">
+      <DependentUpon>NavSelectYear.ascx</DependentUpon>
+    </Compile>
     <Compile Include="WebUserControls\NavSimilarCriteria.ascx.cs">
       <DependentUpon>NavSimilarCriteria.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1016,6 +1023,7 @@
     <Content Include="WebUserControls\NavigationLinkRow.ascx" />
     <Content Include="WebUserControls\NavSchoolType.ascx" />
     <Content Include="WebUserControls\InitSelSchoolInfo.ascx" />
+    <Content Include="WebUserControls\NavSelectYear.ascx" />
     <Content Include="WebUserControls\NavSimilarCriteria.ascx" />
     <Content Include="WebUserControls\NavViewByGroup.ascx" />
     <Content Include="WebUserControls\PlanningHelp.ascx" />
