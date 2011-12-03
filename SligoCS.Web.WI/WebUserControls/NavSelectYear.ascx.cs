@@ -21,18 +21,26 @@ namespace SligoCS.Web.WI.WebUserControls
         protected void Page_Load(object sender, EventArgs e)
         {
             GlobalValues globals = ((PageBaseWI)Page).GlobalValues;
+            if (globals.CompareTo.Key != CompareToKeys.Years)
+                createLinks(globals);
+            else
+                LinkRow.Visible = false;
+        }
+
+        protected void createLinks(GlobalValues globals)
+        {
             int start = globals.TrendStartYear;
             int end = globals.LatestYear;
             HyperLinkPlus link;
-
             int linkYear;
+
             for (linkYear = end; linkYear >= start; linkYear--)
             {
                 link = new HyperLinkPlus();
                 link.ParamName = "Year";
                 link.ParamValue = linkYear.ToString();
-                link.Text =  (SingleYearLabel)
-                    ? LinkPrefix + ((SingleYearPrevLabel)? linkYear-1 : linkYear)
+                link.Text = (SingleYearLabel)
+                    ? LinkPrefix + ((SingleYearPrevLabel) ? linkYear - 1 : linkYear)
                     : LinkPrefix + String.Format("{0}-{1}", (linkYear - 1), linkYear.ToString().Substring(2))
                     ;
 
