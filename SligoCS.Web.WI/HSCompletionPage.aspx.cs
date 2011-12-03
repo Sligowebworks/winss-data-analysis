@@ -47,7 +47,7 @@ namespace SligoCS.Web.WI
         }
         protected override void OnInitComplete(EventArgs e)
         {
-            GlobalValues.Year = 2010;
+            GlobalValues.LatestYear = 2010;
 
             //STYP not supported (but don't loose school type at school level for titling purposes).
             if (GlobalValues.OrgLevel.Key != OrgLevelKeys.School )GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;

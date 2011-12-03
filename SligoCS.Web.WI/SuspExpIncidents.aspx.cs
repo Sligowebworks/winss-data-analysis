@@ -31,7 +31,7 @@ namespace SligoCS.Web.WI
         }
         protected override void OnInitComplete(EventArgs e)
         {
-            GlobalValues.Year = 2010;
+            GlobalValues.LatestYear = 2010;
             if (GlobalValues.Group.Key == GroupKeys.Disability)
             {
                 GlobalValues.TrendStartYear = 2003;

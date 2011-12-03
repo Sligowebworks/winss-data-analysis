@@ -92,7 +92,7 @@ namespace SligoCS.Web.WI
         }
         protected override void OnInitComplete(EventArgs e)
         {
-            GlobalValues.Year = 2011;
+            GlobalValues.LatestYear = 2011;
 
             //Disable "All Tested Subjects"
             if (GlobalValues.SubjectID.Key == SubjectIDKeys.AllTested) GlobalValues.SubjectID.Key = SubjectIDKeys.Reading;

@@ -66,7 +66,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.TrendStartYear = 2003;
-            GlobalValues.Year = 2011;
+            GlobalValues.LatestYear = 2011;
 
             DisabilitiesDataGrid.ColumnLoaded += new EventHandler(DisabilitiesDataGrid_ColumnLoaded);
 

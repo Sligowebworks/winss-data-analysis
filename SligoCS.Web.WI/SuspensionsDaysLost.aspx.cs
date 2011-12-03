@@ -25,8 +25,8 @@ namespace SligoCS.Web.WI
 
         protected override void OnInitComplete(EventArgs e)
         {
-            GlobalValues.Year = 2010;
-            GlobalValues.Grade.Key = GradeKeys.Combined_PreK_12;
+            GlobalValues.LatestYear = 2010;
+            
             if (GlobalValues.Group.Key == GroupKeys.Disability)
             {
                 GlobalValues.TrendStartYear = 2005;
@@ -36,6 +36,8 @@ namespace SligoCS.Web.WI
                 GlobalValues.TrendStartYear = 1999;
             }
 
+            GlobalValues.Grade.Key = GradeKeys.Combined_PreK_12;
+            
             //Don't show combined groups at District Level, until support is added in the data import.
             if (GlobalValues.OrgLevel.Key == OrgLevelKeys.District
                 && QueryMarshaller.RaceDisagCodes.Contains((int)QueryMarshaller.RaceCodes.Comb))

@@ -28,9 +28,24 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
         public string DETAIL { get { if (dETAIL == null) dETAIL = InitializeProperty("DETAIL"); return dETAIL; } set { dETAIL = value; } }
         public GraphFile GraphFile { get { return graphFile; } set { graphFile = value; } }
 
-        public int Year { get { if (year == 0) year = Convert.ToInt16(InitializeProperty("Year")); return year; } set { year = value; } }
+        public int Year 
+        {  
+            set { year = value; }
+            get 
+            {
+                year = Convert.ToInt16(GetParamFromUser("Year", HttpContext.Current));
+
+                if (CompareTo.Key == CompareToKeys.Years
+                    || !(TrendStartYear <= year && year <= LatestYear)
+                    || !inQS.Contains("Year")
+                    ) 
+                        year = LatestYear;
+                
+                return year; 
+            }
+        }
         public int TrendStartYear { get { if (trendStartYear == 0)trendStartYear = Convert.ToInt16(InitializeProperty("TrendStartYear"));  return trendStartYear; } set { trendStartYear = value; } }
-        public int LatestYear { get { if (latestYear == 0) latestYear = Convert.ToInt16(InitializeProperty("TrendStartYear")); return latestYear; } set { latestYear = value; } }
+        public int LatestYear { get { if (latestYear == 0) latestYear = Convert.ToInt16(InitializeProperty("LatestYear")); return latestYear; } set { latestYear = value; } }
         public int ConferenceKey { get { if (conferenceKey == 0) conferenceKey = Convert.ToInt16(InitializeProperty("ConferenceKey")); return conferenceKey; } set { conferenceKey = value; } }
         public int DistrictID { get { return districtID; } set { districtID = value; } }
 

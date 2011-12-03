@@ -52,7 +52,7 @@ namespace SligoCS.Web.WI
         }
         protected override void OnInitComplete(EventArgs e)
         {
-            GlobalValues.Year = 2011;
+            GlobalValues.LatestYear = 2011;
             // NA // GlobalValues.TrendStartYear
 
             GlobalValues.OverrideByNavLinksNotPresent(GlobalValues.Grade, nlrGrade, GradeKeys.Combined_PreK_12);

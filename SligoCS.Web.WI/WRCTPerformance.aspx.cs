@@ -42,7 +42,7 @@ namespace SligoCS.Web.WI
         }
         protected override void OnInitComplete(EventArgs e)
         {
-            GlobalValues.Year = 2005;
+            GlobalValues.LatestYear = 2005;
             GlobalValues.TrendStartYear = 1998;
 
             GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
