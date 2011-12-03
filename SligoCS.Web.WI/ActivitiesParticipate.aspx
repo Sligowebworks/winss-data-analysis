@@ -28,6 +28,7 @@
                 </NavigationLinks>
         </sli:NavigationLinkRow>
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
     </td></tr>
     <tr>
         <td>

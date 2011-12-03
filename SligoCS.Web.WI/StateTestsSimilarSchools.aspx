@@ -54,7 +54,7 @@
           <sli:NavSimilarCriteria ID="nlrSimilar" runat="server" />      
                 
             <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-            
+            <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
             <sli:NavigationLinkRow ID="nlrLocation" runat="server">
                     <RowLabel>Location:</RowLabel>
                     <NavigationLinks>

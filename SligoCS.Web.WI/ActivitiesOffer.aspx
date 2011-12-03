@@ -31,6 +31,8 @@
         
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
         
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
+        
         <table width="100%"><tr>
         <td><sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrictLink1" runat="server" /></td>
         <td align="right"><p>Go to: <a href="ActivitiesParticipate.aspx<% Response.Write(GetQueryString(new String[1]{"Qquad=attendance.aspx"})); %>">Do students participate in school-supported activities?</a></p></td>

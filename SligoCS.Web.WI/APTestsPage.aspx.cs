@@ -45,6 +45,8 @@ namespace SligoCS.Web.WI
         protected override void  OnInitComplete(EventArgs e)
         {
             GlobalValues.Grade.Key = GradeKeys.Grades_9_12_Combined;
+
+            GlobalValues.TrendStartYear = 1997;
             GlobalValues.LatestYear = 2010;
 
             if (UserValues.OrgLevel.Key == OrgLevelKeys.School) 

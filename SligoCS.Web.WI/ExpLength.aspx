@@ -28,6 +28,7 @@
          </sli:NavigationLinkRow>
         
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrict" runat="server" />
          </td></tr>
         <asp:Panel ID="pnlMessage" runat="server" Visible="false">

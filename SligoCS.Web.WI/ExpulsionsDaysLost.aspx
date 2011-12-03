@@ -28,6 +28,7 @@
          </sli:NavigationLinkRow>
         <sli:NavViewByGroup ID="nlrVwByGroup" runat="server" />
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrictLink1" runat="server" />
 </td>
     </tr>

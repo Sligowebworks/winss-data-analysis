@@ -20,6 +20,7 @@
                 </sli:NavigationLinkRow>
                 
                  <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
+                <sli:NavSelectYear ID="nlrSelectYear" runat="server" LinkPrefix="Mar " SingleYearLabel="true"/> 
         <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrictLink1" runat="server" />
                 
     </td></tr>
@@ -72,7 +73,7 @@
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload2" runat="server" Col="14"/>
             <p><span class="text">
-	            <a href="javascript:popup('http://dpi.wi.gov/oea/hist/wrct.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <a href="javascript:popup('http://dpi.wi.gov/oea/hist/wrct.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </span> </p>       
         </td>
     </tr>
