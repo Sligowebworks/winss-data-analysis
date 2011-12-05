@@ -67,6 +67,34 @@ namespace SligoCS.Web.WI
             }
         }
 
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
+
+            //set the URLs for the left hand hyperlinks
+            if (!Page.IsPostBack)
+            {
+                SetLeftHandLinksText();
+                SetDataLinks();
+                SetHideShowNumbersLink();
+                SetScatterplotLink();
+                SetReadAboutLink();
+                SetGlossaryLink();
+
+                string qsChangeSchoolOrDistrict = user.GetQueryString(
+                    "FULLKEY", FullKeyUtils.StateFullKey(globals.FULLKEY));
+                qsChangeSchoolOrDistrict = QueryStringUtils.ReplaceQueryString(qsChangeSchoolOrDistrict,
+                    globals.OrgLevel.Name, globals.OrgLevel.Range[OrgLevelKeys.State]);
+                qsChangeSchoolOrDistrict = QueryStringUtils.ReplaceQueryString(qsChangeSchoolOrDistrict,
+                    "DN", String.Empty);
+                qsChangeSchoolOrDistrict = QueryStringUtils.ReplaceQueryString(qsChangeSchoolOrDistrict,
+                     "SN", String.Empty);
+
+                this.ChangeSchoolOrDistrict.NavigateUrl = globals.CreateURL("~/selschool.aspx", qsChangeSchoolOrDistrict);
+
+                ViewTitle.Text = globals.OrgLevel.Key + " View";
+            }
+        }
         /// <summary>
         /// The master page's Page_Load event occurs AFTER the aspx page's Page_Load event.
         /// </summary>
@@ -76,30 +104,6 @@ namespace SligoCS.Web.WI
         {
             globals = ((PageBaseWI)Page).GlobalValues;
             user = ((PageBaseWI)Page).UserValues;
-
-            //set the URLs for the left hand hyperlinks
-             if (!Page.IsPostBack)
-            {
-                SetLeftHandLinksText();
-                SetDataLinks();
-                SetHideShowNumbersLink();
-                SetScatterplotLink();
-                SetReadAboutLink();
-                SetGlossaryLink();
-
-                string qsChangeSchoolOrDistrict = user.GetQueryString( 
-                    "FULLKEY", FullKeyUtils.StateFullKey(globals.FULLKEY));
-                qsChangeSchoolOrDistrict = QueryStringUtils.ReplaceQueryString(qsChangeSchoolOrDistrict,
-                    globals.OrgLevel.Name, globals.OrgLevel.Range[OrgLevelKeys.State]);
-                qsChangeSchoolOrDistrict = QueryStringUtils.ReplaceQueryString(qsChangeSchoolOrDistrict,
-                    "DN", String.Empty);
-                qsChangeSchoolOrDistrict = QueryStringUtils.ReplaceQueryString(qsChangeSchoolOrDistrict,
-                     "SN", String.Empty);
-                
-                this.ChangeSchoolOrDistrict.NavigateUrl = globals.CreateURL("~/selschool.aspx" , qsChangeSchoolOrDistrict);
-                
-                ViewTitle.Text = globals.OrgLevel.Key +" View";
-            }
             
             add_JS_image_manager();
             add_CssLink();
