@@ -42,8 +42,6 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
                     ) 
                         year = LatestYear;
 
-                    //if (year == 9999)  throw new Exception(TrendStartYear.ToString() + year.ToString() + LatestYear.ToString() + CompareTo.Key);
-                    if (year == 9999) throw new Exception("An error has occured. Please copy the URL from your web browser's address bar and email the website administrator.");
                 return year; 
             }
         }
