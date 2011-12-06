@@ -51,7 +51,7 @@
             </NavigationLinks>
         </sli:NavigationLinkRow>
         
-        <sli:NavSelectYear ID="nlrSelectYear" runat="server" LinkPrefix="Nov " SingleYearPrevLabel="true" /> 
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
 
     </td></tr>
 

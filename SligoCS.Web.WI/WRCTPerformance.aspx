@@ -20,7 +20,7 @@
                 </sli:NavigationLinkRow>
                 
                  <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-                <sli:NavSelectYear ID="nlrSelectYear" runat="server" LinkPrefix="Mar " SingleYearLabel="true"/> 
+                <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrictLink1" runat="server" />
                 
     </td></tr>
