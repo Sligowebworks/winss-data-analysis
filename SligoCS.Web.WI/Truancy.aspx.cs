@@ -26,7 +26,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {            
             GlobalValues.Grade.Key = GradeKeys.Grades_K_12;
-            GlobalValues.LatestYear = 2010;
+            GlobalValues.CurrentYear = 2010;
             GlobalValues.TrendStartYear = 1997;
             base.OnInitComplete(e);
         }

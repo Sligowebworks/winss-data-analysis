@@ -30,7 +30,7 @@ namespace SligoCS.Web.WI.WebUserControls
         protected void createLinks(GlobalValues globals)
         {
             int start = globals.TrendStartYear;
-            int end = globals.LatestYear;
+            int end = globals.CurrentYear;
             HyperLinkPlus link;
             int linkYear;
 

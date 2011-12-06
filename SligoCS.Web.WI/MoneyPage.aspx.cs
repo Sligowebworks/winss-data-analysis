@@ -49,7 +49,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.TrendStartYear = 1999;
-            GlobalValues.LatestYear = 2010;
+            GlobalValues.CurrentYear = 2010;
 
             if (GlobalValues.OrgLevel.Key == OrgLevelKeys.School)
             {

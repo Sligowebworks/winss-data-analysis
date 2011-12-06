@@ -47,7 +47,7 @@ namespace SligoCS.Web.WI
 
 
             GlobalValues.TrendStartYear = 1997;
-            GlobalValues.LatestYear = 2010;
+            GlobalValues.CurrentYear = 2010;
 
             //Disable School Level
             if (UserValues.OrgLevel.Key == OrgLevelKeys.School)

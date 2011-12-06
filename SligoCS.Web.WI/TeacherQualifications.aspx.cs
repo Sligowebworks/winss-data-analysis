@@ -28,7 +28,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.TrendStartYear = 2003;
-            GlobalValues.LatestYear = 2011;
+            GlobalValues.CurrentYear = 2011;
 
             //View By Group not supported:
             GlobalValues.Group.Value = GlobalValues.Group.Range[GroupKeys.All];

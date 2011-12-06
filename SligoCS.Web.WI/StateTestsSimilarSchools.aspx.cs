@@ -55,7 +55,7 @@ namespace SligoCS.Web.WI
         }
         protected override void OnInitComplete(EventArgs e)
         {
-            GlobalValues.LatestYear = 2011;
+            GlobalValues.CurrentYear = 2011;
 
             //View By Group Unsupported.
             GlobalValues.Group.Key = GroupKeys.All;

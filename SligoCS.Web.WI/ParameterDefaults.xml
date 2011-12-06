@@ -16,7 +16,7 @@
   <COUNTY>40</COUNTY>
   <Year>999</Year><!--Year should default to a value between TrendStart and Latest-->
   <TrendStartYear>99</TrendStartYear><!-- Trend start should default below any valid year-->
-  <LatestYear>9999</LatestYear><!-- Latest should default above any valid year-->
+  <CurrentYear>9999</CurrentYear><!-- Latest should default above any valid year-->
   <ConferenceKey>27</ConferenceKey>
   <DistrictID>3619</DistrictID>
   <GradeBreakout>999</GradeBreakout>

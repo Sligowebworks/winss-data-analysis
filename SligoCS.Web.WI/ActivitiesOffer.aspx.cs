@@ -47,7 +47,7 @@ namespace SligoCS.Web.WI
             GlobalValues.Group.Value = GlobalValues.Group.Range[GroupKeys.All];
 
             GlobalValues.TrendStartYear = 1997;
-            GlobalValues.LatestYear = 2010;
+            GlobalValues.CurrentYear = 2010;
 
             if (GlobalValues.Show.Key == ShowKeys.Community)
             {

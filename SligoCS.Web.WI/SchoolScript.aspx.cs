@@ -54,7 +54,8 @@ namespace SligoCS.Web.WI
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            GlobalValues.Year = 2007;
+            GlobalValues.ForceCurrentYear = true;
+            GlobalValues.CurrentYear = 2007;
             SligoDataGrids_not_visible();
             set_state();
             init_display();

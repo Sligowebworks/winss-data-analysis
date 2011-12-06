@@ -42,7 +42,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.TrendStartYear = 1997;
-            GlobalValues.LatestYear = 2010;
+            GlobalValues.CurrentYear = 2010;
 
             //Disable CourseType, Other
             if (GlobalValues.CourseTypeID.Key == CourseTypeIDKeys.Other)
