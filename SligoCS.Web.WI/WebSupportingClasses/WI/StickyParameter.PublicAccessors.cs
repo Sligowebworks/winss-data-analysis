@@ -51,7 +51,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             }
         }
         public int TrendStartYear { get { if (trendStartYear == 0)trendStartYear = Convert.ToInt16(InitializeProperty("TrendStartYear"));  return trendStartYear; } set { trendStartYear = value; } }
-        public int CurrentYear { get { if (latestYear == 0) latestYear = Convert.ToInt16(InitializeProperty("LatestYear")); return latestYear; } set { latestYear = value; } }
+        public int CurrentYear { get { if (latestYear == 0) latestYear = Convert.ToInt16(InitializeProperty("CurrentYear")); return latestYear; } set { latestYear = value; } }
         public Boolean ForceCurrentYear = false;
         public int ConferenceKey { get { if (conferenceKey == 0) conferenceKey = Convert.ToInt16(InitializeProperty("ConferenceKey")); return conferenceKey; } set { conferenceKey = value; } }
         public int DistrictID { get { return districtID; } set { districtID = value; } }
