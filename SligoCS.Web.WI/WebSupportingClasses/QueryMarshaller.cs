@@ -58,10 +58,6 @@ namespace SligoCS.BL.WI
             }
             set { _orderByList = value; }
         }
-        public int AgencyYear
-        {
-            get { return GlobalValues.AgencyYear; }
-        }
         public DALWIBase Database
         {
             get 

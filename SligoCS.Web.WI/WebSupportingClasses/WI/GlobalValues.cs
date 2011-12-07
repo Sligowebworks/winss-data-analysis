@@ -185,21 +185,6 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             // else, State
             return "Entire State";
         }
-        private int agencyYear;
-        /// <summary>
-        /// Designed for use with the Agency Tables. Configured in App Settings, determine's which year of Agency Data to use.
-        /// </summary>
-        public int AgencyYear
-        {
-            get 
-            {
-                if (agencyYear == 0)
-                {
-                    agencyYear = int.Parse(ConfigurationManager.AppSettings["AgencyYear"]);
-                }
-                return agencyYear; 
-            }
-        }
         private int highgrade;
         public int HIGHGRADE { 
             get 
