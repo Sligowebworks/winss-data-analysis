@@ -19,6 +19,8 @@
 <table>
     <tr>
         <td>
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
+
         <sli:NavigationLinkRow ID="nlrGrade" runat="server">
             <RowLabel>Grade:</RowLabel>
             <NavigationLinks>
@@ -51,8 +53,6 @@
             </NavigationLinks>
         </sli:NavigationLinkRow>
         
-        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
-
     </td></tr>
 
      <asp:Panel ID="GraphPanel" runat="server">    

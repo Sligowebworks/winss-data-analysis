@@ -18,6 +18,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table style="padding:0px 0px 0px 0px; width:400px;">
     <tr><td>
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:NavSchoolType ID="nlrSchoolType" runat="server" />
         
         <sli:NavigationLinkRow ID="nlrShow" runat="server">
@@ -28,7 +29,6 @@
                 </NavigationLinks>
         </sli:NavigationLinkRow>
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
     </td></tr>
     <tr>
         <td>

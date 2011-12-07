@@ -21,6 +21,7 @@
 <table>
     <tr>
         <td>
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:NavSchoolType ID="nlrSchoolType" runat="server" />
         
         <sli:NavigationLinkRow ID="nlrShow" runat="server">
@@ -53,7 +54,6 @@
         </sli:NavigationLinkRow>
                 
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrict" runat="server" />
         </td>
     </tr>

@@ -20,6 +20,15 @@ namespace SligoCS.Web.WI {
     public partial class DropOuts {
         
         /// <summary>
+        /// nlrSelectYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::SligoCS.Web.WI.WebUserControls.NavSelectYear nlrSelectYear;
+        
+        /// <summary>
         /// nlrSTYP control.
         /// </summary>
         /// <remarks>
@@ -45,15 +54,6 @@ namespace SligoCS.Web.WI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::SligoCS.Web.WI.WebUserControls.NavCompareTo nlrCompareTo;
-        
-        /// <summary>
-        /// nlrSelectYear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SligoCS.Web.WI.WebUserControls.NavSelectYear nlrSelectYear;
         
         /// <summary>
         /// ChangeSelectedSchoolOrDistrict control.

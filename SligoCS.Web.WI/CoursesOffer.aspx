@@ -19,6 +19,7 @@
 <table style="padding:0px 0px 0px 0px; width:400px;">
     <tr>
         <td>
+            <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
             <sli:NavigationLinkRow ID="nlrCourseTypeID" runat="server">
                 <RowLabel>Show: </RowLabel>
                 <NavigationLinks>
@@ -44,7 +45,6 @@
             </sli:NavigationLinkRow>
             
             <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-            <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
             <table width="100%"><tr>
         <td><sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrictLink1" runat="server" /></td>
         <td align="right"><p>Go to: <a href="coursestaking.aspx<%  Response.Write(GetQueryString(new String[1]{"Qquad=attendance.aspx"})); %>">What courses are students taking?</a></p></td>

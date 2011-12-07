@@ -6,6 +6,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table style="padding:0px 0px 0px 0px; width:400px;">
     <tr><td>
+                <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
                
         <sli:NavigationLinkRow ID="nlrLevel" runat="server">
                     <RowLabel>Level:</RowLabel>
@@ -20,7 +21,6 @@
                 </sli:NavigationLinkRow>
                 
                  <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-                <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrictLink1" runat="server" />
                 
     </td></tr>

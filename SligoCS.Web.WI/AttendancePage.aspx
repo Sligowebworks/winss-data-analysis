@@ -11,10 +11,10 @@
 <table>
     <tr>
         <td>
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:NavSchoolType ID="nlrSTYP" runat="server" />
         <sli:NavViewByGroup ID="nlrVwBy" runat="server" />
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         </td>
     </tr>
     <asp:Panel ID="GraphPanel" runat="server">       

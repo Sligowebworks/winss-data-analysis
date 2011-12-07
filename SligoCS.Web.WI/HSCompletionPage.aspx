@@ -20,6 +20,7 @@
 <table>
     <tr>
         <td>
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:NavigationLinkRow ID="nlrHighSchoolCompletion" runat="server">
             <RowLabel>Credential: </RowLabel>
             <NavigationLinks>
@@ -42,7 +43,6 @@
         </sli:NavigationLinkRow>
         <sli:NavViewByGroup ID="nlrViewByGroup" runat="server" />        
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:ChangeSelectedSchoolOrDistrictLink ID="ChangeSelectedSchoolOrDistrict" Font-Size="Small" runat="server" />
         </td>
     </tr>

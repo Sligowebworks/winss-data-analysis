@@ -19,10 +19,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table style="padding:0px 0px 0px 0px; width:400px;">
     <tr><td>
-      <sli:NavSchoolType ID="nlrSTYP" runat="server" />
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
+        <sli:NavSchoolType ID="nlrSTYP" runat="server" />
         <sli:NavViewByGroup ID="nlrVwByGroup" runat="server" />
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrictLink1" runat="server" />        
         </td></tr>
          <asp:Panel ID="GraphPanel" runat="server">    

@@ -18,7 +18,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table style="padding:0px 0px 0px 0px; width:400px;">
  <tr><td>
-<sli:NavigationLinkRow ID="nlrShow" runat="server">
+        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
+        <sli:NavigationLinkRow ID="nlrShow" runat="server">
                 <RowLabel>Show:</RowLabel> 
                 <NavigationLinks>
                    <cc1:HyperLinkPlus ID="HyperLinkPlus6" runat="server" UrlFile="ExpLength.aspx" Selected="true">Length of Expulsion</cc1:HyperLinkPlus>
@@ -28,7 +29,6 @@
          </sli:NavigationLinkRow>
         
         <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-        <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
         <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrict" runat="server" />
          </td></tr>
         <asp:Panel ID="pnlMessage" runat="server" Visible="false">

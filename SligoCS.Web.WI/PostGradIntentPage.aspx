@@ -11,6 +11,7 @@
 <table>
     <tr>
         <td>
+            <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
             <sli:NavigationLinkRow ID="nlrShow" runat="server">
                 <RowLabel>Show: </RowLabel>
                 <NavigationLinks>
@@ -30,7 +31,6 @@
             <sli:NavViewByGroup ID="nlrVwBy" runat="server" />
             
             <sli:NavCompareTo ID="nlrCompareTo" runat="server" />
-            <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
             <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrictLink1" runat="server" />
         </td>
     </tr>
