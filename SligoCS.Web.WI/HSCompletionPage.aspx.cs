@@ -52,7 +52,8 @@ namespace SligoCS.Web.WI
             //STYP not supported (but don't loose school type at school level for titling purposes).
             if (GlobalValues.OrgLevel.Key != OrgLevelKeys.School )GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
 
-            if (GlobalValues.TmFrm.Key == TmFrmKeys.All)
+            if (GlobalValues.TmFrm.Key == TmFrmKeys.All 
+                || GlobalValues.TmFrm.Key == TmFrmKeys.FourYear)
             {
                 GlobalValues.TrendStartYear = 2010;
             } 
@@ -65,9 +66,13 @@ namespace SligoCS.Web.WI
                 GlobalValues.TrendStartYear = 2003;
             }
             else if (GlobalValues.Group.Key == GroupKeys.EconDisadv
-                || GlobalValues.Group.Key == GroupKeys.EngLangProf)
+           || GlobalValues.Group.Key == GroupKeys.EngLangProf)
             {
                 GlobalValues.TrendStartYear = 2008;
+            }
+            else
+            {
+                GlobalValues.TrendStartYear = 1997;
             }
 
             GlobalValues.Grade.Key = GradeKeys.Grade_12;

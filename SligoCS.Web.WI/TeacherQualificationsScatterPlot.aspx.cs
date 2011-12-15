@@ -63,7 +63,7 @@ namespace SligoCS.Web.WI
             GlobalValues.CompareTo.Key = CompareToKeys.Current;
             GlobalValues.Group.Key = GroupKeys.All;
             GlobalValues.ForceCurrentYear = true;
-            GlobalValues.CurrentYear = 2010;
+            GlobalValues.CurrentYear = 2011;
 
             //disable state level
             if (GlobalValues.OrgLevel.Key == OrgLevelKeys.State) GlobalValues.OrgLevel.Key = OrgLevelKeys.District;

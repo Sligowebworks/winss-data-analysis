@@ -39,6 +39,10 @@ namespace SligoCS.Web.WI
             {
                 GlobalValues.TrendStartYear = 2001;
             }
+            else if (GlobalValues.Group.Key == GroupKeys.EngLangProf)
+            {
+                GlobalValues.TrendStartYear = 1999;
+            }
             else
             {
                 GlobalValues.TrendStartYear = 1996;
