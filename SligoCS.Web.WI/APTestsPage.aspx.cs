@@ -47,7 +47,7 @@ namespace SligoCS.Web.WI
             GlobalValues.Grade.Key = GradeKeys.Grades_9_12_Combined;
 
             GlobalValues.TrendStartYear = 1997;
-            GlobalValues.CurrentYear = 2010;
+            GlobalValues.CurrentYear = 2011;
 
             if (UserValues.OrgLevel.Key == OrgLevelKeys.School) 
                 GlobalValues.OrgLevel.Value = GlobalValues.OrgLevel.Range[OrgLevelKeys.District];
