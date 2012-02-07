@@ -391,8 +391,12 @@ private void set_state()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
 
-            // not sure why this column is showing up in Download Files - removing it 
-            cols.Remove(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.SexLabel);
+            cols.Remove(WebSupportingClasses.ColumnPicker.CommonNames.SexLabel.ToString());
+            cols.Remove(WebSupportingClasses.ColumnPicker.CommonNames.RaceLabel.ToString());
+            cols.Remove(WebSupportingClasses.ColumnPicker.CommonNames.GradeLabel.ToString());
+            cols.Remove(WebSupportingClasses.ColumnPicker.CommonNames.DisabilityLabel.ToString());
+            cols.Remove(WebSupportingClasses.ColumnPicker.CommonNames.EconDisadvLabel.ToString());
+            cols.Remove(WebSupportingClasses.ColumnPicker.CommonNames.ELPLabel.ToString());
 
             int index; 
 
