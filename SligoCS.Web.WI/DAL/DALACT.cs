@@ -21,24 +21,11 @@ namespace SligoCS.DAL.WI
             ////Adds " ... AND (RaceCode in (1, 2, 3, 4, 5)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "Race", Marshaller.raceCodes));
 
-            ////Adds " ... AND ((GradeCode >= 16) AND (GradeCode <= 64)) ..."
-            //sql.Append(SQLHelper.WhereClauseMinAndMaxInclusive(SQLHelper.WhereClauseJoiner.AND, "GradeCode", gradeCodeRange));
-
-            /*
-            ////Adds " ... AND (DisabilityCode in (1, 2)) ..."
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "DisabilityCode", Marshaller.disabilityCodes));
-
-            ////Adds " ... AND (EconDisadvCode in (1, 2)) ..."
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "EconDisadvCode", Marshaller.econDisadvCodes));
-
-            ////Adds " ... AND (ELPCode in (1, 2)) ..."
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "ELPCode", Marshaller.ELPCodes));
-            */
-
             ////Adds " ... AND ((year >= 1997) AND (year <= 2007)) ..."
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.AND, "year", Marshaller.years));
 
-            sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
+            if (Marshaller.GlobalValues.CompareTo.Key != CompareToKeys.OrgLevel)
+                sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.AND, "SchoolType", dbObject));
 
             sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
             
