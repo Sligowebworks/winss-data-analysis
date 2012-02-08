@@ -389,9 +389,7 @@ namespace SligoCS.BL.WI
         public static void SetLowGradeFloor(GlobalValues globals, int gradecode, int floor)
         {
             if (globals.Grade.Value == gradecode.ToString()
-                    && (
-                    ( globals.HIGHGRADE > floor && globals.LOWGRADE < floor )
-                    || globals.SuperDownload.Key == SupDwnldKeys.True)
+                    && globals.HIGHGRADE > floor && globals.LOWGRADE < floor 
                 )
                     globals.LOWGRADE = floor;
         }
