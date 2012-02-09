@@ -504,9 +504,15 @@ namespace SligoCS.BL.WI
              
             return "  "+SQLHelper.GetJoinerString(join)+" " + 
                 String.Format(@"(
+(--lowgrade:
     {0} >= (select top 1  CASE WHEN lowgrade < {2} THEN {2} ELSE lowgrade END from tblAgencyFull where  {1}.year = tblAgencyFull.year and {1}.fullkey = tblAgencyFull.fullkey)
-    AND {0} <= (select top 1 highgrade from tblAgencyFull where {1}.year = tblAgencyFull.year and {1}.fullkey = tblAgencyFull.fullkey)
-    OR fullkey = 'XXXXXXXXXXXX'  
+    OR fullkey = 'XXXXXXXXXXXX'  AND {0} >= {2}
+)--/lowgrade
+    AND 
+(--highgrade
+{0} <= (select top 1 highgrade from tblAgencyFull where {1}.year = tblAgencyFull.year and {1}.fullkey = tblAgencyFull.fullkey)
+    OR fullkey = 'XXXXXXXXXXXX'  AND {0}< 70
+)--/highgrade
     " + strOrAggGradeCode +@"
 ) "
         , field
