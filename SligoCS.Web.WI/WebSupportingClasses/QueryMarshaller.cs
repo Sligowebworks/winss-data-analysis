@@ -495,13 +495,19 @@ namespace SligoCS.BL.WI
 
         public String BuildAutoGradeCodeClause(SQLHelper.WhereClauseJoiner join, String field, String dbObject)
         {
-            int floor = GradeCodeFloorMap[Int16.Parse(globals.Grade.Value)];
+            String strOrAggGradeCode = String.Empty;
+
+            int floor = GradeCodeFloorMap[Int16.Parse(GlobalValues.Grade.Value)];
+            if (GlobalValues.Group.Key != GroupKeys.Grade
+                && GradeCodeFloorMap.ContainsKey(Int16.Parse(GlobalValues.Grade.Value)) )
+                    strOrAggGradeCode = "OR {0} = '"+GlobalValues.Grade.Value+"' ";
+             
             return "  "+SQLHelper.GetJoinerString(join)+" " + 
                 String.Format(@"(
     {0} >= (select top 1  CASE WHEN lowgrade < {2} THEN {2} ELSE lowgrade END from tblAgencyFull where  {1}.year = tblAgencyFull.year and {1}.fullkey = tblAgencyFull.fullkey)
     AND {0} <= (select top 1 highgrade from tblAgencyFull where {1}.year = tblAgencyFull.year and {1}.fullkey = tblAgencyFull.fullkey)
     OR fullkey = 'XXXXXXXXXXXX'  
-    OR {0}='99'
+    " + strOrAggGradeCode +@"
 ) "
         , field
         , dbObject
