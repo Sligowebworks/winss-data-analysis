@@ -680,8 +680,8 @@ namespace SligoCS.BL.WI
                         });
                 }
 
-                if (GlobalValues.CompareTo.Key == CompareToKeys.OrgLevel
-                    || GlobalValues.OrgLevel.Key == OrgLevelKeys.State)
+                if ((GlobalValues.CompareTo.Key == CompareToKeys.OrgLevel || GlobalValues.OrgLevel.Key == OrgLevelKeys.State)
+                    && GlobalValues.SuperDownload.Key != SupDwnldKeys.True)
                 {
                     raceDisagCodes.Remove((int)RaceCodes.Comb);
                 }
