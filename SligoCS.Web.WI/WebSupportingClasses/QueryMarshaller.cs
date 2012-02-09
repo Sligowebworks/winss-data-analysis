@@ -46,6 +46,27 @@ namespace SligoCS.BL.WI
             All_Races = 9
         };
 
+        private static Dictionary<Int16, Int16> gradeCodeFloorMap;
+        protected static Dictionary<Int16, Int16> GradeCodeFloorMap
+        {
+            get
+            {
+                if (gradeCodeFloorMap == null)
+                {
+                    gradeCodeFloorMap = new Dictionary<Int16, Int16>();
+                    gradeCodeFloorMap.Add(99, 12);   // Default Floor
+                    gradeCodeFloorMap.Add(98, 16);   //Kindergarten
+                    gradeCodeFloorMap.Add(94, 40);  // Grade 6
+                    gradeCodeFloorMap.Add(95, 44);  //Grade 7
+                    gradeCodeFloorMap.Add(96, 48);  //Grade 9
+                    gradeCodeFloorMap.Add(97, 56); // Grade 10
+                    gradeCodeFloorMap.Add(0, 28);    //WSAS floor
+                }
+
+                return gradeCodeFloorMap;
+            }
+        }
+
         private List<String> _orderByList;
 
         public List<String> orderByList
@@ -377,20 +398,8 @@ namespace SligoCS.BL.WI
             //kludge :
             if (globals.LOWGRADE < 12) globals.LOWGRADE = 12;
 
-            SligoCS.BL.WI.QueryMarshaller.SetLowGradeFloor(globals, 99, 12); // Default Floor
-            SligoCS.BL.WI.QueryMarshaller.SetLowGradeFloor(globals, 98, 16); //Kindergarten
-            SligoCS.BL.WI.QueryMarshaller.SetLowGradeFloor(globals, 94, 40); // Grade 6
-            SligoCS.BL.WI.QueryMarshaller.SetLowGradeFloor(globals, 95, 44); //Grade 7
-            SligoCS.BL.WI.QueryMarshaller.SetLowGradeFloor(globals, 96, 48); // Grade 9
-            SligoCS.BL.WI.QueryMarshaller.SetLowGradeFloor(globals, 97, 56); // Grade 10
-            SligoCS.BL.WI.QueryMarshaller.SetLowGradeFloor(globals, 0, 28); // WSAS floor
-            
-        }
-        public static void SetLowGradeFloor(GlobalValues globals, int gradecode, int floor)
-        {
-            if (globals.Grade.Value == gradecode.ToString()
-                    && globals.HIGHGRADE > floor && globals.LOWGRADE < floor 
-                )
+            int floor = GradeCodeFloorMap[Int16.Parse(globals.Grade.Value)];
+            if ( globals.HIGHGRADE > floor && globals.LOWGRADE < floor)
                     globals.LOWGRADE = floor;
         }
         
@@ -486,15 +495,17 @@ namespace SligoCS.BL.WI
 
         public String BuildAutoGradeCodeClause(SQLHelper.WhereClauseJoiner join, String field, String dbObject)
         {
+            int floor = GradeCodeFloorMap[Int16.Parse(globals.Grade.Value)];
             return "  "+SQLHelper.GetJoinerString(join)+" " + 
                 String.Format(@"(
-    {0} >= (select top 1  lowgrade from tblAgencyFull where  {1}.year = tblAgencyFull.year and {1}.fullkey = tblAgencyFull.fullkey)
+    {0} >= (select top 1  CASE WHEN lowgrade < {2} THEN {2} ELSE lowgrade END from tblAgencyFull where  {1}.year = tblAgencyFull.year and {1}.fullkey = tblAgencyFull.fullkey)
     AND {0} <= (select top 1 highgrade from tblAgencyFull where {1}.year = tblAgencyFull.year and {1}.fullkey = tblAgencyFull.fullkey)
     OR fullkey = 'XXXXXXXXXXXX'  
     OR {0}='99'
 ) "
         , field
         , dbObject
+        , floor
             );
         }
 
