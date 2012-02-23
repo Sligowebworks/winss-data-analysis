@@ -503,7 +503,10 @@ namespace SligoCS.BL.WI
             //Include Combined Grades only for pages that have individual grade selections
             if (GlobalValues.Group.Key != GroupKeys.Grade
                 && GradeCodeFloorMap.ContainsKey(gradeCode) )
-                    strOrAggGradeCode = "OR {0} = '"+GlobalValues.Grade.Value+"' ";
+                    strOrAggGradeCode = "OR {0} = '"+
+                        //WSAS Exception for "All Tested" Flag
+                        ((GlobalValues.Grade.Value == "0") ? "99" : GlobalValues.Grade.Value)
+                        +"' ";
              
             return "  "+SQLHelper.GetJoinerString(join)+" " + 
                 String.Format(@"(
