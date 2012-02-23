@@ -496,12 +496,13 @@ namespace SligoCS.BL.WI
         public String BuildAutoGradeCodeClause(SQLHelper.WhereClauseJoiner join, String field, String dbObject)
         {
             String strOrAggGradeCode = String.Empty;
+            Int16 gradeCode = Int16.Parse(GlobalValues.Grade.Value);
 
-            int floor = GradeCodeFloorMap[Int16.Parse(GlobalValues.Grade.Value)];
+            int floor = (gradeCodeFloorMap.ContainsKey(gradeCode))? GradeCodeFloorMap[gradeCode] : gradeCode;
 
             //Include Combined Grades only for pages that have individual grade selections
             if (GlobalValues.Group.Key != GroupKeys.Grade
-                && GradeCodeFloorMap.ContainsKey(Int16.Parse(GlobalValues.Grade.Value)) )
+                && GradeCodeFloorMap.ContainsKey(gradeCode) )
                     strOrAggGradeCode = "OR {0} = '"+GlobalValues.Grade.Value+"' ";
              
             return "  "+SQLHelper.GetJoinerString(join)+" " + 

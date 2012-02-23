@@ -126,7 +126,9 @@ namespace SligoCS.Web.WI
 
             base.OnInitComplete(e);
 
-            QueryMarshaller.gradeCodes.ObeyForceDisAgg = true;
+            if (GlobalValues.Grade.Key == GradeKeys.AllDisAgg
+                || GlobalValues.Grade.Key == GradeKeys.Combined_PreK_12)
+            { QueryMarshaller.gradeCodes.ObeyForceDisAgg = true; }
 
             DataGrid.Columns.FieldsChanged += new EventHandler(Columns_FieldsChanged);
 
