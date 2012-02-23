@@ -30,7 +30,7 @@ namespace SligoCS.Web.WI
             GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
 
             //Don't show combined groups at District Level, until support is added in the data import.
-            if (GlobalValues.OrgLevel.Key == OrgLevelKeys.District
+            if ((GlobalValues.OrgLevel.Key == OrgLevelKeys.District || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 && QueryMarshaller.RaceDisagCodes.Contains((int) QueryMarshaller.RaceCodes.Comb))
                 QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
 
