@@ -14,7 +14,8 @@ namespace SligoCS.DAL.WI
             StringBuilder sql = new StringBuilder();
             String dbObject = "v_wsas";
 
-            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            //sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(),dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 
@@ -72,7 +73,7 @@ namespace SligoCS.DAL.WI
             sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "FullKey"));
 
             sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));
-
+            //throw new Exception(sql.ToString());
             return sql.ToString();
         }
 

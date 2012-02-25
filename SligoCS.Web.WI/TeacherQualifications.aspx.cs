@@ -275,11 +275,11 @@ namespace SligoCS.Web.WI
             }
             return retval;
         }
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
             TQShow show = GlobalValues.TQShow;
 
-            List<string> retval = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> retval = base.GetVisibleColumns();
 
             retval.Add(v_TeacherQualifications.FTETotal);
 
@@ -325,7 +325,7 @@ namespace SligoCS.Web.WI
             return retval;
         }
 
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List<String> cols = base.GetDownloadRawVisibleColumns();
 

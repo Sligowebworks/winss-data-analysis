@@ -222,9 +222,9 @@ namespace SligoCS.Web.WI
             ((SligoCS.Web.WI.WI)Page.Master).set_visible_state(WI.displayed_obj.dataLinksPanel, true);
         }
 
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-            List<string> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> cols = base.GetVisibleColumns();
 
             cols.Add(v_POST_GRAD_INTENT.Number_of_Graduates);
 
@@ -285,7 +285,7 @@ namespace SligoCS.Web.WI
 
             return cols;
         }
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List <String> cols = base.GetDownloadRawVisibleColumns();
             if (GlobalValues.PostGradPlan.Key == PostGradPlanKeys.All)

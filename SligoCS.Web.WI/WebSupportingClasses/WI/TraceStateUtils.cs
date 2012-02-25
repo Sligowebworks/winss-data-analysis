@@ -143,14 +143,8 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
 
             SligoCS.Web.Base.PageBase.WI.PageBaseWI page = (SligoCS.Web.Base.PageBase.WI.PageBaseWI)argPage;
 
-            System.Collections.Generic.List<String> cols = page.GetVisibleColumns(
-                        page.GlobalValues.Group,
-                       page. GlobalValues.OrgLevel,
-                        page.GlobalValues.CompareTo,
-                        page.GlobalValues.STYP
-                    );
-
-
+            System.Collections.Generic.List<String> cols = page.GetVisibleColumns();
+            
             sb.Append("<br />VISIBLE COLUMNS:<br />");
             sb.Append(@"<a href=""javascript:ReverseDisplay('traceVisible')"">Click to show/hide.</a>");
             sb.Append(@"<div id=""traceVisible"" style=""display:none;"">");

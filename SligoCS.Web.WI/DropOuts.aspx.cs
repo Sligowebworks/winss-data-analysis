@@ -137,9 +137,9 @@ namespace SligoCS.Web.WI
         {
             BottomLinkViewProfile1.DistrictCd = GlobalValues.DistrictCode;
         }
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-            List<string> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> cols = base.GetVisibleColumns();
 
             cols.Add(v_DropoutsWWoDisEconELPSchoolDistState.Enrollment);
             cols.Add(v_DropoutsWWoDisEconELPSchoolDistState.Students_expected_to_complete_the_school_term);

@@ -146,12 +146,10 @@ namespace SligoCS.Web.WI
             BottomLinkViewProfile1.DistrictCd = GlobalValues.DistrictCode;
         }
 
-        public override List<string> GetVisibleColumns(
-            Group viewBy, OrgLevel orgLevel, 
-            CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
             List<string> retval =
-                base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+                base.GetVisibleColumns();
 
             retval.Add(v_ACT.Enrollment);
             retval.Add(v_ACT.PupilCount);
@@ -174,7 +172,7 @@ namespace SligoCS.Web.WI
             return newLabels;
         }
 
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List<String> cols = base.GetDownloadRawVisibleColumns();
 

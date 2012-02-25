@@ -156,7 +156,7 @@ namespace SligoCS.Web.WI
         {
             TableRow tr = new TableRow();
             String dis = GlobalValues.PrDis.Key;
-            int spacer = base.GetVisibleColumns(GlobalValues.Group, GlobalValues.OrgLevel, GlobalValues.CompareTo, GlobalValues.STYP).Count + 1;
+            int spacer = base.GetVisibleColumns().Count + 1;
 
             WinssDataGrid.AddTableCell(tr, String.Empty, spacer);
             WinssDataGrid.AddTableCell(tr, GetMeasureLabel(), 2);
@@ -386,9 +386,9 @@ namespace SligoCS.Web.WI
         {
             BottomLinkViewProfile1.DistrictCd = GlobalValues.DistrictCode;
         }
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-            List<string> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> cols = base.GetVisibleColumns();
 
             cols.Add(v_Disabilities2.Enrollment_PK12);
 
@@ -598,7 +598,7 @@ namespace SligoCS.Web.WI
             return String.Empty;
         }
 
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List <String> cols = base.GetDownloadRawVisibleColumns();
 

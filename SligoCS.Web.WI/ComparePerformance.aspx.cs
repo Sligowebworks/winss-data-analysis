@@ -139,9 +139,9 @@ namespace SligoCS.Web.WI
              barChart.OverrideSeriesLabels.Add(v_WSAS.Percent_PreReq_Skill, "WAA-SwD");
 
          }
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-            List<string> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> cols = base.GetVisibleColumns();
 
             if (cols.Contains(v_WSAS.LinkedName)) cols.Remove(v_WSAS.LinkedName);
             cols.Add(v_WSAS.FAYLabel);
@@ -195,7 +195,7 @@ namespace SligoCS.Web.WI
         }
 
 
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
             int index;

@@ -325,9 +325,9 @@ namespace SligoCS.Web.WI
 
             return definition.ToString();
         }
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-           List<String> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+           List<String> cols = base.GetVisibleColumns();
 
            cols.Add(v_WSASDemographics.LinkedName);
             cols.Add(v_WSASDemographics.Enrolled);
@@ -414,7 +414,7 @@ namespace SligoCS.Web.WI
 
             return tr;
         }
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
             int index;

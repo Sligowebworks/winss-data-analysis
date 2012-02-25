@@ -494,9 +494,9 @@ namespace SligoCS.Web.WI
 
             return String.Join(",", order.ToArray()); 
         }
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-            List<String> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<String> cols = base.GetVisibleColumns();
 
             if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 return cols; // return only generic (base) columns
@@ -654,7 +654,7 @@ namespace SligoCS.Web.WI
             
             return cols;
         }
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
             int index = 0;

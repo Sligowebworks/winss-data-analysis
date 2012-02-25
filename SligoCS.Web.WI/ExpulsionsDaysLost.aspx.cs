@@ -142,12 +142,9 @@ namespace SligoCS.Web.WI
         {
             BottomLinkViewProfile1.DistrictCd = GlobalValues.DistrictCode;
         }
-        public override System.Collections.Generic.List<string>
-            GetVisibleColumns(Group viewBy, OrgLevel orgLevel, 
-            CompareTo compareTo, STYP schoolType)
+        public override System.Collections.Generic.List<string> GetVisibleColumns()
         {
-            List<string> retval = base.GetVisibleColumns(
-                        viewBy, orgLevel, compareTo, schoolType);
+            List<string> retval = base.GetVisibleColumns();
 
             retval.Add(v_Expulsions.Total_Enrollment_PreK12);
             retval.Add(v_Expulsions.Possible_Days_Attendance);

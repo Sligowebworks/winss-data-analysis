@@ -312,9 +312,9 @@ private void set_state()
         {
             BottomLinkViewProfile1.DistrictCd = GlobalValues.DistrictCode;
         }
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-            List<string> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> cols = base.GetVisibleColumns();
 
             cols.Remove(WebSupportingClasses.ColumnPicker.CommonNames.SexLabel.ToString());
             cols.Remove(WebSupportingClasses.ColumnPicker.CommonNames.RaceLabel.ToString());
@@ -387,7 +387,7 @@ private void set_state()
             //example event handler;
         }
 
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
 

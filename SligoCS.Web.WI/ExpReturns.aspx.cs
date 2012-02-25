@@ -112,9 +112,9 @@ namespace SligoCS.Web.WI
                 System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
-        public override System.Collections.Generic.List<string> GetVisibleColumns(SligoCS.Web.WI.WebSupportingClasses.WI.Group viewBy, SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevel orgLevel, SligoCS.Web.WI.WebSupportingClasses.WI.CompareTo compareTo, SligoCS.Web.WI.WebSupportingClasses.WI.STYP schoolType)
+        public override System.Collections.Generic.List<string> GetVisibleColumns()
         {
-            List<string> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> cols = base.GetVisibleColumns();
 
             cols.Add(vExpulsionServicesAndReturns.Students_Eligible_to_Return_to_School);
             cols.Add(vExpulsionServicesAndReturns.Students_Who_Returned_to_School);

@@ -119,9 +119,9 @@ namespace SligoCS.Web.WI
                             WI.displayed_obj.dataLinksPanel, true);
             }
 
-           public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+           public override List<string> GetVisibleColumns()
             {
-                List<string> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+                List<string> cols = base.GetVisibleColumns();
 
                 cols.Add(vExpulsionServices.Expulsion_Type);
                 cols.Add(vExpulsionServices.Total_NUM_Expelled);

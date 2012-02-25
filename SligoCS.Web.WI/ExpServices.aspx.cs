@@ -113,9 +113,9 @@ namespace SligoCS.Web.WI
                 System.Diagnostics.Debug.WriteLine(ex.Message);
             }
         }
-        public override System.Collections.Generic.List<string> GetVisibleColumns(SligoCS.Web.WI.WebSupportingClasses.WI.Group viewBy, SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevel orgLevel, SligoCS.Web.WI.WebSupportingClasses.WI.CompareTo compareTo, SligoCS.Web.WI.WebSupportingClasses.WI.STYP schoolType)
+        public override System.Collections.Generic.List<string> GetVisibleColumns()
         {
-            List<string> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> cols = base.GetVisibleColumns();
 
             cols.Add(vExpulsionServicesAndReturns.Total_NUM_Students_without_Disabilities_Expelled);
             cols.Add(vExpulsionServicesAndReturns.Total_NUM_Students_without_Disabilities_Offered_Post_Expulsion_Services);

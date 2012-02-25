@@ -686,6 +686,32 @@ namespace SligoCS.BL.WI
             );
             return orderby.ToString();
         }
+        public List<String> ListFromVisibleColumns()
+        {
+            return 
+                (GlobalValues.DnlRaw.Key == DnlRawKeys.Download 
+                || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            ?  GlobalValues.Page.GetDownloadRawVisibleColumns()
+            :   GlobalValues.Page.GetVisibleColumns()
+            ;
+        }
+        public String SelectListFromVisibleColumns()
+        {
+            if (GlobalValues.DnlRaw.Key != DnlRawKeys.Download
+                && GlobalValues.SuperDownload.Key != SupDwnldKeys.True)
+                return "*";
+
+            List<String> cols = ListFromVisibleColumns();
+            String[] colsArray = new String[cols.Count];
+
+            int i;
+            for (i = 0; i < cols.Count; i++)
+            {
+                colsArray[i] = String.Format("[{0}]", cols[i]);
+            }
+
+            return String.Join(",", colsArray);
+        }
         /// <summary>
         /// Values used to initialize QueryMarshaller.raceCode List when Race Dimension is Disaggregated. 
         /// May be set before query-time to determine what race break-outs to return.

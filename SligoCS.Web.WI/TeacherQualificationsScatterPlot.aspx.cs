@@ -355,9 +355,9 @@ namespace SligoCS.Web.WI
             BottomLinkViewProfile1.DistrictCd = GlobalValues.DistrictCode;
         }
 
-        public override List<string>  GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string>  GetVisibleColumns()
         {
-            List<string> cols = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> cols = base.GetVisibleColumns();
 
             TQRelateTo relatedTo = GlobalValues.TQRelateTo;
             TQTeacherVariable teacherVariable = GlobalValues.TQTeacherVariable;
@@ -455,7 +455,7 @@ namespace SligoCS.Web.WI
                     column.FormatString = "#,##0.0%";
         }
 
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
             TQRelateTo relatedTo = GlobalValues.TQRelateTo;

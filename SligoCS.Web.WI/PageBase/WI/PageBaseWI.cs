@@ -268,10 +268,10 @@ namespace SligoCS.Web.Base.PageBase.WI
             //throw new Exception(data.ToString());
             return data.ToString();
         }
-        protected virtual List<String> GetDownloadRawVisibleColumns()
+        public virtual List<String> GetDownloadRawVisibleColumns()
         {
             List<String> list = DownloadRawDataColumnHelper.GetStandardColumns();
-            List<String> tableCols = GetVisibleColumns(GlobalValues.Group, GlobalValues.OrgLevel, GlobalValues.CompareTo, GlobalValues.STYP);
+            List<String> tableCols = GetVisibleColumns();
             foreach (String col in tableCols)
             {
                 if (!list.Contains(col)) list.Add(col);
@@ -511,12 +511,7 @@ namespace SligoCS.Web.Base.PageBase.WI
         {
             if (table == null)  return;
 
-            List<String> cols = GetVisibleColumns(
-                        GlobalValues.Group,
-                        GlobalValues.OrgLevel,
-                        GlobalValues.CompareTo,
-                        GlobalValues.STYP
-                    );
+            List<String> cols = GetVisibleColumns();
 
             if (typeof(WinssDataGrid).IsInstanceOfType(table))
             {
@@ -568,12 +563,9 @@ namespace SligoCS.Web.Base.PageBase.WI
             return TitleBuilder.GetTitleWithoutGroupForSchoolTypeUnsupported(beginTitle, GlobalValues, QueryMarshaller);
         }
 
-         public virtual List<string> GetVisibleColumns(Group viewBy,
-            OrgLevel orgLevel,
-            CompareTo compareTo,
-            STYP schoolType)
+         public virtual List<string> GetVisibleColumns()
         {
-            return ColumnPicker.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            return ColumnPicker.GetVisibleColumns(GlobalValues.Group, GlobalValues.OrgLevel, GlobalValues.CompareTo, GlobalValues.STYP);
         }
 
         /// <summary>

@@ -92,9 +92,9 @@ namespace SligoCS.Web.WI
             barChart.SeriesColumnName = WebSupportingClasses.ColumnPicker.GetCompareToColumnName(GlobalValues);
             barChart.LabelColumnName = WebSupportingClasses.ColumnPicker.GetViewByColumnName(GlobalValues);
         }
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-            List<String> cols  = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<String> cols  = base.GetVisibleColumns();
             Level wrct = GlobalValues.Level;
 
             cols.Add(v_WRCT.Enrolled);

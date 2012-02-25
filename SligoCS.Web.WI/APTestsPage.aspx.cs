@@ -131,10 +131,10 @@ namespace SligoCS.Web.WI
             BottomLinkViewProfile1.DistrictCd = GlobalValues.DistrictCode;
         }
 
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
             List<string> retval = 
-                base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+                base.GetVisibleColumns();
             //page doesn't support school level
            /* if ((compareTo.Key == CompareToKeys.SelDistricts) || (compareTo.Key == CompareToKeys.Current))
             {

@@ -183,9 +183,9 @@ namespace SligoCS.Web.WI
             ((SligoCS.Web.WI.WI)Page.Master).set_visible_state(WI.displayed_obj.dataLinksPanel, true);
         }
 
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-            List<string> retval = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> retval = base.GetVisibleColumns();
 
             if (GlobalValues.RevExp.Key == RevExpKeys.Revenue)
             {
@@ -224,7 +224,7 @@ namespace SligoCS.Web.WI
             return retval;
         }
 
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List <String> newLabels = base.GetDownloadRawVisibleColumns();
             if (GlobalValues.RevExp.Key == RevExpKeys.Revenue)

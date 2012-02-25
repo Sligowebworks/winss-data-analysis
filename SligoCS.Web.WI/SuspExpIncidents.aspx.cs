@@ -244,9 +244,9 @@ namespace SligoCS.Web.WI
             BottomLinkViewProfile1.DistrictCd = GlobalValues.DistrictCode;
         }
 
-        public override System.Collections.Generic.List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override System.Collections.Generic.List<string> GetVisibleColumns()
         {
-            List<string> retval = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> retval = base.GetVisibleColumns();
 
             if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
             {
@@ -296,7 +296,7 @@ namespace SligoCS.Web.WI
             return retval;
         }
 
-        protected override System.Collections.Generic.List<string> GetDownloadRawVisibleColumns()
+        public override System.Collections.Generic.List<string> GetDownloadRawVisibleColumns()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
             if (GlobalValues.Incident.Key == IncidentKeys.Consequences || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)

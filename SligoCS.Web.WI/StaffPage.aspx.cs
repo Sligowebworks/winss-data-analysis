@@ -153,9 +153,9 @@ namespace SligoCS.Web.WI
                 (WI.displayed_obj.dataLinksPanel, true);
         }
 
-        public override List<string> GetVisibleColumns(Group viewBy, OrgLevel orgLevel, CompareTo compareTo, STYP schoolType)
+        public override List<string> GetVisibleColumns()
         {
-            List<string> retval = base.GetVisibleColumns(viewBy, orgLevel, compareTo, schoolType);
+            List<string> retval = base.GetVisibleColumns();
 
             retval.Add(v_StaffFull.Category);
             retval.Add(v_StaffFull.Number_FTE_Staff);
@@ -168,7 +168,7 @@ namespace SligoCS.Web.WI
             return retval;
         }
 
-        protected override List<string> GetDownloadRawVisibleColumns()
+        public override List<string> GetDownloadRawVisibleColumns()
         {
             List<string> cols = base.GetDownloadRawVisibleColumns();
             int index = cols.IndexOf(v_StaffFull.Category);
