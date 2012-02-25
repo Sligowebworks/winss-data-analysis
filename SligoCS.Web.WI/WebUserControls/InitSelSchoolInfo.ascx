@@ -15,7 +15,7 @@ The database should return a list of schools or districts. Each school or distri
 </td></tr>
 <tr><td style="width: 185px">&nbsp;</td></tr>
 <tr><td style="width: 185px">
-<a href="http://data.dpi.state.wi.us/DownloadOptions/frm.SelectDataSet.asp" class="lightblue" target="DownloadOptions">Download Options</a>&nbsp;|&nbsp;<a href="javascript:popup('http://dpi.wi.gov/sig/usetips_data.html')"  class="lightblue">Tips</a>
+<a href="http://dpi.wi.gov/sig/data/download.html" class="lightblue" target="DownloadOptions">Download Options</a>&nbsp;|&nbsp;<a href="javascript:popup('http://dpi.wi.gov/sig/usetips_data.html')"  class="lightblue">Tips</a>
 </td></tr>
 <tr><td style="width: 185px">&nbsp;</td></tr>
 <tr><td style="width: 185px">
