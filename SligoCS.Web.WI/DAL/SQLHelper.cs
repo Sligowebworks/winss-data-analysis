@@ -176,5 +176,9 @@ namespace SligoCS.DAL.WI
         {
             return String.Format("SELECT * FROM {0} WHERE ", dbObject);
         }
+        public static string SelectColumnListFromWhereFormat(String columnList, String dbObject)
+        {
+            return String.Format("SELECT {0} FROM {1} WHERE ", columnList, dbObject);
+        }
     }
 }
