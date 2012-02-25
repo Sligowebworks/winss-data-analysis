@@ -87,6 +87,8 @@ namespace SligoCS.Web.WI.WebUserControls
                     GraphFileKeys.AP,
                     GraphFileKeys.ATTENDANCE,
                     GraphFileKeys.CompareContinuing,
+                    GraphFileKeys.CoursesOffered,
+                    GraphFileKeys.CoursesTaken,
                     GraphFileKeys.DISABILITIES,
                     GraphFileKeys.DROPOUTS,
                     GraphFileKeys.EXPULSIONS,
@@ -109,7 +111,6 @@ namespace SligoCS.Web.WI.WebUserControls
                     GraphFileKeys.GWRCT,
                     GraphFileKeys.HIGHSCHOOLCOMPLETION,
                     GraphFileKeys.RETENTION,
-                    GraphFileKeys.POSTGRADPLAN,
                     GraphFileKeys.StateTests,
                 }
             );

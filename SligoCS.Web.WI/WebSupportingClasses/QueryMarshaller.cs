@@ -498,7 +498,7 @@ namespace SligoCS.BL.WI
             String strOrAggGradeCode = String.Empty;
             Int16 gradeCode = Int16.Parse(GlobalValues.Grade.Value);
 
-            int floor = (GradeCodeFloorMap.ContainsKey(gradeCode))? GradeCodeFloorMap[gradeCode] : gradeCode;
+            Int16 floor = (GradeCodeFloorMap.ContainsKey(gradeCode)) ? GradeCodeFloorMap[gradeCode] : (Int16)0;
 
             //Include Combined Grades only for pages that have individual grade selections
             if (GlobalValues.Group.Key != GroupKeys.Grade

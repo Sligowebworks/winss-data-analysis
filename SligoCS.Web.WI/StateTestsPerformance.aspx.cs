@@ -108,6 +108,7 @@ namespace SligoCS.Web.WI
             GlobalValues.OverrideByNavLinksNotPresent(GlobalValues.SubjectID, nlrSubject, SubjectIDKeys.Reading);
             
             //***Grades
+            QueryMarshaller.gradeCodes.ObeyForceDisAgg = true;
             GlobalValues.OverrideByNavLinksNotPresent(GlobalValues.Grade, nlrGrade, GlobalValues.Grade.Value);
             GradeCodesActive = getGradeCodeRange();
             if (!GradeCodesActive.Contains(GlobalValues.Grade.Value))
