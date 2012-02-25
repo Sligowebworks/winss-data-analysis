@@ -501,12 +501,13 @@ namespace SligoCS.BL.WI
             Int16 floor = (GradeCodeFloorMap.ContainsKey(gradeCode)) ? GradeCodeFloorMap[gradeCode] : (Int16)0;
 
             //Include Combined Grades only for pages that have individual grade selections
-            if (GlobalValues.Group.Key != GroupKeys.Grade
-                && GradeCodeFloorMap.ContainsKey(gradeCode) )
-                    strOrAggGradeCode = "OR {0} = '"+
+            if (GlobalValues.Group.Key != GroupKeys.Grade )
+            {
+                 strOrAggGradeCode = "OR {0} = '"+
                         //WSAS Exception for "All Tested" Flag
-                        ((GlobalValues.Grade.Value == "0") ? "99" : GlobalValues.Grade.Value)
+                        ((GradeCodeFloorMap.ContainsKey(gradeCode)) ?GlobalValues.Grade.Value :  "99")
                         +"' ";
+            }
              
             return "  "+SQLHelper.GetJoinerString(join)+" " + 
                 String.Format(@"(
