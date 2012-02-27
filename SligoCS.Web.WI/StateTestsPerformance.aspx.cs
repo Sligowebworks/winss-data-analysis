@@ -111,7 +111,11 @@ namespace SligoCS.Web.WI
             QueryMarshaller.gradeCodes.ObeyForceDisAgg = true;
             GlobalValues.OverrideByNavLinksNotPresent(GlobalValues.Grade, nlrGrade, GlobalValues.Grade.Value);
             GradeCodesActive = getGradeCodeRange();
-            if (!GradeCodesActive.Contains(GlobalValues.Grade.Value))
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
+            {//necessary when Combined grades is selected because gives wrong floor.
+                GlobalValues.Grade.Key = GradeKeys.AllDisAgg;
+            }
+            else if (!GradeCodesActive.Contains(GlobalValues.Grade.Value))
             {
                 if (GradeCodesActive[0] == GlobalValues.Grade.Range[GradeKeys.Grade_3]
                     && GradeCodesActive.Contains(GlobalValues.Grade.Range[GradeKeys.Grade_4]))

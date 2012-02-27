@@ -899,6 +899,7 @@
     <Content Include="images\mortar_big.gif" />
     <Content Include="images\mortar_big_on.gif" />
     <Content Include="images\wins_big.gif" />
+    <Content Include="robots.txt" />
     <Content Include="selschool.asp" />
     <Content Include="serveRawDataCsv.aspx" />
     <Content Include="MoneyPage.aspx" />

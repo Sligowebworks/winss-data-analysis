@@ -498,15 +498,18 @@ namespace SligoCS.BL.WI
             String strOrAggGradeCode = String.Empty;
             Int16 gradeCode = Int16.Parse(GlobalValues.Grade.Value);
 
-            Int16 floor = (GradeCodeFloorMap.ContainsKey(gradeCode)) ? GradeCodeFloorMap[gradeCode] : (Int16)0;
+            Int16 floor = (GradeCodeFloorMap.ContainsKey(gradeCode))
+                ? GradeCodeFloorMap[gradeCode]
+                : GradeCodeFloorMap[99];
 
             //Include Combined Grades only for pages that have individual grade selections
-            if (GlobalValues.Group.Key != GroupKeys.Grade )
+            if (GlobalValues.Group.Key != GroupKeys.Grade) // i.e. this clause was triggered some other way
             {
-                 strOrAggGradeCode = "OR {0} = '"+
-                        //WSAS Exception for "All Tested" Flag
-                        ((GradeCodeFloorMap.ContainsKey(gradeCode)) ?GlobalValues.Grade.Value :  "99")
-                        +"' ";
+                strOrAggGradeCode = "OR {0} = '" +
+                    //WSAS Exception for "All Tested" Flag
+                       ((GradeCodeFloorMap.ContainsKey(gradeCode) && GlobalValues.Grade.Value != "0")
+                           ? GlobalValues.Grade.Value : "99")
+                       + "' ";
             }
              
             return "  "+SQLHelper.GetJoinerString(join)+" " + 
