@@ -55,7 +55,7 @@ namespace SligoCS.Web.WI
         }
         protected override void OnInitComplete(EventArgs e)
         {
-            GlobalValues.ForceCurrentYear = true;
+            GlobalValues.TrendStartYear = (GlobalValues.WOW.Key == WOWKeys.WKCE) ? 1997 : 2003;
             GlobalValues.CurrentYear = 2011;
 
             //View By Group Unsupported.
