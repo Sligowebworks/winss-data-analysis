@@ -92,15 +92,15 @@
         </td>
     </tr>
     <tr>
-        <td><BR>
+        <td><BR />
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <sli:BottomLinkViewDistrictReport id="BottomLinkViewDistrictReport1" runat="server"/>
             <sli:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="14"/>
-            <SPAN class="text">
-	            <p><a href="javascript:popup('http://dpi.wi.gov/spr/post_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
-            </SPAN>        
+	            <div class="text"><a href="javascript:popup('http://dpi.wi.gov/spr/post_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+            </div>        
+            </td>
     </tr>
 </table>        
 </asp:Content>
