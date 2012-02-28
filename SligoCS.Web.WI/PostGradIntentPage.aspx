@@ -11,6 +11,7 @@
 <table>
     <tr>
         <td> 
+            <sli:NavSelectYear ID="nlrSelectYear" runat="server" /> 
             <sli:NavigationLinkRow ID="nlrShow" runat="server">
                 <RowLabel>Show: </RowLabel>
                 <NavigationLinks>
