@@ -27,7 +27,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.Grade.Key = GradeKeys.Combined_PreK_12;
-            GlobalValues.CurrentYear = 2011;
+            GlobalValues.CurrentYear = 2012;
 
             QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
 
