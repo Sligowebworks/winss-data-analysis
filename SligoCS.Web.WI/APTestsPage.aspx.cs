@@ -59,6 +59,8 @@ namespace SligoCS.Web.WI
             if (QueryMarshaller.RaceDisagCodes.Contains((int)QueryMarshaller.RaceCodes.Comb))
                 QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
 
+            QueryMarshaller.SexDisagCodes.Add((int)SexCodes.Missing);
+
             base.OnInitComplete(e);
         }
        

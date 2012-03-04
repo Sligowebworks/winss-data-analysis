@@ -20,6 +20,7 @@ namespace SligoCS.BL.WI
         private GlobalValues globals;
         private DALWIBase database;
         private List<int> raceDisagCodes;
+        private List<int> sexDisagCodes;
         private DataColumnCollection dataColumns;
 
         public List<String> years, FAYCodes, fullkeylist;
@@ -176,7 +177,7 @@ namespace SligoCS.BL.WI
         {
             SetSubsSTYPlist(stypList);
 
-            sexCodes.DisAggValues = delegate  () { return new List<String>( new String[] { "1","2","8"}); };
+            sexCodes.DisAggValues = delegate() { return SexDisagCodes.ConvertAll<String>(SQLHelper.ConvertIntToString); };
             sexCodes.ArgSub = delegate()
                 { return
                     (globals.Group.Key == GroupKeys.Gender || globals.Group.Key == GroupKeys.RaceGender)
@@ -749,6 +750,22 @@ namespace SligoCS.BL.WI
             }
             set { raceDisagCodes = value; }
         }
+        public List<int> SexDisagCodes
+        {
+            get
+            {
+                if (sexDisagCodes == null)
+                {
+                    sexDisagCodes = new List<int>(
+                        new int[]
+                    {
+                        (int) SexCodes.Male,
+                        (int) SexCodes.Female
+                    });
+                }
+                return sexDisagCodes;
+            }
+        }
     }
     public enum PrimaryOrderByCols
     {
@@ -766,5 +783,12 @@ namespace SligoCS.BL.WI
         EconDisadvCode,
         ELPCode,
         MigrantCode
+    }
+    public enum SexCodes
+    {
+        Male = 1,
+        Female = 2,
+        Missing = 8,
+        Combined = 9
     }
 }

@@ -58,6 +58,8 @@ namespace SligoCS.Web.WI
             QueryMarshaller.RaceDisagCodes.Add((int)QueryMarshaller.RaceCodes.RaceEth_NA);
             QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
 
+            QueryMarshaller.SexDisagCodes.Add((int)SexCodes.Missing);
+
             base.OnInitComplete(e);
         }
         protected void Page_Load(object sender, EventArgs e)
