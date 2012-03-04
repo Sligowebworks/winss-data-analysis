@@ -11,7 +11,7 @@ namespace SligoCS.DAL.WI
             StringBuilder sql = new StringBuilder();
             String dbObject = "v_SuspensionsSchoolDistState";
 
-            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
 
             sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.NONE, "SchoolType", dbObject));
 

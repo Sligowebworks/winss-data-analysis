@@ -12,7 +12,7 @@ namespace SligoCS.DAL.WI
             StringBuilder sql = new StringBuilder();
             String dbObject = "v_ActivitiesSchoolDistState";
 
-            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
 
             //Adds " ... AND ((year >= 1997) AND (year <= 2007)) ..."
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));

@@ -9,8 +9,9 @@ namespace SligoCS.DAL.WI
         public override string BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
+            String dbObject = "v_Revenues_2";
             
-            sql.Append(SQLHelper.SelectStarFromWhereFormat("v_Revenues_2"));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
 
             sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.NONE, "FullKey"));
 

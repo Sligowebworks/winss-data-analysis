@@ -20,7 +20,7 @@ namespace SligoCS.DAL.WI
                 : "v_WSASDemographics4810"
                     );
 
-            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 

@@ -20,7 +20,7 @@ namespace SligoCS.DAL.WI
             else
                 dbObject = "v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat ";
 
-            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
             
             //School Types
             sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.NONE, "SchoolType", dbObject));

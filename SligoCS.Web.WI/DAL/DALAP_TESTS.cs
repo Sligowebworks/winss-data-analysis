@@ -11,7 +11,7 @@ namespace SligoCS.DAL.WI
             StringBuilder sql = new StringBuilder();
             String dbObject = "v_AP_TESTS";
 
-            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
 
             //Adds " ... AND (SexCode in (1, 2)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "Sex", Marshaller.sexCodes));

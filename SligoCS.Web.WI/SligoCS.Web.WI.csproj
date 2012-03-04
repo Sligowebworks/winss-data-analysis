@@ -140,7 +140,6 @@
     <Compile Include="DAL\DALDisabilities.cs" />
     <Compile Include="DAL\DALDropouts.cs" />
     <Compile Include="DAL\DALEnrollment.cs" />
-    <Compile Include="DAL\DALEnumerations.cs" />
     <Compile Include="DAL\DALExpenditure.cs" />
     <Compile Include="DAL\DALExpulsions.cs" />
     <Compile Include="DAL\DALExpulsionsDaysLost.cs" />

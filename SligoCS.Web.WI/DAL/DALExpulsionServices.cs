@@ -9,8 +9,9 @@ namespace SligoCS.DAL.WI
         public override string  BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
+            String dbObject = "vExpulsionServices";
 
-            sql.Append(SQLHelper.SelectStarFromWhereFormat("vExpulsionServices"));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 

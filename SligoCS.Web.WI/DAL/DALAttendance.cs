@@ -6,24 +6,12 @@ namespace SligoCS.DAL.WI
 {
     public class DALAttendance : DALWIBase
     {
-
-        /*
-        public v_AttendanceWWoDisSchoolDistStateEconELP GetAttendanceData(List<int> raceCode,
-            List<int> sexCode,
-            List<int> disabilityCode,
-            List<int> year,
-            List<string> fullKey,
-            List<int> gradeCodeRange,
-            List<int> schoolType,
-            List<int> econDisadv,
-            List<int> ELPCode,
-            List<string> orderBy)*/
         public override string  BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
             String dbObject = "v_AttendanceWWoDisSchoolDistStateEconELP";
 
-            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
 
             sql.Append(Marshaller.STYPClause(SQLHelper.WhereClauseJoiner.NONE, "SchoolType", dbObject));
 

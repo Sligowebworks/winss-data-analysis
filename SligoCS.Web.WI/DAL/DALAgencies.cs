@@ -7,17 +7,20 @@ namespace SligoCS.DAL.WI
     public class DALAgencies : DALWIBase
     {
         private const String FROM = " FROM v_AgencyFull ";
-        private const String SELECT_STAR_WHERE = "SELECT *" + FROM + "WHERE ";
         private const String SELECT_DISTRICT_WHERE = "SELECT DISTINCT DistrictName, fullkey " + FROM + " WHERE ";
         private const string SELECT_SCHOOL_WHERE = "SELECT DISTINCT SchoolName, DistrictName, fullkey " + FROM + " WHERE ";
 
+        /// <summary>
+        /// NOT USED AS OF Jan '10 --mzd
+        /// </summary>
+        /// <param name="Marshaller"></param>
+        /// <returns></returns>
         public override string BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
-            //NOT USED AS OF Jan '10 --mzd
-
             StringBuilder sql = new StringBuilder();
+            String dbObject = "v_AgencyFull";
 
-            sql.Append(SELECT_STAR_WHERE);
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
 
             sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.NONE, "FullKey"));
 

@@ -13,7 +13,7 @@ namespace SligoCS.DAL.WI
             StringBuilder sql = new StringBuilder();
             String dbObject = "v_HSCWWoDisSchoolDistStateEconELPXYearRate";
 
-            sql.Append(SQLHelper.SelectStarFromWhereFormat(dbObject));
+            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
            
             //Adds " ... AND (SexCode in (1, 2)) ..."
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.NONE, "SexCode", Marshaller.sexCodes));
