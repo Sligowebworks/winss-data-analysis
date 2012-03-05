@@ -56,6 +56,8 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.TrendStartYear = (GlobalValues.WOW.Key == WOWKeys.WKCE) ? 1997 : 2003;
+            //Can't support more than current year because dbObject tblWSASDemographicsFlat has only one year
+            GlobalValues.ForceCurrentYear = true;
             GlobalValues.CurrentYear = 2011;
 
             //View By Group Unsupported.

@@ -20,15 +20,6 @@ namespace SligoCS.Web.WI {
     public partial class StateTestsSimilarSchools {
         
         /// <summary>
-        /// nlrSelectYear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SligoCS.Web.WI.WebUserControls.NavSelectYear nlrSelectYear;
-        
-        /// <summary>
         /// nlrGrade control.
         /// </summary>
         /// <remarks>
