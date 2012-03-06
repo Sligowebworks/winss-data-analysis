@@ -113,7 +113,7 @@ namespace SligoCS.DAL.WI
             String dbObject = "v_WSASDemographics";
             Marshaller.InitFullkeyList();
 
-            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
+            sql.Append(Marshaller.SelectListFromVisibleColumns(dbObject));
 
             sql.Append(SQLHelper.WhereClauseSingleValueOrInclusiveRange(SQLHelper.WhereClauseJoiner.NONE, "year", Marshaller.years));
 

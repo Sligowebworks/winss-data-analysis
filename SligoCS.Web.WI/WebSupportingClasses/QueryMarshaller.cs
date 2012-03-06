@@ -699,13 +699,36 @@ namespace SligoCS.BL.WI
             :   GlobalValues.Page.GetVisibleColumns()
             ;
         }
-        public String SelectListFromVisibleColumns()
+        public String SelectListFromVisibleColumns(String dbObject)
         {
             if (GlobalValues.DnlRaw.Key != DnlRawKeys.Download
                 && GlobalValues.SuperDownload.Key != SupDwnldKeys.True)
-                return "*";
+                return (SQLHelper.SelectStarFromWhereFormat(dbObject)); 
 
             List<String> cols = ListFromVisibleColumns();
+            cols.Add("fullkey");
+
+            QueryMarshaller qm = new QueryMarshaller(GlobalValues);
+            qm.AssignQuery(
+                new DALWIBase(), 
+                String.Format("SELECT syscolumns.name FROM syscolumns INNER JOIN sysobjects on sysobjects.id = syscolumns.id WHERE sysobjects.name = '{0}'", dbObject));
+
+            if (qm.Database.DataSet.Tables.Count < 1) throw new Exception(String.Format("[{0}] not found in sysobjects;", dbObject));
+
+            qm.Database.Table.PrimaryKey = new DataColumn[] { qm.Database.Table.Columns[0] };
+
+            int n;
+            DataRow columnName;
+            String col;
+
+            for (n = cols.Count - 1; n >= 0 ; n--)
+            {
+                col = cols[n];
+                columnName = qm.Database.Table.Rows.Find(col);
+
+                if (columnName == null) cols.RemoveAt(n);
+            }
+                       
             String[] colsArray = new String[cols.Count];
 
             int i;
@@ -714,7 +737,10 @@ namespace SligoCS.BL.WI
                 colsArray[i] = String.Format("[{0}]", cols[i]);
             }
 
-            return String.Join(",", colsArray);
+            String SELECT = SQLHelper.SelectColumnListFromWhereFormat( String.Join(",", colsArray), dbObject);
+
+            return SELECT;
+            
         }
         /// <summary>
         /// Values used to initialize QueryMarshaller.raceCode List when Race Dimension is Disaggregated. 

@@ -13,7 +13,7 @@ namespace SligoCS.DAL.WI
             StringBuilder sql = new StringBuilder();
             String dbObject = "v_POST_GRAD_INTENT";
 
-            sql.Append(SQLHelper.SelectColumnListFromWhereFormat(Marshaller.SelectListFromVisibleColumns(), dbObject));
+            sql.Append(Marshaller.SelectListFromVisibleColumns(dbObject));
 
             sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.NONE, "fullkey"));
 
