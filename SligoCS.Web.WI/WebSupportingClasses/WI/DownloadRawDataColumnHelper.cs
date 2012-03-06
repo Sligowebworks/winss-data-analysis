@@ -38,6 +38,9 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             lst.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull.ELPLabel, "english_proficiency_status");
             lst.Add(v_WSAS.MigrantLabel, "migrant_status");
 
+            lst.Add(v_ActivitiesSchoolDistState.Enrollment_Grades_912, "total_enrollment_grades_9-12");
+            lst.Add(v_ActivitiesSchoolDistState.Enrollment_Grades_612, "total_enrollment_grades_6-12");
+
             return lst;
         }
 
