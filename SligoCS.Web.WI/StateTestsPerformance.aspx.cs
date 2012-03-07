@@ -129,6 +129,8 @@ namespace SligoCS.Web.WI
             }
             nlrGrade.LinkControlAdded += new LinkControlAddedHandler(disableGradeLinks_LinkControlAdded);
 
+            QueryMarshaller.SexDisagCodes.Add((int)SexCodes.Missing);
+
             base.OnInitComplete(e);
 
             if (GlobalValues.Grade.Key == GradeKeys.AllDisAgg
