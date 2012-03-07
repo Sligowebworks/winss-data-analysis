@@ -23,6 +23,7 @@ namespace SligoCS.Web.WI
             Response.ContentType = "text/csv";
             Response.AddHeader("Content-Disposition",
             "attachment;filename=" + Session["RawCsvName"].ToString());
+            Response.AddHeader("Cache-Control", "max-age=360");
             Response.Write(Session["RawCsvData"].ToString());
             Response.Flush();
             Response.Close();
