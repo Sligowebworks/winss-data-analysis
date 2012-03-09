@@ -623,8 +623,8 @@ namespace SligoCS.BL.WI
 
             BuildCompareToOrderBy(orderby, dataColumns);
 
-            BuildOrderBySecondarySort(orderby, dataColumns);            
-
+            BuildOrderBySecondarySort(orderby, dataColumns);
+            
             return orderby;
         }
         public void BuildCompareToOrderBy(List<String> orderby, DataColumnCollection dataColumns)
@@ -701,12 +701,24 @@ namespace SligoCS.BL.WI
         }
         public String SelectListFromVisibleColumns(String dbObject)
         {
+            String col;
+
             if (GlobalValues.DnlRaw.Key != DnlRawKeys.Download
                 && GlobalValues.SuperDownload.Key != SupDwnldKeys.True)
                 return (SQLHelper.SelectStarFromWhereFormat(dbObject)); 
 
             List<String> cols = ListFromVisibleColumns();
+
+            //Add columns that are rarely visible, but might be needed for other reasons
             cols.Add("fullkey");
+            foreach( String name in Enum.GetNames(typeof(PrimaryOrderByCols)))
+            {
+                cols.Add(name);
+            }
+            foreach (String name in Enum.GetNames(typeof(ViewByGroupOrderByCols)))
+            {
+                cols.Add(name);
+            }
 
             QueryMarshaller qm = new QueryMarshaller(GlobalValues);
             qm.AssignQuery(
@@ -719,7 +731,6 @@ namespace SligoCS.BL.WI
 
             int n;
             DataRow columnName;
-            String col;
 
             for (n = cols.Count - 1; n >= 0 ; n--)
             {
@@ -803,6 +814,7 @@ namespace SligoCS.BL.WI
     public enum ViewByGroupOrderByCols
     {
         SexCode,
+        Sex,
         RaceCode,
         GradeCode,
         DisabilityCode,

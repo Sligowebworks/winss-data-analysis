@@ -31,9 +31,6 @@ namespace SligoCS.DAL.WI
             
             sql.Append(Marshaller.FullkeyClause(SQLHelper.WhereClauseJoiner.AND, "fullkey"));
             
-            //order by clause
-            sql.Append(SQLHelper.GetOrderByClause(Marshaller.orderByList));
-
             return sql.ToString();
         }
     }
