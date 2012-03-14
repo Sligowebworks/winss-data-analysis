@@ -712,6 +712,7 @@ namespace SligoCS.BL.WI
             //Add columns that are rarely visible, but might be needed for other reasons
             cols.Add("fullkey");
             cols.Add("Timeframe");
+            cols.Add("SubjectID");
             foreach( String name in Enum.GetNames(typeof(PrimaryOrderByCols)))
             {
                 cols.Add(name);
