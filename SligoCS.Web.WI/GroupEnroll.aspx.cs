@@ -508,8 +508,16 @@ private void set_state()
                 map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.WhiteCount, "white_count");
                 map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.TwoPercent, "two_or_more_percent");
                 map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.TwoCount, "two_or_more_count");
-
             }
+
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.DisabledCount, "with_disabilities_count");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.EconDisadvCount, "with_econd_disadv_count");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.DisabledPercent, "with_disabilities_percent");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.EconDisadvPercent, "with_econ_disadv_percent");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.NonDisabledPercent, "without_disabilities_percent");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.NonEconDisadvPercent, "without_econ_disadv_percent");
+            
+
             return map;
         }
     }
