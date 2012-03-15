@@ -511,11 +511,13 @@ private void set_state()
             }
 
             map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.DisabledCount, "with_disabilities_count");
-            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.EconDisadvCount, "with_econd_disadv_count");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.EconDisadvCount, "econ_disadv_count");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.NonDisabledCount, "without_disabilities_count");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.NonEconDisadvCount, "not_econd_disadv_count");
             map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.DisabledPercent, "with_disabilities_percent");
-            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.EconDisadvPercent, "with_econ_disadv_percent");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.EconDisadvPercent, "econ_disadv_percent");
             map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.NonDisabledPercent, "without_disabilities_percent");
-            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.NonEconDisadvPercent, "without_econ_disadv_percent");
+            map.Add(v_Template_Keys_WWoDisEconELP_tblAgencyFull_Flat.NonEconDisadvPercent, "not_econ_disadv_percent");
             
 
             return map;
