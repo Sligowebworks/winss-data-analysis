@@ -181,7 +181,7 @@ namespace SligoCS.Web.WI
             {
                 horizChart.LabelColumns = new List<String>(new String[]
                     {
-                        v_POST_GRAD_INTENT.SchooltypeLabel.Trim()
+                        v_POST_GRAD_INTENT.SchoolTypeLabel.Trim()
                     });
             }
 
