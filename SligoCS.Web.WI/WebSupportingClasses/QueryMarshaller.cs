@@ -818,6 +818,7 @@ namespace SligoCS.BL.WI
         SexCode,
         Sex,
         RaceCode,
+        Race,
         GradeCode,
         DisabilityCode,
         EconDisadvCode,
