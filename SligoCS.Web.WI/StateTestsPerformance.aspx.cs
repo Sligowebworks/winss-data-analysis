@@ -929,7 +929,7 @@ namespace SligoCS.Web.WI
                 graphColumns.Add(v_WSAS.ProficientWSAS);
                 graphColumns.Add(v_WSAS.BasicWSAS);
                 graphColumns.Add(v_WSAS.MinPerfWSAS);
-                graphColumns.Add(v_WSAS.No_WSAS);
+                graphColumns.Add(v_WSAS.No_WSAS_Total);
             }
             return graphColumns;
         }
