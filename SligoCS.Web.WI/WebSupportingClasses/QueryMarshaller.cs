@@ -23,7 +23,7 @@ namespace SligoCS.BL.WI
         private List<int> sexDisagCodes;
         private DataColumnCollection dataColumns;
 
-        public List<String> years, FAYCodes, fullkeylist;
+        public List<String> years, fullkeylist;
 
         public QueryArgumentsWithDisagg stypList, gradeCodes, sexCodes, raceCodes, disabilityCodes, econDisadvCodes, migrantCodes, ELPCodes, WsasSubjectCodes, WMASCodes, CourseTypeCodes, ActivityCodes, GradReqSubjCodes, TQSubjectCodes, CostTypeCodes;
         
@@ -340,22 +340,6 @@ namespace SligoCS.BL.WI
             };
 
             InitFullkeyList();
-
-            FAYCodes = new List<String>();
-
-            if (globals.FAYCode.Key == FAYCodeKeys.CompareFayALL)
-            {
-                FAYCodes.Add("2");
-                FAYCodes.Add("9");
-            }
-            else if (globals.FAYCode.Key == FAYCodeKeys.FAY)
-            {
-                FAYCodes.Add("2");
-            }
-            else
-            {
-                FAYCodes.Add("9");
-            }
 
             WsasSubjectCodes.DisAggValues =  delegate()
             {
