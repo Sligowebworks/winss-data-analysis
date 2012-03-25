@@ -507,9 +507,12 @@ namespace SligoCS.Web.WI
             if (GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 return cols; // return only generic (base) columns
 
-            //debug GroupNum
+            //debug GroupNum, faycode
             if ((GlobalValues.TraceLevels & TraceStateUtils.TraceLevels.sql) == TraceStateUtils.TraceLevels.sql)
+            {
                 cols.Add(v_WSAS.GroupNum);
+                cols.Add(v_WSAS.FAYCode);
+            }
 
             if (GlobalValues.Grade.Key == GradeKeys.AllDisAgg)
                 cols.Add(v_WSAS.GradeLabel);

@@ -84,6 +84,7 @@
             <slx:WinssDataGrid ID="StateTestsDataGrid" runat="server" >
                 <Columns>
                     <slx:WinssDataGridColumn DataField="GroupNum" />
+                    <slx:WinssDataGridColumn DataField="FayCode" />
                     <slx:WinssDatagridColumn MergeRows="true" DataField="LinkedName"  HeaderText="&nbsp;" />
                     <slx:WinssDatagridColumn MergeRows="true" DataField="YearFormatted" HeaderText="&nbsp;" />
                     <slx:WinssDatagridColumn MergeRows="true" DataField="District Name"  HeaderText="&nbsp;" />
