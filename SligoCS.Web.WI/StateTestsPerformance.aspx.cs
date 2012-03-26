@@ -443,8 +443,14 @@ namespace SligoCS.Web.WI
             {
                 if (!disaggFlags[GlobalValues.Group.Name] && !disaggFlags[GlobalValues.SubjectID.Name])
                 {
-                    if (!disaggFlags[GlobalValues.Grade.Name])
+                    if (!disaggFlags[GlobalValues.Group.Name] && !disaggFlags[GlobalValues.Grade.Name])
+                    {
+                        barChart.FriendlyAxisXNames = new List<String>(new string[] { "All Students" });
+                    }
+                    else if (!disaggFlags[GlobalValues.Grade.Name])
+                    {
                         barChart.LabelColumnName = ColumnPicker.GetCompareToColumnName(GlobalValues);
+                    }
                     else
                         barChart.LabelColumnName = v_WSAS.GradeShortLabel;
                 }
@@ -470,10 +476,15 @@ namespace SligoCS.Web.WI
                         barChart.SeriesColumnName = v_WSAS.SubjectLabel;
                 }
             }
+            else if (!disaggFlags[GlobalValues.Group.Name]) // All Students
+            {
+                barChart.SeriesColumnName = ColumnPicker.GetCompareToColumnName(GlobalValues);
+                barChart.LegendBox.Visible = true; // not sure why this is necessary!! but not visible without it
+            }
 
             if (barChart.SeriesColumnName == barChart.LabelColumnName)
                 //Assumption is that Series column is defaulting to CompareTo and should not be used
-            { 
+            {
                 barChart.SeriesColumnName = ColumnPicker.GetViewByColumnName(GlobalValues);
             }
         }
