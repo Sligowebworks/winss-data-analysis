@@ -38,31 +38,17 @@ namespace SligoCS.DAL.WI
 
             sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "Migrantcode", Marshaller.migrantCodes));
 
-            if ((Marshaller.GlobalValues.CompareTo.Key != CompareToKeys.OrgLevel
-                || Marshaller.GlobalValues.FAYCode.Key == FAYCodeKeys.NonFAY)
-                && Marshaller.GlobalValues.SuperDownload.Key == SupDwnldKeys.False)
-            {
-                if (Marshaller.GlobalValues.OrgLevel.Key == OrgLevelKeys.State)
-                    sql.Append(" AND  FAYCode = 9 ");
-                else if (Marshaller.GlobalValues.Group.Key == GroupKeys.All)
-                    sql.Append(" AND FAYCode = 2 ");
-                else
-                {
-                    sql.Append(" AND ( (year < 2003");
-                    sql.Append(" AND  FAYCode = 9 ");
-                    sql.Append(")  OR ");
-                    sql.Append("year > 2002 AND faycode = 2");
-                    sql.Append(")");
-                }
-            }
+            sql.Append(" AND ( ");
+
+            if (Marshaller.GlobalValues.Group.Key != GroupKeys.All)
+                sql.Append("(year < 2003 AND  FAYCode = 9 ) OR (year > 2002 AND faycode = 2)");
             else
-            {
-                sql.Append(" AND ( (FullKey NOT in ('XXXXXXXXXXXX') ");
-                sql.Append(" AND  FAYCode = 2 ");
-                sql.Append(")  OR ");
-                sql.Append("FullKey in ('XXXXXXXXXXXX') AND faycode <> 2");
-                sql.Append(")");
-            }
+                sql.Append("FAYCode = 2 AND left(fullkey,1) <> 'X'");
+
+            sql.Append(" OR (FullKey in ('XXXXXXXXXXXX') AND faycode = 9)");
+
+            sql.Append(")");
+
 
             if (Marshaller.GlobalValues.Grade.Value == GradeKeys.AllDisAgg && Marshaller.GlobalValues.SuperDownload.Key != SupDwnldKeys.True)
             {
