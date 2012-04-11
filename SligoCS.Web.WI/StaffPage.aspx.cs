@@ -31,7 +31,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.TrendStartYear = 1997;
-            GlobalValues.CurrentYear = 2011;
+            GlobalValues.CurrentYear = 2012;
 
             //Disable School Level
             if (UserValues.OrgLevel.Key == OrgLevelKeys.School)
