@@ -49,8 +49,7 @@
     <tr>
         <td>
 	        <SPAN class="text">	
-	         Major changes in WI student enrollment collections were implemented in 2004-05. 2004-05 enrollment data 
-	        may not be comprehensive so some 2004-05 ratios should be interpreted with caution.  
+	         Major changes in WI student enrollment collections were implemented in 2004-05. 2004-05 enrollment data may not be comprehensive so some 2004-05 student-staff ratios should be interpreted with caution. Due to 2003-04 changes in the WI fall staff data collection, pre- and post-2003-04 staff counts may not be not comparable. 
 	        <a href="javascript:popup('http://www.dpi.wi.gov/spr/staff_q&a.html')" onClick="setCookie(question, url)">[More]</a>
 	        <br/>
 	        </SPAN> 
