@@ -86,7 +86,7 @@ namespace SligoCS.Web.WI
                 List<String> dgOrder = QueryMarshaller.BuildOrderByList(DataSet.Tables[0].Columns);
                 List<String> grOrder = new List<string>(dgOrder.ToArray());
                 dgOrder.Insert(1, v_POST_GRAD_INTENT.Race);
-                grOrder.Insert(0, v_POST_GRAD_INTENT.Race);
+                grOrder.Insert(1, v_POST_GRAD_INTENT.Race);
                 
                 PostGradDataGrid.OrderBy = String.Join(",", dgOrder.ToArray());
                 horizChart.OrderBy = String.Join(",", grOrder.ToArray());
@@ -200,7 +200,10 @@ namespace SligoCS.Web.WI
                     horizChart.LabelColumns.Insert(0, v_POST_GRAD_INTENT.SexLabel.Trim());
 
                 if (GlobalValues.Group.Key == GroupKeys.Race)
-                    horizChart.LabelColumns.Insert(0, v_POST_GRAD_INTENT.RaceShortLabel.Trim());
+                {
+                    horizChart.SelectedSortBySecondarySort = false;
+                    horizChart.LabelColumns.Insert(1, v_POST_GRAD_INTENT.RaceShortLabel.Trim());
+                }
             }
             horizChart.MeasureColumns = new List<String>(new String[]
                 {
