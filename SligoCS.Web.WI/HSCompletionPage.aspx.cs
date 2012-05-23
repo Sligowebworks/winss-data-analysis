@@ -96,6 +96,8 @@ namespace SligoCS.Web.WI
                         : CompareToKeys.OrgLevel;
             }
 
+            if (GlobalValues.OrgLevel.Key == OrgLevelKeys.District) QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
+
             base.OnInitComplete(e);
 
             nlrTimeFrame.LinkControlAdded += new LinkControlAddedHandler(disable6Year_LinkControlAdded);
