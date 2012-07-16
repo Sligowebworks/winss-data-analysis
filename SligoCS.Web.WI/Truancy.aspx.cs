@@ -28,6 +28,12 @@ namespace SligoCS.Web.WI
             GlobalValues.Grade.Key = GradeKeys.Grades_K_12;
             GlobalValues.CurrentYear = 2011;
             GlobalValues.TrendStartYear = 1997;
+
+            //Don't show combined groups at District Level, until support is added in the data import.
+            if (GlobalValues.OrgLevel.Key == OrgLevelKeys.District
+                && QueryMarshaller.RaceDisagCodes.Contains((int)QueryMarshaller.RaceCodes.Comb))
+                QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
+
             base.OnInitComplete(e);
         }
         protected override NavViewByGroup InitNavRowGroups()
