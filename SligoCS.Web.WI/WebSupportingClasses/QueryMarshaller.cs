@@ -48,6 +48,9 @@ namespace SligoCS.BL.WI
         };
 
         private static Dictionary<Int16, Int16> gradeCodeFloorMap;
+        /***
+         * Returns a Grade Floor based on an Aggregate-Grade-Code, e.g. PreK-12(99) returns 12(PreK)
+         */
         protected static Dictionary<Int16, Int16> GradeCodeFloorMap
         {
             get
@@ -382,8 +385,11 @@ namespace SligoCS.BL.WI
         {
             //kludge :
             if (globals.LOWGRADE < 12) globals.LOWGRADE = 12;
+            
+            int floor = (GradeCodeFloorMap.ContainsKey(Int16.Parse(globals.Grade.Value))) 
+                    ? GradeCodeFloorMap[Int16.Parse(globals.Grade.Value)]
+                    : globals.LOWGRADE ;
 
-            int floor = GradeCodeFloorMap[Int16.Parse(globals.Grade.Value)];
             if ( globals.HIGHGRADE > floor && globals.LOWGRADE < floor)
                     globals.LOWGRADE = floor;
         }
