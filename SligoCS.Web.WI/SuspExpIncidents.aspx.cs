@@ -162,7 +162,7 @@ namespace SligoCS.Web.WI
                 else if (GlobalValues.Group.Key == GroupKeys.Race)
                 {
                     List<String> grOrder = new List<string>(QueryMarshaller.BuildOrderByList(DataSet.Tables[0].Columns).ToArray());
-                    grOrder.Insert(1, v_POST_GRAD_INTENT.Race);
+                    grOrder.Insert(1, v_SuspExpIncidentsWWoDisSchoolDistState.Race);
 
                     hrzBarChart.OrderBy = String.Join(",", grOrder.ToArray());
                 }
