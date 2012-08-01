@@ -83,12 +83,17 @@ namespace SligoCS.Web.WI
 
             if (GlobalValues.Group.Key == GroupKeys.Race)
             {
-                List<String> dgOrder = QueryMarshaller.BuildOrderByList(DataSet.Tables[0].Columns);
-                List<String> grOrder = new List<string>(dgOrder.ToArray());
-                dgOrder.Insert(1, v_POST_GRAD_INTENT.RaceLabel);
-                grOrder.Insert(0, v_POST_GRAD_INTENT.RaceLabel);
+                List<String> grOrder = new List<string>(QueryMarshaller.BuildOrderByList(DataSet.Tables[0].Columns));
                 
-                PostGradDataGrid.OrderBy = String.Join(",", dgOrder.ToArray());
+                if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
+                { //so race codes that vary across years can be sorted together
+                    grOrder.Insert(0, v_POST_GRAD_INTENT.RaceLabel);
+                }
+                else
+                {
+                    grOrder.Insert(0, v_POST_GRAD_INTENT.Race);
+                }
+                
                 horizChart.OrderBy = String.Join(",", grOrder.ToArray());
             }
 
