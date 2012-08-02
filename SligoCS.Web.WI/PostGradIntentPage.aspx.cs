@@ -87,7 +87,7 @@ namespace SligoCS.Web.WI
                 
                 if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
                 { //so race codes that vary across years can be sorted together
-                    grOrder.Insert(0, v_POST_GRAD_INTENT.RaceLabel);
+                    grOrder.Insert(0, v_POST_GRAD_INTENT.RaceShortLabel);
                 }
                 else
                 {
