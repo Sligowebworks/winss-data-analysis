@@ -30,6 +30,15 @@ namespace SligoCS.Web.WI
             GlobalValues.TrendStartYear = 2003;
             GlobalValues.CurrentYear = 2011;
 
+            if (GlobalValues.TQShow.Key == TQShowKeys.ESEAQualified)
+            {
+                if (GlobalValues.TQSubjects.Key == TQSubjectsKeys.All)
+                    GlobalValues.TQSubjects.Key = TQSubjectsKeys.Core;
+
+                if (GlobalValues.TQSubjects.Key == TQSubjectsKeys.SpecEdSumm)
+                    GlobalValues.TQSubjects.Key = TQSubjectsKeys.SpecEdCore;
+            }
+
             //View By Group not supported:
             GlobalValues.Group.Value = GlobalValues.Group.Range[GroupKeys.All];
 
@@ -75,6 +84,9 @@ namespace SligoCS.Web.WI
             set_state();
             setBottomLink();
 
+            if (GlobalValues.TQShow.Key == TQShowKeys.ESEAQualified)
+                nlrSubject.LinkControlAdded += new LinkControlAddedHandler(nlrSubject_DisableSummaryForESEA);
+
             if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
             {
                 List<String> order = new List<String>(QueryMarshaller.BuildOrderByList(DataSet.Tables[0].Columns).ToArray());
@@ -83,6 +95,12 @@ namespace SligoCS.Web.WI
             }
 
             SetUpChart(DataSet);
+        }
+
+        void nlrSubject_DisableSummaryForESEA(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)
+        {
+            if (link.ID == "linkTQSubjectsAll"
+                || link.ID =="linkTQSubjectsSpecEdSumm") link.Enabled = false;
         }
         private void SetUpChart(DataSet ds)
         {
