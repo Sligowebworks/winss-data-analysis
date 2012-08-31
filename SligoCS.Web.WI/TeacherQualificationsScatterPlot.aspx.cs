@@ -69,17 +69,36 @@ namespace SligoCS.Web.WI
             if (GlobalValues.OrgLevel.Key == OrgLevelKeys.State) GlobalValues.OrgLevel.Key = OrgLevelKeys.District;
 
             base.OnInitComplete(e);
+
             TQScatterDataGrid.ColumnLoaded += RenameRelatedToColumn;
             TQScatterDataGrid.ColumnLoaded += new EventHandler(SetFormatString_ColumnLoaded);
+
+            if (GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.All
+            || GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.SpecEdSumm)
+            {
+                if (GlobalValues.TQTeacherVariable.Key == TQTeacherVariableKeys.ESEA)
+                    GlobalValues.TQTeacherVariable.Key = TQTeacherVariableKeys.WiscLicense;
+            }
             
             nlrRelateTo.LinkControlAdded += new LinkControlAddedHandler(DisableSchoolSize_LinkControlAdded);
+
             if (GlobalValues.OrgLevel.Key != OrgLevelKeys.School
                 && GlobalValues.TQRelateTo.Key == TQRelateToKeys.SchoolSize)
                 GlobalValues.TQRelateTo.Key = TQRelateToKeys.DistrictSize;
 
             //overide until 2011 refresh and new races are added to data.
             nlrRelateTo.LinkControlAdded += new LinkControlAddedHandler(disableNewRaces_LinkControlAdded);
-            
+
+            nlrTeacherVariable.LinkControlAdded += new LinkControlAddedHandler(nlrTeacherVariable_DisableESEAforSummary);
+        }
+
+        void nlrTeacherVariable_DisableESEAforSummary(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)
+        {
+            if (link.ID != "linkTQTeacherVariableESEA") return;
+
+            if (GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.SpecEdSumm
+                || GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.All)
+                link.Enabled = false;
         }
 
         void disableNewRaces_LinkControlAdded(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)

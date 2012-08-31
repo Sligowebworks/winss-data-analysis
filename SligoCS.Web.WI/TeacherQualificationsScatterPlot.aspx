@@ -30,7 +30,7 @@
                 <cc1:HyperLinkPlus ID="linkTQSubjectsSPAll" runat="server" ParamName="TQSubjectsSP" ParamValue="SUMALL">Summary All Subjects</cc1:HyperLinkPlus>
                 </NavigationLinks>
          </sli:NavigationLinkRow>
-         <sli:NavigationLinkRow ID="NavigationLinkRow1" runat="server">
+         <sli:NavigationLinkRow ID="nlrTeacherVariable" runat="server">
                 <RowLabel>Teacher Variable:</RowLabel> 
                 <NavigationLinks>
                    <cc1:HyperLinkPlus ID="linkTQTeacherVariableWiscLicense" runat="server" ParamName="TQTeacherVariable" ParamValue="LICFULL">&#37; Full Wisconsin License</cc1:HyperLinkPlus>
