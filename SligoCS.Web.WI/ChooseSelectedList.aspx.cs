@@ -148,7 +148,7 @@ namespace SligoCS.Web.WI
         {
             GlobalValues.SQL =
                 (GlobalValues.CompareTo.Key == CompareToKeys.SelSchools) ?
-                DALAgencies.GetSelectedSchoolsSQL(GlobalValues.Year, selectedCSV)
+                DALAgencies.GetSelectedSchoolsSQL(selectedCSV)
                 : DALAgencies.GetSelectedDistrictsSQL(selectedCSV)
                 ;
             QueryMarshaller.AssignQuery(new DALAgencies(), GlobalValues.SQL);
@@ -173,13 +173,13 @@ namespace SligoCS.Web.WI
             if (compare == CompareToKeys.SelSchools)
             {
                 if (Key == SRegionKeys.County)
-                    sql = DALAgencies.GetSchoolsInCountySQL(GlobalValues.SCounty, int.Parse(GlobalValues.STYP.Value), GlobalValues.Year, selectedAndCurrent);//fullkeys to be excluded
+                    sql = DALAgencies.GetSchoolsInCountySQL(GlobalValues.SCounty, int.Parse(GlobalValues.STYP.Value), selectedAndCurrent);//fullkeys to be excluded
 
                 if (Key == SRegionKeys.AthleticConf)
-                    sql = DALAgencies.GetSchoolsInAthleticConfSQL(Int32.Parse(GlobalValues.SAthleticConf), int.Parse(GlobalValues.STYP.Value), GlobalValues.Year, selectedAndCurrent); //fullkeys to be excluded
+                    sql = DALAgencies.GetSchoolsInAthleticConfSQL(Int32.Parse(GlobalValues.SAthleticConf), int.Parse(GlobalValues.STYP.Value), selectedAndCurrent); //fullkeys to be excluded
 
                 if (Key == SRegionKeys.CESA)
-                    sql = DALAgencies.GetSchoolsInCESASQL(GlobalValues.SCESA, int.Parse(GlobalValues.STYP.Value), GlobalValues.Year, selectedAndCurrent); //fullkeys to be excluded
+                    sql = DALAgencies.GetSchoolsInCESASQL(GlobalValues.SCESA, int.Parse(GlobalValues.STYP.Value), selectedAndCurrent); //fullkeys to be excluded
             }
 
             if (compare == CompareToKeys.SelDistricts)

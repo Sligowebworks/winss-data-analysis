@@ -102,7 +102,7 @@ namespace SligoCS.Web.WI
             {
                 GlobalValues.SQL =
                 (GlobalValues.CompareTo.Key == CompareToKeys.SelSchools) ?
-                DALAgencies.GetSelectedSchoolsSQL(GlobalValues.Year,
+                DALAgencies.GetSelectedSchoolsSQL(
                     SligoCS.BL.WI.Utilities.BLUtil.GetCommaDeliFullKeyString(String.Join("", selected.ToArray())))
                 : DALAgencies.GetSelectedDistrictsSQL(
                     SligoCS.BL.WI.Utilities.BLUtil.GetCommaDeliFullKeyString(String.Join("", selected.ToArray())))

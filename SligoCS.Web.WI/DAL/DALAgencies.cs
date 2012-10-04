@@ -17,6 +17,7 @@ namespace SligoCS.DAL.WI
         /// <returns></returns>
         public override string BuildSQL(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
+            throw new Exception("An error has occured. Please copy the URL from your browser and email the site administrator.");
             StringBuilder sql = new StringBuilder();
             String dbObject = "v_AgencyFull";
 
@@ -103,7 +104,7 @@ namespace SligoCS.DAL.WI
 
             return sql.ToString();
         }
-        public static String GetSchoolsInCountySQL(string county, int schoolType, int year, string selectedAndCurrentSchools)
+        public static String GetSchoolsInCountySQL(string county, int schoolType, string selectedAndCurrentSchools)
         {
             StringBuilder sql = new StringBuilder();
             if (selectedAndCurrentSchools == string.Empty)
@@ -115,13 +116,12 @@ namespace SligoCS.DAL.WI
                     + " and right(fullkey,1) <> 'X' and Schooltype = {1} "
                     + " and left(right(fullkey,6),2) <> '14' "
                     + " and fullkey not in ({2}) "
-                    + "and year = '{3}' "
                     + " order by DistrictName;",
-                    county, schoolType, selectedAndCurrentSchools, year);
+                    county, schoolType, selectedAndCurrentSchools);
 
             return sql.ToString();
         }
-        public static String GetSchoolsInAthleticConfSQL(int conferenceKey, int schoolType, int year,  string selectedAndCurrentSchools)
+        public static String GetSchoolsInAthleticConfSQL(int conferenceKey, int schoolType,  string selectedAndCurrentSchools)
         {
             StringBuilder sql = new StringBuilder();
             if (selectedAndCurrentSchools == string.Empty)
@@ -135,13 +135,12 @@ namespace SligoCS.DAL.WI
                     + " and fullkey not in ({0})  "
                     + " and Schooltype = {1} "
                     + " and ConferenceKey = {2} "
-                    + "and year = '{3}' "
                     + " order by DistrictName;",
-                      selectedAndCurrentSchools, schoolType, conferenceKey, year);
+                      selectedAndCurrentSchools, schoolType, conferenceKey);
 
             return sql.ToString();
         }
-        public static String GetSchoolsInCESASQL(string cesa, int schoolType, int year, string selectedAndCurrentSchools)
+        public static String GetSchoolsInCESASQL(string cesa, int schoolType, string selectedAndCurrentSchools)
         {
             StringBuilder sql = new StringBuilder();
             if (selectedAndCurrentSchools == string.Empty)
@@ -153,13 +152,12 @@ namespace SligoCS.DAL.WI
                     + " and right(fullkey,1) <> 'X' and Schooltype = {1} "
                     + " and left(right(fullkey,6),2) <> '14' "
                     + " and fullkey not in ({2}) "
-                    + "and year = '{3}' "
                     + " order by SchoolName;",
-                    cesa, schoolType, selectedAndCurrentSchools, year);
+                    cesa, schoolType, selectedAndCurrentSchools);
 
             return sql.ToString();
         }
-        public static String GetSelectedSchoolsSQL(int year, string selectedSchools)
+        public static String GetSelectedSchoolsSQL(string selectedSchools)
         {
             StringBuilder sql = new StringBuilder();
             if (String.IsNullOrEmpty(selectedSchools))
@@ -170,8 +168,7 @@ namespace SligoCS.DAL.WI
             // if (selectedSchools != null && selectedSchools.Length > 11)
             sql.AppendFormat(SELECT_SCHOOL_WHERE 
                 + "  schooltype is not null and fullkey in ({0}) "
-                + "and year = '{1}' "
-                +"order by [SchoolName]", selectedSchools, year);
+                +"order by [SchoolName]", selectedSchools);
 
             return sql.ToString();
         }
