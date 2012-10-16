@@ -37,6 +37,17 @@ namespace SligoCS.Web.WI
 
                 if (GlobalValues.TQSubjects.Key == TQSubjectsKeys.SpecEdSumm)
                     GlobalValues.TQSubjects.Key = TQSubjectsKeys.SpecEdCore;
+
+                nlrSubject.LinkControlAdded += new LinkControlAddedHandler(nlrSubject_DisableSummaryForESEA);
+            }
+
+            if (GlobalValues.TQSubjects.Key == TQSubjectsKeys.All
+                || GlobalValues.TQSubjects.Key == TQSubjectsKeys.SpecEdSumm)
+            {
+                if (GlobalValues.TQShow.Key == TQShowKeys.ESEAQualified)
+                    GlobalValues.TQShow.Key = TQShowKeys.WisconsinLicenseStatus;
+
+                nlrShow.LinkControlAdded += new LinkControlAddedHandler(nlrShow_LinkControlAdded_DisableESEAQualified);
             }
 
             //View By Group not supported:
@@ -52,9 +63,18 @@ namespace SligoCS.Web.WI
             base.OnInitComplete(e);
         }
 
+        void nlrShow_LinkControlAdded_DisableESEAQualified(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)
+        {
+            if (link.ID == "linkTQShowESEAQualified") link.Enabled = false;
+        }
         void LinkRow_LinkControlAdded_DisableCompareToForSTYPALL(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)
         {
             if (link.ID != "linkCompareToCurrent") link.Enabled = false;
+        }
+        void nlrSubject_DisableSummaryForESEA(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)
+        {
+            if (link.ID == "linkTQSubjectsAll"
+                || link.ID == "linkTQSubjectsSpecEdSumm") link.Enabled = false;
         }
         protected override DALWIBase InitDatabase()
         {
@@ -84,9 +104,6 @@ namespace SligoCS.Web.WI
             set_state();
             setBottomLink();
 
-            if (GlobalValues.TQShow.Key == TQShowKeys.ESEAQualified)
-                nlrSubject.LinkControlAdded += new LinkControlAddedHandler(nlrSubject_DisableSummaryForESEA);
-
             if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
             {
                 List<String> order = new List<String>(QueryMarshaller.BuildOrderByList(DataSet.Tables[0].Columns).ToArray());
@@ -97,11 +114,6 @@ namespace SligoCS.Web.WI
             SetUpChart(DataSet);
         }
 
-        void nlrSubject_DisableSummaryForESEA(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)
-        {
-            if (link.ID == "linkTQSubjectsAll"
-                || link.ID =="linkTQSubjectsSpecEdSumm") link.Enabled = false;
-        }
         private void SetUpChart(DataSet ds)
         {
             barChart.Title = DataSetTitle;

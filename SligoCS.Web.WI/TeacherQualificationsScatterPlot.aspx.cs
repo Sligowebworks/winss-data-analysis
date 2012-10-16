@@ -76,8 +76,21 @@ namespace SligoCS.Web.WI
             if (GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.All
             || GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.SpecEdSumm)
             {
+                nlrTeacherVariable.LinkControlAdded += new LinkControlAddedHandler(nlrTeacherVariable_DisableESEAforSummary);
+
                 if (GlobalValues.TQTeacherVariable.Key == TQTeacherVariableKeys.ESEA)
                     GlobalValues.TQTeacherVariable.Key = TQTeacherVariableKeys.WiscLicense;
+            }
+
+            if (GlobalValues.TQTeacherVariable.Key == TQTeacherVariableKeys.ESEA)
+            {
+                nlrShow.LinkControlAdded += new LinkControlAddedHandler(nlrShow_LinkControlAdded_DisableForESEA);
+
+                if (GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.All
+                || GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.SpecEdSumm)
+                {
+                    GlobalValues.TQSubjectsSP.Key = TQSubjectsSPKeys.Core;
+                }
             }
             
             nlrRelateTo.LinkControlAdded += new LinkControlAddedHandler(DisableSchoolSize_LinkControlAdded);
@@ -88,17 +101,18 @@ namespace SligoCS.Web.WI
 
             //overide until 2011 refresh and new races are added to data.
             nlrRelateTo.LinkControlAdded += new LinkControlAddedHandler(disableNewRaces_LinkControlAdded);
+        }
 
-            nlrTeacherVariable.LinkControlAdded += new LinkControlAddedHandler(nlrTeacherVariable_DisableESEAforSummary);
+        void nlrShow_LinkControlAdded_DisableForESEA(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)
+        {
+            if (link.ID == "linkTQSubjectsSPSpecEdSumm"
+                || link.ID == "linkTQSubjectsSPAll")
+                link.Enabled = false;
         }
 
         void nlrTeacherVariable_DisableESEAforSummary(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)
         {
-            if (link.ID != "linkTQTeacherVariableESEA") return;
-
-            if (GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.SpecEdSumm
-                || GlobalValues.TQSubjectsSP.Key == TQSubjectsSPKeys.All)
-                link.Enabled = false;
+            if (link.ID == "linkTQTeacherVariableESEA") link.Enabled = false;
         }
 
         void disableNewRaces_LinkControlAdded(SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus link)

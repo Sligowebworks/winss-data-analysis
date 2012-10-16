@@ -29,6 +29,7 @@ namespace SligoCS.Web.WI {
         protected global::SligoCS.Web.WI.WebUserControls.NavSchoolType nlrSTYP;
 
         protected global::SligoCS.Web.WI.WebUserControls.NavigationLinkRow nlrTeacherVariable;
+        protected global::SligoCS.Web.WI.WebUserControls.NavigationLinkRow nlrShow;
         
         /// <summary>
         /// GraphPanel control.
