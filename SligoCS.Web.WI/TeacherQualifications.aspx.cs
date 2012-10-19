@@ -28,7 +28,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {
             GlobalValues.TrendStartYear = 2003;
-            GlobalValues.CurrentYear = 2011;
+            GlobalValues.CurrentYear = 2012;
 
             if (GlobalValues.TQShow.Key == TQShowKeys.ESEAQualified)
             {
