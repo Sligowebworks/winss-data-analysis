@@ -201,7 +201,9 @@ namespace SligoCS.Web.WI
                     );
                 mapping.Add(
                     TQShowKeys.ESEAQualified,
-                    v_TeacherQualifications.EHQYesFTEPercentage
+                    (GlobalValues.TQSubjects.Key ==  TQSubjectsKeys.SoclStd) 
+                        ? v_TeacherQualifications.ESEA_Core_HQYesFTEPercentage 
+                        :  v_TeacherQualifications.EHQYesFTEPercentage
                     );
 
                 barChart.DisplayColumnName = mapping[TQ.Key].ToString();
@@ -311,7 +313,15 @@ namespace SligoCS.Web.WI
 
             List<string> retval = base.GetVisibleColumns();
 
-            retval.Add(v_TeacherQualifications.FTETotal);
+            if (GlobalValues.TQShow.Key == TQShowKeys.ESEAQualified
+                && GlobalValues.TQSubjects.Key == TQSubjectsKeys.SoclStd)
+            {
+                retval.Add(v_TeacherQualifications.ESEA_Core_FTE_Total);
+            }
+            else
+            {
+                retval.Add(v_TeacherQualifications.FTETotal);
+            }
 
             bool statewide = (GlobalValues.SuperDownload.Key == SupDwnldKeys.True);
 
@@ -347,10 +357,20 @@ namespace SligoCS.Web.WI
 
             if (statewide || show.Key == TQShowKeys.ESEAQualified)
             {
-                retval.Add(v_TeacherQualifications.EHQYesFTE);
-                retval.Add(v_TeacherQualifications.EHQYesFTEPercentage);
-                retval.Add(v_TeacherQualifications.EHQNoFTE);
-                retval.Add(v_TeacherQualifications.EHQNoFTEPercentage);
+                if (GlobalValues.TQSubjects.Key == TQSubjectsKeys.SoclStd)
+                {
+                    retval.Add(v_TeacherQualifications.FTE_ESEACore_HQYes);
+                    retval.Add(v_TeacherQualifications.ESEA_Core_HQYesFTEPercentage);
+                    retval.Add(v_TeacherQualifications.FTE_ESEACore_HQNo);
+                    retval.Add(v_TeacherQualifications.ESEA_Core_HQNoFTEPercentage);
+                }
+                else
+                {
+                    retval.Add(v_TeacherQualifications.FTE_ESEA_HQYes);
+                    retval.Add(v_TeacherQualifications.EHQYesFTEPercentage);
+                    retval.Add(v_TeacherQualifications.FTE_ESEA_HQNo);
+                    retval.Add(v_TeacherQualifications.EHQNoFTEPercentage);
+                }
             }
             return retval;
         }
@@ -395,9 +415,11 @@ namespace SligoCS.Web.WI
             newLabels.Add(v_TeacherQualifications.TotalExperience5YearsOrMoreFTEPercentage, "percentage_with_at_least_5_years_total_experience");
             newLabels.Add(v_TeacherQualifications.DegreeMastersOrHigherFTE, "masters_or_higher_number_fte");
             newLabels.Add(v_TeacherQualifications.DegreeMastersOrHigherFTEPercentage, "masters_or_higher_percentage_of_total");
-            newLabels.Add(v_TeacherQualifications.EHQYesFTE, "esea_qualified_number_fte");
+            newLabels.Add(v_TeacherQualifications.FTE_ESEA_HQYes, "esea_qualified_number_fte");
+            newLabels.Add(v_TeacherQualifications.FTE_ESEACore_HQYes, "esea_qualified_number_fte");
             newLabels.Add(v_TeacherQualifications.EHQYesFTEPercentage, "esea_qualified_percentage_of_total");
-            newLabels.Add(v_TeacherQualifications.EHQNoFTE, "not_esea_qualified_number_fte");
+            newLabels.Add(v_TeacherQualifications.FTE_ESEA_HQNo, "not_esea_qualified_number_fte");
+            newLabels.Add(v_TeacherQualifications.FTE_ESEACore_HQNo, "not_esea_qualified_number_fte");
             newLabels.Add(v_TeacherQualifications.EHQNoFTEPercentage, "not_esea_qualified_percentage_of_total");
             newLabels.Add(v_TeacherQualifications.LinkSubjectLabel, "subject_taught");
             return newLabels;

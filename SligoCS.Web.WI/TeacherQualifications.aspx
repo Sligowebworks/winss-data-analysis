@@ -80,6 +80,7 @@
                 <slx:WinssDataGridColumn MergeRows="true" HeaderText="&nbsp;" DataField="OrgSchoolTypeLabel" />
                 <slx:WinssDataGridColumn MergeRows="true" HeaderText="&nbsp;" DataField="OrgLevelLabel" />
                 <slx:WinssDataGridColumn DataField="FTETotal" HeaderText="# of FTE teachers"  FormatString="#,##0.0" />
+                <slx:WinssDataGridColumn DataField="ESEA_Core_FTE_Total" HeaderText="# of FTE teachers"  FormatString="#,##0.0" />
                 <slx:WinssDataGridColumn DataField="FTELicenseFull" HeaderText="# FTE" FormatString="#,##0.0" />
                 <slx:WinssDataGridColumn DataField="LicenseFullFTEPercentage" HeaderText="% of Total" FormatString="#,##0.0%" />
                 <slx:WinssDataGridColumn DataField="LicenseEmerFTE" HeaderText="# FTE" FormatString="#,##0.0" />
@@ -94,10 +95,14 @@
                 <slx:WinssDataGridColumn DataField="TotalExperience5YearsOrMoreFTEPercentage" HeaderText="% with at least 5 years total experience" FormatString="#,##0.0%" />
                 <slx:WinssDataGridColumn DataField="DegreeMastersOrHigherFTE" HeaderText="# FTE" FormatString="#,##0.0" />
                 <slx:WinssDataGridColumn DataField="DegreeMastersOrHigherFTEPercentage" HeaderText="% of Total" FormatString="#,##0.0%" />
-                <slx:WinssDataGridColumn DataField="EHQYesFTE" HeaderText="# FTE" FormatString="#,##0.0" />
+                <slx:WinssDataGridColumn DataField="FTE_ESEA_HQYes" HeaderText="# FTE" FormatString="#,##0.0" />
+                <slx:WinssDataGridColumn DataField="FTE_ESEACore_HQYes" HeaderText="# FTE" FormatString="#,##0.0" />
                 <slx:WinssDataGridColumn DataField="EHQYesFTEPercentage" HeaderText="% of Total" FormatString="#,##0.0%" />
-                <slx:WinssDataGridColumn DataField="EHQNoFTE" HeaderText="# FTE" FormatString="#,##0.0" />
+                <slx:WinssDataGridColumn DataField="ESEA_Core_HQYesFTEPercentage" HeaderText="% of Total" FormatString="#,##0.0%" />
+                <slx:WinssDataGridColumn DataField="FTE_ESEA_HQNo" HeaderText="# FTE" FormatString="#,##0.0" />
+                <slx:WinssDataGridColumn DataField="FTE_ESEACore_HQNo" HeaderText="# FTE" FormatString="#,##0.0" />
                 <slx:WinssDataGridColumn DataField="EHQNoFTEPercentage" HeaderText="% of Total" FormatString="#,##0.0%" />
+                <slx:WinssDataGridColumn DataField="ESEA_Core_HQNoFTEPercentage" HeaderText="% of Total" FormatString="#,##0.0%" />
                 </Columns>
             </slx:WinssDataGrid>
         </td>
