@@ -66,7 +66,7 @@ function writeGuideHeader(){
 '<option value="" selected>Go to:</option>',
 '<option value="/">DPI Home</option>',
 '<option value="/sig/">WINSS Home</option>',
-'<option value="http://',mydomain,':31489/survey_popup.html">comments / feedback</option>',
+'<option value="mailto:winss@dpi.wi.gov?Subject=WINSS feedback">comments / feedback</option>',
 '<option value="/sig/assessment"> --- Standards and Assessment</option>',
 '<option value="http://',mydomain,':31489/selschool.aspx"> --- Data Analysis</option>',
 '<option value="/sig/improvement/"> --- Continuous Improvement</option>',

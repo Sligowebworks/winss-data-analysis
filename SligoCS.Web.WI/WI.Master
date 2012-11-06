@@ -133,7 +133,7 @@
         </select>
         </form>
     </td>
-    <td align="right"><a href="http://www2.dpi.state.wi.us/sig/feedback/comments/survey_popup.html" target="survey" onclick="manualPopup('http://www2.dpi.state.wi.us/sig/feedback/comments/survey_popup.html','survey');" class="feedback">feedback</a>
+    <td align="right"><a href="mailto:winss@dpi.wi.gov?Subject=WINSS feedback" class="feedback">feedback</a>
     </td>
 	</tr>
     </table>
