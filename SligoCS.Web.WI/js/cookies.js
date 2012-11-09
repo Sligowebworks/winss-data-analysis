@@ -54,7 +54,7 @@ function writeGuideHeader(){
 	document.write(
 '<div style="margin-top: -0px;  margin-right: -0px;  margin-left: -0px;  margin-bottom: 0px;  padding: 0">',
 '<table width="100%" border="0" cellspacing="0" cellpadding="0">',
-'<form action="" method="POST">',
+'<form action="" method="POST" id="UAQA_Header">',
 '<tr valign="top"  bgcolor="',color,'">',
 '<td width="100">&nbsp;&nbsp;</td>',
 '<td width="185"><a href="/sig/index.html"><img src="/sig/images/wins_sm.gif" alt="" border="0"><img src="/sig/images/mortar.gif" alt="" border="0" name=mortar><img src="/sig/images/guide_sm.gif" alt="" border="0"></a><BR><img src="/sig/images/mortartip_sm.gif" alt="" border="0"></td>',

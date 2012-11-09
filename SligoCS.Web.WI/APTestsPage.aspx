@@ -41,7 +41,7 @@
 	    <SPAN class="text">	
 	     Major changes in WI student enrollment collections were implemented in 2004-05. 2004-05 enrollment data 
 	    may not be comprehensive so 2004-05 test participation rates should be interpreted with caution. 
-	    <a href="javascript:popup('http://www.dpi.wi.gov/spr_colleg_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
+	    <a href="javascript:popup('http://spr.dpi.wi.gov/spr_colleg_q&a')" onClick="setCookie(question, url)">[More]</a>
 	    </SPAN>
         </td>
     </tr>

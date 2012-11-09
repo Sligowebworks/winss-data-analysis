@@ -73,7 +73,7 @@
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload2" runat="server" Col="14"/>
             <p><span class="text">
-	            <a href="javascript:popup('http://dpi.wi.gov/oea_hist/wrct')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <a href="javascript:popup('http://oeahist.dpi.wi.gov/ohist_wrct')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </span> </p>       
         </td>
     </tr>

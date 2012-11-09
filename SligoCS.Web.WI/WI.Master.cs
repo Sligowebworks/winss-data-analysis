@@ -387,7 +387,7 @@ namespace SligoCS.Web.WI
                         readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_course_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.GWRCT:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/oea_hist/wrct";
+                        readAbout_NavigateUrl = "http://oeahist.dpi.wi.gov/ohist_wrct";
                         break;
                     default:
                         readAbout_NavigateUrl = "http://dpi.wi.gov/oea_kce_q%26amp%3Ba";
@@ -452,7 +452,7 @@ namespace SligoCS.Web.WI
             if (page.ToUpper() == GraphFileKeys.TQSCATTERPLOT.ToUpper())
                 url = GraphFileKeys.TEACHERQUALIFICATIONS + user.GetBaseQueryString();
             else if (page.ToUpper() == GraphFileKeys.TEACHERQUALIFICATIONS.ToUpper() && globals.OrgLevel.Key == OrgLevelKeys.State)
-                url = "javascript:popup('http://www.dpi.wi.gov/winss_tq_scatter')";
+                url = "javascript:popup('http://winss.dpi.wi.gov/winss_tq_scatter')";
             else if (page.ToUpper() == GraphFileKeys.TEACHERQUALIFICATIONS.ToUpper())
                 url = GraphFileKeys.TQSCATTERPLOT + user.GetBaseQueryString();
             else if (page.ToUpper() == GraphFileKeys.CompareContinuing.ToUpper()
@@ -461,11 +461,11 @@ namespace SligoCS.Web.WI
             {
                 url = (globals.OrgLevel.Key != OrgLevelKeys.State) ?
                     GraphFileKeys.StateTestsScatter + user.GetBaseQueryString() :
-                    "javascript:popup('http://www.dpi.wi.gov/winss_kcescatter')"; ;
+                    "javascript:popup('http://winss.dpi.wi.gov/winss_kcescatter')"; ;
             }
             else if (page.ToUpper() == GraphFileKeys.StateTestsScatter.ToUpper())
                 url = GraphFileKeys.StateTests + user.GetBaseQueryString();
-            //url = "javascript:popup('http://www.dpi.wi.gov/winss_kcescatter')";
+            //url = "javascript:popup('http://winss.dpi.wi.gov/winss_kcescatter')";
             else
             {
                 url = "";

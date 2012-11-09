@@ -75,7 +75,7 @@
 			
 			<br /> Due to <a href="javascript:popup('http://www.dpi.wi.gov/spr_demog_q%26amp%3Ba#race')" onClick="setCookie(question, url)">2010-11 race/ethnicity reporting</a> changes, pre- and post-2010-11 data by race/ethnicity may not be comparable. 
 		
-		<br />FAY = full academic year. <a href="javascript:popup('http://dpi.wi.gov/oea_kce_q%26amp%3Ba')" onclick='setCookie(question, url)'>What are WSAS, WKCE, and WAA? [More]</a>
+		<br />FAY = full academic year. <a href="javascript:popup('http://oea.dpi.wi.gov/oea_kce_q&a')" onclick='setCookie(question, url)'>What are WSAS, WKCE, and WAA? [More]</a>
 			    
 	</span>
         </td>
