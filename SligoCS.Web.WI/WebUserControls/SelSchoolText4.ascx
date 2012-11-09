@@ -3,5 +3,5 @@
 <span class="datatext">
 Most of the data on these pages are provided by Wisconsin schools and districts to the Department of Public Instruction as part of state or federally mandated data collections.
 	<br /><br /><a href="Selschool.aspx" target="_top" class="lightblue">EDIT</a> your selection<br />
-	<a href="http://dpi.wi.gov/oea/searchhelp.html" target="help" class="lightblue">Help</a>
+	<a href="http://dpi.wi.gov/oea_searchhelp" target="help" class="lightblue">Help</a>
 </span>

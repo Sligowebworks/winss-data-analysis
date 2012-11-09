@@ -53,7 +53,7 @@
             ACT results are for public school students in grade 12 who took the ACT as juniors or seniors. 
             Major changes in WI student enrollment collections were implemented in 2004-05. 2004-05 enrollment data 
             may not be comprehensive so 2004-05 test participation rates should be interpreted with caution. 
-            <a href="javascript:popup('http://www.dpi.wi.gov/spr/colleg_q&a.html')" onClick="setCookie(question, url)">[More]</a>
+            <a href="javascript:popup('http://www.dpi.wi.gov/spr_colleg_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
             </SPAN>
         </td>
     </tr>
@@ -101,7 +101,7 @@
 <%--             <uc9:BottomLinkWhatToConsider id="BottomLinkWhatToConsider1" runat="server"/>
 --%>   
 <SPAN class="text">
-	<p><a href="javascript:popup('http://dpi.wi.gov/spr/colleg_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	<p><a href="javascript:popup('http://spr.dpi.wi.gov/spr_colleg_use')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
 </SPAN>   
         </td>
     </tr>

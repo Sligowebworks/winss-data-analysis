@@ -2,7 +2,7 @@
 <asp:Panel ID="LinkPanel" runat="server">
 <p>
 <span class="text">	
-<a href="javascript:popup('https://apps2.dpi.wi.gov/sdpr/district-report.action?district=<%= DistrictCd %>')"  >
+<a href="javascript:popup('https://apps2.dpi.wi.gov/sdpr_district-report.action?district=<%= DistrictCd %>')"  >
 
 View School District Performance Report</a>
 </span>

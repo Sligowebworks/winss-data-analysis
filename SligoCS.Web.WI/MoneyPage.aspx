@@ -129,7 +129,7 @@ You may click on the "Back" button of your browser to select another type of dat
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload2" runat="server" Col="14"/>
             <SPAN class="text">
-	            <p><a href="javascript:popup('http://dpi.wi.gov/spr/money_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <p><a href="javascript:popup('http://spr.dpi.wi.gov/spr_money_use')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </SPAN>        
         </td>
     </tr>

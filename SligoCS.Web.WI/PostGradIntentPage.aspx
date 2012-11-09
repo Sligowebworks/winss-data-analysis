@@ -99,7 +99,7 @@
             <sli:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="14"/>
-	            <div class="text"><a href="javascript:popup('http://dpi.wi.gov/spr/post_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <div class="text"><a href="javascript:popup('http://spr.dpi.wi.gov/spr_post_use')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </div>        
             </td>
     </tr>

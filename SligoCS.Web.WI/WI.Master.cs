@@ -290,107 +290,107 @@ namespace SligoCS.Web.WI
                 switch (zGraph.ToString())
                 {
                     case GraphFileKeys.RETENTION:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/ret_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_ret_q%26amp%3Ba";
                         break;
                     //case  Constants.GRAPH_FILE_GGRADRATE:
-                    //    readAbout_NavigateUrl = "http://dpi.wi.gov/spr/grad_q&a.html";
+                    //    readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_grad_q%26a";
                     //    break;
                     case GraphFileKeys.HIGHSCHOOLCOMPLETION:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/grad_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_grad_q%26a";
                         break;
                     case GraphFileKeys.DROPOUTS:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/drop_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_drop_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.ATTENDANCE:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/att_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_att_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.TRUANCY:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/tru_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_tru_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.STAFF:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/staff_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_staff_q&a";
                         break;
                     case GraphFileKeys.MONEY:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/money_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_money_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.SUSPEXPINCIDENTS:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.SUSPENSIONS:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.EXPULSIONS:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.SUSPENSIONSDAYSLOST:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.EXPULSIONSDAYSLOST:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.GEXPLENGTH:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.GEXPSERVICES:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.GEXPRETURNS:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.GROUPS:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/demog_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba";
                         break;
                     //case  Constants.GRAPH_FILE_SUSPEXP:
-                    //    readAbout_NavigateUrl = "http://dpi.wi.gov/spr/discip_q&a.html";
+                    //    readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba";
                     //    break;
                     //case  Constants.GRAPH_FILE_SSACTIVITIES:
-                    //    readAbout_NavigateUrl = "http://dpi.wi.gov/spr/activi_q&a.html";
+                    //    readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_activi_q%26amp%3Ba";
                     //    break;
                     case GraphFileKeys.ActivitiesPartic:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/activi_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_activi_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.ActivityOffer:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/activi_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_activi_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.POSTGRADPLAN:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/post_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_post_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.AP:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/colleg_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_colleg_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.ACT:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/colleg_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_colleg_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.GGRADREQS:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/gradrq_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_gradrq_q%26amp%3Ba";
                         break;
                     //case  Constants.GRAPH_FILE_GCOURSEOFFER:
-                    //    readAbout_NavigateUrl = "http://dpi.wi.gov/spr/course_q&a.html";
+                    //    readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_course_q%26amp%3Ba";
                     //    break;
                     //case  Constants.GRAPH_FILE_GCOURSETAKE:
-                    //    readAbout_NavigateUrl = "http://dpi.wi.gov/spr/course_q&a.html";
+                    //    readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_course_q%26amp%3Ba";
                     //    break;
                     //case  Constants.GRAPH_FILE_TEACHERQUALIFICATIONSSCATTER:
-                    //    readAbout_NavigateUrl = "http://dpi.wi.gov/spr/teach_q&a.html";
+                    //    readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_teach_q%26a";
                     //    break;
                     case GraphFileKeys.TEACHERQUALIFICATIONS:
                     case GraphFileKeys.TQSCATTERPLOT:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/teach_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_teach_q%26a";
                         break;
                     case GraphFileKeys.DISABILITIES:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/demog_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.CoursesOffered:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/course_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_course_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.CoursesTaken:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/spr/course_q&a.html";
+                        readAbout_NavigateUrl = "http://spr.dpi.wi.gov/spr_course_q%26amp%3Ba";
                         break;
                     case GraphFileKeys.GWRCT:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/oea/hist/wrct.html";
+                        readAbout_NavigateUrl = "http://dpi.wi.gov/oea_hist/wrct";
                         break;
                     default:
-                        readAbout_NavigateUrl = "http://dpi.wi.gov/oea/kce_q&a.html";
+                        readAbout_NavigateUrl = "http://dpi.wi.gov/oea_kce_q%26amp%3Ba";
                         break;
                 }
 
@@ -452,7 +452,7 @@ namespace SligoCS.Web.WI
             if (page.ToUpper() == GraphFileKeys.TQSCATTERPLOT.ToUpper())
                 url = GraphFileKeys.TEACHERQUALIFICATIONS + user.GetBaseQueryString();
             else if (page.ToUpper() == GraphFileKeys.TEACHERQUALIFICATIONS.ToUpper() && globals.OrgLevel.Key == OrgLevelKeys.State)
-                url = "javascript:popup('http://www.dpi.wi.gov/winss/tq_scatter.html')";
+                url = "javascript:popup('http://www.dpi.wi.gov/winss_tq_scatter')";
             else if (page.ToUpper() == GraphFileKeys.TEACHERQUALIFICATIONS.ToUpper())
                 url = GraphFileKeys.TQSCATTERPLOT + user.GetBaseQueryString();
             else if (page.ToUpper() == GraphFileKeys.CompareContinuing.ToUpper()
@@ -461,11 +461,11 @@ namespace SligoCS.Web.WI
             {
                 url = (globals.OrgLevel.Key != OrgLevelKeys.State) ?
                     GraphFileKeys.StateTestsScatter + user.GetBaseQueryString() :
-                    "javascript:popup('http://www.dpi.wi.gov/winss/kcescatter.html')"; ;
+                    "javascript:popup('http://www.dpi.wi.gov/winss_kcescatter')"; ;
             }
             else if (page.ToUpper() == GraphFileKeys.StateTestsScatter.ToUpper())
                 url = GraphFileKeys.StateTests + user.GetBaseQueryString();
-            //url = "javascript:popup('http://www.dpi.wi.gov/winss/kcescatter.html')";
+            //url = "javascript:popup('http://www.dpi.wi.gov/winss_kcescatter')";
             else
             {
                 url = "";
@@ -486,19 +486,19 @@ namespace SligoCS.Web.WI
             switch (quadrant)
             {
                 case "performance.aspx":
-                    Glossary_NavigateUrl = "http://dpi.wi.gov/winss/perfacademic_glossary.html";
+                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_perfacademic_glossary";
                     break;
                 case "attendance.aspx":
-                    Glossary_NavigateUrl = "http://dpi.wi.gov/winss/attendbehave_glossary.html";
+                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_attendbehave_glossary";
                     break;
                 case "offerings.aspx":
-                    Glossary_NavigateUrl = "http://dpi.wi.gov/winss/available_glossary.html";
+                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_available_glossary";
                     break;
                 case "demographics.aspx":
-                    Glossary_NavigateUrl = "http://dpi.wi.gov/winss/studentdemo_glossary.html";
+                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_studentdemo_glossary";
                     break;
                 default:
-                    Glossary_NavigateUrl = "http://dpi.wi.gov/winss/perfacademic_glossary.html";
+                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_perfacademic_glossary";
                     break;
             }
             //Glossary.NavigateUrl = Glossary_NavigateUrl;

@@ -113,8 +113,8 @@ You may click on the "Back" button of your browser to select another type of dat
         <span class="text">
             <br />Larger red plotting symbol represents current <%= (GlobalValues.OrgLevel.Key == SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevelKeys.School)? "school." : "district." %>
 		     <br /> Some subject area tests are given only at grades 4, 8, and 10. 
-			<br />Due to 2010-11 race/ethnicity reporting changes, pre- and post-2010-11 data by race/ethnicity may not be comparable. <a href="javascript:popup('http://www.dpi.wi.gov/spr/demog_q&a.html')" onClick="setCookie(question, url)">[More]</a>
-			<br />FAY = full academic year. <a href="javascript:popup('http://dpi.wi.gov/oea/kce_q&a.html')" onclick='setCookie(question, url)'>What are WSAS, WKCE, and WAA?</a><br />
+			<br />Due to 2010-11 race/ethnicity reporting changes, pre- and post-2010-11 data by race/ethnicity may not be comparable. <a href="javascript:popup('http://www.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
+			<br />FAY = full academic year. <a href="javascript:popup('http://dpi.wi.gov/oea_kce_q%26amp%3Ba')" onclick='setCookie(question, url)'>What are WSAS, WKCE, and WAA?</a><br />
 	</span>
 	</td>
     </tr>
@@ -209,7 +209,7 @@ You may click on the "Back" button of your browser to select another type of dat
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload1" runat="server" />
             <div class="text">
-	            <a href="javascript:popup('http://dpi.wi.gov/spr/kce_use.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <a href="javascript:popup('http://spr.dpi.wi.gov/spr_kce_use')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </div>
         </td>
     </tr>

@@ -2,7 +2,7 @@
  <asp:Panel ID="LinkPanel" runat="server">
 <p>
 <SPAN class="text">				
-<a href="javascript:popup('http://dpi.wi.gov/oea/amo.html')" onClick="setCookie(question, url)">
+<a href="javascript:popup('http://dpi.wi.gov/oea_amo')" onClick="setCookie(question, url)">
 View comparison to annual measurable objectives</a>
 </SPAN>
 </p>

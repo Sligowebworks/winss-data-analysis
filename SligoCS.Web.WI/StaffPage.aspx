@@ -50,7 +50,7 @@
         <td>
 	        <SPAN class="text">	
 	         Major changes in WI student enrollment collections were implemented in 2004-05. 2004-05 enrollment data may not be comprehensive so some 2004-05 student-staff ratios should be interpreted with caution. Due to 2003-04 changes in the WI fall staff data collection, pre- and post-2003-04 staff counts may not be not comparable. 
-	        <a href="javascript:popup('http://www.dpi.wi.gov/spr/staff_q&a.html')" onClick="setCookie(question, url)">[More]</a>
+	        <a href="javascript:popup('http://www.dpi.wi.gov/spr_staff_q&a')" onClick="setCookie(question, url)">[More]</a>
 	        <br/>
 	        </SPAN> 
         </td>
@@ -84,7 +84,7 @@
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload2" runat="server" Col="14"/>
             <SPAN class="text">
-	            <p><a href="javascript:popup('http://dpi.wi.gov/spr/staff_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <p><a href="javascript:popup('http://spr.dpi.wi.gov/spr_staff_use')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </SPAN>        
         </td>
     </tr>

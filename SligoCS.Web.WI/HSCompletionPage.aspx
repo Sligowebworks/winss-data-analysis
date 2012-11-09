@@ -57,7 +57,7 @@
     <tr>
         <td>
 	<span class="text">
-	Graduation (regular diploma) and completion rate reporting changed in 2003-04 and 2009-10. 2003-04 was a year of transition to a new student data collection, and as a result 2003-04 legacy-rate data may not be comprehensive. Four-year  rates were first available in 2009-10.  See formulas for calculating <a href="javascript:popup('http://www.dpi.wi.gov/spr/grad_q&a.html#rate')" onclick="setCookie(question, url)">rates</a>.  Due to <a href="javascript:popup('http://dpi.wi.gov/spr/demog_q&a.html#race')">2010-11 race/ethnicity reporting changes</a>, pre- and post-2010-11 completion rates by race/ethnicity may not be comparable. Also note that automated processes to <a href="javascript:popup('http://www.dpi.wi.gov/lbstat/priv_more.html')" onclick="setCookie(question, url)">protect student privacy</a> were modified in spring 2012. <a href="javascript:popup('http://www.dpi.wi.gov/spr/grad_q&a.html')" onclick="setCookie(question, url)">[More]</a>  
+	Graduation (regular diploma) and completion rate reporting changed in 2003-04 and 2009-10. 2003-04 was a year of transition to a new student data collection, and as a result 2003-04 legacy-rate data may not be comprehensive. Four-year  rates were first available in 2009-10.  See formulas for calculating <a href="javascript:popup('http://www.dpi.wi.gov/spr_grad_q%26a#rate')" onclick="setCookie(question, url)">rates</a>.  Due to <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba#race')">2010-11 race/ethnicity reporting changes</a>, pre- and post-2010-11 completion rates by race/ethnicity may not be comparable. Also note that automated processes to <a href="javascript:popup('http://www.dpi.wi.gov/lbstat_priv_more')" onclick="setCookie(question, url)">protect student privacy</a> were modified in spring 2012. <a href="javascript:popup('http://www.dpi.wi.gov/spr_grad_q%26a')" onclick="setCookie(question, url)">[More]</a>  
 	</span>
         </td>
     </tr>
@@ -94,7 +94,7 @@
     <tr>
         <td>
 	
-<br /><p><span class="text">**<a href="javascript:popup('http://dpi.wi.gov/winss/perfacademic_glossary.html#expected_completer')" onclick="setCookie(question, url)">Total Expected to Complete High School</a> is the denominator used to calculate graduation and completion rates.   For the four-year rates, this total is the count of students in the <a href="javascript:popup('http://dpi.wi.gov/winss/perfacademic_glossary.html#adjusted_cohort')" onclick="setCookie(question, url)">adjusted 4-year cohort</a> for the graduating class. For the legacy rates, this total is the sum of actual high school completers, <a href="javascript:popup('http://dpi.wi.gov/winss/perfacademic_glossary.html#cohort_dropout')" onclick="setCookie(question, url)">cohort dropouts</a>, plus noncompleters who reached the <a href="javascript:popup('http://dpi.wi.gov/winss/perfacademic_glossary.html#maximum_age')" onclick="setCookie(question, url)">maximum age</a> associated with the right to a free public education.   
+<br /><p><span class="text">**<a href="javascript:popup('http://winss.dpi.wi.gov/winss_perfacademic_glossary#expected_completer')" onclick="setCookie(question, url)">Total Expected to Complete High School</a> is the denominator used to calculate graduation and completion rates.   For the four-year rates, this total is the count of students in the <a href="javascript:popup('http://winss.dpi.wi.gov/winss_perfacademic_glossary#adjusted_cohort')" onclick="setCookie(question, url)">adjusted 4-year cohort</a> for the graduating class. For the legacy rates, this total is the sum of actual high school completers, <a href="javascript:popup('http://winss.dpi.wi.gov/winss_perfacademic_glossary#cohort_dropout')" onclick="setCookie(question, url)">cohort dropouts</a>, plus noncompleters who reached the <a href="javascript:popup('http://winss.dpi.wi.gov/winss_perfacademic_glossary#maximum_age')" onclick="setCookie(question, url)">maximum age</a> associated with the right to a free public education.   
 </span></p>
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <sli:BottomLinkViewDistrictReport id="BottomLinkViewDistrictReport1" runat="server"/>
@@ -102,7 +102,7 @@
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="14"/>
             
-	            <p><span class="text"><a href="javascript:popup('http://dpi.wi.gov/spr/grad_use.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a></span></p>
+	            <p><span class="text"><a href="javascript:popup('http://spr.dpi.wi.gov/spr_grad_use')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a></span></p>
         </td>
     </tr>
 </table>

@@ -84,7 +84,7 @@
        
     <tr>
         <td>
-        <SPAN class="text">FTE: Full-Time Equivalency.&nbsp;&nbsp;Teaching assignments are as of September of each school year.&nbsp;&nbsp;"ESEA Qualified" status applies to core subjects only.&nbsp;&nbsp;<a href="javascript:popup('http://dpi.wi.gov/spr/teach_q&a.html#core_subjects')" onClick='setCookie(question, url)'>What are core subjects?</a> <a href="javascript:popup('http://dpi.wi.gov/spr/teach_q&a.html')" onClick='setCookie(question, url)'>[Cautions]</a><br></SPAN>
+        <SPAN class="text">FTE: Full-Time Equivalency.&nbsp;&nbsp;Teaching assignments are as of September of each school year.&nbsp;&nbsp;"ESEA Qualified" status applies to core subjects only.&nbsp;&nbsp;<a href="javascript:popup('http://spr.dpi.wi.gov/spr_teach_q%26a#core_subjects')" onClick='setCookie(question, url)'>What are core subjects?</a> <a href="javascript:popup('http://spr.dpi.wi.gov/spr_teach_q%26a')" onClick='setCookie(question, url)'>[Cautions]</a><br></SPAN>
         </td>
     </tr>
     <tr>
@@ -133,7 +133,7 @@
          
             <uc8:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="17"/>
         <div class="text">
-	            <a href="javascript:popup('http://dpi.wi.gov/spr/teach_use.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <a href="javascript:popup('http://spr.dpi.wi.gov/spr_teach_use')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </div>
         </td>
     </tr>

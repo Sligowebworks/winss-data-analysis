@@ -106,7 +106,7 @@
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload1" runat="server" />
             <div class="text">
-	            <a href="javascript:popup('http://dpi.wi.gov/spr/course_use.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <a href="javascript:popup('http://spr.dpi.wi.gov/spr_course_use')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </div>        
         </td>
     </tr>

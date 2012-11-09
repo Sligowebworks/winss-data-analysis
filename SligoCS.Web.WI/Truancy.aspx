@@ -30,7 +30,7 @@
               <span class="text">
 	Major changes in WI student enrollment collections were implemented in
 	2004-05. 2004-05 enrollment data may not be comprehensive so some 2004-05
-	truancy rates should be interpreted with caution. <a href="javascript:popup('http://dpi.wi.gov/spr/tru_q&a.html#cautions')" onclick="setCookie(question, url)">[More]</a>
+	truancy rates should be interpreted with caution. <a href="javascript:popup('http://spr.dpi.wi.gov/spr_tru_q%26amp%3Ba#cautions')" onclick="setCookie(question, url)">[More]</a>
 
 </span></p> </td>
         </tr>
@@ -60,10 +60,10 @@
             <tr>
         <td>
         <asp:Panel ID="DefPanel" runat="server">
-	        <div class="text">* <a href="javascript:popup('http://dpi.wi.gov/spr/tru_q&a.html')" onclick="setCookie(question, url)">Definition of Habitual Truancy changed in 1998-99</a></div>
+	        <div class="text">* <a href="javascript:popup('http://spr.dpi.wi.gov/spr_tru_q%26amp%3Ba')" onclick="setCookie(question, url)">Definition of Habitual Truancy changed in 1998-99</a></div>
             <br/>
 	        <div class="text">
-	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://dpi.wi.gov/spr/demog_q&a.html')" onclick="setCookie(question, url)">[More]</a>
+	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onclick="setCookie(question, url)">[More]</a>
 	        </div>
         </asp:Panel>
             <!-- <sli:BottomLinkEnrollmentCounts id="BottomLinkEnrollmentCounts1" runat="server"/> -->
@@ -73,7 +73,7 @@
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload1" runat="server" />
             <div class="text">
-	            <a href="javascript:popup('http://dpi.wi.gov/spr/tru_use.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <a href="javascript:popup('http://spr.dpi.wi.gov/spr_tru_use')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </div>        
         </td>
     </tr>

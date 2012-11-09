@@ -53,7 +53,7 @@
             <Graph:GraphBarChart ID="barChart" runat="server"></Graph:GraphBarChart>
             <Graph:GraphHorizBarChart ID="hrzBarChart" runat="server" />
             	<SPAN class="text"><br>
-Major changes in WI data collection systems were implemented in 2004-05. 2004-05 enrollment data were included in this transition year collection and are not comprehensive so should be interpreted with caution. Also note that, due to 2010-11 race/ethnicity reporting changes, pre- and post-2010-11 data by race/ethncity may not be comparable. <a href="javascript:popup('http://www.dpi.wi.gov/spr/demog_q&a.html')" onClick="setCookie(question, url)">[More]</a>
+Major changes in WI data collection systems were implemented in 2004-05. 2004-05 enrollment data were included in this transition year collection and are not comprehensive so should be interpreted with caution. Also note that, due to 2010-11 race/ethnicity reporting changes, pre- and post-2010-11 data by race/ethncity may not be comparable. <a href="javascript:popup('http://www.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
 	</SPAN>
         </td>
     </tr>    
@@ -144,7 +144,7 @@ Major changes in WI data collection systems were implemented in 2004-05. 2004-05
             <uc11:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <uc8:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="16"/>
             <SPAN class="text">
-	            <p><a href="javascript:popup('http://dpi.wi.gov/spr/demog_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <p><a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_use')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </p></SPAN>        
         </td>
     </tr>

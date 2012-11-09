@@ -158,7 +158,7 @@
             <asp:Panel ID="SimilarDefPanel" runat="server"><asp:Label ID="SimilarDefLabel" runat="server"></asp:Label><br /></asp:Panel>
                 <asp:Panel ID="DefPanel" runat="server">
                 <p class="text">**You define “similar” by selecting one or more criteria on the “Similar Criteria” row above the graph.   Note that all data used in defining 'similar' are the most current data available. <% Response.Write((GlobalValues.OrgLevel.Key == SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevelKeys.District) ? "Districts" : "Schools"); %> serving similar or more disadvantaged populations with similar or fewer resources are included in lists of <% Response.Write((GlobalValues.OrgLevel.Key == SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevelKeys.District) ? "districts" : "schools"); %> that outperformed your <% Response.Write((GlobalValues.OrgLevel.Key == SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevelKeys.District) ? "district" : "school"); %> to provide more sources of ideas for improvement.
-[<a href="javascript:popup('http://dpi.wi.gov/winss/similar.html')" onclick="setCookie(question, url)">More</a>] 
+[<a href="javascript:popup('http://winss.dpi.wi.gov/winss_similar')" onclick="setCookie(question, url)">More</a>] 
                 </p>
                 </asp:Panel>
                 
@@ -176,7 +176,7 @@
                 <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported" runat="server" />
                 <sli:BottomLinkDownload id="BottomLinkDownload" runat="server" />
                 <div class="text">
-                    <a href="javascript:popup('http://dpi.wi.gov/spr/kce_use.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+                    <a href="javascript:popup('http://spr.dpi.wi.gov/spr_kce_use')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
                 </div>
             </td>
     </tr>

@@ -50,7 +50,7 @@
            <Graph:GraphBarChart ID="barChart" runat="server" Visible ="false"></Graph:GraphBarChart>
            <Graph:GraphHorizBarChart ID="hrzBarChart" runat="server" Visible ="false"></Graph:GraphHorizBarChart>
               <span class="text"><br><br>
-Major changes in WI discipline data collection systems were implemented in 2006-07. WINSS data about suspensions and expulsions were included in this transition year collection and are not comprehensive so should be interpreted with caution. See other <a href="javascript:popup('http://dpi.wi.gov/spr/discip_q&a.html')" onClick="setCookie(question, url)">cautions</a> and information about discipline data on WINSS.
+Major changes in WI discipline data collection systems were implemented in 2006-07. WINSS data about suspensions and expulsions were included in this transition year collection and are not comprehensive so should be interpreted with caution. See other <a href="javascript:popup('http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba')" onClick="setCookie(question, url)">cautions</a> and information about discipline data on WINSS.
 </span>
         </td>
         </tr>
@@ -86,7 +86,7 @@ Major changes in WI discipline data collection systems were implemented in 2006-
         <td>
         <asp:Panel ID="DefPanel" runat="server">
 	        <div class="text">
-	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://dpi.wi.gov/spr/demog_q&a.html')" onclick="setCookie(question, url)">[More]</a>
+	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onclick="setCookie(question, url)">[More]</a>
 	        </div>
         </asp:Panel>
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
@@ -95,7 +95,7 @@ Major changes in WI discipline data collection systems were implemented in 2006-
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="16"/>
             <SPAN class="text">
-	            <p><a href="javascript:popup('http://dpi.wi.gov/spr/discip_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <p><a href="javascript:popup('http://spr.dpi.wi.gov/spr_discip_use')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </SPAN>        
         </td>
     </tr>

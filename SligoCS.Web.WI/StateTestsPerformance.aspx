@@ -71,11 +71,11 @@
             <Graph:GraphBarChart ID="barChart" runat="server"></Graph:GraphBarChart>
             	<span class="text"><br />
 		        
-				<br />* WINSS proficiency data for Nov 2002 through Nov 2011 are not comparable to data for earlier years, and reading and math proficiency data are not comparable to later years, due to cut score adjustments in 2002 and <a href="http://dpi.wi.gov/oea/wkce-crtcuts.html">2012</a>.   Some subject area tests are given only at grades 4, 8, and 10.  
+				<br />* WINSS proficiency data for Nov 2002 through Nov 2011 are not comparable to data for earlier years, and reading and math proficiency data are not comparable to later years, due to cut score adjustments in 2002 and <a href="http://dpi.wi.gov/oea_wkce-crtcuts">2012</a>.   Some subject area tests are given only at grades 4, 8, and 10.  
 			
-			<br /> Due to <a href="javascript:popup('http://www.dpi.wi.gov/spr/demog_q&a.html#race')" onClick="setCookie(question, url)">2010-11 race/ethnicity reporting</a> changes, pre- and post-2010-11 data by race/ethnicity may not be comparable. 
+			<br /> Due to <a href="javascript:popup('http://www.dpi.wi.gov/spr_demog_q%26amp%3Ba#race')" onClick="setCookie(question, url)">2010-11 race/ethnicity reporting</a> changes, pre- and post-2010-11 data by race/ethnicity may not be comparable. 
 		
-		<br />FAY = full academic year. <a href="javascript:popup('http://dpi.wi.gov/oea/kce_q&a.html')" onclick='setCookie(question, url)'>What are WSAS, WKCE, and WAA? [More]</a>
+		<br />FAY = full academic year. <a href="javascript:popup('http://dpi.wi.gov/oea_kce_q%26amp%3Ba')" onclick='setCookie(question, url)'>What are WSAS, WKCE, and WAA? [More]</a>
 			    
 	</span>
         </td>
@@ -144,7 +144,7 @@
 
      <tr>
         <td>
-        <div class="text"><A href=javascript:popup('http://dpi.wi.gov/oea/amo.html') onClick='setCookie(question, url)'>View comparison to annual measurable objectives</A></div>
+        <div class="text"><A href=javascript:popup('http://dpi.wi.gov/oea_amo') onClick='setCookie(question, url)'>View comparison to annual measurable objectives</A></div>
         
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <sli:BottomLinkViewDistrictReport id="BottomLinkViewDistrictReport1" runat="server"/>
@@ -152,9 +152,9 @@
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload1" runat="server" />
             <div class="text">
-	            <a href="javascript:popup('http://dpi.wi.gov/oea/naeprslt.html')" onclick="setCookie(question, url)">National Assessment of Educational Progress – Wisconsin Results</a></div>
+	            <a href="javascript:popup('http://dpi.wi.gov/oea_naeprslt')" onclick="setCookie(question, url)">National Assessment of Educational Progress – Wisconsin Results</a></div>
             <div class="text"><br />
-	            <a href="javascript:popup('http://dpi.wi.gov/spr/kce_use.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <a href="javascript:popup('http://spr.dpi.wi.gov/spr_kce_use')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </div>        
         </td>
     </tr>

@@ -214,7 +214,7 @@ namespace SligoCS.DAL.WI
         public SimilarRanges Ranges;
 
 #region Init Range Statements
-        //http://dpi.wi.gov/oea/similar.html
+        //http://dpi.wi.gov/oea_similar
 
         private SimilarRange InitSpendingRange(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {

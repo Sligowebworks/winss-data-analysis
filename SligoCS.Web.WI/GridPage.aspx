@@ -41,9 +41,9 @@
             <Graph:GraphBarChart ID="barChart" runat="server"></Graph:GraphBarChart>
             	<span class="text"><br />
 	The method of calculating retention rates changed in 2004-05.  See formula for 
-	calculating <a href="javascript:popup('http://www.dpi.wi.gov/spr/ret_q&a.html#rate')" onclick="setCookie(question, url)">rates</a>. Also note 
+	calculating <a href="javascript:popup('http://www.dpi.wi.gov/spr_ret_q%26amp%3Ba#rate')" onclick="setCookie(question, url)">rates</a>. Also note 
 	that 2004-05 was a year of transition to a new retention data collection, and as a result 2004-05 retention data may 
-	not be comprehensive. <a href="javascript:popup('http://www.dpi.wi.gov/spr/ret_q&a.html')" onclick="setCookie(question, url)">[More]</a>
+	not be comprehensive. <a href="javascript:popup('http://www.dpi.wi.gov/spr_ret_q%26amp%3Ba')" onclick="setCookie(question, url)">[More]</a>
 	</span>
         </td>
     </tr>    
@@ -182,7 +182,7 @@
            
             <uc8:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="16"/>
             <p><span class="text">
-	            <a href="javascript:popup('http://dpi.wi.gov/spr/ret_use.html')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <a href="javascript:popup('http://spr.dpi.wi.gov/spr_ret_use')" onclick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </span></p>
         </td>
     </tr>

@@ -71,7 +71,7 @@
             <uc11:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <uc8:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="16"/>
             <SPAN class="text">
-	            <p><a href="javascript:popup('http://dpi.wi.gov/spr/discip_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <p><a href="javascript:popup('http://spr.dpi.wi.gov/spr_discip_use')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </p></SPAN>        
         </td>
     </tr>

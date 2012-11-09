@@ -67,7 +67,7 @@
         <td>
             <asp:Panel ID="LinkPanel" runat="server">
                 <p>
-                <span class="text">	** State law sets a minimum standard of 13 credits in specified required subjects. Districts are encouraged by law to require a minimum of 8.5 credits in unspecified additional subjects for a total of at least 21.5 credits. Districts meet or exceed this 21.5 credit minimum standard.  <a href="javascript:popup('http://dpi.wi.gov/spr/gradrq_q&a.html')" >[More]</a>
+                <span class="text">	** State law sets a minimum standard of 13 credits in specified required subjects. Districts are encouraged by law to require a minimum of 8.5 credits in unspecified additional subjects for a total of at least 21.5 credits. Districts meet or exceed this 21.5 credit minimum standard.  <a href="javascript:popup('http://spr.dpi.wi.gov/spr_gradrq_q%26amp%3Ba')" >[More]</a>
                 </span>
                 </p>
             </asp:Panel>
@@ -77,7 +77,7 @@
             <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <sli:BottomLinkDownload id="BottomLinkDownload1" runat="server" Col="14"/>
             <SPAN class="text">
-	            <p><a href="javascript:popup('http://dpi.wi.gov/spr/gradrq_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	            <p><a href="javascript:popup('http://spr.dpi.wi.gov/spr_gradrq_use')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
             </SPAN>        
         </td>
     </tr>

@@ -41,7 +41,7 @@
 	    <SPAN class="text">	
 	     Major changes in WI student enrollment collections were implemented in 2004-05. 2004-05 enrollment data 
 	    may not be comprehensive so 2004-05 test participation rates should be interpreted with caution. 
-	    <a href="javascript:popup('http://www.dpi.wi.gov/spr/colleg_q&a.html')" onClick="setCookie(question, url)">[More]</a>
+	    <a href="javascript:popup('http://www.dpi.wi.gov/spr_colleg_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
 	    </SPAN>
         </td>
     </tr>
@@ -72,7 +72,7 @@
         <td>
         <asp:Panel ID="DefPanel" runat="server">
 	        <SPAN class="text">
-	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://dpi.wi.gov/spr/demog_q&a.html')" onClick="setCookie(question, url)">[More]</a>
+	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
 	        </SPAN>
         </asp:Panel>
             <!-- <uc10:BottomLinkEnrollmentCounts id="BottomLinkE2" runat="server"/> -->
@@ -85,7 +85,7 @@
 <%--             <uc9:BottomLinkWhatToConsider id="BottomLinkWhatToConsider1" runat="server"/>
 --%>   
 <SPAN class="text">
-	<p><a href="javascript:popup('http://dpi.wi.gov/spr/colleg_use.html')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
+	<p><a href="javascript:popup('http://spr.dpi.wi.gov/spr_colleg_use')" onClick="setCookie(question, url)">What are some questions to consider when reviewing these graphs?</a>
 </SPAN>         
         </td>
     </tr>

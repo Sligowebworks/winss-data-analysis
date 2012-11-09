@@ -23,7 +23,7 @@ namespace SligoCS.Web.WI.WebUserControls
         protected void Page_Load(object sender, EventArgs e)
         {
             globals = ((PageBaseWI)Page).GlobalValues;
-            set_link_item("WINSS", "http://dpi.wi.gov/sig/index.html", "Wins_Mortar_Guide", "wins_big", "mortar_big", "guide_big");
+            set_link_item("WINSS", "http://winss.dpi.wi.gov/", "Wins_Mortar_Guide", "wins_big", "mortar_big", "guide_big");
             data_big_gif.NavigateUrl = "~/questions.aspx" + globals.GetQueryString( string.Empty, string.Empty);
         }
 

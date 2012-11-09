@@ -8,6 +8,6 @@ Download Raw Data From This Page</a>
 </p>
 <asp:Panel ID="pnlStatewideDownload" runat="server"><p>
 <span class="text">
-<a href="<% =  StatewideDownloadUrl %>" <% = DisableAttr %>>Download All School and District Data Statewide</a>&nbsp;&nbsp;&nbsp;<a href="http://dpi.wi.gov/sig/data/download.html#statewide" target="_blank">How to use this feature.</a>
+<a href="<% =  StatewideDownloadUrl %>" <% = DisableAttr %>>Download All School and District Data Statewide</a>&nbsp;&nbsp;&nbsp;<a href="http://winss.dpi.wi.gov/winss_data_download#statewide" target="_blank">How to use this feature.</a>
 </span>
 </p></asp:Panel>

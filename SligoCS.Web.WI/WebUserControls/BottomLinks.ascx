@@ -5,7 +5,7 @@
 * Enrollment counts in this column may cover a narrower grade range 
 if the "view by: grade" option is selected or if counts are for a specific "school type" 
 (e.g. High School). 
-<a href="javascript:popup('http://dpi.wi.gov/spr/demog_q&a.html')" onClick="setCookie(question, url)">[More]</a>
+<a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
 </span>
 </p>
 
@@ -26,7 +26,7 @@ View Adequate Yearly Progress report</a>
 
 <p>
 <span class="text">	
-<a href="javascript:popup('http://dpi.wi.gov/lbstat/privacy.html')" 
+<a href="javascript:popup('http://lbstat.dpi.wi.gov/lbstat_privacy')" 
     onClick="setCookie(question, url)">
 Why are data for some student groups not reported?</a>
 </span>
@@ -41,7 +41,7 @@ Download Raw Data From This Page</a>
 
 <p>
 <span class="text">
-<a href="javascript:popup('http://dpi.wi.gov/spr/post_use.html')" onClick="setCookie(question, url)">
+<a href="javascript:popup('http://spr.dpi.wi.gov/spr_post_use')" onClick="setCookie(question, url)">
 What are some questions to consider when reviewing these graphs?</a>
 </span>
 </p>

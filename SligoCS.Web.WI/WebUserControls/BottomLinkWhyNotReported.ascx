@@ -2,7 +2,7 @@
 
 <p>
 <span class="text">	
-<a href="javascript:popup('http://dpi.wi.gov/lbstat/privacy.html')" 
+<a href="javascript:popup('http://lbstat.dpi.wi.gov/lbstat_privacy')" 
     onClick="setCookie(question, url)">
 Why are data for some student groups not reported?</a>
 </span>
