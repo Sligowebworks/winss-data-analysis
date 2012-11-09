@@ -416,11 +416,13 @@ namespace SligoCS.Web.WI
             newLabels.Add(v_TeacherQualifications.DegreeMastersOrHigherFTE, "masters_or_higher_number_fte");
             newLabels.Add(v_TeacherQualifications.DegreeMastersOrHigherFTEPercentage, "masters_or_higher_percentage_of_total");
             newLabels.Add(v_TeacherQualifications.FTE_ESEA_HQYes, "esea_qualified_number_fte");
-            newLabels.Add(v_TeacherQualifications.FTE_ESEACore_HQYes, "esea_qualified_number_fte");
             newLabels.Add(v_TeacherQualifications.EHQYesFTEPercentage, "esea_qualified_percentage_of_total");
+            newLabels.Add(v_TeacherQualifications.FTE_ESEACore_HQYes, "esea_qualified_number_core _fte");
+            newLabels.Add(v_TeacherQualifications.ESEA_Core_HQYesFTEPercentage, "esea_qualified_percentage_of_total_core");
             newLabels.Add(v_TeacherQualifications.FTE_ESEA_HQNo, "not_esea_qualified_number_fte");
-            newLabels.Add(v_TeacherQualifications.FTE_ESEACore_HQNo, "not_esea_qualified_number_fte");
+            newLabels.Add(v_TeacherQualifications.FTE_ESEACore_HQNo, "not_esea_qualified_number_core_fte");
             newLabels.Add(v_TeacherQualifications.EHQNoFTEPercentage, "not_esea_qualified_percentage_of_total");
+            newLabels.Add(v_TeacherQualifications.ESEA_Core_HQNoFTEPercentage, "not_esea_qualified_percentage_of_total_core");
             newLabels.Add(v_TeacherQualifications.LinkSubjectLabel, "subject_taught");
             return newLabels;
         }
