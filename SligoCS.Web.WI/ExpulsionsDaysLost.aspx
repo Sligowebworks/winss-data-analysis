@@ -51,7 +51,7 @@
               <p align="justify" style ="width:550px">
               <span class="text">
 
-Major changes in WI student enrollment and attendance collections were implemented in 2004-05 so these data may not be comprehensive. 2004-05 ratios and percents using enrollment and attendance data should be interpreted with caution. <a href="javascript:popup('http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
+Major changes in WI student enrollment and attendance collections were implemented in 2004-05 so these data may not be comprehensive. 2004-05 ratios and percents using enrollment and attendance data should be interpreted with caution. <a href="javascript:popup('http://spr.dpi.wi.gov/spr_discip_q&a')" onClick="setCookie(question, url)">[More]</a>
 
 </span></p> </td>
         </tr>
@@ -82,7 +82,7 @@ Major changes in WI student enrollment and attendance collections were implement
         <td>
         <asp:Panel ID="DefPanel" runat="server">
 	        <SPAN class="text">
-	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
+	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q&a')" onClick="setCookie(question, url)">[More]</a>
 	        </SPAN>
         </asp:Panel>
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>

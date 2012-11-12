@@ -28,7 +28,7 @@
             <td style="width: 291px; height: 3px;" >
               <p align="left" style ="width:475px">
               <span class="text">
-The method of calculating retention rates changed in 2004-05. See formula for calculating <a href="javascript:popup('http://spr.dpi.wi.gov/spr_ret_q%26amp%3Ba#rate')" onClick="setCookie(question, url)">rates</a>. Also note that 2004-05 was a year of transition to a new retention data collection, and as a result 2004-05 retention data may not be comprehensive. <a href="javascript:popup('http://spr.dpi.wi.gov/spr_ret_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
+The method of calculating retention rates changed in 2004-05. See formula for calculating <a href="javascript:popup('http://spr.dpi.wi.gov/spr_ret_q&a#rate')" onClick="setCookie(question, url)">rates</a>. Also note that 2004-05 was a year of transition to a new retention data collection, and as a result 2004-05 retention data may not be comprehensive. <a href="javascript:popup('http://spr.dpi.wi.gov/spr_ret_q&a')" onClick="setCookie(question, url)">[More]</a>
 </span></p> </td>
         </tr>
         <tr>
@@ -61,7 +61,7 @@ The method of calculating retention rates changed in 2004-05. See formula for ca
         <td>
         <asp:Panel ID="DefPanel" runat="server">
 	        <SPAN class="text">
-	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
+	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q&a')" onClick="setCookie(question, url)">[More]</a>
 	        </SPAN>
         </asp:Panel>
             <!-- <sli:BottomLinkEnrollmentCounts id="BottomLinkEnrollmentCounts1" runat="server"/> -->

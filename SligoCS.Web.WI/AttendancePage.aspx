@@ -35,7 +35,7 @@
             <!-- <br/> -->
               <p align="left" style ="width:475px">
               <span class="text">
-                    2004-05 was a year of transition to a new attendance data collection, and as a result 2004-05 attendance data may not be comprehensive. <a href="javascript:popup('http://spr.dpi.wi.gov/spr_att_q%26amp%3Ba')" onclick="setCookie(question, url)">[More]</a>
+                    2004-05 was a year of transition to a new attendance data collection, and as a result 2004-05 attendance data may not be comprehensive. <a href="javascript:popup('http://spr.dpi.wi.gov/spr_att_q&a')" onclick="setCookie(question, url)">[More]</a>
               </span>
               </p> 
          </td>
@@ -69,7 +69,7 @@
         <td>
         <asp:Panel ID="DefPanel" runat="server">
 	        <span class="text">
-	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onclick="setCookie(question, url)">[More]</a>
+	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q&a')" onclick="setCookie(question, url)">[More]</a>
 	        </span>
         </asp:Panel>
             <sli:BottomLinkViewReport id="BottomLinkViewReport" runat="server"/>

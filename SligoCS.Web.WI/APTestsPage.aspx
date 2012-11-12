@@ -72,7 +72,7 @@
         <td>
         <asp:Panel ID="DefPanel" runat="server">
 	        <SPAN class="text">
-	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
+	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q&a')" onClick="setCookie(question, url)">[More]</a>
 	        </SPAN>
         </asp:Panel>
             <!-- <uc10:BottomLinkEnrollmentCounts id="BottomLinkE2" runat="server"/> -->

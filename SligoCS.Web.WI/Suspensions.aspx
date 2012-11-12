@@ -54,7 +54,7 @@
             <td style="width: 291px; height: 3px;" >
               <p align="justify" style ="width:550px">
               <span class="text">
-	Major changes in WI discipline data collection systems were implemented in 2006-07. WINSS data about suspensions and expulsions were included in this transition year collection and are not comprehensive so should be interpreted with caution. See other <a href="javascript:popup('http://spr.dpi.wi.gov/spr_discip_q%26amp%3Ba')" onClick="setCookie(question, url)">cautions</a> and information about discipline data on WINSS.
+	Major changes in WI discipline data collection systems were implemented in 2006-07. WINSS data about suspensions and expulsions were included in this transition year collection and are not comprehensive so should be interpreted with caution. See other <a href="javascript:popup('http://spr.dpi.wi.gov/spr_discip_q&a')" onClick="setCookie(question, url)">cautions</a> and information about discipline data on WINSS.
 
 </span></p> </td>
         </tr>
@@ -85,7 +85,7 @@
         <td>
         <asp:Panel ID="DefPanel" runat="server">
 	        <SPAN class="text">
-	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q%26amp%3Ba')" onClick="setCookie(question, url)">[More]</a>
+	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q&a')" onClick="setCookie(question, url)">[More]</a>
 	        </SPAN>
         </asp:Panel>
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>

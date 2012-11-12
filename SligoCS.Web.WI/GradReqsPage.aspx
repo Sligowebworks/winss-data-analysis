@@ -67,7 +67,7 @@
         <td>
             <asp:Panel ID="LinkPanel" runat="server">
                 <p>
-                <span class="text">	** State law sets a minimum standard of 13 credits in specified required subjects. Districts are encouraged by law to require a minimum of 8.5 credits in unspecified additional subjects for a total of at least 21.5 credits. Districts meet or exceed this 21.5 credit minimum standard.  <a href="javascript:popup('http://spr.dpi.wi.gov/spr_gradrq_q%26amp%3Ba')" >[More]</a>
+                <span class="text">	** State law sets a minimum standard of 13 credits in specified required subjects. Districts are encouraged by law to require a minimum of 8.5 credits in unspecified additional subjects for a total of at least 21.5 credits. Districts meet or exceed this 21.5 credit minimum standard.  <a href="javascript:popup('http://spr.dpi.wi.gov/spr_gradrq_q&a')" >[More]</a>
                 </span>
                 </p>
             </asp:Panel>
