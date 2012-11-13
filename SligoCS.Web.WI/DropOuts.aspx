@@ -26,7 +26,7 @@
         <td>
             <Graph:GraphBarChart ID="barChart" runat="server"></Graph:GraphBarChart>
             	<SPAN class="text"><br>
-	The method of calculating dropout rates changed in 1998-99 and 2003-04. 2003-04 was a year of transition to a new dropout data collection, and as a result 2003-04 dropout data may not be comprehensive. <a href="javascript:popup('http://www.dpi.wi.gov/spr_drop_q&a')" onClick="setCookie(question, url)">[More]</a>
+	The method of calculating dropout rates changed in 1998-99 and 2003-04. 2003-04 was a year of transition to a new dropout data collection, and as a result 2003-04 dropout data may not be comprehensive. <a href="javascript:popup('http://spr.dpi.wi.gov/spr_drop_q&a')" onClick="setCookie(question, url)">[More]</a>
 	</SPAN>
         </td>
     </tr>    
