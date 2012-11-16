@@ -146,6 +146,7 @@
         <td>
         <div class="text"><A href=javascript:popup('http://dpi.wi.gov/oea_amo') onClick='setCookie(question, url)'>View comparison to annual measurable objectives</A></div>
         
+            <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <sli:BottomLinkViewDistrictReport id="BottomLinkViewDistrictReport1" runat="server"/>
             <sli:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>

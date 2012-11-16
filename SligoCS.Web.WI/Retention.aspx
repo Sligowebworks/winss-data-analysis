@@ -65,6 +65,7 @@ The method of calculating retention rates changed in 2004-05. See formula for ca
 	        </SPAN>
         </asp:Panel>
             <!-- <sli:BottomLinkEnrollmentCounts id="BottomLinkEnrollmentCounts1" runat="server"/> -->
+            <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <sli:BottomLinkViewDistrictReport id="BottomLinkViewDistrictReport1" runat="server"/>
             <sli:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>

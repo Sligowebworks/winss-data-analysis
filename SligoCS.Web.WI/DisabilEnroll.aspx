@@ -138,7 +138,8 @@ Major changes in WI data collection systems were implemented in 2004-05. 2004-05
         <td>
 
             <uc10:BottomLinkEnrollmentCounts id="BottomLinkEnrollmentCounts1" runat="server"/>
-            <uc6:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
+            <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
+            <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <sli:BottomlinkViewDistrictReport ID="BottomLinkViewDistrictReport" runat="server" />
             <uc7:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>
             <uc11:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />

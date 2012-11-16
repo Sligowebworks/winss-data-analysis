@@ -88,6 +88,7 @@
 	        ** Enrollment counts in this column may cover a narrower grade range if the "view by: grade" option is selected or if counts are for a specific "school type" (e.g. High School). <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q&a')" onClick="setCookie(question, url)">[More]</a>
 	        </SPAN>
         </asp:Panel>
+            <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <sli:BottomLinkViewDistrictReport id="BottomLinkViewDistrictReport1" runat="server"/>
             <sli:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>

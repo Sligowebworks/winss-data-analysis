@@ -78,6 +78,7 @@
         <td>
         <br/>
             <!-- <sli:BottomLinkEnrollmentCounts id="BottomLinkEnrollmentCounts1" runat="server"/> -->
+            <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
             <sli:BottomLinkViewReport id="BottomLinkViewReport2" runat="server"/>
             <sli:BottomLinkViewDistrictReport id="BottomLinkViewDistrictReport1" runat="server"/>
             <sli:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>

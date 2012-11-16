@@ -514,6 +514,11 @@
     <Compile Include="WebUserControls\BottomLinks.ascx.designer.cs">
       <DependentUpon>BottomLinks.ascx</DependentUpon>
     </Compile>
+    <Compile Include="WebUserControls\BottomLinkViewAccountabilityReport.ascx.cs">
+      <DependentUpon>BottomLinkViewAccountabilityReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\BottomLinkViewAccountabilityReport.designer.cs" />
     <Compile Include="WebUserControls\BottomLinkViewDistrictReport.ascx.cs">
       <DependentUpon>BottomLinkViewDistrictReport.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -991,6 +996,7 @@
     <Content Include="WebUserControls\BottomLinkEnrollmentCounts.ascx" />
     <Content Include="WebUserControls\BottomLinkMoreData.ascx" />
     <Content Include="WebUserControls\BottomLinks.ascx" />
+    <Content Include="WebUserControls\BottomLinkViewAccountabilityReport.ascx" />
     <Content Include="WebUserControls\BottomLinkViewDistrictReport.ascx" />
     <Content Include="WebUserControls\BottomLinkViewProfile.ascx" />
     <Content Include="WebUserControls\BottomLinkViewReport.ascx" />

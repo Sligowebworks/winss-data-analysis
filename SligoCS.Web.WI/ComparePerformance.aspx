@@ -105,7 +105,8 @@
           <tr>
         <td>
          <uc12:BottomLinkAMO id="BottomLinkAMO" runat="server" />
-            <uc6:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
+            <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
+            <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <uc7:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>
             <uc11:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
             <uc8:BottomLinkDownload id="BottomLinkDownload1" runat="server"/>

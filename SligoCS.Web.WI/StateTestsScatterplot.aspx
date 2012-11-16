@@ -203,6 +203,7 @@ You may click on the "Back" button of your browser to select another type of dat
      <tr>
         <td>
             
+            <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
             <sli:BottomLinkViewReport id="BottomLinkViewReport" runat="server"/>
             <sli:BottomLinkViewProfile ID="BottomLinkViewProfile" runat="server" />
             <sli:BottomLinkViewDistrictReport ID="BottomLinkViewDistrictReport" runat="server" />

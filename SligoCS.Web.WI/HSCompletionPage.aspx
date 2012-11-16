@@ -96,6 +96,7 @@
 	
 <br /><p><span class="text">**<a href="javascript:popup('http://winss.dpi.wi.gov/winss_perfacademic_glossary#expected_completer')" onclick="setCookie(question, url)">Total Expected to Complete High School</a> is the denominator used to calculate graduation and completion rates.   For the four-year rates, this total is the count of students in the <a href="javascript:popup('http://winss.dpi.wi.gov/winss_perfacademic_glossary#adjusted_cohort')" onclick="setCookie(question, url)">adjusted 4-year cohort</a> for the graduating class. For the legacy rates, this total is the sum of actual high school completers, <a href="javascript:popup('http://winss.dpi.wi.gov/winss_perfacademic_glossary#cohort_dropout')" onclick="setCookie(question, url)">cohort dropouts</a>, plus noncompleters who reached the <a href="javascript:popup('http://winss.dpi.wi.gov/winss_perfacademic_glossary#maximum_age')" onclick="setCookie(question, url)">maximum age</a> associated with the right to a free public education.   
 </span></p>
+            <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
             <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <sli:BottomLinkViewDistrictReport id="BottomLinkViewDistrictReport1" runat="server"/>
             <sli:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>

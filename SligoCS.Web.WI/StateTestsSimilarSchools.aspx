@@ -170,7 +170,8 @@
                This list ranks all ‘similar’ <% Response.Write((GlobalValues.OrgLevel.Key == SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevelKeys.District) ? "districts" : "schools"); %> by performance from highest to lowest.  Use this link to see how your <% Response.Write((GlobalValues.OrgLevel.Key == SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevelKeys.District) ? "district" : "school"); %> performance compares to the performance of all ‘similar’ <% Response.Write((GlobalValues.OrgLevel.Key == SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevelKeys.District) ? "districts" : "schools"); %>.
 
                 
-                <sli:BottomLinkViewReport id="BottomLinkViewReport" runat="server"/>
+                <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
+            <sli:BottomLinkViewReport id="BottomLinkViewReport" runat="server"/>
                 <sli:BottomLinkViewProfile ID="BottomLinkViewProfile" runat="server" />
                 <sli:BottomLinkViewDistrictReport ID="BottomLinkViewDistrictReport" runat="server" />
                 <sli:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported" runat="server" />

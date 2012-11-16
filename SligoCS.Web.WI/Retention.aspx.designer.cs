@@ -110,6 +110,15 @@ namespace SligoCS.Web.WI {
         protected global::SligoCS.Web.WI.WebUserControls.BottomLinkEnrollmentCounts BottomLinkEnrollmentCounts1;
         
         /// <summary>
+        /// BottomLinkViewAccountabilityReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::SligoCS.Web.WI.WebUserControls.BottomLinkViewAccountabilityReport BottomLinkViewAccountabilityReport;
+        
+        /// <summary>
         /// BottomLinkViewReport1 control.
         /// </summary>
         /// <remarks>

@@ -370,6 +370,9 @@ SligoCS.Web.WI/WebUserControls/BottomLinkMoreData.ascx.designer.cs -text
 SligoCS.Web.WI/WebUserControls/BottomLinkNoData.ascx -text
 SligoCS.Web.WI/WebUserControls/BottomLinkNoData.ascx.cs -text
 SligoCS.Web.WI/WebUserControls/BottomLinkNoData.ascx.designer.cs -text
+SligoCS.Web.WI/WebUserControls/BottomLinkViewAccountabilityReport.ascx -text
+SligoCS.Web.WI/WebUserControls/BottomLinkViewAccountabilityReport.ascx.cs -text
+SligoCS.Web.WI/WebUserControls/BottomLinkViewAccountabilityReport.designer.cs -text
 SligoCS.Web.WI/WebUserControls/BottomLinkViewDistrictReport.ascx -text
 SligoCS.Web.WI/WebUserControls/BottomLinkViewDistrictReport.ascx.cs -text
 SligoCS.Web.WI/WebUserControls/BottomLinkViewDistrictReport.ascx.designer.cs -text

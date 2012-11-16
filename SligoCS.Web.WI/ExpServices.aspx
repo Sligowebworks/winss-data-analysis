@@ -68,7 +68,8 @@
           <tr>
         <td>
         <br/>
-            <uc6:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
+            <sli:BottomLinkViewAccountabilityReport id="BottomLinkViewAccountabilityReport" runat="server"/>
+            <sli:BottomLinkViewReport id="BottomLinkViewReport1" runat="server"/>
             <uc:BottomlinkViewDistrictReport ID="BottomLinkViewDistrictReport" runat="server" />
             <uc7:BottomLinkViewProfile id="BottomLinkViewProfile1" runat="server"/>
             <uc11:BottomLinkWhyNotReported ID="BottomLinkWhyNotReported1" runat="server" />
