@@ -90,7 +90,7 @@
                     
                     <slx:WinssDatagridColumn MergeRows="true" DataField="SexLabel" HeaderText="&nbsp;" />
                    <slx:WinssDataGridColumn DataField="enrollment" HeaderText="Total Fall Enrollment in <nobr>Grade(s)**</nobr>" FormatString="#,##0.###" MergeRows="false"/>
-                    <slx:WinssDataGridColumn MergeRows="true" DataField="Course" HeaderText="Course Content" />
+                    <slx:WinssDataGridColumn MergeRows="false" DataField="Course" HeaderText="Course Content" />
                     <slx:WinssDataGridColumn DataField="# Who Took Course" HeaderText="Sum of Students Taking Courses" FormatString="#,##0.###"/>
                 </Columns>
             </slx:WinssDataGrid>
