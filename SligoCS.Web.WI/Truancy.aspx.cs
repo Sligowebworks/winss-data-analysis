@@ -26,7 +26,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {            
             GlobalValues.Grade.Key = GradeKeys.Grades_K_12;
-            GlobalValues.CurrentYear = 2011;
+            GlobalValues.CurrentYear = 2012;
             GlobalValues.TrendStartYear = 1997;
 
             //Don't show combined groups at District Level, until support is added in the data import.
