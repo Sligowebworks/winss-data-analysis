@@ -57,12 +57,25 @@ namespace SligoCS.DAL.WI
             //Timeframe
             TmFrm frame = Marshaller.GlobalValues.TmFrm;
 
-            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "timeframe", 
-                ( (frame.Key == TmFrmKeys.All)
-                ? new List<int>(new int[] { 0,1}) 
-                : new List<int>( new int[] { 
-                        ((frame.Key == TmFrmKeys.FourYear) ? 1 : 0)
-                    }))));
+            List<int> sqlTmFrm = null;
+            if (frame.Key == TmFrmKeys.All)
+            {
+                sqlTmFrm = new List<int>(new int[] { 0, 1, 2 });
+            }
+            else if (frame.Key == TmFrmKeys.FourYear)
+            {
+                sqlTmFrm = new List<int>( new int[] { 1 });
+            }
+            else if (frame.Key == TmFrmKeys.SixYear)
+            {
+                sqlTmFrm = new List<int>(new int[] { 2 });
+            }
+            else //if (frame.Key == TmFrmKeys.Legacy)
+            {
+                sqlTmFrm = new List<int>(new int[] { 0 });
+            }
+
+            sql.Append(SQLHelper.WhereClauseValuesInList(SQLHelper.WhereClauseJoiner.AND, "timeframe", sqlTmFrm));
 
             //order by clause
             //sb.AppendFormat(" ORDER BY {0}", SQLHelper.ConvertToCSV(orderBy, false));

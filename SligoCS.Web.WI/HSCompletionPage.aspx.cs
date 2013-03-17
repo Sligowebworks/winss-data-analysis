@@ -56,7 +56,11 @@ namespace SligoCS.Web.WI
                 || GlobalValues.TmFrm.Key == TmFrmKeys.FourYear)
             {
                 GlobalValues.TrendStartYear = 2010;
-            } 
+            }
+            else if (GlobalValues.TmFrm.Key == TmFrmKeys.SixYear)
+            {
+                GlobalValues.TrendStartYear = 2012;
+            }
             else if (GlobalValues.HighSchoolCompletion.Key == HighSchoolCompletionKeys.All)
             {
                 GlobalValues.TrendStartYear = 2004;
@@ -100,12 +104,6 @@ namespace SligoCS.Web.WI
 
             base.OnInitComplete(e);
 
-            nlrTimeFrame.LinkControlAdded += new LinkControlAddedHandler(disable6Year_LinkControlAdded);
-        }
-
-        void disable6Year_LinkControlAdded(HyperLinkPlus link)
-        {
-            if (link.ID == "linkTmFrmSixYear") link.Enabled = false;
         }
 
        protected void Page_Load(object sender, EventArgs e)
