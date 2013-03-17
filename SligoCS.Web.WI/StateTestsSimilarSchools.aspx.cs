@@ -58,7 +58,7 @@ namespace SligoCS.Web.WI
             GlobalValues.TrendStartYear = (GlobalValues.WOW.Key == WOWKeys.WKCE) ? 1997 : 2003;
             //Can't support more than current year because dbObject tblWSASDemographicsFlat has only one year
             GlobalValues.ForceCurrentYear = true;
-            GlobalValues.CurrentYear = 2012;
+            GlobalValues.CurrentYear = 2013;
 
             //View By Group Unsupported.
             GlobalValues.Group.Key = GroupKeys.All;
