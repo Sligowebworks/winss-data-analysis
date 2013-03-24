@@ -125,7 +125,7 @@ namespace SligoCS.Web.WI
 
            List<String> dgOrder = QueryMarshaller.BuildOrderByList(DataSet.Tables[0].Columns);
            //timeframe should be the second sort factor
-           dgOrder.Insert(1, "timeframe DESC");
+           dgOrder.Insert(1, "TimeFrameSort");
 
            barChart.OrderBy =  TimeFrameDataGrid.OrderBy = String.Join(",", dgOrder.ToArray());
 
