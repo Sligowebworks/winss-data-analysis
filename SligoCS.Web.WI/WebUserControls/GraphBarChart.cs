@@ -84,6 +84,11 @@ namespace SligoCS.Web.WI.WebUserControls
             get { return seriesPatterns; }
             set { seriesPatterns = value; }
         }
+        ///<summary>
+        ///CAUTION: you must add column names to the list in SaveOriginalAxisAndSeriesLabels() 
+        ///for sorting by that column to work. 
+        ///SaveOriginalAxisAndSeriesLabels() doesn't control the sort, but it enables sorting by those columns.
+        ///</summary>
         public String OrderBy
         {
             get { return orderBy; }
@@ -499,6 +504,8 @@ namespace SligoCS.Web.WI.WebUserControls
         /// gets a unique list of values for the AxisX and Series labels.
         /// Attempts to retrieve them in the correct order.
         /// Order of collections impacts the pivotDataSource method.
+        /// To enable sorting through the graph OrderBy property,
+        /// you Must add the column to the sortColumns array in this function.
         /// </summary>
         /// <param name="table"></param>
         private void SaveOriginalAxisAndSeriesLabels(DataTable table)
@@ -512,7 +519,7 @@ namespace SligoCS.Web.WI.WebUserControls
              * NOTE the Lists populated ultimately determine the sort of the graph, which will be ascending for all columns.
              */
             DataTable sorted = new DataTable();
-            String[] sortColumns = new String[] { "year", "gradecode", "racecode","race", "sex","sexcode","DisabilityCode", "EconDisadvCode", "ELPCode", "OrgLevelLabel" };
+            String[] sortColumns = new String[] { "year", "gradecode", "racecode","race", "sex","sexcode","DisabilityCode", "EconDisadvCode", "ELPCode", "OrgLevelLabel", "TimeFrameSort" };
             List<String> orderBy = new List<string>();
 
             foreach (String col in sortColumns)
