@@ -64,8 +64,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
             return (String.IsNullOrEmpty(queryString[paramName])) ? null : queryString[paramName];
         }
         /// <summary>
-        /// Gets a single Sticky Parameter from the context:  qs first,
-        /// then Default value from xml file 'StickyParameterDefaults.xml'.
+        /// Gets a single Sticky Parameter from ParameterDefaults.xm'.
         /// </summary>
         /// <param name="paramName"></param>
         /// <returns>class, object</returns>
@@ -96,7 +95,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
         }
         
         /// <summary>
-        /// Reads the system default values from XML file 'StickyParameterDefaults.xml'
+        /// Reads the system default values from XML file
         /// </summary>
         private static Dictionary<string, string> DefaultValues
         {
@@ -105,7 +104,7 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
                 if (defaultValues.Count == 0)
                 {
 
-                    string path = "..\\..\\..\\SligoCS.Web.WI\\StickyParameterDefaults.xml";
+                    string path = null;
                     //If the default values haven't already been loaded, read them from XML.
                     if ((HttpContext.Current != null) && (HttpContext.Current.Server != null))
                     {
@@ -116,9 +115,9 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
                     {
                         XmlDocument doc = new XmlDocument();
                         doc.Load(path);
-                        if (doc.LastChild.Name == "StickyParameter")
+                        if (doc.GetElementsByTagName("StickyParameter").Count > 0)
                         {
-                            XmlNode stickyParameterNode = doc.LastChild;
+                            XmlNode stickyParameterNode = doc.SelectSingleNode("StickyParameter");
                             foreach (XmlNode child in stickyParameterNode.ChildNodes)
                             {
                                 if (!defaultValues.ContainsKey(child.Name))
