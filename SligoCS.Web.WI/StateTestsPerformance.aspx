@@ -65,6 +65,11 @@
             <sli:ChangeSelectedSchoolOrDistrictLink id="ChangeSelectedSchoolOrDistrict" runat="server" />
         </td>
     </tr>
+       <asp:Panel ID="pnlNotComparable" runat="server" Visible="false" >  
+      <tr>
+        <td align="right"><p>Current Year Test Results are not Comparable*  Go to: <slb:HyperLinkPlus ID="gotocurrent" runat="server" ParamName="CompareTo" ParamValue="CURRENTONLY" Prefix="">Current Year Test Results</slb:HyperLinkPlus></p></td>
+        </tr> 
+       </asp:Panel>
          <asp:Panel ID="GraphPanel" runat="server">    
     <tr>
         <td>
