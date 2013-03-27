@@ -125,7 +125,7 @@ namespace SligoCS.Web.WI
 
            List<String> dgOrder = QueryMarshaller.BuildOrderByList(DataSet.Tables[0].Columns);
            //timeframe should be the second sort factor
-           dgOrder.Insert(1, "TimeFrameSort");
+           dgOrder.Insert(1, v_HSCWWoDisSchoolDistStateEconELPXYearRate.TimeFrameSort);
 
            barChart.OrderBy =  TimeFrameDataGrid.OrderBy = String.Join(",", dgOrder.ToArray());
 
@@ -338,6 +338,8 @@ namespace SligoCS.Web.WI
 
             cols.Add(v_HSCWWoDisSchoolDistStateEconELPXYearRate.Completers_Combined_Count);
             cols.Add(v_HSCWWoDisSchoolDistStateEconELPXYearRate.Combined_Percent);
+
+            cols.Add(v_HSCWWoDisSchoolDistStateEconELPXYearRate.TimeFrameSort);
             
             return cols;
         }
