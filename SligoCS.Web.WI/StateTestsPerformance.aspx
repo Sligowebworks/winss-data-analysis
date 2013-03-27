@@ -76,7 +76,7 @@
             <Graph:GraphBarChart ID="barChart" runat="server"></Graph:GraphBarChart>
             	<span class="text"><br />
 		        
-				<br />* WINSS proficiency data for Nov 2002 through Nov 2011 are not comparable to data for earlier years, and reading and math proficiency data are not comparable to later years, due to cut score adjustments in 2002 and <a href="http://oea.dpi.wi.gov/oea_wkce-crtcuts">2012</a>.   Some subject area tests are given only at grades 4, 8, and 10.  
+				<br />** WINSS proficiency data for Nov 2002 through Nov 2011 are not comparable to data for earlier years, and reading and math proficiency data are not comparable to later years, due to cut score adjustments in 2002 and <a href="http://oea.dpi.wi.gov/oea_wkce-crtcuts">2012</a>.   Some subject area tests are given only at grades 4, 8, and 10.  
 			
 			<br /> Due to <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q&a#race')" onClick="setCookie(question, url)">2010-11 race/ethnicity reporting</a> changes, pre- and post-2010-11 data by race/ethnicity may not be comparable. 
 		
