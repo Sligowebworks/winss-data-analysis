@@ -496,6 +496,61 @@ namespace SligoCS.DAL.WI
     {
         public const System.String year = "year";
     }
+    public struct v_Template_Keys_WWoDisEconELP_tblAgencyFull_Xyears
+    {
+        public const System.String year = "year";
+        public const System.String YearFormatted = "YearFormatted";
+        public const System.String fullkey = "fullkey";
+        public const System.String agencykey = "agencykey";
+        public const System.String CESA = "CESA";
+        public const System.String County = "County";
+        public const System.String ConferenceKey = "ConferenceKey";
+        public const System.String AgencyType = "AgencyType";
+        public const System.String schooltype = "schooltype";
+        public const System.String SchoolTypeLabel = "SchoolTypeLabel";
+        public const System.String SchoolTypeLabelShort = "SchoolTypeLabelShort";
+        public const System.String SchoolTypeLabelLong = "SchoolTypeLabelLong";
+        public const System.String RollupSchooltype = "RollupSchooltype";
+        public const System.String District_Number = "District Number";
+        public const System.String School_Number = "School Number";
+        public const System.String charter = "charter";
+        public const System.String OrgLevelLabel = "OrgLevelLabel";
+        public const System.String OrgSchoolTypeLabel = "OrgSchoolTypeLabel";
+        public const System.String OrgSchoolTypeLabelAbbr = "OrgSchoolTypeLabelAbbr";
+        public const System.String Name = "Name";
+        public const System.String District_Name = "District Name";
+        public const System.String School_Name = "School Name";
+        public const System.String Grade = "Grade";
+        public const System.String GradeCode = "GradeCode";
+        public const System.String GradeLabel = "GradeLabel";
+        public const System.String GradeShortLabel = "GradeShortLabel";
+        public const System.String Race = "Race";
+        public const System.String RaceCode = "RaceCode";
+        public const System.String RaceLabel = "RaceLabel";
+        public const System.String RaceShortLabel = "RaceShortLabel";
+        public const System.String Sex = "Sex";
+        public const System.String SexCode = "SexCode";
+        public const System.String SexLabel = "SexLabel";
+        public const System.String DisabilityCode = "DisabilityCode";
+        public const System.String DisabilityLabel = "DisabilityLabel";
+        public const System.String ShortDisabilityLabel = "ShortDisabilityLabel";
+        public const System.String EconDisadv = "EconDisadv";
+        public const System.String EconDisadvLabel = "EconDisadvLabel";
+        public const System.String ShortEconDisadvLabel = "ShortEconDisadvLabel";
+        public const System.String ELPCode = "ELPCode";
+        public const System.String ELPLabel = "ELPLabel";
+        public const System.String ShortELPLabel = "ShortELPLabel";
+        public const System.String TimeFrame = "TimeFrame";
+        public const System.String TimeFrameLabel = "TimeFrameLabel";
+        public const System.String Student_Group = "Student Group";
+        public const System.String StudentGroupLabel = "StudentGroupLabel";
+        public const System.String LinkedName = "LinkedName";
+        public const System.String LinkedDistrictName = "LinkedDistrictName";
+        public const System.String LinkedSchoolName = "LinkedSchoolName";
+        public const System.String Total_Enrollment_PreK12 = "Total Enrollment PreK-12";
+        public const System.String enrollment = "enrollment";
+        public const System.String suppressed = "suppressed";
+    }
     public struct v_Retention
     {
         public const System.String year = "year";
@@ -876,6 +931,77 @@ namespace SligoCS.DAL.WI
         public const System.String AdvancedPlusProficientTotalWSAS = "AdvancedPlusProficientTotalWSAS";
         public const System.String BasicPlusMinPerfPlusPreReqSkillsEngPlusNoWSASTotal = "BasicPlusMinPerfPlusPre-ReqSkillsEngPlusNoWSASTotal";
         public const System.String BasicPlusMinPerfPlusNoWSASTotalWSAS = "BasicPlusMinPerfPlusNoWSASTotalWSAS";
+    }
+    public struct v_HSCWWoDisSchoolDistStateEconELPXYearRate
+    {
+        public const System.String year = "year";
+        public const System.String YearFormatted = "YearFormatted";
+        public const System.String fullkey = "fullkey";
+        public const System.String agencykey = "agencykey";
+        public const System.String AgencyType = "AgencyType";
+        public const System.String CESA = "CESA";
+        public const System.String county = "county";
+        public const System.String ConferenceKey = "ConferenceKey";
+        public const System.String schooltype = "schooltype";
+        public const System.String SchoolTypeCode = "SchoolTypeCode";
+        public const System.String SchooltypeLabel = "SchooltypeLabel";
+        public const System.String District_Number = "District Number";
+        public const System.String School_Number = "School Number";
+        public const System.String charter = "charter";
+        public const System.String OrgLevelLabelNoSchoolType = "OrgLevelLabelNoSchoolType";
+        public const System.String OrgLevelLabel = "OrgLevelLabel";
+        public const System.String OrgSchoolTypeLabel = "OrgSchoolTypeLabel";
+        public const System.String OrgSchoolTypeLabelAbbr = "OrgSchoolTypeLabelAbbr";
+        public const System.String Name = "Name";
+        public const System.String District_Name = "District Name";
+        public const System.String School_Name = "School Name";
+        public const System.String GradeCode = "GradeCode";
+        public const System.String GradeLabel = "GradeLabel";
+        public const System.String GradeShortLabel = "GradeShortLabel";
+        public const System.String RaceCode = "RaceCode";
+        public const System.String RaceLabel = "RaceLabel";
+        public const System.String RaceShortLabel = "RaceShortLabel";
+        public const System.String SexCode = "SexCode";
+        public const System.String GenderCode = "GenderCode";
+        public const System.String SexLabel = "SexLabel";
+        public const System.String GenderLabel = "GenderLabel";
+        public const System.String DisabilityCode = "DisabilityCode";
+        public const System.String DisabilityLabel = "DisabilityLabel";
+        public const System.String ShortDisabilityLabel = "ShortDisabilityLabel";
+        public const System.String EconDisadv = "EconDisadv";
+        public const System.String EconDisadvLabel = "EconDisadvLabel";
+        public const System.String ShortEconDisadvLabel = "ShortEconDisadvLabel";
+        public const System.String ELPCode = "ELPCode";
+        public const System.String ELPLabel = "ELPLabel";
+        public const System.String ShortELPLabel = "ShortELPLabel";
+        public const System.String Student_Group = "Student Group";
+        public const System.String StudentGroupLabel = "StudentGroupLabel";
+        public const System.String LinkedName = "LinkedName";
+        public const System.String LinkedDistrictName = "LinkedDistrictName";
+        public const System.String LinkedSchoolName = "LinkedSchoolName";
+        public const System.String Total_Enrollment_Grade_12 = "Total Enrollment Grade 12";
+        public const System.String Suppressed = "Suppressed";
+        public const System.String kenrollment = "kenrollment";
+        public const System.String TotalExp_unsupp = "TotalExp_unsupp";
+        public const System.String XYears = "XYears";
+        public const System.String TimeFrame = "TimeFrame";
+        public const System.String TimeFrameLabel = "TimeFrameLabel";
+        public const System.String TimeFrameSort = "TimeFrameSort";
+        public const System.String Not_Continuing_Count = "Not_Continuing_Count";
+        public const System.String Maximum_Aged_Count = "Maximum_Aged_Count";
+        public const System.String Continuing_Count = "Continuing_Count";
+        public const System.String Certificate_Count = "Certificate_Count";
+        public const System.String HSED_Count = "HSED_Count";
+        public const System.String Regular_Count = "Regular_Count";
+        public const System.String Completers_Combined_Count = "Completers_Combined_Count";
+        public const System.String Total_Expected_to_Complete_High_School_Count = "Total_Expected_to_Complete_High_School_Count";
+        public const System.String Not_Continuing_Percent = "Not Continuing Percent";
+        public const System.String Students_Who_Reached_the_Maximum_Age_Percent = "Students Who Reached the Maximum Age Percent";
+        public const System.String Continuing_Percent = "Continuing Percent";
+        public const System.String Certificates_Percent = "Certificates Percent";
+        public const System.String HSEDs_Percent = "HSEDs Percent";
+        public const System.String Regular_Diplomas_Percent = "Regular Diplomas Percent";
+        public const System.String Combined_Percent = "Combined Percent";
     }
     public struct v_DropoutsWWoDisSchoolDistStateIan
     {
@@ -2079,86 +2205,6 @@ namespace SligoCS.DAL.WI
         public const System.String webaddress = "webaddress";
         public const System.String LinkedSchoolName = "LinkedSchoolName";
     }
-    public struct v_TeacherQualificationsScatterplot
-    {
-        public const System.String Year = "Year";
-        public const System.String YearFormatted = "YearFormatted";
-        public const System.String fullkey = "fullkey";
-        public const System.String agencykey = "agencykey";
-        public const System.String AgencyType = "AgencyType";
-        public const System.String CESA = "CESA";
-        public const System.String County = "County";
-        public const System.String schooltype = "schooltype";
-        public const System.String conferencekey = "conferencekey";
-        public const System.String SchooltypeCode = "SchooltypeCode";
-        public const System.String SchooltypeLabel = "SchooltypeLabel";
-        public const System.String SchooltypeLabel2 = "SchooltypeLabel2";
-        public const System.String SchooltypeLabel3 = "SchooltypeLabel3";
-        public const System.String SchooltypeLabel4 = "SchooltypeLabel4";
-        public const System.String District_Number = "District Number";
-        public const System.String School_Number = "School Number";
-        public const System.String charter = "charter";
-        public const System.String OrgLevelLabel = "OrgLevelLabel";
-        public const System.String Name = "Name";
-        public const System.String District_Name = "District Name";
-        public const System.String School_Name = "School Name";
-        public const System.String GradeCode = "GradeCode";
-        public const System.String GradeLabel = "GradeLabel";
-        public const System.String GradeShortLabel = "GradeShortLabel";
-        public const System.String RaceCode = "RaceCode";
-        public const System.String RaceLabel = "RaceLabel";
-        public const System.String RaceShortLabel = "RaceShortLabel";
-        public const System.String SexCode = "SexCode";
-        public const System.String SexLabel = "SexLabel";
-        public const System.String Student_Group = "Student Group";
-        public const System.String StudentGroupLabel = "StudentGroupLabel";
-        public const System.String LinkedName = "LinkedName";
-        public const System.String LinkedDistrictName = "LinkedDistrictName";
-        public const System.String LinkedSchoolName = "LinkedSchoolName";
-        public const System.String LinkSubjectCode = "LinkSubjectCode";
-        public const System.String LinkSubjectLabel = "LinkSubjectLabel";
-        public const System.String RelateToKey = "RelateToKey";
-        public const System.String RelateToLabel = "RelateToLabel";
-        public const System.String RelateToNumerator = "RelateToNumerator";
-        public const System.String RelateToDenominator = "RelateToDenominator";
-        public const System.String RelateToValue = "RelateToValue";
-        public const System.String LicenseFullFTEPercentage = "LicenseFullFTEPercentage";
-        public const System.String LicenseEmerFTEPercentage = "LicenseEmerFTEPercentage";
-        public const System.String LicenseNoFTEPercentage = "LicenseNoFTEPercentage";
-        public const System.String LocalExperience5YearsOrMoreFTEPercentage = "LocalExperience5YearsOrMoreFTEPercentage";
-        public const System.String TotalExperience5YearsOrMoreFTEPercentage = "TotalExperience5YearsOrMoreFTEPercentage";
-        public const System.String DegreeMastersOrHigherFTEPercentage = "DegreeMastersOrHigherFTEPercentage";
-        public const System.String FTETotal = "FTETotal";
-        public const System.String FTELicenseFull = "FTELicenseFull";
-        public const System.String LicenseEmerFTE = "LicenseEmerFTE";
-        public const System.String LicenseNoFTE = "LicenseNoFTE";
-        public const System.String EHQYesFTE = "EHQYesFTE";
-        public const System.String EHQYesFTEPercentage = "EHQYesFTEPercentage";
-        public const System.String EHQNoFTE = "EHQNoFTE";
-        public const System.String EHQNoFTEPercentage = "EHQNoFTEPercentage";
-        public const System.String LocalExperience5YearsOrLessFTE = "LocalExperience5YearsOrLessFTE";
-        public const System.String LocalExperience5YearsOrMoreFTE = "LocalExperience5YearsOrMoreFTE";
-        public const System.String TotalExperience5YearsOrLessFTE = "TotalExperience5YearsOrLessFTE";
-        public const System.String TotalExperience5YearsOrMoreFTE = "TotalExperience5YearsOrMoreFTE";
-        public const System.String DegreeMastersOrHigherFTE = "DegreeMastersOrHigherFTE";
-        public const System.String LicenseCountTotal = "LicenseCountTotal";
-        public const System.String LicenseCountFull = "LicenseCountFull";
-        public const System.String LicenseCountEmer = "LicenseCountEmer";
-        public const System.String LicenseCountNo = "LicenseCountNo";
-        public const System.String EHQCountTotal = "EHQCountTotal";
-        public const System.String EHQCountYes = "EHQCountYes";
-        public const System.String EHQCountNo = "EHQCountNo";
-        public const System.String LocalExperience = "LocalExperience";
-        public const System.String TotalExperience = "TotalExperience";
-        public const System.String DegreeHighSchool = "DegreeHighSchool";
-        public const System.String DegreeAssoc = "DegreeAssoc";
-        public const System.String DegreeBach = "DegreeBach";
-        public const System.String DegreeMast = "DegreeMast";
-        public const System.String Degree6YrSpec = "Degree6YrSpec";
-        public const System.String DegreeDoc = "DegreeDoc";
-        public const System.String DegreeOther = "DegreeOther";
-        public const System.String DegreeN = "DegreeN";
-    }
     public struct v_TruancyDistState
     {
         public const System.String year = "year";
@@ -2456,55 +2502,6 @@ namespace SligoCS.DAL.WI
         public const System.String Number_FTE_Staff = "Number FTE Staff";
         public const System.String Ratio_of_Students_to_FTE_Staff = "Ratio of Students to FTE Staff";
         public const System.String FTE_Staff_per_100_Students = "FTE Staff per 100 Students";
-    }
-    public struct v_COURSEWORK
-    {
-        public const System.String year = "year";
-        public const System.String YearFormatted = "YearFormatted";
-        public const System.String fullkey = "fullkey";
-        public const System.String agencykey = "agencykey";
-        public const System.String AgencyType = "AgencyType";
-        public const System.String CESA = "CESA";
-        public const System.String County = "County";
-        public const System.String ConferenceKey = "ConferenceKey";
-        public const System.String schooltype = "schooltype";
-        public const System.String RollupSchooltype = "RollupSchooltype";
-        public const System.String District_Number = "District Number";
-        public const System.String School_Number = "School Number";
-        public const System.String charter = "charter";
-        public const System.String OrgLevelLabel = "OrgLevelLabel";
-        public const System.String OrgSchoolTypeLabel = "OrgSchoolTypeLabel";
-        public const System.String OrgSchoolTypeLabelAbbr = "OrgSchoolTypeLabelAbbr";
-        public const System.String Name = "Name";
-        public const System.String District_Name = "District Name";
-        public const System.String School_Name = "School Name";
-        public const System.String Grade = "Grade";
-        public const System.String GradeCode = "GradeCode";
-        public const System.String GradeLabel = "GradeLabel";
-        public const System.String GradeShortLabel = "GradeShortLabel";
-        public const System.String Race = "Race";
-        public const System.String RaceCode = "RaceCode";
-        public const System.String RaceLabel = "RaceLabel";
-        public const System.String RaceShortLabel = "RaceShortLabel";
-        public const System.String Sex = "Sex";
-        public const System.String SexCode = "SexCode";
-        public const System.String SexLabel = "SexLabel";
-        public const System.String DisabilityCode = "DisabilityCode";
-        public const System.String DisabilityLabel = "DisabilityLabel";
-        public const System.String ShortDisabilityLabel = "ShortDisabilityLabel";
-        public const System.String Student_Group = "Student Group";
-        public const System.String StudentGroupLabel = "StudentGroupLabel";
-        public const System.String LinkedName = "LinkedName";
-        public const System.String LinkedDistrictName = "LinkedDistrictName";
-        public const System.String LinkedSchoolName = "LinkedSchoolName";
-        public const System.String Total_Enrollment_PreK12 = "Total Enrollment PreK-12";
-        public const System.String enrollment = "enrollment";
-        public const System.String suppressed = "suppressed";
-        public const System.String CourseTypeID = "CourseTypeID";
-        public const System.String WMASID1 = "WMASID1";
-        public const System.String Course = "Course";
-        public const System.String NUM_Who_Took_Course = "# Who Took Course";
-        public const System.String PRC_Who_Took_Course = "% Who Took Course";
     }
     public struct v_WSAS_7_14_Test_NegNumFix
     {
@@ -3820,57 +3817,6 @@ namespace SligoCS.DAL.WI
         public const System.String Graduates = "Graduates";
         public const System.String DropOutCohorts = "DropOutCohorts";
     }
-    public struct v_AP_TESTS
-    {
-        public const System.String year = "year";
-        public const System.String YearFormatted = "YearFormatted";
-        public const System.String fullkey = "fullkey";
-        public const System.String agencykey = "agencykey";
-        public const System.String AgencyType = "AgencyType";
-        public const System.String Cesa = "Cesa";
-        public const System.String schooltype = "schooltype";
-        public const System.String SchoolTypeLabel = "SchoolTypeLabel";
-        public const System.String ConferenceKey = "ConferenceKey";
-        public const System.String County = "County";
-        public const System.String District_Number = "District Number";
-        public const System.String School_Number = "School Number";
-        public const System.String charter = "charter";
-        public const System.String District_Name = "District Name";
-        public const System.String School_Name = "School Name";
-        public const System.String Name = "Name";
-        public const System.String SexLabel = "SexLabel";
-        public const System.String RaceLabel = "RaceLabel";
-        public const System.String RaceShortLabel = "RaceShortLabel";
-        public const System.String GradeLabel = "GradeLabel";
-        public const System.String Grade = "Grade";
-        public const System.String GradeName = "GradeName";
-        public const System.String Race = "Race";
-        public const System.String RaceCode = "RaceCode";
-        public const System.String Sex = "Sex";
-        public const System.String Student_Group = "Student Group";
-        public const System.String StudentGroupLabel = "StudentGroupLabel";
-        public const System.String DistState = "DistState";
-        public const System.String OrgLevelLabel = "OrgLevelLabel";
-        public const System.String OrgSchoolTypeLabel = "OrgSchoolTypeLabel";
-        public const System.String OrgSchoolTypeLabelAbbr = "OrgSchoolTypeLabelAbbr";
-        public const System.String PriorYear = "PriorYear";
-        public const System.String LinkedDistrictName = "LinkedDistrictName";
-        public const System.String LinkedName = "LinkedName";
-        public const System.String LinkedSchoolName = "LinkedSchoolName";
-        public const System.String Exam_Name = "Exam Name";
-        public const System.String ExamCode = "ExamCode";
-        public const System.String enrollment = "enrollment";
-        public const System.String totaltakers = "totaltakers";
-        public const System.String asupp = "asupp";
-        public const System.String ksupp = "ksupp";
-        public const System.String esupp = "esupp";
-        public const System.String PCTPASSING = "PCTPASSING";
-        public const System.String NUM_Taking_Exams = "# Taking Exams";
-        public const System.String PRC_Taking_Exams = "% Taking Exams";
-        public const System.String NUM_Exams_Taken = "# Exams Taken";
-        public const System.String NUM_Exams_Passed = "# Exams Passed";
-        public const System.String PRC_of_Exams_Passed = "% of Exams Passed";
-    }
     public struct v_Enrollment_WWoDis
     {
         public const System.String year = "year";
@@ -4609,6 +4555,83 @@ namespace SligoCS.DAL.WI
         public const System.String Graduates = "Graduates";
         public const System.String DropOutCohorts = "DropOutCohorts";
     }
+    public struct v_TeacherQualificationsScatterplot
+    {
+        public const System.String Year = "Year";
+        public const System.String YearFormatted = "YearFormatted";
+        public const System.String fullkey = "fullkey";
+        public const System.String agencykey = "agencykey";
+        public const System.String AgencyType = "AgencyType";
+        public const System.String CESA = "CESA";
+        public const System.String County = "County";
+        public const System.String schooltype = "schooltype";
+        public const System.String conferencekey = "conferencekey";
+        public const System.String SchooltypeCode = "SchooltypeCode";
+        public const System.String SchooltypeLabel = "SchooltypeLabel";
+        public const System.String SchooltypeLabel2 = "SchooltypeLabel2";
+        public const System.String SchooltypeLabel3 = "SchooltypeLabel3";
+        public const System.String SchooltypeLabel4 = "SchooltypeLabel4";
+        public const System.String District_Number = "District Number";
+        public const System.String School_Number = "School Number";
+        public const System.String charter = "charter";
+        public const System.String OrgLevelLabel = "OrgLevelLabel";
+        public const System.String Name = "Name";
+        public const System.String District_Name = "District Name";
+        public const System.String School_Name = "School Name";
+        public const System.String GradeCode = "GradeCode";
+        public const System.String GradeLabel = "GradeLabel";
+        public const System.String GradeShortLabel = "GradeShortLabel";
+        public const System.String RaceCode = "RaceCode";
+        public const System.String RaceLabel = "RaceLabel";
+        public const System.String RaceShortLabel = "RaceShortLabel";
+        public const System.String SexCode = "SexCode";
+        public const System.String SexLabel = "SexLabel";
+        public const System.String Student_Group = "Student Group";
+        public const System.String StudentGroupLabel = "StudentGroupLabel";
+        public const System.String LinkedName = "LinkedName";
+        public const System.String LinkedDistrictName = "LinkedDistrictName";
+        public const System.String LinkedSchoolName = "LinkedSchoolName";
+        public const System.String LinkSubjectCode = "LinkSubjectCode";
+        public const System.String LinkSubjectLabel = "LinkSubjectLabel";
+        public const System.String RelateToKey = "RelateToKey";
+        public const System.String RelateToLabel = "RelateToLabel";
+        public const System.String RelateToNumerator = "RelateToNumerator";
+        public const System.String RelateToDenominator = "RelateToDenominator";
+        public const System.String RelateToValue = "RelateToValue";
+        public const System.String LicenseFullFTEPercentage = "LicenseFullFTEPercentage";
+        public const System.String LicenseEmerFTEPercentage = "LicenseEmerFTEPercentage";
+        public const System.String LicenseNoFTEPercentage = "LicenseNoFTEPercentage";
+        public const System.String LocalExperience5YearsOrMoreFTEPercentage = "LocalExperience5YearsOrMoreFTEPercentage";
+        public const System.String TotalExperience5YearsOrMoreFTEPercentage = "TotalExperience5YearsOrMoreFTEPercentage";
+        public const System.String DegreeMastersOrHigherFTEPercentage = "DegreeMastersOrHigherFTEPercentage";
+        public const System.String FTETotal = "FTETotal";
+        public const System.String FTELicenseFull = "FTELicenseFull";
+        public const System.String LicenseEmerFTE = "LicenseEmerFTE";
+        public const System.String LicenseNoFTE = "LicenseNoFTE";
+        public const System.String EHQYesFTE = "EHQYesFTE";
+        public const System.String EHQYesFTEPercentage = "EHQYesFTEPercentage";
+        public const System.String EHQNoFTE = "EHQNoFTE";
+        public const System.String EHQNoFTEPercentage = "EHQNoFTEPercentage";
+        public const System.String LocalExperience5YearsOrLessFTE = "LocalExperience5YearsOrLessFTE";
+        public const System.String LocalExperience5YearsOrMoreFTE = "LocalExperience5YearsOrMoreFTE";
+        public const System.String TotalExperience5YearsOrLessFTE = "TotalExperience5YearsOrLessFTE";
+        public const System.String TotalExperience5YearsOrMoreFTE = "TotalExperience5YearsOrMoreFTE";
+        public const System.String DegreeMastersOrHigherFTE = "DegreeMastersOrHigherFTE";
+        public const System.String LicenseCountTotal = "LicenseCountTotal";
+        public const System.String LicenseCountFull = "LicenseCountFull";
+        public const System.String LicenseCountEmer = "LicenseCountEmer";
+        public const System.String LicenseCountNo = "LicenseCountNo";
+        public const System.String LocalExperience = "LocalExperience";
+        public const System.String TotalExperience = "TotalExperience";
+        public const System.String DegreeHighSchool = "DegreeHighSchool";
+        public const System.String DegreeAssoc = "DegreeAssoc";
+        public const System.String DegreeBach = "DegreeBach";
+        public const System.String DegreeMast = "DegreeMast";
+        public const System.String Degree6YrSpec = "Degree6YrSpec";
+        public const System.String DegreeDoc = "DegreeDoc";
+        public const System.String DegreeOther = "DegreeOther";
+        public const System.String DegreeN = "DegreeN";
+    }
     public struct v_SMALL_SCHOOL_ENR_STYPE_86_89
     {
         public const System.String year = "year";
@@ -4824,6 +4847,57 @@ namespace SligoCS.DAL.WI
         public const System.String English_Proficient = "English Proficient";
         public const System.String Number_English_Proficient = "Number English Proficient";
         public const System.String Percent_English_Proficient = "Percent English Proficient";
+    }
+    public struct v_AP_TESTS
+    {
+        public const System.String year = "year";
+        public const System.String YearFormatted = "YearFormatted";
+        public const System.String fullkey = "fullkey";
+        public const System.String agencykey = "agencykey";
+        public const System.String AgencyType = "AgencyType";
+        public const System.String Cesa = "Cesa";
+        public const System.String schooltype = "schooltype";
+        public const System.String SchoolTypeLabel = "SchoolTypeLabel";
+        public const System.String ConferenceKey = "ConferenceKey";
+        public const System.String County = "County";
+        public const System.String District_Number = "District Number";
+        public const System.String School_Number = "School Number";
+        public const System.String charter = "charter";
+        public const System.String District_Name = "District Name";
+        public const System.String School_Name = "School Name";
+        public const System.String Name = "Name";
+        public const System.String SexLabel = "SexLabel";
+        public const System.String RaceLabel = "RaceLabel";
+        public const System.String RaceShortLabel = "RaceShortLabel";
+        public const System.String GradeLabel = "GradeLabel";
+        public const System.String Grade = "Grade";
+        public const System.String GradeName = "GradeName";
+        public const System.String Race = "Race";
+        public const System.String RaceCode = "RaceCode";
+        public const System.String Sex = "Sex";
+        public const System.String Student_Group = "Student Group";
+        public const System.String StudentGroupLabel = "StudentGroupLabel";
+        public const System.String DistState = "DistState";
+        public const System.String OrgLevelLabel = "OrgLevelLabel";
+        public const System.String OrgSchoolTypeLabel = "OrgSchoolTypeLabel";
+        public const System.String OrgSchoolTypeLabelAbbr = "OrgSchoolTypeLabelAbbr";
+        public const System.String PriorYear = "PriorYear";
+        public const System.String LinkedDistrictName = "LinkedDistrictName";
+        public const System.String LinkedName = "LinkedName";
+        public const System.String LinkedSchoolName = "LinkedSchoolName";
+        public const System.String Exam_Name = "Exam Name";
+        public const System.String ExamCode = "ExamCode";
+        public const System.String enrollment = "enrollment";
+        public const System.String totaltakers = "totaltakers";
+        public const System.String asupp = "asupp";
+        public const System.String ksupp = "ksupp";
+        public const System.String esupp = "esupp";
+        public const System.String PCTPASSING = "PCTPASSING";
+        public const System.String NUM_Taking_Exams = "# Taking Exams";
+        public const System.String PRC_Taking_Exams = "% Taking Exams";
+        public const System.String NUM_Exams_Taken = "# Exams Taken";
+        public const System.String NUM_Exams_Passed = "# Exams Passed";
+        public const System.String PRC_of_Exams_Passed = "% of Exams Passed";
     }
     public struct v_WSASDemographics4810
     {
@@ -5290,73 +5364,6 @@ namespace SligoCS.DAL.WI
         public const System.String PRCNonWeaponDrugLongSusp = "%NonWeaponDrugLongSusp";
         public const System.String PRCNonWeaponDrugExp = "%NonWeaponDrugExp";
     }
-    public struct v_HSCWWoDisSchoolDistStateEconELPXYearRate
-    {
-        public const System.String year = "year";
-        public const System.String YearFormatted = "YearFormatted";
-        public const System.String fullkey = "fullkey";
-        public const System.String agencykey = "agencykey";
-        public const System.String AgencyType = "AgencyType";
-        public const System.String CESA = "CESA";
-        public const System.String county = "county";
-        public const System.String ConferenceKey = "ConferenceKey";
-        public const System.String schooltype = "schooltype";
-        public const System.String SchoolTypeCode = "SchoolTypeCode";
-        public const System.String SchooltypeLabel = "SchooltypeLabel";
-        public const System.String District_Number = "District Number";
-        public const System.String School_Number = "School Number";
-        public const System.String charter = "charter";
-        public const System.String OrgLevelLabelNoSchoolType = "OrgLevelLabelNoSchoolType";
-        public const System.String OrgLevelLabel = "OrgLevelLabel";
-        public const System.String OrgSchoolTypeLabel = "OrgSchoolTypeLabel";
-        public const System.String OrgSchoolTypeLabelAbbr = "OrgSchoolTypeLabelAbbr";
-        public const System.String Name = "Name";
-        public const System.String District_Name = "District Name";
-        public const System.String School_Name = "School Name";
-        public const System.String GradeCode = "GradeCode";
-        public const System.String GradeLabel = "GradeLabel";
-        public const System.String GradeShortLabel = "GradeShortLabel";
-        public const System.String RaceCode = "RaceCode";
-        public const System.String RaceLabel = "RaceLabel";
-        public const System.String RaceShortLabel = "RaceShortLabel";
-        public const System.String SexCode = "SexCode";
-        public const System.String SexLabel = "SexLabel";
-        public const System.String DisabilityCode = "DisabilityCode";
-        public const System.String DisabilityLabel = "DisabilityLabel";
-        public const System.String ShortDisabilityLabel = "ShortDisabilityLabel";
-        public const System.String EconDisadv = "EconDisadv";
-        public const System.String EconDisadvLabel = "EconDisadvLabel";
-        public const System.String ShortEconDisadvLabel = "ShortEconDisadvLabel";
-        public const System.String ELPCode = "ELPCode";
-        public const System.String ELPLabel = "ELPLabel";
-        public const System.String ShortELPLabel = "ShortELPLabel";
-        public const System.String Student_Group = "Student Group";
-        public const System.String StudentGroupLabel = "StudentGroupLabel";
-        public const System.String LinkedName = "LinkedName";
-        public const System.String LinkedDistrictName = "LinkedDistrictName";
-        public const System.String LinkedSchoolName = "LinkedSchoolName";
-        public const System.String Total_Enrollment_Grade_12 = "Total Enrollment Grade 12";
-        public const System.String TotalExp_unsupp = "TotalExp_unsupp";
-        public const System.String Suppressed = "Suppressed";
-        public const System.String XYears = "XYears";
-        public const System.String TimeFrame = "TimeFrame";
-        public const System.String TimeFrameLabel = "TimeFrameLabel";
-        public const System.String Not_Continuing_Count = "Not_Continuing_Count";
-        public const System.String Maximum_Aged_Count = "Maximum_Aged_Count";
-        public const System.String Continuing_Count = "Continuing_Count";
-        public const System.String Certificate_Count = "Certificate_Count";
-        public const System.String HSED_Count = "HSED_Count";
-        public const System.String Regular_Count = "Regular_Count";
-        public const System.String Completers_Combined_Count = "Completers_Combined_Count";
-        public const System.String Total_Expected_to_Complete_High_School_Count = "Total_Expected_to_Complete_High_School_Count";
-        public const System.String Not_Continuing_Percent = "Not Continuing Percent";
-        public const System.String Students_Who_Reached_the_Maximum_Age_Percent = "Students Who Reached the Maximum Age Percent";
-        public const System.String Continuing_Percent = "Continuing Percent";
-        public const System.String Certificates_Percent = "Certificates Percent";
-        public const System.String HSEDs_Percent = "HSEDs Percent";
-        public const System.String Regular_Diplomas_Percent = "Regular Diplomas Percent";
-        public const System.String Combined_Percent = "Combined Percent";
-    }
     public struct v_COURSE_OFFERINGS
     {
         public const System.String year = "year";
@@ -5541,6 +5548,57 @@ namespace SligoCS.DAL.WI
         public const System.String segment = "segment";
         public const System.String name = "name";
         public const System.String status = "status";
+    }
+    public struct v_COURSEWORK
+    {
+        public const System.String year = "year";
+        public const System.String YearFormatted = "YearFormatted";
+        public const System.String fullkey = "fullkey";
+        public const System.String agencykey = "agencykey";
+        public const System.String AgencyType = "AgencyType";
+        public const System.String CESA = "CESA";
+        public const System.String County = "County";
+        public const System.String ConferenceKey = "ConferenceKey";
+        public const System.String schooltype = "schooltype";
+        public const System.String RollupSchooltype = "RollupSchooltype";
+        public const System.String District_Number = "District Number";
+        public const System.String School_Number = "School Number";
+        public const System.String charter = "charter";
+        public const System.String OrgLevelLabel = "OrgLevelLabel";
+        public const System.String OrgSchoolTypeLabel = "OrgSchoolTypeLabel";
+        public const System.String OrgSchoolTypeLabelAbbr = "OrgSchoolTypeLabelAbbr";
+        public const System.String Name = "Name";
+        public const System.String District_Name = "District Name";
+        public const System.String School_Name = "School Name";
+        public const System.String Grade = "Grade";
+        public const System.String GradeCode = "GradeCode";
+        public const System.String GradeLabel = "GradeLabel";
+        public const System.String GradeShortLabel = "GradeShortLabel";
+        public const System.String Race = "Race";
+        public const System.String RaceCode = "RaceCode";
+        public const System.String RaceLabel = "RaceLabel";
+        public const System.String RaceShortLabel = "RaceShortLabel";
+        public const System.String Sex = "Sex";
+        public const System.String SexCode = "SexCode";
+        public const System.String SexLabel = "SexLabel";
+        public const System.String DisabilityCode = "DisabilityCode";
+        public const System.String DisabilityLabel = "DisabilityLabel";
+        public const System.String ShortDisabilityLabel = "ShortDisabilityLabel";
+        public const System.String Student_Group = "Student Group";
+        public const System.String StudentGroupLabel = "StudentGroupLabel";
+        public const System.String LinkedName = "LinkedName";
+        public const System.String LinkedDistrictName = "LinkedDistrictName";
+        public const System.String LinkedSchoolName = "LinkedSchoolName";
+        public const System.String Total_Enrollment_PreK12 = "Total Enrollment PreK-12";
+        public const System.String enrollment = "enrollment";
+        public const System.String suppressed = "suppressed";
+        public const System.String CourseTypeID = "CourseTypeID";
+        public const System.String WMASID1 = "WMASID1";
+        public const System.String topic = "topic";
+        public const System.String subjectid = "subjectid";
+        public const System.String Course = "Course";
+        public const System.String NUM_Who_Took_Course = "# Who Took Course";
+        public const System.String PRC_Who_Took_Course = "% Who Took Course";
     }
     public struct sysconstraints
     {
@@ -6060,61 +6118,6 @@ namespace SligoCS.DAL.WI
         public const System.String Year = "Year";
         public const System.String Fullkey = "Fullkey";
         public const System.String Cost_Per_Member = "Cost Per Member";
-    }
-    public struct v_Template_Keys_WWoDisEconELP_tblAgencyFull_Xyears
-    {
-        public const System.String year = "year";
-        public const System.String YearFormatted = "YearFormatted";
-        public const System.String fullkey = "fullkey";
-        public const System.String agencykey = "agencykey";
-        public const System.String CESA = "CESA";
-        public const System.String County = "County";
-        public const System.String ConferenceKey = "ConferenceKey";
-        public const System.String AgencyType = "AgencyType";
-        public const System.String schooltype = "schooltype";
-        public const System.String SchoolTypeLabel = "SchoolTypeLabel";
-        public const System.String SchoolTypeLabelShort = "SchoolTypeLabelShort";
-        public const System.String SchoolTypeLabelLong = "SchoolTypeLabelLong";
-        public const System.String RollupSchooltype = "RollupSchooltype";
-        public const System.String District_Number = "District Number";
-        public const System.String School_Number = "School Number";
-        public const System.String charter = "charter";
-        public const System.String OrgLevelLabel = "OrgLevelLabel";
-        public const System.String OrgSchoolTypeLabel = "OrgSchoolTypeLabel";
-        public const System.String OrgSchoolTypeLabelAbbr = "OrgSchoolTypeLabelAbbr";
-        public const System.String Name = "Name";
-        public const System.String District_Name = "District Name";
-        public const System.String School_Name = "School Name";
-        public const System.String Grade = "Grade";
-        public const System.String GradeCode = "GradeCode";
-        public const System.String GradeLabel = "GradeLabel";
-        public const System.String GradeShortLabel = "GradeShortLabel";
-        public const System.String Race = "Race";
-        public const System.String RaceCode = "RaceCode";
-        public const System.String RaceLabel = "RaceLabel";
-        public const System.String RaceShortLabel = "RaceShortLabel";
-        public const System.String Sex = "Sex";
-        public const System.String SexCode = "SexCode";
-        public const System.String SexLabel = "SexLabel";
-        public const System.String DisabilityCode = "DisabilityCode";
-        public const System.String DisabilityLabel = "DisabilityLabel";
-        public const System.String ShortDisabilityLabel = "ShortDisabilityLabel";
-        public const System.String EconDisadv = "EconDisadv";
-        public const System.String EconDisadvLabel = "EconDisadvLabel";
-        public const System.String ShortEconDisadvLabel = "ShortEconDisadvLabel";
-        public const System.String ELPCode = "ELPCode";
-        public const System.String ELPLabel = "ELPLabel";
-        public const System.String ShortELPLabel = "ShortELPLabel";
-        public const System.String TimeFrame = "TimeFrame";
-        public const System.String TimeFrameLabel = "TimeFrameLabel";
-        public const System.String Student_Group = "Student Group";
-        public const System.String StudentGroupLabel = "StudentGroupLabel";
-        public const System.String LinkedName = "LinkedName";
-        public const System.String LinkedDistrictName = "LinkedDistrictName";
-        public const System.String LinkedSchoolName = "LinkedSchoolName";
-        public const System.String Total_Enrollment_PreK12 = "Total Enrollment PreK-12";
-        public const System.String enrollment = "enrollment";
-        public const System.String suppressed = "suppressed";
     }
     public struct viwUDFTest
     {
