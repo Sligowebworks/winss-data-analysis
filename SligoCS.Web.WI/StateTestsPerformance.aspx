@@ -67,7 +67,7 @@
     </tr>
        <asp:Panel ID="pnlNotComparable" runat="server" Visible="false" >  
       <tr>
-        <td align="right"><p>Current Year Test Results are not Comparable*  Go to: <slb:HyperLinkPlus ID="gotocurrent" runat="server" ParamName="CompareTo" ParamValue="CURRENTONLY" Prefix="">Current Year Test Results</slb:HyperLinkPlus></p></td>
+        <td align="right"><p> Go to: <slb:HyperLinkPlus ID="gotocurrent" runat="server" ParamName="CompareTo" ParamValue="CURRENTONLY" Prefix="">Nov 2012</slb:HyperLinkPlus>** Test Results</p></td>
         </tr> 
        </asp:Panel>
          <asp:Panel ID="GraphPanel" runat="server">    
@@ -76,7 +76,7 @@
             <Graph:GraphBarChart ID="barChart" runat="server"></Graph:GraphBarChart>
             	<span class="text"><br />
 		        
-				<br />** WINSS proficiency data for Nov 2002 through Nov 2011 are not comparable to data for earlier years, and reading and math proficiency data are not comparable to later years, due to cut score adjustments in 2002 and <a href="http://oea.dpi.wi.gov/oea_wkce-crtcuts">2012</a>.   Some subject area tests are given only at grades 4, 8, and 10.  
+				<br />** Due to cut score adjustments in 2002 and <a href="javascript:popup('http://oea.dpi.wi.gov/oea_wkce-crtcuts')">2012</a>, proficiency data are not comparable over time.  WINSS proficiency data (all subjects) for Nov 2002 through Nov 2011 are not comparable to earlier years.  Some subject area tests are given only at grades 4, 8, and 10. 
 			
 			<br /> Due to <a href="javascript:popup('http://spr.dpi.wi.gov/spr_demog_q&a#race')" onClick="setCookie(question, url)">2010-11 race/ethnicity reporting</a> changes, pre- and post-2010-11 data by race/ethnicity may not be comparable. 
 		
