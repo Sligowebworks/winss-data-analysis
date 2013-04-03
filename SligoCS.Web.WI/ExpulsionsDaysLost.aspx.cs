@@ -37,7 +37,7 @@ namespace SligoCS.Web.WI
         }
         protected override void OnInitComplete(EventArgs e)
         {
-            GlobalValues.CurrentYear = 2011;
+            GlobalValues.CurrentYear = 2012;
 
             if (GlobalValues.Group.Key == GroupKeys.Disability)
             {
