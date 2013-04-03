@@ -197,9 +197,12 @@ namespace SligoCS.Web.Base.PageBase.WI
                     Response.Redirect("serveRawDataCsv.aspx");
                 }
             }
-            
-            OnDataBindTable(); //must be called after Page Load has been
-            if (Graph != null && Graph.Visible)OnDataBindGraph();
+
+            if (GlobalValues.SuperDownload.Key == SupDwnldKeys.False)
+            {
+                OnDataBindTable(); //must be called after Page Load has been
+                if (Graph != null && Graph.Visible) OnDataBindGraph();
+            }
         }
         protected virtual String GenerateRawCsvData(DataSet ds)
         {
