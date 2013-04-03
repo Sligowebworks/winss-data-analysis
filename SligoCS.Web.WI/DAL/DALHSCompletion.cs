@@ -60,15 +60,19 @@ namespace SligoCS.DAL.WI
             List<int> sqlTmFrm = null;
             if (frame.Key == TmFrmKeys.All)
             {
-                sqlTmFrm = new List<int>(new int[] { 0, 1, 2 });
+                sqlTmFrm = new List<int>(new int[] { 0, 1, 2,3 });
             }
             else if (frame.Key == TmFrmKeys.FourYear)
             {
                 sqlTmFrm = new List<int>( new int[] { 1 });
             }
-            else if (frame.Key == TmFrmKeys.SixYear)
+            else if (frame.Key == TmFrmKeys.FiveYear)
             {
                 sqlTmFrm = new List<int>(new int[] { 2 });
+            }
+            else if (frame.Key == TmFrmKeys.SixYear)
+            {
+                sqlTmFrm = new List<int>(new int[] { 3 });
             }
             else //if (frame.Key == TmFrmKeys.Legacy)
             {
