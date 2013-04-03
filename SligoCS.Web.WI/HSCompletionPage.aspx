@@ -36,9 +36,10 @@
             <RowLabel>Timeframe:</RowLabel>
             <NavigationLinks>
                 <cc1:HyperLinkPlus ID="linkTmFrmAll" runat="server" ParamName="TmFrm" ParamValue="A">All Timeframes</cc1:HyperLinkPlus>
-                <cc1:HyperLinkPlus ID="linkTmFrmFourYear" runat="server" ParamName="TmFrm" ParamValue="4">Four-Year Rate</cc1:HyperLinkPlus>
-                <cc1:HyperLinkPlus ID="linkTmFrmSixYear" runat="server" ParamName="TmFrm" ParamValue="6">Six-Year Rate</cc1:HyperLinkPlus>
-                <cc1:HyperLinkPlus ID="linkTmFrmLegacy" runat="server" ParamName="TmFrm" ParamValue="L">Legacy Rate (By Age 21)</cc1:HyperLinkPlus>
+<cc1:HyperLinkPlus ID="linkTmFrmFiveYear" runat="server" ParamName="TmFrm" ParamValue="5">Five-Year Rate</cc1:HyperLinkPlus>
+<cc1:HyperLinkPlus ID="linkTmFrmFourYear" runat="server" ParamName="TmFrm" ParamValue="4">Four-Year Rate</cc1:HyperLinkPlus>
+<cc1:HyperLinkPlus ID="linkTmFrmSixYear" runat="server" ParamName="TmFrm" ParamValue="6">Six-Year Rate</cc1:HyperLinkPlus>
+<cc1:HyperLinkPlus ID="linkTmFrmLegacy" runat="server" ParamName="TmFrm" ParamValue="L">Legacy Rate (By Age 21)</cc1:HyperLinkPlus>
             </NavigationLinks>
         </sli:NavigationLinkRow>
         <sli:NavViewByGroup ID="nlrViewByGroup" runat="server" />        

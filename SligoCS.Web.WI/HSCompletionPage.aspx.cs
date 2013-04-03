@@ -61,6 +61,10 @@ namespace SligoCS.Web.WI
             {
                 GlobalValues.TrendStartYear = 2012;
             }
+            else if (GlobalValues.TmFrm.Key == TmFrmKeys.FiveYear)
+            {
+                GlobalValues.TrendStartYear = 2012;
+            }
             else if (GlobalValues.HighSchoolCompletion.Key == HighSchoolCompletionKeys.All)
             {
                 GlobalValues.TrendStartYear = 2004;
@@ -272,7 +276,8 @@ namespace SligoCS.Web.WI
             retval.Remove(WebSupportingClasses.ColumnPicker.CommonNames.SchooltypeLabel.ToString());
 
             if (GlobalValues.CompareTo.Key == CompareToKeys.Current
-                && retval.Contains(ColumnPicker.CommonNames.LinkedName.ToString()))
+                && retval.Contains(ColumnPicker.CommonNames.LinkedName.ToString())
+                && GlobalValues.SuperDownload.Key == SupDwnldKeys.False)
                 retval.Remove(ColumnPicker.CommonNames.LinkedName.ToString());
 
             if (GlobalValues.TmFrm.Key == TmFrmKeys.All)
