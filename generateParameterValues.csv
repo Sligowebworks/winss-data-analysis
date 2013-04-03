@@ -375,6 +375,7 @@ AllSimilar | View list of all 'similar districts. | A
 
 ::TmFrm::
 All | All Timeframes | A
+FiveYear | Five-Year Rate | 5
 FourYear | Four-Year Rate | 4
 SixYear | Six-Year Rate | 6
 Legacy | Legacy Rate (By Age 21) | L
