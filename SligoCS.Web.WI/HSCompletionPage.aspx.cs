@@ -63,7 +63,7 @@ namespace SligoCS.Web.WI
             }
             else if (GlobalValues.TmFrm.Key == TmFrmKeys.FiveYear)
             {
-                GlobalValues.TrendStartYear = 2012;
+                GlobalValues.TrendStartYear = 2011;
             }
             else if (GlobalValues.HighSchoolCompletion.Key == HighSchoolCompletionKeys.All)
             {

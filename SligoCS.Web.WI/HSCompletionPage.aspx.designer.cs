@@ -101,15 +101,6 @@ namespace SligoCS.Web.WI {
         protected global::SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus linkTmFrmAll;
         
         /// <summary>
-        /// linkTmFrmFiveYear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus linkTmFrmFiveYear;
-        
-        /// <summary>
         /// linkTmFrmFourYear control.
         /// </summary>
         /// <remarks>
@@ -117,6 +108,15 @@ namespace SligoCS.Web.WI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus linkTmFrmFourYear;
+        
+        /// <summary>
+        /// linkTmFrmFiveYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::SligoCS.Web.Base.WebServerControls.WI.HyperLinkPlus linkTmFrmFiveYear;
         
         /// <summary>
         /// linkTmFrmSixYear control.
