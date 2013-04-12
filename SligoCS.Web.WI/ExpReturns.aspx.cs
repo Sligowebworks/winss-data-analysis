@@ -29,7 +29,7 @@ namespace SligoCS.Web.WI
             }
 
             GlobalValues.TrendStartYear = 2001;
-            GlobalValues.CurrentYear = 2011;
+            GlobalValues.CurrentYear = 2012;
 
             //STYP not supported
             GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
