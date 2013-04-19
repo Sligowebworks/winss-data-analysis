@@ -74,16 +74,6 @@ namespace SligoCS.Web.WI
         {
             GlobalValues.TrendStartYear = (GlobalValues.WOW.Key == WOWKeys.WKCE) ? 1997 : 2003;
             GlobalValues.CurrentYear = 2013;
-
-            if ((GlobalValues.SubjectID.Key == SubjectIDKeys.Math 
-                || GlobalValues.SubjectID.Key == SubjectIDKeys.Reading)
-                && GlobalValues.CompareTo.Key == CompareToKeys.Years)
-            {
-                if (GlobalValues.Year > 2012)
-                {
-                    GlobalValues.CurrentYear = 2012;
-                }
-            }
            
             QueryMarshaller.RaceDisagCodes.Add((int)QueryMarshaller.RaceCodes.RaceEth_NA);
 
@@ -155,6 +145,15 @@ namespace SligoCS.Web.WI
 
             if (GlobalValues.OrgLevel.Key == OrgLevelKeys.District)
                 QueryMarshaller.RaceDisagCodes.Add((int)QueryMarshaller.RaceCodes.Comb);
+
+            // Give other overrides a chance to have effect before overriding Year
+            if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
+            { //due to changes is cut scores, years are not comparable.
+                if (GlobalValues.Year > 2012)
+                {
+                    GlobalValues.CurrentYear = 2012;
+                }
+            }
         }
 
         void renameLevelLabels_LinkControlAdded(HyperLinkPlus link)
@@ -229,9 +228,7 @@ namespace SligoCS.Web.WI
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((GlobalValues.SubjectID.Key == SubjectIDKeys.Math 
-                || GlobalValues.SubjectID.Key == SubjectIDKeys.Reading)
-                && GlobalValues.CompareTo.Key == CompareToKeys.Years)
+            if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
             {
                     pnlNotComparable.Visible = true;
             }
