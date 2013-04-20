@@ -149,10 +149,25 @@ namespace SligoCS.Web.WI
             // Give other overrides a chance to have effect before overriding Year
             if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
             { //due to changes is cut scores, years are not comparable.
-                if (GlobalValues.Year > 2012)
+                if (GlobalValues.Year > 2012
+                    && GlobalValues.SubjectID.Key == SubjectIDKeys.Reading
+                    || GlobalValues.SubjectID.Key == SubjectIDKeys.Math)
                 {
                     GlobalValues.CurrentYear = 2012;
                 }
+                if (GlobalValues.SubjectID.Key == SubjectIDKeys.AllTested)
+                { // Override Subject
+                    GlobalValues.SubjectID.Key = SubjectIDKeys.Reading;
+                }
+                nlrSubject.LinkControlAdded += new LinkControlAddedHandler(nlrSubject_LinkControlAdded_DisableAllSubjects);
+            }
+        }
+
+        void nlrSubject_LinkControlAdded_DisableAllSubjects(HyperLinkPlus link)
+        {
+            if (link.ID == "linkSubjectIDAllTested")
+            {
+                link.Enabled = false;
             }
         }
 
@@ -230,7 +245,7 @@ namespace SligoCS.Web.WI
         {
             if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
             {
-                    pnlNotComparable.Visible = true;
+                pnlNotComparable.Visible = true;
             }
             
 
