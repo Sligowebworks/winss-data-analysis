@@ -149,17 +149,19 @@ namespace SligoCS.Web.WI
             // Give other overrides a chance to have effect before overriding Year
             if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
             { //due to changes is cut scores, years are not comparable.
+                /*if (GlobalValues.SubjectID.Key == SubjectIDKeys.AllTested)
+                { // Override Subject
+                    GlobalValues.SubjectID.Key = SubjectIDKeys.Reading;
+                } */
                 if (GlobalValues.Year > 2012
-                    && GlobalValues.SubjectID.Key == SubjectIDKeys.Reading
-                    || GlobalValues.SubjectID.Key == SubjectIDKeys.Math)
+                    && (GlobalValues.SubjectID.Key == SubjectIDKeys.Reading
+                    || GlobalValues.SubjectID.Key == SubjectIDKeys.Math
+                    || GlobalValues.SubjectID.Key == SubjectIDKeys.AllTested))
                 {
                     GlobalValues.CurrentYear = 2012;
                 }
-                if (GlobalValues.SubjectID.Key == SubjectIDKeys.AllTested)
-                { // Override Subject
-                    GlobalValues.SubjectID.Key = SubjectIDKeys.Reading;
-                }
-                nlrSubject.LinkControlAdded += new LinkControlAddedHandler(nlrSubject_LinkControlAdded_DisableAllSubjects);
+                
+                //nlrSubject.LinkControlAdded += new LinkControlAddedHandler(nlrSubject_LinkControlAdded_DisableAllSubjects);
             }
         }
 
@@ -243,7 +245,11 @@ namespace SligoCS.Web.WI
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (GlobalValues.CompareTo.Key == CompareToKeys.Years)
+            if (GlobalValues.CompareTo.Key == CompareToKeys.Years
+                && (GlobalValues.SubjectID.Key == SubjectIDKeys.Math
+                || GlobalValues.SubjectID.Key == SubjectIDKeys.Reading
+                || GlobalValues.SubjectID.Key == SubjectIDKeys.AllTested)
+               )
             {
                 pnlNotComparable.Visible = true;
             }
