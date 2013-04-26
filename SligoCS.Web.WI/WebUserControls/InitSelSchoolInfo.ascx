@@ -22,6 +22,6 @@ The database should return a list of schools or districts. Each school or distri
 See also <a href="javascript:popup('http://winss.dpi.wi.gov/winss_work_settings')" class="lightblue">Workstation Settings</a>. To use this web application, you must have cookies enabled in your browser. 
 </td></tr>
 <tr><td style="width: 185px">
-<br />Data for private schools participating in the <a href="javascript:popup('http://oea.dpi.wi.gov/oea_wkce_mpcp')"  class="lightblue" >Milwaukee Parental Choice Program</a> are available. 
+<br />Data for private schools participating in the <a href="javascript:popup('http://oea.dpi.wi.gov/oea_mpcp_results')"  class="lightblue" >Milwaukee Parental Choice Program</a> are available. 
 &nbsp;</td></tr>
 </table>
