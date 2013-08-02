@@ -110,8 +110,14 @@ namespace SligoCS.DAL.WI
         public string BuildWsasSimilarCurrentAgencyQuery(SligoCS.BL.WI.QueryMarshaller Marshaller)
         {
             StringBuilder sql = new StringBuilder();
-            String dbObject = "v_WSASDemographics";
             Marshaller.InitFullkeyList();
+
+            String dbObject =
+                ((Marshaller.GlobalValues.SubjectID.Key == SubjectIDKeys.Reading
+                || Marshaller.GlobalValues.SubjectID.Key == SubjectIDKeys.Math) ?
+                "v_WSASDemographics"
+                : "v_WSASDemographics4810"
+                    );
 
             sql.Append(Marshaller.SelectListFromVisibleColumns(dbObject));
 
