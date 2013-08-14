@@ -50,7 +50,7 @@ namespace SligoCS.Web.WI
             GlobalValues.Grade.Key = GradeKeys.Combined_PreK_12;
 
             GlobalValues.TrendStartYear = 1996;
-            GlobalValues.CurrentYear = 2012;
+            GlobalValues.CurrentYear = 2013;
 
             //STYP not supported
             GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
