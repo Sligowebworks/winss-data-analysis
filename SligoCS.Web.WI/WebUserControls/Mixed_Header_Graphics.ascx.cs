@@ -24,8 +24,8 @@ namespace SligoCS.Web.WI.WebUserControls
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            set_link_item("WINSS", "http://winss.dpi.wi.gov/", "Wins_Mortar_Guide", "wins_big", "mortar_big", "guide_big");
-            set_link_item2("Data_Analysis", "~/questions.aspx", "Data_Analysis", "data_sm_lft", "data_sm_rt");
+            set_link_item("WINSS - Data_Analysis", "~/questions.aspx", "Wins_Mortar_Guide", "wins_big", "mortar_big", "guide_big");
+            set_link_item2("WINSS - Data_Analysis", "~/questions.aspx", "Data_Analysis", "data_sm_lft", "data_sm_rt");
         }
 
         private void set_link_item(string link_text, string nav_url, string placeholder_name, string pic_name1, string pic_name2, string pic_name3)
@@ -52,7 +52,9 @@ namespace SligoCS.Web.WI.WebUserControls
             HyperLink item_link = new HyperLink();
             item_link.ID = placeholder_name + "_link";
             item_link.Text = link_text;
-            item_link.NavigateUrl = user.CreateNewURL( nav_url,  string.Empty, string.Empty);
+            item_link.NavigateUrl = user.CreateNewURL(nav_url,
+                            globals.GraphFile.Name,
+                            globals.GraphFile.Range[GraphFileKeys.BLANK_REDIRECT_PAGE]);
 
             item_link.Attributes.Add("onMouseOver", "img_hot('" + pic_name2 + "')");
             item_link.Attributes.Add("onMouseOut", "img_cool('" + pic_name2 + "')");

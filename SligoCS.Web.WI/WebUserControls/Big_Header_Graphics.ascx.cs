@@ -19,11 +19,12 @@ namespace SligoCS.Web.WI.WebUserControls
     public partial class Big_Header_Graphics : System.Web.UI.UserControl
     {
         protected GlobalValues globals = null;
+        protected GlobalValues user = null;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             globals = ((PageBaseWI)Page).GlobalValues;
-            set_link_item("WINSS", "http://winss.dpi.wi.gov/", "Wins_Mortar_Guide", "wins_big", "mortar_big", "guide_big");
+            set_link_item("WINSS", "~/questions.aspx", "Wins_Mortar_Guide", "wins_big", "mortar_big", "guide_big");
             data_big_gif.NavigateUrl = "~/questions.aspx" + globals.GetQueryString( string.Empty, string.Empty);
         }
 
@@ -31,6 +32,7 @@ namespace SligoCS.Web.WI.WebUserControls
         {
             string controlID = placeholder_name.ToString();
             globals = ((PageBaseWI)Page).GlobalValues;
+            user = ((PageBaseWI)Page).UserValues;
 
             Image myImage1 = new Image();
             myImage1.AlternateText = link_text;
@@ -50,8 +52,9 @@ namespace SligoCS.Web.WI.WebUserControls
             HyperLink item_link = new HyperLink();
             item_link.ID = placeholder_name + "_link";
             item_link.Text = link_text;
-            item_link.NavigateUrl = nav_url
-               + globals.GetQueryString(string.Empty, string.Empty);
+            item_link.NavigateUrl = user.CreateNewURL(nav_url,
+                            globals.GraphFile.Name,
+                            globals.GraphFile.Range[GraphFileKeys.BLANK_REDIRECT_PAGE]);
 
             item_link.Attributes.Add("onMouseOver", "img_hot('" + pic_name2 + "')");
             item_link.Attributes.Add("onMouseOut", "img_cool('" + pic_name2 + "')");
