@@ -33,51 +33,7 @@ function deleteCookie(){
 }
 
 function writeGuideHeader(){
-	var color;
-	var xclose;
-	if (url.indexOf("assessment") != -1){
-		color = "#E1F1F3";
-		xclose = "/sig/images/bclose.gif";
-	}
-	else if (url.indexOf("practices") != -1){
-		color = "#CBE9DD";
-		xclose = "/sig/images/cclose.gif";
-	}
-	else if (url.indexOf("improvement") != -1){
-		color = "#FAE9BF";
-		xclose = "/sig/images/aclose.gif";
-	}
-	else if (url.indexOf("data") != -1){
-		color = "#F5C7D5";
-		xclose = "/sig/images/dclose.gif";
-	}
-	document.write(
-'<div style="margin-top: -0px;  margin-right: -0px;  margin-left: -0px;  margin-bottom: 0px;  padding: 0">',
-'<table width="100%" border="0" cellspacing="0" cellpadding="0">',
-'<form action="" method="POST" id="UAQA_Header">',
-'<tr valign="top"  bgcolor="',color,'">',
-'<td width="100">&nbsp;&nbsp;</td>',
-'<td width="185"><a href="/sig/index.html"><img src="/sig/images/wins_sm.gif" alt="" border="0"><img src="/sig/images/mortar.gif" alt="" border="0" name=mortar><img src="/sig/images/guide_sm.gif" alt="" border="0"></a><BR><img src="/sig/images/mortartip_sm.gif" alt="" border="0"></td>',
-'<td width="24">&nbsp;&nbsp;</td>',
-'<td width="100%" valign="middle"><img src="/sig/images/spacer.gif" width=1 height=1 alt="" border="0"><br>',
-'<b><font face="Verdana, Arial, Helvetica" size="2"><a href="', url, '">', question, '</a></font></b>',
-'</font></td>',
-'<td width="220" align="right" valign="middle"><nobr><select name="section" onchange="a = this.options[this.selectedIndex].value; location=a;">',
-'<option value="" selected>Go to:</option>',
-'<option value="/">DPI Home</option>',
-'<option value="/sig/">WINSS Home</option>',
-'<option value="mailto:winss@dpi.wi.gov?Subject=WINSS feedback">comments / feedback</option>',
-'<option value="/sig/assessment"> --- Standards and Assessment</option>',
-'<option value="http://',mydomain,':31489/selschool.aspx"> --- Data Analysis</option>',
-'<option value="/sig/improvement/"> --- Continuous Improvement</option>',
-'<option value="/sig/practices"> --- Best Practices</option>',
-'<option value="/dpi/search.html">Site Search</option></select>',
-'<a href="javascript:deleteCookie();document.location.reload();"><img src="',xclose,'" width=16 height=16 vspace=2 hspace=2 alt="" border="0"></a></nobr></td>',
-'</tr>',
-'<tr valign="TOP"><td width="100%" height="2" colspan="5"><img src="/sig/images/black.gif" width="100%" height=1 alt="" border="0"><br>&nbsp;</td></tr>',
-'</form>',
-'</table>',
-'</div>');
+    alert('Error in cookies.js,  writeGuideHeader()');
 }
 
 // following code used for WINSS survey popup
