@@ -59,9 +59,8 @@ namespace SligoCS.Web.WI
             SerializableDictionary<String, String> range = GlobalValues.GraphFile.Range;
 
             set_list_item_link("How did students perform on state tests at grades 3-8 and 10?",
-                "~/" + GraphFileKeys.StateTests, list_items.state_tests);
-            set_list_item_link("How did performance of all students enrolled compare to continuing students only?", 
-                "~/" + GraphFileKeys.CompareContinuing, list_items.all_vs_continuing);
+                "http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/WSAS%20%28WKCE%20and%20WAA-SwD%29", 
+                list_items.state_tests);
             set_list_item_link("How did students perform on the Wisconsin Reading Comprehension Test? (Last administered March 2005)", 
                 "~/" + GraphFileKeys.GWRCT, list_items.wrct);
             set_list_item_link("What percent of students did not advance to the next grade level?",
@@ -71,8 +70,6 @@ namespace SligoCS.Web.WI
             //to fix #1017, so comment out the if statement below. #1017 : performance page - not showing all questions at state level 
             if (GlobalValues.HIGHGRADE == 64 || base.GlobalValues.OrgLevel.Key == OrgLevelKeys.State )
             {
-                set_list_item_link("How did students perform on college admissions and placement tests?", 
-                    "~/" + GraphFileKeys.ACT, list_items.coll_admit_placement);
                 set_list_item_link("What are the high school completion rates? (Schools with grade 12 only)",
                     "~/" + GraphFileKeys.HIGHSCHOOLCOMPLETION, list_items.hs_completion);
                 set_list_item_link("What are students' postgraduation plans? (Schools with grade 12 only)", 

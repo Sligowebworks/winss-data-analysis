@@ -51,8 +51,6 @@ namespace SligoCS.Web.WI
 
         private void set_list_links()
         {
-            set_list_item_link("What percent of students attend school each day?",
-                "~/" + GraphFileKeys.ATTENDANCE, list_items.attend);
             set_list_item_link( "What percent of students are habitually truant?", 
                 "~/" + GraphFileKeys.TRUANCY, list_items.truant);
             set_list_item_link("Do students participate in school supported activities?",

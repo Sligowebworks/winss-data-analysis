@@ -45,8 +45,6 @@ namespace SligoCS.Web.WI
 
         private void set_list_links()
         {
-            set_list_item_link("What is the enrollment by student group?",
-                "~/" + GraphFileKeys.GROUPS, list_items.groups);
             set_list_item_link("What are the primary disabilities of students in need of special education services?",
                 "~/" + GraphFileKeys.DISABILITIES, list_items.disabilities);
         }

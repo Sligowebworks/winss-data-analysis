@@ -481,27 +481,8 @@ namespace SligoCS.Web.WI
         private void SetGlossaryLink()
         {
             string quadrant = globals.Qquad;
-            string Glossary_NavigateUrl = string.Empty;
+            string Glossary_NavigateUrl = "http://wise.dpi.wi.gov/wisedash_glossary";
 
-            switch (quadrant)
-            {
-                case "performance.aspx":
-                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_perfacademic_glossary";
-                    break;
-                case "attendance.aspx":
-                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_attendbehave_glossary";
-                    break;
-                case "offerings.aspx":
-                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_available_glossary";
-                    break;
-                case "demographics.aspx":
-                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_studentdemo_glossary";
-                    break;
-                default:
-                    Glossary_NavigateUrl = "http://winss.dpi.wi.gov/winss_perfacademic_glossary";
-                    break;
-            }
-            //Glossary.NavigateUrl = Glossary_NavigateUrl;
             Glossary.NavigateUrl = "javascript:void(0)";
             Glossary.Attributes.Add("Onclick", "popup('" + Glossary_NavigateUrl + "'); return true;");
             Glossary.Attributes.Add("onmouseover", "window.status='" + Glossary_NavigateUrl + "'; return true;");

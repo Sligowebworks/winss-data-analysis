@@ -14,12 +14,8 @@
     <asp:PlaceHolder ID="state_tests" runat="server" />
 
     <asp:Panel ID="pnl_HasG3" runat="server">
-    <asp:Label ID="Label3" runat="server" Font-Italic="true" Text="(Percents and totals include continuing students only, not newly enrolled students)." />
+    <asp:Label ID="Label3" runat="server" Font-Italic="true" Text="(Goes to: WISEdash WSAS)" />
     </asp:Panel>
-</li>
-
-<li>
-    <asp:PlaceHolder ID="all_vs_continuing" runat="server" />
 </li>
         
 <asp:Panel ID="pnl_WRCT" runat="server" Visible="false">
@@ -44,8 +40,9 @@
 
 <asp:Panel ID="pnl_grade_12" Visible="false" runat="server">
 
-<li>
-    <asp:PlaceHolder ID="coll_admit_placement" runat="server" />
+<li>How did students perform on college admissions and placement tests?  
+    (Go to: <a href="http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/ACT">WISEdash ACT</a> and 
+    <a href="http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/AP">WISEdash Advanced Placement Program  Exams</a> )
 </li>			
 
 <li>
