@@ -58,9 +58,6 @@ namespace SligoCS.Web.WI
             
             SerializableDictionary<String, String> range = GlobalValues.GraphFile.Range;
 
-            set_list_item_link("How did students perform on state tests at grades 3-8 and 10?",
-                "http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/WSAS%20%28WKCE%20and%20WAA-SwD%29", 
-                list_items.state_tests);
             set_list_item_link("How did students perform on the Wisconsin Reading Comprehension Test? (Last administered March 2005)", 
                 "~/" + GraphFileKeys.GWRCT, list_items.wrct);
             set_list_item_link("What percent of students did not advance to the next grade level?",

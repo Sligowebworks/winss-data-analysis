@@ -29,15 +29,6 @@ namespace SligoCS.Web.WI {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// state_tests control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder state_tests;
-        
-        /// <summary>
         /// pnl_HasG3 control.
         /// </summary>
         /// <remarks>
@@ -45,15 +36,6 @@ namespace SligoCS.Web.WI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnl_HasG3;
-        
-        /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
         /// pnl_WRCT control.

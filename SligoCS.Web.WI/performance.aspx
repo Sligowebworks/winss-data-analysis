@@ -10,13 +10,11 @@
 <tr><td>
 <ul class="text">
 <asp:Label ID="Label1" runat="server" Font-Bold = "true" Text="Examining School Performance on Statewide Tests." />
-<li>
-    <asp:PlaceHolder ID="state_tests" runat="server" />
+<li>How did students perform on state tests at grades 3-8 and 10?
+(Go to: <a href="http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/WSAS%20%28WKCE%20and%20WAA-SwD%29">WISEdash WSAS</a>)</li>   
 
-    <asp:Panel ID="pnl_HasG3" runat="server">
-    <asp:Label ID="Label3" runat="server" Font-Italic="true" Text="(Goes to: WISEdash WSAS)" />
-    </asp:Panel>
-</li>
+   <asp:Panel ID="pnl_HasG3" runat="server"></asp:Panel>
+
         
 <asp:Panel ID="pnl_WRCT" runat="server" Visible="false">
     <li>
