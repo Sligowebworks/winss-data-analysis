@@ -74,6 +74,7 @@ namespace SligoCS.Web.Base.PageBase.WI
             System.Diagnostics.Debug.WriteLine("Entered PageBaseWI.OnInit");
             
             OnCheckPrerequisites += CheckSelectedSchoolOrDistrict;
+            OnRedirectUser += decommissionedPagesRedirect;
             
             userValues = new GlobalValues();
             globalValues = new GlobalValues();
@@ -651,6 +652,32 @@ namespace SligoCS.Web.Base.PageBase.WI
             qs = UserValues.GetBaseQueryString();
             string NavigateUrl = GlobalValues.CreateURL("~/" +  filedest, qs);
             Response.Redirect(NavigateUrl, true);
+        }
+        private void decommissionedPagesRedirect()
+        {
+            string graphFileKey = GlobalValues.GraphFile.Key;
+
+            switch (graphFileKey)
+            {
+                case GraphFileKeys.ACT:
+                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/ACT", true);
+                    break;
+                case GraphFileKeys.AP:
+                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/AP", true);
+                    break;
+                case GraphFileKeys.ATTENDANCE:
+                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Attendance/", true);
+                    break;
+                case GraphFileKeys.StateTests:
+                case GraphFileKeys.StateTestsScatter:
+                case GraphFileKeys.StateTestsSimilar:
+                case GraphFileKeys.CompareContinuing:
+                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/WSAS%20%28WKCE%20and%20WAA-SwD%29", true);
+                    break;
+                case GraphFileKeys.GROUPS:
+                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/", true);
+                    break;
+            }
         }
         protected void InitialAgencyRedirect()
         {
