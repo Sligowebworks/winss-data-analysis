@@ -88,7 +88,7 @@
 </td>
 </asp:Panel><!-- /LeftPanel -->
 <!-- Primary Content Cell -->
-<td valign="top" align="right" >
+<td valign="top" align="left" style="padding:10px 10px 10px 20px;">
     <form id="form1" runat="server">        
         <div align="right"><b><asp:Label ID="lblPageHeading" runat="server" CssClass="dataquestion" /></b></div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
