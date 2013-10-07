@@ -660,22 +660,22 @@ namespace SligoCS.Web.Base.PageBase.WI
             switch (graphFileKey)
             {
                 case GraphFileKeys.ACT:
-                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/ACT", true);
+                    Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/ACT", true);
                     break;
                 case GraphFileKeys.AP:
-                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/AP", true);
+                    Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/AP", true);
                     break;
                 case GraphFileKeys.ATTENDANCE:
-                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Attendance/", true);
+                    Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Attendance/", true);
                     break;
                 case GraphFileKeys.StateTests:
                 case GraphFileKeys.StateTestsScatter:
                 case GraphFileKeys.StateTestsSimilar:
                 case GraphFileKeys.CompareContinuing:
-                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/WSAS%20%28WKCE%20and%20WAA-SwD%29", true);
+                    Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/WSAS%20%28WKCE%20and%20WAA-SwD%29", true);
                     break;
                 case GraphFileKeys.GROUPS:
-                    Response.Redirect("http://uawisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/", true);
+                    Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/", true);
                     break;
             }
         }
