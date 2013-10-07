@@ -707,6 +707,8 @@ namespace SligoCS.Web.WI
             cols.Add(v_WSAS.Percent_PreReq_Eng_Advanced);
             cols.Add(v_WSAS.Number_PreReq_Eng);
             cols.Add(v_WSAS.Percent_PreReq_Eng);
+            cols.Add(v_WSAS.percent_waa_total);
+            cols.Add(v_WSAS.number_waa_total);
             
             return cols;
         }
