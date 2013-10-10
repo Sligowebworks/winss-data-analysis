@@ -10,6 +10,6 @@ Most of the data on these pages are provided by Wisconsin schools and districts 
 <asp:HyperLink ID="EDITselection" runat="server" CssClass="lightblue" Text="EDIT" />
 your selection
 <br />
-<a href="http://winss.dpi.wi.gov/winss_usertips" target="help" class="lightblue">Help</a>
+<a href="http://winss.dpi.wi.gov/winss_usertips" target="help" class="lightblue" target="_blank">Help</a>
 </td></tr></table>
 <br /><br />

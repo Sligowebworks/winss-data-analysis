@@ -6,7 +6,7 @@
 <tr><td>&nbsp;</td></tr>
 <tr><td align="left">
 <ul class="text">    
-<li>What is the enrollment by student group? (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/">WISEdash Enrollment</a>)</li>
+<li>What is the enrollment by student group? (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/" target="_blank">WISEdash Enrollment</a>)</li>
 <li>
     <asp:PlaceHolder ID="disabilities" runat="server" />
 </li>

@@ -11,7 +11,7 @@
 <ul class="text">
 <asp:Label ID="Label1" runat="server" Font-Bold = "true" Text="Examining School Performance on Statewide Tests." />
 <li>How did students perform on state tests at grades 3-8 and 10?
-(Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/WSAS%20%28WKCE%20and%20WAA-SwD%29">WISEdash WSAS</a>)</li>   
+(Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/WSAS%20%28WKCE%20and%20WAA-SwD%29" target="_blank">WISEdash WSAS</a>)</li>   
 
    <asp:Panel ID="pnl_HasG3" runat="server"></asp:Panel>
 
@@ -39,8 +39,8 @@
 <asp:Panel ID="pnl_grade_12" Visible="false" runat="server">
 
 <li>How did students perform on college admissions and placement tests?  
-    (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/ACT">WISEdash ACT</a> and 
-    <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/AP">WISEdash Advanced Placement Program  Exams</a> )
+    (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/ACT" target="_blank">WISEdash ACT</a> and 
+    <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/AP" target="_blank">WISEdash Advanced Placement Program  Exams</a> )
 </li>			
 
 <li>

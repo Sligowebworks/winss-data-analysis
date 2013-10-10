@@ -14,7 +14,7 @@
 <ul class="text">	
 <asp:Label ID="Label2" runat="server" Font-Bold = "true" Text="Examining Attendance Patterns" />
 <li>
-    What percent of students attend school each day? (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Attendance/">WISEdash Attendance</a>)
+    What percent of students attend school each day? (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Attendance/" target="_blank">WISEdash Attendance</a>)
 </li>
 
 <li>

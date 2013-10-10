@@ -101,11 +101,11 @@
     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding:0px 5px 0px 0px;">
 	<tr valign="middle">
 	<td align="left" width="33%" style="padding: 3px 8px;">
-	<a href="http://winss.dpi.wi.gov/winss_data_using" class="feedback">Using WINSS Data Analysis</a>
+	<a href="http://winss.dpi.wi.gov/winss_data_using" class="feedback" target="_blank">Using WINSS Data Analysis</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </td>
     <td align="right">
-        <a href="http://wise.dpi.wi.gov/help-ticket" class="feedback">Contact Us</a>
+        <a href="http://wise.dpi.wi.gov/help-ticket" class="feedback" target="_blank">Contact Us</a>
     </td>
 	</tr>
     </table>

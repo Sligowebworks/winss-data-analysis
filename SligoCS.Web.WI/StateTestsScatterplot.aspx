@@ -104,7 +104,7 @@
     <tr>
         <td>The data you have requested are not available for the school you have selected. The cause may be that the data are not available for the grade range of your school. For example, if the grade range of your school is kindergarten through second grade, then you will not get any data under "Examining School Performance on Statewide Tests" because no statewide tests are given to students in these grades. Another possible cause is that you selected a newly opened school, and the data you requested are not yet available. 
 
-You may click on the "Back" button of your browser to select another type of data, or click on "change school" to select a different school. If you feel you have received this page in error, please open a help ticket <a href="https://helpdesk.dpi.wi.gov/user.html">https://helpdesk.dpi.wi.gov/user.html</a>. </td>
+You may click on the "Back" button of your browser to select another type of data, or click on "change school" to select a different school. If you feel you have received this page in error, please open a help ticket <a href="https://helpdesk.dpi.wi.gov/user.html" target="_blank">https://helpdesk.dpi.wi.gov/user.html</a>. </td>
     </tr>
     </asp:Panel>
     <tr>
