@@ -3,7 +3,7 @@
 <p>
 <SPAN class="text">				
 <!--a href="javascript:popup('https://www2.dpi.state.wi.us/DistrictProfile/Pages/DistrictProfile.aspx?year=2006&DistrictID=3276')" onClick="setCookie(question, url)"-->
-<a href="javascript:popup('https://www2.dpi.state.wi.us/DistrictProfile/Pages/DistrictProfile.aspx?year=2009&DistrictID=<% = DistrictCd %>')" onClick="setCookie(question, url)">
+<a href="javascript:popup('https://www2.dpi.state.wi.us/DistrictProfile/Pages/DistrictProfile.aspx?year=<%= globals.CurrentYear %>&DistrictID=<% = DistrictCd %>')" onClick="setCookie(question, url)">
 View Special Education District Profile</a>
 </SPAN>
 </p>
