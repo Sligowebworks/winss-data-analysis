@@ -2,7 +2,7 @@
    
 <p>
 <span class="text">
-<a href="<% =Url %>">
+<a href="<% =Url %>" target="_blank">
 Download Raw Data From This Page</a>
 </span>
 </p>
