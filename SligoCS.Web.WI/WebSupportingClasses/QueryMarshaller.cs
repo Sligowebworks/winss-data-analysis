@@ -136,7 +136,7 @@ namespace SligoCS.BL.WI
 
             stypList.ObeyForceDisAgg = true;
             WMASCodes.ObeyForceDisAgg = true;
-            CourseTypeCodes.ObeyForceDisAgg = true;
+            //CourseTypeCodes.ObeyForceDisAgg = true;
             GradReqSubjCodes.ObeyForceDisAgg = true;
             TQSubjectCodes.ObeyForceDisAgg = true;
             CostTypeCodes.ObeyForceDisAgg = true;
