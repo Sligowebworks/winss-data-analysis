@@ -135,10 +135,24 @@ namespace SligoCS.Web.WI
 
             return cols;
         }
+        public override List<string> GetDownloadRawVisibleColumns()
+        {
+            List<string> visibleColumns = base.GetDownloadRawVisibleColumns();
+
+            int idx = visibleColumns.IndexOf(v_COURSE_OFFERINGS.Course);
+            visibleColumns.Insert(idx, v_COURSE_OFFERINGS.CourseType);
+            visibleColumns.Insert(idx, v_COURSE_OFFERINGS.WMAS_Description1);
+
+            return visibleColumns;
+        }
         protected override SortedList<string, string> GetDownloadRawColumnLabelMapping()
         {
             SortedList<string, string> cols = base.GetDownloadRawColumnLabelMapping();
             cols.Add(v_COURSE_OFFERINGS.Course, "course_content");
+
+            cols.Add(v_COURSE_OFFERINGS.CourseType, "course_type");
+            cols.Add(v_COURSE_OFFERINGS.WMAS_Description1, "subject");
+
             if (GlobalValues.OrgLevel.Key == OrgLevelKeys.State)
                 cols.Add(v_COURSE_OFFERINGS.Districts_Offering_At_Least_One_Course, "number_of_districts_offering_at_least_one_course");
             else

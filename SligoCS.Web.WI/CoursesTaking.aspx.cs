@@ -125,11 +125,23 @@ namespace SligoCS.Web.WI
            
             return cols;
         }
+        public override List<string> GetDownloadRawVisibleColumns()
+        {
+            List<string> visibleColumns = base.GetDownloadRawVisibleColumns();
+
+            int idx = visibleColumns.IndexOf(v_COURSEWORK.Course);
+            visibleColumns.Insert(idx, v_COURSE_OFFERINGS.CourseType);
+            visibleColumns.Insert(idx, v_COURSE_OFFERINGS.WMAS_Description1);
+
+            return visibleColumns;
+        }
         protected override SortedList<string, string> GetDownloadRawColumnLabelMapping()
         {
             SortedList<string, string> cols = base.GetDownloadRawColumnLabelMapping();
             cols.Add(v_COURSEWORK.enrollment, "total_enrolled_in_grades");
             cols.Add(v_COURSEWORK.Course, "course_content");
+            cols.Add(v_COURSE_OFFERINGS.CourseType, "course_type");
+            cols.Add(v_COURSE_OFFERINGS.WMAS_Description1, "subject");
             cols.Add(v_COURSEWORK.NUM_Who_Took_Course, "sum_of_students_taking_courses");
             return cols;
         }
