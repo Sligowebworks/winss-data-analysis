@@ -133,15 +133,34 @@ namespace SligoCS.Web.WI
             else
                 cols.Add(v_COURSE_OFFERINGS.Offerings);
 
+            if (cols.Contains(ColumnPicker.CommonNames.SexLabel.ToString()))
+                cols.Remove(ColumnPicker.CommonNames.SexLabel.ToString());
+            if (cols.Contains(ColumnPicker.CommonNames.RaceLabel.ToString()))
+                cols.Remove(ColumnPicker.CommonNames.RaceLabel.ToString());
+            if (cols.Contains(ColumnPicker.CommonNames.DisabilityLabel.ToString()))
+                cols.Remove(ColumnPicker.CommonNames.DisabilityLabel.ToString());
+            
             return cols;
         }
         public override List<string> GetDownloadRawVisibleColumns()
         {
             List<string> visibleColumns = base.GetDownloadRawVisibleColumns();
 
+            if (visibleColumns.Contains(ColumnPicker.CommonNames.SexLabel.ToString()))
+                visibleColumns.Remove(ColumnPicker.CommonNames.SexLabel.ToString());
+            if (visibleColumns.Contains(ColumnPicker.CommonNames.RaceLabel.ToString()))
+                visibleColumns.Remove(ColumnPicker.CommonNames.RaceLabel.ToString());
+            if (visibleColumns.Contains(ColumnPicker.CommonNames.DisabilityLabel.ToString()))
+                visibleColumns.Remove(ColumnPicker.CommonNames.DisabilityLabel.ToString());
+            
             int idx = visibleColumns.IndexOf(v_COURSE_OFFERINGS.Course);
             visibleColumns.Insert(idx, v_COURSE_OFFERINGS.CourseType);
             visibleColumns.Insert(idx, v_COURSE_OFFERINGS.WMAS_Description1);
+
+            if (!visibleColumns.Contains(v_COURSE_OFFERINGS.Districts_Offering_At_Least_One_Course))
+                visibleColumns.Add(v_COURSE_OFFERINGS.Districts_Offering_At_Least_One_Course);
+            if (!visibleColumns.Contains(v_COURSE_OFFERINGS.Offerings))
+                visibleColumns.Add(v_COURSE_OFFERINGS.Offerings);
 
             return visibleColumns;
         }
@@ -153,10 +172,9 @@ namespace SligoCS.Web.WI
             cols.Add(v_COURSE_OFFERINGS.CourseType, "course_type");
             cols.Add(v_COURSE_OFFERINGS.WMAS_Description1, "subject");
 
-            if (GlobalValues.OrgLevel.Key == OrgLevelKeys.State)
-                cols.Add(v_COURSE_OFFERINGS.Districts_Offering_At_Least_One_Course, "number_of_districts_offering_at_least_one_course");
-            else
-                cols.Add(v_COURSE_OFFERINGS.Offerings, "number_of_different_courses_offered");
+            cols.Add(v_COURSE_OFFERINGS.Districts_Offering_At_Least_One_Course, "number_of_districts_offering_at_least_one_course");
+            cols.Add(v_COURSE_OFFERINGS.Offerings, "number_of_different_courses_offered");
+
             return cols;
         }
     }

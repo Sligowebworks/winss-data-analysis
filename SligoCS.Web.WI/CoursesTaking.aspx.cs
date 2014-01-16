@@ -119,15 +119,25 @@ namespace SligoCS.Web.WI
         {
             List<string> cols = base.GetVisibleColumns();
 
+            if ( cols.Contains(ColumnPicker.CommonNames.RaceLabel.ToString()) )
+                cols.Remove(ColumnPicker.CommonNames.RaceLabel.ToString());
+            if (cols.Contains(ColumnPicker.CommonNames.DisabilityLabel.ToString()))
+                cols.Remove(ColumnPicker.CommonNames.DisabilityLabel.ToString());
+
             cols.Add(v_COURSEWORK.enrollment);
             cols.Add(v_COURSEWORK.Course);
             cols.Add(v_COURSEWORK.NUM_Who_Took_Course);
-           
+
             return cols;
         }
         public override List<string> GetDownloadRawVisibleColumns()
         {
             List<string> visibleColumns = base.GetDownloadRawVisibleColumns();
+
+            if (visibleColumns.Contains(ColumnPicker.CommonNames.RaceLabel.ToString()))
+                visibleColumns.Remove(ColumnPicker.CommonNames.RaceLabel.ToString());
+            if (visibleColumns.Contains(ColumnPicker.CommonNames.DisabilityLabel.ToString()))
+                visibleColumns.Remove(ColumnPicker.CommonNames.DisabilityLabel.ToString());
 
             int idx = visibleColumns.IndexOf(v_COURSEWORK.Course);
             visibleColumns.Insert(idx, v_COURSE_OFFERINGS.CourseType);
