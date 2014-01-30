@@ -292,8 +292,8 @@ namespace SligoCS.Web.WI.WebUserControls
                 }
                 else
                 {
-                    AxisYMax = 109;
-                    AxisYStep = 10;
+                    AxisYMax = (int)_maxRateInResult + 20;
+                    AxisYStep = AxisYMax/10;
                 }
 
                 SetAutoFriendlyAxisYNames(AxisYMin, AxisYMax, AxisYStep);
