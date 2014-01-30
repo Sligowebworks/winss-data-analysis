@@ -109,7 +109,6 @@ namespace SligoCS.Web.WI
                 barChart.Title = DataSetTitle;
                 barChart.AxisY.Step = 10;
                 barChart.AxisYMin = 0;
-                barChart.AxisYMax = 100;
                 barChart.YAxisSuffix = String.Empty;
 
              //  if (GlobalValues.Group.Key == GroupKeys.All)
@@ -121,9 +120,11 @@ namespace SligoCS.Web.WI
                 barChart.AxisYDescription = "Incidents per 1,000 Students";
                 //Bind Data Source & Display
 
-                barChart.DisplayColumnName = v_SuspExpIncidentsWWoDisSchoolDistState.WeaponDrugIncidentRate;
+                barChart.DisplayColumnName = (GlobalValues.Weapon.Key == WeaponKeys.Yes) 
+                    ? v_SuspExpIncidentsWWoDisSchoolDistState.WeaponDrugIncidentRate
+                    : v_SuspExpIncidentsWWoDisSchoolDistState.NonWeaponDrugIncidentRate;
+
                 barChart.MaxRateInResult = GraphBarChart.GetMaxRateInColumn(ds.Tables[0], barChart.DisplayColumnName);
-                //jdj: need to add column for nonweapondrug
             }
             catch (Exception ex)
             {
