@@ -61,6 +61,9 @@ namespace SligoCS.Web.WI
 
             QueryMarshaller.gradeCodes.ObeyForceDisAgg = true;
 
+            if (GlobalValues.CourseTypeID.Key == CourseTypeIDKeys.Other)
+                QueryMarshaller.WMASCodes.ObeyForceDisAgg = false;
+
             base.OnInitComplete(e);
         }
         protected override DALWIBase InitDatabase()
