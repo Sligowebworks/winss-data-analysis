@@ -40,7 +40,7 @@ namespace SligoCS.Web.WI
 
             QueryMarshaller.RaceDisagCodes.Remove((int)QueryMarshaller.RaceCodes.Comb);
 
-            GlobalValues.CurrentYear = 2012;
+            GlobalValues.CurrentYear = 2013;
             
             if (GlobalValues.Group.Key == GroupKeys.Disability)
             {

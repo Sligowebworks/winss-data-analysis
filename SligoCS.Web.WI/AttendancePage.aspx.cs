@@ -56,7 +56,7 @@ namespace SligoCS.Web.WI
         protected override void OnInitComplete(EventArgs e)
         {            
             GlobalValues.Grade.Key = GradeKeys.Combined_PreK_12;
-            GlobalValues.CurrentYear = 2012;
+            GlobalValues.CurrentYear = 2013;
 
             if (GlobalValues.Group.Key == GroupKeys.Disability)
             {
