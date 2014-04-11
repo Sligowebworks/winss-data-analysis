@@ -49,10 +49,10 @@ namespace SligoCS.Web.WI
         {
             GlobalValues.CurrentYear = 2012;
 
-            //STYP not supported (but don't loose school type at school level for titling purposes).
-            if (GlobalValues.OrgLevel.Key != OrgLevelKeys.School )GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
+            GlobalValues.TrendStartYear = 1997;
 
-            if (GlobalValues.TmFrm.Key == TmFrmKeys.All 
+            if ( (GlobalValues.TmFrm.Key == TmFrmKeys.All 
+                    && GlobalValues.SuperDownload.Key == SupDwnldKeys.False )
                 || GlobalValues.TmFrm.Key == TmFrmKeys.FourYear)
             {
                 GlobalValues.TrendStartYear = 2010;
@@ -78,10 +78,9 @@ namespace SligoCS.Web.WI
             {
                 GlobalValues.TrendStartYear = 2008;
             }
-            else
-            {
-                GlobalValues.TrendStartYear = 1997;
-            }
+
+            //STYP not supported (but don't loose school type at school level for titling purposes).
+            if (GlobalValues.OrgLevel.Key != OrgLevelKeys.School) GlobalValues.OverrideSchoolTypeWhenOrgLevelIsSchool_Complete += PageBaseWI.DisableSchoolType;
 
             GlobalValues.Grade.Key = GradeKeys.Grade_12;
 
@@ -280,7 +279,7 @@ namespace SligoCS.Web.WI
                 && GlobalValues.SuperDownload.Key == SupDwnldKeys.False)
                 retval.Remove(ColumnPicker.CommonNames.LinkedName.ToString());
 
-            if (GlobalValues.TmFrm.Key == TmFrmKeys.All)
+            if (GlobalValues.TmFrm.Key == TmFrmKeys.All || GlobalValues.SuperDownload.Key == SupDwnldKeys.True)
                 retval.Add(v_HSCWWoDisSchoolDistStateEconELPXYearRate.TimeFrameLabel);
 
             retval.Add(v_HSCWWoDisSchoolDistStateEconELP.Total_Enrollment_Grade_12);
