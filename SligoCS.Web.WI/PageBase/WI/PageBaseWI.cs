@@ -677,6 +677,9 @@ namespace SligoCS.Web.Base.PageBase.WI
                 case GraphFileKeys.GROUPS:
                     Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/", true);
                     break;
+                case GraphFileKeys.HIGHSCHOOLCOMPLETION:
+                    Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Graduation/", true);
+                    break;
             }
         }
         protected void InitialAgencyRedirect()
