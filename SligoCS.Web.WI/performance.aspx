@@ -44,7 +44,7 @@
 </li>			
 
 <li>
-    What are the high school completion rates? (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Graduation/" target="_blank">WISEdash HS Completion</a>
+    What are the high school completion rates? (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Graduation/" target="_blank">WISEdash HS Completion</a> )
 </li>
 
 <li>
