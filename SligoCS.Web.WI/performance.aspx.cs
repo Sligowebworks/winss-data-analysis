@@ -93,6 +93,11 @@ namespace SligoCS.Web.WI
             list_item_link.NavigateUrl = nav_file_path + queryString;
             list_item_link.Visible = true;
 
+            if (placeholder_name == list_items.wrct)
+            { // WRCT no longer available
+                //list_item_link.Enabled = false;
+            }
+
             Control c = CPH.FindControl(controlID);
             if (c != null)
             {

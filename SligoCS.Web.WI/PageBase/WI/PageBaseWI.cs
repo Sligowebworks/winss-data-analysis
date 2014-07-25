@@ -680,6 +680,10 @@ namespace SligoCS.Web.Base.PageBase.WI
                 case GraphFileKeys.HIGHSCHOOLCOMPLETION:
                     Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Graduation/", true);
                     break;
+                case GraphFileKeys.GWRCT:
+                    string NavigateUrl = GlobalValues.CreateURL("~/performance.aspx", UserValues.GetQueryString(GlobalValues.GraphFile.Name, String.Empty));
+                    Response.Redirect(NavigateUrl);
+                    break;
             }
         }
         protected void InitialAgencyRedirect()
