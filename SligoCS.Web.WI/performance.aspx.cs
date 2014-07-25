@@ -108,6 +108,8 @@ namespace SligoCS.Web.WI
 
         private void check_wrct()
         {
+            //disable WrCT permenantly:
+            /*
             DAL.WI.DALWRCT dal =  new DAL.WI.DALWRCT();
             GlobalValues.SQL = dal.GetWRCT(FullKeyUtils.GetMaskedFullkey(GlobalValues.FULLKEY, GlobalValues.OrgLevel));
             QueryMarshaller.AssignQuery(dal, GlobalValues.SQL);
@@ -120,6 +122,7 @@ namespace SligoCS.Web.WI
 
             if (GlobalValues.OrgLevel.Key == OrgLevelKeys.School)
                 pnl_HasG3.Visible = true;
+             */
         }
     }
 }
