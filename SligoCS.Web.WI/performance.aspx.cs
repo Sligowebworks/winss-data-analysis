@@ -95,7 +95,7 @@ namespace SligoCS.Web.WI
 
             if (placeholder_name == list_items.wrct)
             { // WRCT no longer available
-                //list_item_link.Enabled = false;
+                list_item_link.Enabled = false;
             }
 
             Control c = CPH.FindControl(controlID);
