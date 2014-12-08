@@ -27,7 +27,6 @@ namespace SligoCS.Web.WI
         protected void Page_Load(object sender, EventArgs e)
         {
             set_state();
-            set_list_links();
         }
 
 
@@ -41,12 +40,6 @@ namespace SligoCS.Web.WI
             ((SligoCS.Web.WI.WI)Page.Master).set_visible_state(WI.displayed_obj.ViewTitlePanel, false);
             ((SligoCS.Web.WI.WI)Page.Master).SetlinkSchoolDistrictPanelWidth(185);
             Page.EnableViewState = false;
-        }
-
-        private void set_list_links()
-        {
-            set_list_item_link("What are the primary disabilities of students in need of special education services?",
-                "~/" + GraphFileKeys.DISABILITIES, list_items.disabilities);
         }
 
         private void set_list_item_link(string link_text, string nav_file_path, list_items placeholder_name)
