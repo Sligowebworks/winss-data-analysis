@@ -675,6 +675,8 @@ namespace SligoCS.Web.Base.PageBase.WI
                     Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Academic%20Performance/WSAS%20%28WKCE%20and%20WAA-SwD%29", true);
                     break;
                 case GraphFileKeys.DISABILITIES:
+                    Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/Enrollment%20(Single%20Year)?pf:DatasetView=Current&pf:GroupBy=Primary%20Disability", true);
+                    break;
                 case GraphFileKeys.GROUPS:
                     Response.Redirect("http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/", true);
                     break;

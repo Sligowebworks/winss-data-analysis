@@ -7,7 +7,7 @@
 <tr><td align="left">
 <ul class="text">    
 <li>What is the enrollment by student group? (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/" target="_blank">WISEdash Enrollment</a>)</li>
-<li>What are the primary disabilities of students in need of special education services? (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/Enrollment%20(Single%20Year)?pf:DatasetView=Current&pf:GroupBy=Primary%20Disability&viewermode=part" target="_blank"> WISEdash Enrollment by Primary Disability</a>)</li>
+<li>What are the primary disabilities of students in need of special education services? (Go to: <a href="http://wisedash.dpi.wi.gov/Dashboard/Page/Home/Topic%20Area/Enrollment/Enrollment%20(Single%20Year)?pf:DatasetView=Current&pf:GroupBy=Primary%20Disability" target="_blank"> WISEdash Enrollment by Primary Disability</a>)</li>
 <li>
 What are the characteristics of limited English proficient students at this school?
 </li>
