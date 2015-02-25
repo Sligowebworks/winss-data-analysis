@@ -48,7 +48,7 @@
 </li>
 
 <li>
-    <asp:PlaceHolder ID="postgrad_plan" runat="server" />
+    What are students' postgraduation plans? (Go to: <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=postgrad-plans<%= GlobalValues.SdprQS %>">SDPR Postgraduation Plans</a>)
 </li>
 
 </asp:Panel>

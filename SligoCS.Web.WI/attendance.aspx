@@ -18,7 +18,7 @@
 </li>
 
 <li>
-    <asp:PlaceHolder ID="truant" runat="server" />
+    What percent of students are habitually truant? (Go to: <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=habitual-truancy<%= GlobalValues.SdprQS %>">SDPR Habitual Truancy</a>)
 </li>
 
 </ul>
@@ -30,7 +30,7 @@
 </li>
 
 <li>
-    <asp:PlaceHolder ID="courses" runat="server" />
+    Do students participate in school supported activities? (Go To:  <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=community-activities<%= GlobalValues.SdprQS %>">SDPR School-Sponsored Community Activities</a> and <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=extra-curricular-activities<%= GlobalValues.SdprQS %>">SDPR Extra-/Co-Curricular Activities</a>)
 </li>
 
 </ul>

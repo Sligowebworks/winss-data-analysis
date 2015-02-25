@@ -12,7 +12,7 @@
 <ul class="text">
     <asp:Label ID="Label1" runat="server" Text="Reviewing School Programs and Processes" Font-Bold="true" />
 <li>
-    <asp:PlaceHolder ID="activities" runat="server" />
+   What school-supported activities are offered? (Go To:  <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=community-activities<%= GlobalValues.SdprQS %>">SDPR School-Sponsored Community Activities</a> and <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=extra-curricular-activities<%= GlobalValues.SdprQS %>">SDPR Extra-/Co-Curricular Activities</a>)
 </li>
 
 <li>
