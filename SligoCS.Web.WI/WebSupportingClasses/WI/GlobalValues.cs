@@ -33,6 +33,23 @@ namespace SligoCS.Web.WI.WebSupportingClasses.WI
         private bool shortCircuitRedirectTests = false;
         private SligoCS.Web.Base.PageBase.WI.PageBaseWI myPage;
 
+        public String SdprQS
+        {
+            get {
+                if (this.OrgLevel.Key == OrgLevelKeys.District)
+                {
+                    return "&district=" + this.DistrictCode;
+                }
+                else if (this.OrgLevel.Key == OrgLevelKeys.School)
+                {
+                    return "&district=" + this.DistrictCode + "&compareTo=SCH";
+                } else // if (this.OrgLevel.Key == OrgLevelKeys.State)
+                {
+                    return "&district=0007";
+                }
+            }
+        }
+
         public SligoCS.Web.Base.PageBase.WI.PageBaseWI Page
         {
             get { return myPage; }
