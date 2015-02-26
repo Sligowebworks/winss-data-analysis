@@ -38,13 +38,13 @@ namespace SligoCS.Web.WI {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// activities control.
+        /// courses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder activities;
+        protected global::System.Web.UI.WebControls.PlaceHolder courses;
         
         /// <summary>
         /// Label3 control.

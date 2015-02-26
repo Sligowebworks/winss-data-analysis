@@ -26,11 +26,11 @@
 <ul class="text">	
 <asp:Label ID="Label1" runat="server" Font-Bold = "true" Text="Examining Student Involvement" />
 <li>
-    <asp:PlaceHolder ID="activities" runat="server" />
+    Do students participate in school supported activities? (Go To:  <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=community-activities<%= GlobalValues.SdprQS %>">SDPR School-Sponsored Community Activities</a> and <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=extra-curricular-activities<%= GlobalValues.SdprQS %>">SDPR Extra-/Co-Curricular Activities</a>)
 </li>
 
 <li>
-    Do students participate in school supported activities? (Go To:  <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=community-activities<%= GlobalValues.SdprQS %>">SDPR School-Sponsored Community Activities</a> and <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=extra-curricular-activities<%= GlobalValues.SdprQS %>">SDPR Extra-/Co-Curricular Activities</a>)
+        <asp:PlaceHolder ID="courses" runat="server" />
 </li>
 
 </ul>

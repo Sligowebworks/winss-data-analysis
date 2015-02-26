@@ -687,6 +687,24 @@ namespace SligoCS.Web.Base.PageBase.WI
                     string NavigateUrl = GlobalValues.CreateURL("~/performance.aspx", UserValues.GetQueryString(GlobalValues.GraphFile.Name, String.Empty));
                     Response.Redirect(NavigateUrl);
                     break;
+                case GraphFileKeys.ActivityOffer:
+                case GraphFileKeys.ActivitiesPartic:
+                    if (GlobalValues.Show.Key == ShowKeys.Community)
+                    {
+                        Response.Redirect("http://apps2.dpi.wi.gov/sdpr/redirect?topic=community-activities" + GlobalValues.SdprQS);
+                    }
+                    else if (GlobalValues.Show.Key == ShowKeys.Extracurricular)
+                    {
+                        Response.Redirect("http://apps2.dpi.wi.gov/sdpr/redirect?topic=extra-curricular-activities"+GlobalValues.SdprQS);
+                    }
+                    break;
+                case GraphFileKeys.TRUANCY:
+                    Response.Redirect("http://apps2.dpi.wi.gov/sdpr/redirect?topic=habitual-truancy"+GlobalValues.SdprQS);
+                    break;
+                case GraphFileKeys.POSTGRADPLAN:
+                    Response.Redirect("http://apps2.dpi.wi.gov/sdpr/redirect?topic=postgrad-plans" + GlobalValues.SdprQS);
+                    break;
+
             }
         }
         protected void InitialAgencyRedirect()
