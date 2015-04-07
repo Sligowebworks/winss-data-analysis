@@ -16,7 +16,7 @@
 </li>
 
 <li>
-    <asp:PlaceHolder ID="requirements" runat="server" />
+    What are the district requirements for high school graduation? (Go To: <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=hs-grad-req<%= GlobalValues.SdprQS %>">SDPR High School Graduation Requirements</a>)
 </li>
 
 <li>

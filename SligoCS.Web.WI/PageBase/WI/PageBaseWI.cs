@@ -704,7 +704,9 @@ namespace SligoCS.Web.Base.PageBase.WI
                 case GraphFileKeys.POSTGRADPLAN:
                     Response.Redirect("http://apps2.dpi.wi.gov/sdpr/redirect?topic=postgrad-plans" + GlobalValues.SdprQS);
                     break;
-
+                case GraphFileKeys.GGRADREQS:
+                    Response.Redirect("http://apps2.dpi.wi.gov/sdpr/redirect?topic=hs-grad-req" + GlobalValues.SdprQS);
+                    break;
             }
         }
         protected void InitialAgencyRedirect()
