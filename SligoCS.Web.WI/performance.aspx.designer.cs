@@ -74,15 +74,6 @@ namespace SligoCS.Web.WI {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// retention control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder retention;
-        
-        /// <summary>
         /// pnl_grade_12 control.
         /// </summary>
         /// <remarks>
