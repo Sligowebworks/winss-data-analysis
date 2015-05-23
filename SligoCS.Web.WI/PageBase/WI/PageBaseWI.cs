@@ -707,6 +707,9 @@ namespace SligoCS.Web.Base.PageBase.WI
                 case GraphFileKeys.GGRADREQS:
                     Response.Redirect("http://apps2.dpi.wi.gov/sdpr/redirect?topic=hs-grad-req" + GlobalValues.SdprQS);
                     break;
+                case GraphFileKeys.RETENTION:
+                    Response.Redirect("http://apps2.dpi.wi.gov/sdpr/redirect?topic=retention" + GlobalValues.SdprQS);
+                    break;
             }
         }
         protected void InitialAgencyRedirect()
