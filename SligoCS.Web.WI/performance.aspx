@@ -32,9 +32,7 @@
     <asp:Label ID="Label4" runat="server" Text="What other evidence of student proficiency is available locally?" />
 </li>
 
-<li>
-    <asp:PlaceHolder ID="retention" runat="server" />
-</li>
+<li>What percent of students did not advance to the next grade level?(Go To: <a href="http://apps2.dpi.wi.gov/sdpr/redirect?topic=retention<%= GlobalValues.SdprQS %>">SDPR Retention</a>)</li>
 
 <asp:Panel ID="pnl_grade_12" Visible="false" runat="server">
 
