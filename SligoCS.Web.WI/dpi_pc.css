@@ -1,0 +1,43 @@
+.questionsfuchsia {color:#EBA600; font-family:Arial, Helvetica; font-size:15px; text-weight: bold; text-decoration: none;}
+	#questionsfuchsia {color:#EBA600; font-family:Arial, Helvetica; font-size:15px; text-decoration: none;}
+	#questionsfuchsia:hover {color:#0000FF; font-family:Arial, Helvetica; font-size:15px; text-weight: bold; text-decoration: none;}
+
+.questionsfuchsiasm {color:#EBA600; font-family:Arial, Helvetica; font-size:13px; text-weight: bold; text-decoration: none;}
+	#questionsfuchsiasm {color:#EBA600; font-family:Arial, Helvetica; font-size:13px; text-decoration: none;}
+	#questionsfuchsiam:hover {color:#0000FF; font-family:Arial, Helvetica; font-size:13px; text-weight: bold; text-decoration: none;}
+
+.title {color:#000000; font-family:Arial, Helvetica; font-size:14px; text-decoration: none;}
+.text {color:#000000; font-family:Arial, Helvetica; font-size:12px; text-decoration: none;}
+body {color:#000000; font-family:Arial, Helvetica; font-size:12px; text-decoration: none;}/*mzd attempted fix to pages losing style
+is copy of the text class*/
+.textlt {color:#5D5D5D; font-family:Arial, Helvetica; font-size:11px; text-decoration: none;}
+.textwhite {color:#ffffff; font-family:Arial, Helvetica; font-size:12px; text-decoration: none;}
+.smtext {color:#000000; font-family:Arial, Helvetica; font-size:11px; text-decoration: none;}
+.verysmtext {color:#000000; font-family:Arial, Helvetica; font-size:9px; text-decoration: none;}
+.belowpic {color:#000000; font-family:Arial, Helvetica; font-size:12px; text-decoration: none;}
+.profilebar {color:#ffffff; font-family:Arial, Helvetica; font-size:10px; text-decoration: none;}
+.profilebar {color:#ffffff; font-family:Arial, Helvetica; font-size:10px; text-decoration: none;}
+
+.datatext {color:#FFFFFF; font-family:Arial, Helvetica; font-size:12px; text-decoration: none;}
+.datasmtext {color:#FFFFFF; font-family:Arial, Helvetica; font-size:11px; text-decoration: none;}
+.dataschoolname {color:#FFFFFF; font-family:Arial, Helvetica; font-size:12px; text-decoration: none;}
+.datadistrictname {color:#FFFFFF; font-family:Arial, Helvetica; font-size:12px; text-decoration: none;}
+.dataquestion
+{
+    color: #D82058;
+    font-family: Arial, Helvetica;
+    font-size: 16px;
+    text-align: right;
+}
+.datalgtitle {color:#D82058; font-family:Arial, Helvetica; font-size:18px;}
+.datalinks {color:#000000; font-family:Arial, Helvetica; font-size:10pt; text-decoration: none;}
+.botlinks {color:#000000; font-family:Arial, Helvetica; font-size:10pt; text-decoration: none;}
+
+A.lightblue:link {color:#FFFFCC;;font-size:12px;font-family:Arial, Helvetica; text-decoration: underline;}
+A.lightblue:active {color:#FFFFFF;;font-size:12px;font-family:Arial, Helvetica; text-decoration: underline;}
+A.lightblue:visited {color:#FFFFCC;;font-size:12px;font-family:Arial, Helvetica; text-decoration: underline;}
+A.lightblue:hover {color:#FFFFFF;;font-size:12px;font-family:Arial, Helvetica; text-decoration: underline;}
+A.feedback:link {color:#FFFFCC;font-size:12px;font-family:Arial, Helvetica; text-decoration: none;}
+A.feedback:active {color:#FFFFFF;font-size:12px;font-family:Arial, Helvetica; text-decoration: none;}
+A.feedback:visited {color:#FFFFCC;font-size:12px;font-family:Arial, Helvetica; text-decoration: none;}
+A.feedback:hover {color:#FFFFFF;font-size:12px;font-family:Arial, Helvetica; text-decoration: underline;}
