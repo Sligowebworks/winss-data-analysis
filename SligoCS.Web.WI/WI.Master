@@ -1,0 +1,146 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WI.master.cs" Inherits="SligoCS.Web.WI.WI" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head id="Head1" runat="server">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>WINSS Data Analysis</title>
+
+</head>
+
+<body>
+<div align="center">
+<table cellspacing="0" cellpadding="0" border="0" style="padding:5px 5px 5px 10px; width:600px;">
+<tr valign=top>
+    <td colspan="2">
+    <slw:Big_Header_Graphics ID="Big_Header_Graphics1" Visible="false" runat="server" />
+    <slw:Small_Header_Graphics ID="Small_Header_Graphics1" Visible="false" runat="server" />
+    <slw:Mixed_Header_Graphics ID="Mixed_Header_Graphics1" Visible="false" runat="server" />
+    </td>
+</tr>
+
+<tr valign="top">
+<asp:Panel ID="LeftPanel" runat="server">
+<td bgcolor="#D82058" class="text"  style="padding:5px 5px 5px 10px; " align="left">
+ 
+    <slw:InitSelSchoolInfo ID="InitSelSchoolInfo1" Visible="false" runat="server" />
+    <slw:selMultiSchoolsDirections ID="selMultiSchoolsDirections1" Visible="false" runat="server" />
+    <slw:DistrictMapInfo ID="DistrictMapInfo1" Visible="false" runat="server" />
+    <slw:DistrictInfo ID="DistrictInfo1" Visible="false" runat="server" />
+    <slw:WI_DPI_Disclaim ID="WI_DPI_Disclaim1" Visible="false" runat="server" /> 
+    
+    <asp:Panel ID="linkSchoolDistrictPanel" Visible="true" runat="server" Width="122px">
+     <span class="dataschoolname">
+     
+     <asp:Panel ID="ViewTitlePanel" Visible="true" runat="server">
+        <asp:Label ID="ViewTitle" runat="server" Font-Bold="true" CssClass="lightblue" /><br /><br />
+     </asp:Panel><!-- ViewTitlePanel -->
+     
+     <b>School</b><br />
+     <asp:HyperLink ID="linkSchool" runat="server" CssClass="lightblue" >Choose School</asp:HyperLink>
+     <br />
+     <asp:Panel ID="School_br_Panel" runat="server"><br /></asp:Panel>
+     <b>District</b><br />
+     <asp:HyperLink ID="linkDistrict" runat="server" CssClass="lightblue" >Choose District</asp:HyperLink>
+     <br /> 
+     <asp:Panel ID="District_br_Panel" runat="server"><br /></asp:Panel>
+     <% if (((SligoCS.Web.Base.PageBase.WI.PageBaseWI)Page).GlobalValues.OrgLevel.Key != SligoCS.Web.WI.WebSupportingClasses.WI.OrgLevelKeys.State)
+            //default "selected" is the wrong style so simply hide the linke when selected.
+        {%>
+     <slb:HyperLinkPlus ID="linkState" runat="server" ParamName="OrgLevel" ParamValue="st" Prefix="" ><b>State</b></slb:HyperLinkPlus>
+     <% }
+        else
+        {%><b>State</b><%
+        } %>
+     <br /> 
+     <asp:Panel ID="State_br_Panel" runat="server"><br /></asp:Panel>
+     
+     <asp:HyperLink ID="ChangeSchoolOrDistrict" runat="server" CssClass="lightblue" Text="Change school or district" />
+     
+     </span><!-- /dataschoolname --><br />
+     </asp:Panel><!-- /linkSchoolDistrictPanel -->
+    
+    <asp:Panel ID="dataLinksPanel" Visible="false" runat="server" Width="122px">
+    <br />
+    <asp:HyperLink ID="districtHomePage" runat="server" CssClass="lightblue" />
+    <br /><br />
+    <asp:HyperLink ID="schoolHomePage" runat="server" CssClass="lightblue"  />
+    <br /><br /> 
+    <asp:HyperLink ID="HideShowNumbers" runat="server" CssClass="lightblue" />
+    <br /><br />
+    <asp:HyperLink ID="readAbout" runat="server" CssClass="lightblue" Text="Read about the data" />
+    <br /><br />
+    <asp:HyperLink ID="ScatterplotLink" runat="server" CssClass="lightblue" />
+     <br /><br />
+    <asp:HyperLink ID="Glossary" runat="server" CssClass="lightblue" Text="Glossary" />
+    <br /><br />
+    <a href="http://winss.dpi.wi.gov/winss_data_download" class="lightblue" target="_blank">Download Options</a>
+    </asp:Panel><!-- dataLinksPanel -->
+    
+    <slw:DataAnalysisInfo id="DataAnalysisInfo1" Visible="false" runat="server" />
+    <slw:PlanningHelp ID="PlanningHelp1" Visible="false" runat="server" />
+    <slw:StandardsPerformance ID="StandardsPerformance1" Visible="false" runat="server" />
+    <slw:AttendanceDataInfo ID="AttendanceDataInfo1" Visible="false" runat="server" />
+    <slw:StudentCharacteristics ID="StudentCharacteristics1" Visible="false" runat="server" />
+    &nbsp;&nbsp;
+</td>
+</asp:Panel><!-- /LeftPanel -->
+<!-- Primary Content Cell -->
+<td valign="top" align="left" style="padding:10px 10px 10px 20px;">
+    <form id="form1" runat="server">        
+        <div align="right"><b><asp:Label ID="lblPageHeading" runat="server" CssClass="dataquestion" /></b></div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</td>
+
+</tr>
+<tr bgcolor="#D82058"><!-- Footer -->
+<td colspan="2" style="padding:0px 0px 0px 0px;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding:0px 5px 0px 0px;">
+	<tr valign="middle">
+	<td align="left">
+        <form action=" ">
+        <select name="section" onchange="a = this.options[this.selectedIndex].value; location=a;">
+        <option value="" selected="selected">Go to:</option><option value="http://dpi.wi.gov/">DPI Home<_option>
+        <option value="http://winss.dpi.wi.gov">WINSS Home</option>
+        <option value="http://winss.dpi.wi.gov/winss_assessment_index">Standards and Assessment</option>
+        <option value="http://winss.dpi.wi.gov/winss_assessment_index_sa1a"> --- What are our academic standards?</option>
+        <option value="http://winss.dpi.wi.gov/winss_assessment_index_sa1"> --- What are standards of the heart?</option>
+        <option value="http://winss.dpi.wi.gov/winss_assessment_index_success"> --- What indicates success in academic standards?</option>
+        <option value="http://winss.dpi.wi.gov/winss_assessment_index_sa4"> --- What indicates success in standards of the heart?</option>
+        <option value="<%= Request.ApplicationPath %>/selschool.aspx">Data Analysis</option>
+        <option value="<%= Request.ApplicationPath %>/performance.aspx"> --- How are students performing academically?</option>
+        <option value="<%= Request.ApplicationPath %>/offerings.aspx"> --- What programs, staff and money are available?</option>
+        <option value="<%= Request.ApplicationPath %>/attendance.aspx"> --- What about attendance and behavior?</option>
+        <option value="<%= Request.ApplicationPath %>/demographics.aspx"> --- What are student demographics?</option>
+        <option value="http://winss.dpi.wi.gov/winss_improvement_index/">Continuous School Improvement</option>
+        <option value="http://winss.dpi.wi.gov/winss_improvement_index_character"> --- What makes a successful school?</option>
+        <option value="http://winss.dpi.wi.gov/winss_improvement_process"> --- How can we improve?</option>
+        <option value="http://winss.dpi.wi.gov/winss_improvement_tools"> --- Where can we find planning tools?</option>
+        <option value="http://winss.dpi.wi.gov/winss_tips"> --- Who should be involved in improvement?</option>
+        <option value="http://winss.dpi.wi.gov/winss_practices_index">Best Practices</option>
+        <option value="http://winss.dpi.wi.gov/winss_practices_vision"> --- Vision</option>
+        <option value="http://winss.dpi.wi.gov/winss_practices_evidence"> --- Evidence of success</option>
+        <option value="http://winss.dpi.wi.gov/winss_practices_standards"> --- High academic standards</option>
+        <option value="http://winss.dpi.wi.gov/winss_practices_family"> --- Family, school and community partnerships</option>
+        <option value="http://winss.dpi.wi.gov/winss_practices_heart"> --- Standards of the heart</option>
+        <option value="http://winss.dpi.wi.gov/winss_practices_professional"> --- Professional development</option>
+        <option value="http://winss.dpi.wi.gov/winss_practices_leadership"> --- Leadership</option>
+        <option value="http://winss.dpi.wi.gov/winss_sitemap">Site Map</option>
+        <option value="http://search.wi.gov/query.html?qt=winss&qp=url%3Adpi.wi.gov&style=dpi">Site Search</option>
+        </select>
+        </form>
+    </td>
+    <td align="right"><a href="mailto:winss@dpi.wi.gov?Subject=WINSS feedback" class="feedback">feedback</a>
+    </td>
+	</tr>
+    </table>
+</td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>
