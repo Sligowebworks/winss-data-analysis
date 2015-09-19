@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StickyParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FULLKEY>XXXXXXXXXXXX</FULLKEY>
+  <GraphFile>BlankPageUrl</GraphFile>
+  <CompareTo>PRIORYEARS</CompareTo>
+  <OrgLevel>st</OrgLevel>
+	<LOWGRADE>12</LOWGRADE>
+	<HIGHGRADE>64</HIGHGRADE>
+  <Group>AllStudentsFAY</Group>
+  <DN>None Chosen</DN>
+  <SN>None Chosen</SN>
+  <DETAIL>YES</DETAIL>
+  <NumSchools>4</NumSchools>
+  <Qquad>offerings.aspx</Qquad>
+  <STYP>9</STYP>
+  <COUNTY>40</COUNTY>
+  <Year>2009</Year>
+  <TrendStartYear>1997</TrendStartYear>
+  <ConferenceKey>27</ConferenceKey>
+  <DistrictID>3619</DistrictID>
+  <GradeBreakout>999</GradeBreakout>
+  <GradeBreakoutLAG>555</GradeBreakoutLAG>
+  <GradeBreakoutEDISA>212</GradeBreakoutEDISA>
+  <STAFFRATIO>STUDENTSTAFF</STAFFRATIO>
+  <!--Activities Offered/Participate-->
+  <Show>EXTRA</Show>
+  <!-- Course Offered/Participate-->
+  <CourseTypeID>1</CourseTypeID>
+  <WMAS>4</WMAS>
+  <!--Teacher Qualification page variables-->
+	<TQShow>LICSTAT</TQShow>
+  <TQSubjects>SUMALL</TQSubjects>
+  
+  <!--Teacher Qualification Scatterplot page variables-->
+  <TQSubjectsSP>SUMALL</TQSubjectsSP>
+  <TQTeacherVariable>LICFULL</TQTeacherVariable>
+  <!--TQRelateTo>EconomicStatus</TQRelateTo-->
+  <TQRelateTo>Econ</TQRelateTo>
+  <TQLocation>CT</TQLocation>
+ 
+  <!--ACT Page-->
+	<ACTSubj>0AS</ACTSubj>
+
+  <!--PostGrad page-->
+	<PostGradPlan>ALL</PostGradPlan>
+	
+  <!--Graduation Requirements page-->
+	<CRED>R</CRED>
+  
+  <!--High School Completionol page,  HSC=Credential -->
+  <HighSchoolCompletion>REG</HighSchoolCompletion>
+	
+  <!--Money page-->
+  <RevExp>2</RevExp>
+  <CT>TC</CT>
+  
+	<!--Staff page-->  
+  <StaffRatio>STUDENTSTAFF</StaffRatio>
+  
+  <!-- WRCT-->
+  <Level>ALL</Level>
+
+  <!--SDistrictFullKeys>11165903XXXX11457803XXXX11489303XXXX</SDistrictFullKeys-->
+  <SDistrictFullKeys />
+  <!--SSchoolFullKeys>111659040020111659040040111659040060</SSchoolFullKeys-->
+  <SSchoolFullKeys />
+  <SRegion>1</SRegion>
+   <SCounty>47</SCounty>
+  <SAthleticConf>45</SAthleticConf>
+  <SCESA>05</SCESA>
+  <S4orALL>1</S4orALL>
+  <!--&SDistrictFullKeys=03252703XXXX&SSchoolFullKeys=032527040040&SCounty=47&SAthleticConf=45&SCESA=05-->
+
+  <LepPctG4 />
+  <SdisPctG4 />
+  <EconPctG4 />
+  <LepPctG8 />
+  <SdisPctG8 />
+  <EconPctG8 />
+  <LepPctG10 />
+  <SdisPctG10 />
+  <EconPctG10 />
+  <Grade>98</Grade>
+  
+  <TraceLevels>0</TraceLevels>
+  <WkceWsas>ws</WkceWsas>
+  <GRSbj>2</GRSbj>
+  <PrDis>apd</PrDis>
+  <DnlRaw>F</DnlRaw>
+  <Incident>RATE</Incident>
+  <Weapon>YES</Weapon>
+  <WOW>WSAS</WOW>
+  <SubjectID>1RE</SubjectID>
+  <FAYCode>0</FAYCode>
+  <Rel>EconomicStatus</Rel>
+  <Group2>None</Group2>
+  <LF>ST</LF>
+  <SORT>AP</SORT>
+  <SIZE>N</SIZE>
+  <SPEND>N</SPEND>
+  <ECON>Y</ECON>
+  <LEP>N</LEP>
+  <DISABILITY>N</DISABILITY>
+  <NoChce>N</NoChce>
+  <Sim>D</Sim>
+  
+</StickyParameter>
