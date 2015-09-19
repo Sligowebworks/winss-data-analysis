@@ -1,0 +1,385 @@
+::FAYCode::
+CompareFayALL | Compare | 0
+NonFAY | All Students | 9
+FAY | Full Academic Year | 1
+
+::SubjectID::
+AllTested | All Tested Subjects | 0AS
+Reading | Reading | 1RE
+Language | Language Arts | 2LA
+Math | Mathematics | 3MA
+Science | Science | 4SC
+SocialStudies | Social Studies | 5SS
+
+::Grade::
+AllDisAgg | All Tested Grades | 0
+TBD | TBD | 9
+Four_Year_Old_Kindergarten | Four Year Old Kindergarten | 10
+Pre_Kindergarten | Pre-Kindergarten | 12
+Kinder | Kinder. | 16
+Grade_1 | 1 | 20
+Grade_2 | 2 | 24
+Grade_3 | 3 | 28
+Grade_4 | 4 | 32
+Grade_5 | 5 | 36
+Grade_6 | 6 | 40
+Grade_7 | 7 | 44
+Grade_8 | 8 | 48
+Grade_9 | 9 | 52
+Grade_10 | 10 | 56
+Grade_11 | 11 | 60
+Grade_12 | 12 | 64
+GradeCode70 | Elementary School Type/ Prek-12 | 70
+GradeCode71 | Middle/Junior High School Type/ Prek-12 | 71
+GradeCode72 | High School Type/ PreK-12 | 72
+GradeCode73 | Combined Elementary/Secondary School Type/ Prek-12 | 73
+GradeCode74 | Elementary School Type/ K-12 | 74
+GradeCode75 | Middle/Junior High School Type/ K-12 | 75
+GradeCode76 | High School Type / K-12 | 76
+GradeCode77 | Combined Elementary/Secondary School Type/K-12 | 77
+GradeCode78 | Elementary School Type/Grades 7-12 | 78
+GradeCode79 | Middle/Junior High School Type/Grades 7-12 | 79
+GradeCode80 | High School Type/Grades 7-12 | 80
+GradeCode81 | Comb. Elem/Second School Type/Grades 7-12 | 81
+GradeCode82 | Elementary School Type/Grades 9-12 | 82
+GradeCode83 | Middle/Junior High School Type/Grades 9-12 | 83
+GradeCode84 | High School Type/Grades 9-12 | 84
+GradeCode85 | Combined Elem/Secondary/ Grades 9-12 | 85
+GradeCode86 | Elementary School Type/Grades 10-12 | 86
+GradeCode87 | Middle/Junior High School Type/Grades 10-12 | 87
+GradeCode88 | High School Type/Grades 10-12 | 88
+GradeCode89 | Combined Elem/Secondary School Type/Grades 10-12 | 89
+GradeCode90 | Elementary School Type/Grades 6-12 | 90
+GradeCode91 | Middle/Junior High School Type/Grades 6-12 | 91
+GradeCode92 | High School Type/Grades 6-12 | 92
+GradeCode93 | Combined Elem/Secondary School Type/Grades 6-12 | 93
+Grades_6_12_Combined | Grades 6-12 | 94
+Grades_7_12_Combined | Grades 7-12 Combined | 95
+Grades_9_12_Combined | Grades 9-12 Combined | 96
+Grades_10_12_Combined | Grades 10-12 Combined | 97
+Grades_K_12 | Grades K-12 | 98
+Combined_PreK_12 | Combined Grades | 99
+
+::ACTSubj::
+Reading | Reading | 1RE
+English | English | 2LA
+Math | Math | 3MA
+Science | Science | 4SC
+Composite | Composite | 0AS
+
+::TQShow::
+WisconsinLicenseStatus | Wisconsin License Status | LICSTAT
+DistrictExperience | District Experience | DISTEXP
+TotalExperience | Total Experience | TOTEXP
+HighestDegree | Highest Degree | DEGR
+ESEAQualified | ESEA Qualified | ESEAHIQ
+
+::TQSubjects::
+EngLangArt | English Language Arts | ELA
+Mathematics | Mathematics | MATH
+Science | Science | SCI
+SoclStd | Social Studies | SOC
+FrgnLang | Foreign Languages | FLANG
+Arts |The Arts: Art &amp; Design Dance Music Theatre | ARTS
+Elem | Elementary - All Subjects | ELSUBJ
+SpecEdCore | Special Education - Core Subjects | SPCORE
+SpecEdSumm | Special Education Summary | SPSUM
+Core | Core Subjects Summary | CORESUM
+All | Summary - All Subjects | SUMALL
+
+::TQSubjectsSP::
+SpecEdCore | Special Education Core Subjects | SPCORE
+Core | Core Subjects Summary | CORESUM
+SpecEdSumm | Special Education Summary | SPSUM
+All | Summary All Subjects | SUMALL
+
+
+::TQRelateTo::
+Spending | District Spending | SPND
+DistrictSize | District Size | DSZE
+SchoolSize | School Size | SSZE
+EconomicStatus | &#37; Economically Disadvantaged | Econ
+EnglishProficiency | &#37; Limited English Proficient | LEP
+Disability | &#37; Students with Disabilities | DISAB
+NativeAm | &#37; Am Indian | Ntv
+Asian | &#37; Asian | Asn
+Black | &#37; Black | Blck
+Hispanic | &#37; Hispanic | Hsp
+Pacific| &#37; Pacific Islander| Pac
+White | &#37; White | Wht
+TwoPlusRaces | &#37; Two+ Races| 2OrMore
+
+
+
+::TQRace::
+NativeAm | &#37; Amer Indian | Native
+Asian | &#37; Asian | Asian
+Black | &#37; Black | Black
+Hispanic | &#37; Hisp Any Race | Hispanic
+Pacific| &#37; Pacific Islander| Pacific
+White | &#37; White | White
+All | &#37; Two+ Races| Races
+
+::TQTeacherVariable::
+WiscLicense | &#37; Full Wisconsin License | LICFULL
+EmergencyLic | &#37; Emergency Wisconsin License | LICEMER
+NoLicense | &#37; No License for Assignment | LICNO
+DistrictExp | &#37; 5 or More Years District Experience | DISTEXP
+TotalExp | &#37; 5 or More Years Total Experience | TOTEXP
+Degree | &#37; Masters or Higher Degree | DEGR
+ESEA | &#37; ESEA Qualified | ESEAHIQ
+
+::TQLocation::
+State | Entire State | ST
+CESA | My CESA | CE
+County | My County | CT
+
+::PostGradPlan::
+All | All Options | ALL
+FourYr | 4-Yr College/University | 4-YR
+VocTechCollege | Voc/Tec College | VOC
+Employment | Employment | EMP
+Military | Military | MILITARY
+Training | Job Training | JOB
+SeekEmploy | Seeking Employment | SEEKEMP
+Other | Other Plans | OTHER
+Undecided | Undecided | UNDECIDED
+NoResponse | No Response | NO-RESP
+
+::HighSchoolCompletion::
+All | All Types | All
+Certificate | Certificate | CERT
+HSED | HSED | HSED
+Regular | Regular Diploma | REG
+Summary | Combined | COMB
+
+::RevExp::
+Revenue | Revenue Per Member | 2
+Expenditure | Cost Per Member | 4
+
+::CT::
+Cost | Total Cost | TC
+TotalEducation | Total Education Cost | TE
+CurrentEducation | Current Education Cost | CE
+
+::StaffRatio::
+Student | Students to Staff | STUDENTSTAFF
+Staff | Staff to Students | STAFFSTUDENT
+
+::CourseTypeID::
+AP | Advanced Placement Program&reg; | 1
+CAPP | CAPP | 2
+IB | International Baccalaureate | 6
+Other | Other Courses | 4
+
+::WMAS::
+English | English Language Arts | 4
+Mathematics | Mathematics | 8
+Science | Science | 10
+SocialStudies | Social Studies | 11
+Agriculture | Agricultural Education | 1
+Art | Art and Design | 2
+Business | Business | 3
+Family | Family and Consumer Ed | 5
+WorldLang | World Languages | 6
+Marketing | Marketing Education | 7
+Music | Music | 9
+TechEd | Technology Education | 12
+Other | Other Subjects | 13
+
+::Show::
+Extracurricular | Extra/Co-curricular Activites | EXTRA
+Community | Community Activities | COMM
+
+::Group::
+All | All Students | AllStudentsFAY
+Gender | Gender | Gender
+Race | Race/Ethnicity | RaceEthnicity
+RaceGender | Race/Ethnicity & Gender | RceGndr
+Grade | Grade | Grade
+Disability | Disability | Disability
+EconDisadv | Economic Status | EconDisadv
+EngLangProf | English Proficiency | ELP
+Migrant | Migrant Status | Mig
+
+::CompareTo::
+Years | Prior Years | PRIORYEARS
+OrgLevel | District/State | DISTSTATE
+SelSchools | Selected Schools | SELSCHOOLS
+SelDistricts | Selected Districts | SELDISTRICTS
+SimSchools | Similar Schools | SIMSCHOOLS
+Current | Current School Data | CURRENTONLY
+
+::STYP::
+AllTypes | All Types | 1
+Elem | Elem | 6
+Mid | Mid/Jr Hi | 5
+Hi | High |  3
+ElSec | El/Sec |  7
+StateSummary | School Summary | 9
+
+::OrgLevel::
+School | School | sc
+District | District | di
+State | State | st
+
+::S4orALL::
+FourSchoolsOrDistrictsIn | 4 Schools/Districts In |  1
+AllSchoolsOrDistrictsIn | All In | 2
+
+::SRegion::
+County | Country | 1
+AthleticConf | Athlectic Conference | 2
+CESA | CESA | 3
+
+::GraphFile::
+BLANK_REDIRECT_PAGE | *.aspx | BlankPageUrl 
+RETENTION | Retention.aspx | RETENTION 
+HIGHSCHOOLCOMPLETION | HSCompletionPage.aspx | HIGHSCHOOLCOMPLETION 
+ATTENDANCE | AttendancePage.aspx | ATTENDANCE 
+TRUANCY | Truancy.aspx | TRUANCY 
+STAFF | StaffPage.aspx | STAFF 
+MONEY | MoneyPage.aspx | MONEY 
+AP | APTestsPage.aspx | AP 
+ACT | ACTPage.aspx | ACT 
+GGRADREQS | GradReqsPage.aspx | GGRADREQS 
+TEACHERQUALIFICATIONS | TeacherQualifications.aspx | TEACHERQUALIFICATIONS 
+TQSCATTERPLOT | TeacherQualificationsScatterPlot.aspx | TQSCATTER
+DROPOUTS | DropOuts.aspx | DROPOUTS 
+ETHNICENROLL | EthnicEnroll.aspx | ETHNICENROLL 
+SUSPEXPINCIDENTS | SuspExpIncidents.aspx | SUSPEXPINCIDENTS 
+SUSPENSIONS | Suspensions.aspx | SUSPENSIONS
+SUSPENSIONSDAYSLOST | SuspensionsDaysLost.aspx| SUSPENSIONSDAYSLOST
+EXPULSIONS | Expulsions.aspx | EXPULSIONS
+EXPULSIONSDAYSLOST | ExpulsionsDaysLost.aspx| EXPULSIONSDAYSLOST
+GEXPSERVICES | ExpServices.aspx | GEXPSERVICES
+GEXPLENGTH | ExpLength.aspx | GEXPLENGTH
+GEXPRETURNS | ExpReturns.aspx | GEXPRETURNS
+GROUPS | GroupEnroll.aspx | GROUPS 
+DISABILITIES | DisabilEnroll.aspx | DISABILITIES 
+GWRCT | WRCTPerformance.aspx | GWRCT 
+POSTGRADPLAN | PostGradIntentPage.aspx | GRADPLAN 
+StateTests | StateTestsPerformance.aspx | GEDISA
+StateTestsScatter | StateTestsScatterplot.aspx | SCATTERPLOT
+StateTestsSimilar | StateTestsSimilarSchools.aspx | GEDISASIMILARSCHOOLS
+CoursesOffered | CoursesOffer.aspx | GCOURSEOFFER
+CoursesTaken | CoursesTaking.aspx | GCOURSETAKE
+ActivityOffer | ActivitiesOffer.aspx | SSACTIVITIESOFFER
+ActivitiesPartic | ActivitiesParticipate.aspx | SSACTIVITIESPARTIC
+CompareContinuing | ComparePerformance.aspx | EDISACONTINUING
+
+::WkceWsas::
+Wsas | [WSAS: WKCE and WAA Combined | ws
+Wkcs | WKCE Only] | wk
+
+::WOW::
+WSASCombined | WSAS: WKCE and WAA Combined | WSAS
+WKCE | WKCE Only | WKCE
+
+::GRSbj::
+StateLaw | Subjects Required by State Law | 2
+Additional | Additional Subjects | 4
+
+::PrDis::
+AllDisabilities | All Primary Disabilities | apd
+Cognitive | Cognitive Disability (CD) | cd
+Emotional | Emotional Behavioral Disability (EBD) | ebd
+Learning | Specific Learning Disability (LD) | ld
+SpeachLanguage | Speech or Language Impairment (SL) | sl
+Autism | Autism (A) | a
+DeafBlind | Deaf-Blind (DB) | db
+Hearing | Hearing Impairment (HI) | hi
+OtherHealth | Other Primary Disability (OPD) | ohi
+Orthopedic | Orthopedic Impairment (OI) | oi
+Developmental | Significant Developmental Delay (SDD) | sdd
+TraumaticBrain | Traumatic Brain Injury (TBI) | tbi
+Visual | Visual Impairment (VI) | vi
+Combined | Combined (SWD) | swd
+
+::Level::
+All | All Levels | ALL
+Advanced | Advanced | ADV
+AdvancedProficient | Advanced + Proficient | A-P
+AdvProfBas | Advanced + Proficient + Basic | A-P-B
+BasicMinSkillEng | Basic + Min Perf + WAA SwD/ELL + No WSAS | B-M-NT
+WAA_SwD | WAA SwD | SWD
+WAA_ELL | WAA ELL | ELL
+NoWSAS | No WSAS | No-W
+MinPerfNotTested | Min Perf + Not Tested on WRCT | M-NT-wrct
+MinimumPerf | Min Perf | MIN
+NotTested | Not Tested on WRCT |  NT-wrct
+
+::DnlRaw::
+Download | Download | T
+Disable | Disable | F
+
+::Incident::
+Rate | Incident Rate | RATE
+Consequences | Disciplinary Consequences | CONS
+
+::Weapon::
+Yes | Weapon/Drug Related | YES
+No | Not Weapon/Drug Related | NO
+
+::Rel::
+DistrictSpending | District Spending | Spending
+DistrictSize | District Size | Size
+EconDisadvantaged | % Economically Disadvantaged | EconomicStatus
+LEP | % Limited English Proficient | EnglishProficiency
+Disabilities | % Students with Disabilities | Disability
+Native | % Am Indian | Native
+Asian | % Asian | Asian
+Black | % Black | Black
+Hispanic | % Hispanic | Hispanic
+White | % White | White
+
+::Group2::
+DistrictSpending | District Spending | Spending
+DistrictSize | District Size | Size
+EconDisadvantaged | % Economically Disadvantaged | EconomicStatus
+LEP | % Limited English Proficient | EnglishProficiency
+Disabilities | % Students with Disabilities | Disability
+Native | % Am Indian | Native
+Asian | % Asian | Asian
+Black | % Black | Black
+Hispanic | % Hispanic | Hispanic
+White | % White | White
+None | No Option Selected | None
+
+::LF::
+State | Entire State | ST
+CESA | My CESA | CE
+County | My County | CT
+
+::SORT::
+Advanced | %  Advanced | A
+AdvPlusProf | % Advanced + Proficient | AP
+
+::LEP::
+On | %  Limited English Proficient | Y
+Off | % Limited English Proficient | N
+
+::DISABILITY::
+On | %  Students w/ Disabilites | Y
+Off | % Students w/ Disabilites | N
+
+::ECON::
+On | %  Economically Disadvantaged | Y
+Off | % Economically Disadvantaged | N
+
+::SIZE::
+On | District  Size | Y
+Off | District Size | N
+
+::SPEND::
+On | District  Spending | Y
+Off | District Spending | N
+
+::NoChce::
+On | No Criteria  Chosen | Y
+Off | No Criteria Chosen | N
+
+::Sim::
+Default | Default Similar | D
+Outperform | View list of all 'similar' districts that outperformed my school. | O
+AllSimilar | View list of all 'similar districts. | A
