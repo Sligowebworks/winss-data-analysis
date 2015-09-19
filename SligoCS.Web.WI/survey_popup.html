@@ -1,0 +1,191 @@
+<!doctype html public "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+	<title>Feedback and Comment Form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<script type="text/javascript" language="Javascript">
+<!--
+function closePopup() {
+	top.close();
+}
+function dontShowAgain(){
+	var mydomain = "127.0.0.1";
+	//var mydomain = "wi.uaqa.com";
+	var expires = new Date((new Date()).getTime() + 365 * 24 * 3600000);
+	document.cookie = "survey=10; path=/; domain=" + mydomain + "; expires=" + expires.toGMTString();
+	closePopup();
+}
+function ck_email(email) {
+	var test = /\w+@[\w.]+\.\w{2,}/;
+	var result = email.match(test);
+	if (result != null) return true;
+	else return false;
+}
+function ck_phone(string) {
+    if (!string) return false;
+    var Chars = "0123456789()-+. ";
+    for (var i = 0; i < string.length; i++) {
+       if (Chars.indexOf(string.charAt(i)) == -1)
+          return false;
+    }
+	return true;
+}
+function validate(f){
+	if (f.Email.value){
+		if (ck_email(f.Email.value) == false){
+			alert("Please enter valid email address.");
+			return false;
+		}
+	}
+	if (f.Phone.value){
+		if (ck_phone(f.Phone.value) == false){
+			alert("Please enter valid phone number.");
+			return false;
+		}
+	}
+	return true;
+}
+//--> </script>
+	<LINK REL=stylesheet HREF="dpi_pc.css" TYPE="text/css">
+</head>
+<body bgcolor="#FFFFFF" vlink="#000000" alink="#0000FF">
+<div align="center">
+<form name="WINSSform" action="WINSSfeedback.asp" method="post" onSubmit="return validate(this);">
+<table cellpadding="3" cellspacing="0" border="0" width="350">
+	<tr bgcolor="#f0f0f0">
+		<td valign="top"><span class="smtext"> &nbsp; <A HREF="javascript:dontShowAgain()">Don't show this again</A></span></TD>
+		<td align="right"><span class="smtext"><A HREF="javascript:closePopup()">CLOSE</A> &nbsp; </span></TD>
+	</TR>
+</TABLE>
+<table cellpadding="0" cellspacing="0" border="0" width="350">
+	<tr>
+		<td><img src="images/spacer.gif" width="10" height="2" alt="" border="0"></td>
+		<td colspan="2" align="center"><img src="images/spacer.gif" width="2" height="13" alt="" border="0"><br />
+<img src="images/wins_big.gif" alt="" border="0"><img src="images/mortar_big.gif" alt="" border="0"><img src="images/guide_big.gif" alt="" border="0"><br />&#160;</td>
+		<td><img src="images/spacer.gif" width="10" height="2" alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td><img src="images/spacer.gif" width="10" height="2" alt="" border="0"></td>
+		<td colspan="2" class="text"><span class="lgtitle"><strong>Feedback and Comment Form</strong></span><br />
+We need your help! Please take a minute to complete the survey below. We will use your responses to make improvements and additions to WINSS.<br />&nbsp;</td>
+		<td><img src="images/spacer.gif" width="10" height="2" alt="" border="0"></td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td rowspan="17"><img src="images/spacer.gif" width="10" height="2" alt="" border="0"></td>
+		<td colspan="2" class="text"><img src="images/spacer.gif" width="2" height="10" alt="" border="0"><br />
+<strong>How did you learn about WINSS?</strong><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+		<td rowspan="17"><img src="images/spacer.gif" width="10" height="2" alt="" border="0"></td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+		<td class="text">
+<input type="radio" name="LearnAboutWINSS" value="B" style="background:#eaeaea"> Web browsing<br /><img src="images/spacer.gif" width="2" height="1" alt="" border="0"><br />
+<input type="radio" name="LearnAboutWINSS" value="P" style="background:#eaeaea"> PTO<br /><img src="images/spacer.gif" width="2" height="1" alt="" border="0"><br />
+<input type="radio" name="LearnAboutWINSS" value="S" style="background:#eaeaea"> School newsletter<br /><img src="images/spacer.gif" width="2" height="1" alt="" border="0"><br />
+<input type="radio" name="LearnAboutWINSS" value="C" style="background:#eaeaea"> CESA<br /><img src="images/spacer.gif" width="2" height="1" alt="" border="0"><br />
+<input type="radio" name="LearnAboutWINSS" value="W" style="background:#eaeaea"> Workshop / conference<br /><img src="images/spacer.gif" width="2" height="1" alt="" border="0"><br />
+<input type="radio" name="LearnAboutWINSS" value="O" style="background:#eaeaea"> Other -- please specify:<br /><img src="images/spacer.gif" width="2" height="1" alt="" border="0"><br />
+<input type="text" name="LearnOtherComment" size="29" value=""><br />&#160;</td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td colspan="2" class="text"><strong>Are you a:</strong>
+<br /><span class="smtext">(check all that apply)</span><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+		<td class="text">
+<input type="checkbox" name="Parent" value="1">Parent of a school-age child<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="Teacher" value="1">School teacher<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="Counselor" value="1">School counselor<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="Administrator" value="1">School administrator<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="SchoolBoardMember" value="1">School Board member<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="HigherEd" value="1">Higher education faculty<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="Media" value="1">Media representative<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="Researcher" value="1">Researcher<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="Other" value="1">Other -- please specify:<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="text" name="OtherComment" size="29" value=""><br />&#160;</td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td colspan="2" class="text"><strong>Which major type(s) of information were you looking for?</strong><br />
+<span class="smtext">(check all that apply)</span><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+		<td class="text">
+<input type="checkbox" name="SchoolData" value="1">School data<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="SchoolImprovement" value="1">School improvement<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="BestPractices" value="1">Best practices<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="StandardsAndAssessments" value="1">Standards and assessments information<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="OtherLookingFor" value="1">Other -- please specify:<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="text" name="OtherLookingForComment" size="29" value=""><br />&#160;</td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td colspan="2" class="text"><strong>Did you find it?</strong><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+		<td class="text">
+<input type="radio" name="InfoFound" value="1" style="background:#eaeaea">Yes<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="radio" name="InfoFound" value="0" style="background:#eaeaea">No<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />&#160;</td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td colspan="2" class="text"><strong>Which major type(s) of information did you find most useful?</strong>
+<br /><span class="smtext">(check all that apply)</span><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+		<td class="text">
+<input type="checkbox" name="SchoolDataUseful" value="1">School data<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="SchoolImprovementProcesses" value="1">School improvement<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="BestPracticesUseful" value="1">Best practices<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="StandardsAndAssessmentsInfo" value="1">Standards and assessments information<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="checkbox" name="OtherUseful" value="1">Other -- please specify:<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="text" name="UsefulComment" size="29" value=""><br />&#160;</td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td colspan="2" class="text"><strong>How would you rate your overall satisfaction with WINSS?</strong><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+		<td class="text">
+<input type="radio" name="Rating" value="VS" style="background:#eaeaea">Very satisfied<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="radio" name="Rating" value="S" style="background:#eaeaea">Satisfied<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="radio" name="Rating" value="N" style="background:#eaeaea">Neutral<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="radio" name="Rating" value="D" style="background:#eaeaea">Dissatisfied<br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<input type="radio" name="Rating" value="VD" style="background:#eaeaea">Very dissatisfied<br />&#160;</td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td colspan="2" class="text"><strong>Please provide any comments/suggestions:</strong><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+<textarea cols="30" rows="5" name="GeneralComments"></textarea><br />&#160;</td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td colspan="2" class="text"><strong>May we contact you about making our site more useful?
+<br />If yes, please provide the following information:</strong><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /></td>
+		<td class="text">
+E-mail address: <input type="text" name="Email" size="17" value=""><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+Daytime telephone # <input type="text" name="Phone" size="17" value=""><br /><img src="images/spacer.gif" width="2" height="2" alt="" border="0" /><br />
+Person to ask for: <input type="text" name="Name" size="17" value=""><br />&#160;</td>
+	</tr>
+	<tr bgcolor="#eaeaea">
+		<td colspan="2"><input type="submit" name="WINSS_form" value="Submit Survey"> &nbsp; <input type="Reset" value="Close" onclick="closePopup()"><br />&#160;</td>
+</tr>
+<!--
+	<tr bgcolor="#eaeaea">
+		<td colspan="2" align="right"><span class="smtext">Or send E-mail <A HREF="mailto:WINSS@dpi.state.wi.us">WINSS@dpi.state.wi.us</A></span><br /><img src="images/spacer.gif" width="2" height="5" alt="" border="0"><br /></td>
+	</tr>
+	
+	<tr>
+		<td><img src="images/spacer.gif" width="10" height="2" alt="" border="0"></td>
+		<td><img src="images/spacer.gif" width="5" height="2" alt="" border="0"></td>
+		<td><img src="images/spacer.gif" width="295" height="2" alt="" border="0"></td>
+		<td><img src="images/spacer.gif" width="10" height="2" alt="" border="0"></td>
+	</tr>
+	-->
+</table>
+</form>
+</div>
+</body>
+</html>
