@@ -1,0 +1,63 @@
+<job id="GenerateParameterValues">
+  <script language="VBScript" src="generateUtilities.vbs"/>
+  <script language="VBScript">
+OPTION EXPLICIT
+
+' takes one argument, a file name of a character-seperated-values
+' Configure the field delimiter and the Stanza Delimiter
+' Stanza Delimiter must start a line that names the stanza
+' all lines after a stanza delimiter, up to another stanza will be in the stanza
+' blank lines and spaces are ignored
+' rows() array will be populated with values() arrays for each data row of csv
+' InvokeGenerate() will call the sub Generate() which must be declared here
+' Generate is called once for each stanza. the rows array is flushed after each call to Generate()
+' Utilities declare TextStream, tsOut, for writing
+
+' *** Required by Utilities:
+' Configurations:
+Const blnDEBUG = false
+Const FIELD_ARRAY_MAX = 2 ' number fields in input csv - 1
+Const NEW_STANZA_DELIM = "::"
+Const FIELD_DELIM = "|"
+Const FILE_EXT = ".navlinks"
+' End Configurations
+
+Dim stanzaName 'read from csv, 
+ReDim values(FIELD_ARRAY_MAX)
+Dim rows()	'dynammic array of values array (above). (column,row) Note: only last dimension is dynamic, hence col-row tuple instead of row-col
+Dim strFileName	'from user
+Dim rowCount	'number of rows in each stanza
+' *** End Required by Utilities
+
+Dim colArgs	'command line arguments
+
+Set colArgs = WSH.Arguments
+strFileName = CStr(colArgs(0))
+Set colArgs = Nothing
+
+Call InvokeGenerate	'defined in utilities include
+
+'~,~`~,~`~,~`~,~`
+
+sub Generate()
+	debug "Writing Class::" & stanzaName, true
+	if rowCount = 0 then
+		Exit Sub
+	end if
+	
+	Call GenerateNavigationLink
+end sub
+
+sub GenerateNavigationLink()
+
+	Dim n
+
+    n = 0
+	do while n < rowCount
+		'tsOut.WriteLine vbTab & vbTab & "public const string " & rows(0,n) & " = """ & rows(1,n) & """;"
+		tsOut.WriteLine "<cc1:HyperLinkPlus ID=""link" & stanzaName & rows(0,n) &""" runat=""server"" ParamName=""" & stanzaName & """ ParamValue=""" & rows(2,n) & """>" & rows(1,n) & "</cc1:HyperLinkPlus>"
+	n = n + 1
+	loop
+end sub
+</script>
+</job>
