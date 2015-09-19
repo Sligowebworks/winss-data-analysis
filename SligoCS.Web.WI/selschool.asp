@@ -1,0 +1,5 @@
+<%
+
+response.redirect("SelSchool.aspx")
+
+%>
